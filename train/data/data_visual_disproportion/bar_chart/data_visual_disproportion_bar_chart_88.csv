@@ -1,0 +1,6 @@
+region,market_share,color,height
+North,5,#FF6B35,20
+South,1,#1428A0,14
+East,10,#34C759,5
+West,82,#F39C12,95
+Central,3,#C70039,14

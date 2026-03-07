@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows revenue for several years. Which statement is most accurate based on the chart?",
+  "options": {
+    "A": "Revenue increased by the same amount between each pair of consecutive years shown.",
+    "B": "The last two years shown have identical revenue values.",
+    "C": "The highest revenue value is cut off at the top of the chart, so its exact level cannot be read.",
+    "D": "Revenue decreased in at least one of the years shown."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The bar tops are clipped outside the visible plotting area, so equality or ordering for the clipped bars cannot be inferred."
+}

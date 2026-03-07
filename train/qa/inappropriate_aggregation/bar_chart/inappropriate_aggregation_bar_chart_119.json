@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is Thursday, what is the average energy usage for the entire week shown?",
+  "options": {
+    "A": "Unable to determine from the information given",
+    "B": "19 kWh, averaging only Monday through Thursday",
+    "C": "11 kWh, averaging all seven days including Friday to Sunday as 0 kWh",
+    "D": "20 kWh, because the bars look roughly similar"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart only shows measured values for the first part of the week; the remaining days are effectively missing, but are drawn as zero-height bars. Computing an average across all seven days (including those zeros) assumes the missing days truly had zero values, which is not supported by the data. Therefore the weekly average cannot be reliably calculated."
+}

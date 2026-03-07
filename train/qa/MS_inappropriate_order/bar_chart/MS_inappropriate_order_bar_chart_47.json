@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart of daily website visitors over the two‑week period, which statement about the totals for the first 7 days versus the last 7 days is most accurate?",
+  "options": {
+    "A": "The total number of visitors is higher across the first 7 days than across the last 7 days.",
+    "B": "The total number of visitors across the first 7 days is exactly the same as across the last 7 days.",
+    "C": "The total number of visitors is higher across the last 7 days than across the first 7 days.",
+    "D": "It is impossible to compare the totals for the two weeks from this chart."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x‑axis order has been scrambled: the bars are not shown in true chronological sequence. If you reorder the days from Day 1 to Day 14 and sum the first and last 7 days, you see that the last segment actually has the greater total. Judging only from the apparent left‑to‑right pattern would give the wrong conclusion."
+}

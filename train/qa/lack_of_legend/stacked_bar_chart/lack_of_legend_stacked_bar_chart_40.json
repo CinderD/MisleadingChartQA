@@ -1,0 +1,17 @@
+{
+  "question": "Which segment appears to have the largest share in the last year shown?",
+  "options": {
+    "A": "The brown segment shows the largest share.",
+    "B": "The green segment shows the largest share.",
+    "C": "Cannot determine which segment has the largest share without a legend to explain what each color represents.",
+    "D": "The purple segment shows the largest share."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays different colored segments but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category has the largest share; options that assign a category to a color are guessing."
+}

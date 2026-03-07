@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart shown, what can be concluded about performance when experience reaches 150 years?",
+  "options": {
+    "A": "Cannot be determined due to data variability.",
+    "B": "The performance will definitely be lower than current scores.",
+    "C": "The performance will definitely be higher than current scores.",
+    "D": "The performance will definitely stay around the same level as the current scores."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "concealed_uncertainty",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While the trend line suggests decreasing performance, the data shows significant variability and only goes up to 100 years. Extrapolating to 150 years involves uncertainty, and option B implies a level of certainty that cannot be guaranteed given the scatter in the data. The concealed uncertainty lies in the variability around the trend line and the act of extrapolation beyond the observed data range."
+}

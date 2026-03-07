@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Preference</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .bar {
+            fill: #3498db;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Market Research Preference as of Phase 1</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/concealed_uncertainty/bar_chart/concealed_uncertainty_bar_chart_37.csv").then(data => {
+            data.forEach(d => {
+                d.city = d.city;
+                d.preference = +d.preference;
+                d.uncertainty = +d.uncertainty;
+            });
+
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.city))
+                .range([0, width])
+                .padding(0.3);
+
+            const y = d3.scaleLinear()
+                .domain([0, 62.260000000000005])
+                .range([height, 0]);
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            g.append("g")
+                .call(d3.axisLeft(y));
+
+            g.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.city))
+                .attr("y", d => y(d.preference))
+                .attr("width", x.bandwidth())
+                .attr("height", d => height - y(d.preference));
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 35)
+                .attr("text-anchor", "middle")
+                .text("Cities");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -40)
+                .attr("x", -height / 2)
+                .attr("text-anchor", "middle")
+                .text("Preference Score (%)");
+        });
+    </script>
+</body>
+</html>

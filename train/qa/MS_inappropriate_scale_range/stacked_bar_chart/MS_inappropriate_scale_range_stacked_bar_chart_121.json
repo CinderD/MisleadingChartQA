@@ -1,0 +1,17 @@
+{
+  "question": "Across all weeks shown, approximately what proportion of total visitors at Station Z does Station X account for?",
+  "options": {
+    "A": "About one tenth",
+    "B": "About one quarter",
+    "C": "About one half",
+    "D": "Almost the same number"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 1000 instead of 0, which compresses the visible differences between stacked totals. That can make Station X look as large as (or larger than) Station Z even though the totals favor Station Z."
+}

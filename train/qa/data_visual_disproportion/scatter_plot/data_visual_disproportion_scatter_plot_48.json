@@ -1,0 +1,17 @@
+{
+  "question": "Based on the data labels in the chart, which of the following statements is correct?",
+  "options": {
+    "A": "Design has the highest value among all the categories.",
+    "B": "Quality has a higher value than Design.",
+    "C": "Quality and Price have similar values.",
+    "D": "Delivery has a higher value than Other."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

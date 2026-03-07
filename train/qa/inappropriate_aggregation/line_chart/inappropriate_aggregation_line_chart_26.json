@@ -1,0 +1,17 @@
+{
+  "question": "A company tracks average website sign-ups per year. Which of the following statements is supported by the chart?",
+  "options": {
+    "A": "None of the listed statements about the latest full-year trend is supported by this chart.",
+    "B": "The latest year clearly has the lowest sign-ups of all the years shown.",
+    "C": "Sign-ups have sharply declined in the latest year compared with previous years.",
+    "D": "The chart proves that sign-ups are now on a permanent downward trend."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The latest year in the chart only includes about 4 months of data, while previous years show full 12‑month totals. Comparing the partial-year value (519 sign-ups) directly to full-year values like 1,450 sign-ups creates the illusion of a sharp decline. We cannot draw full‑year conclusions from this incomplete aggregate."
+}

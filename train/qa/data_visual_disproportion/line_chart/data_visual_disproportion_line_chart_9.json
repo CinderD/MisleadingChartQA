@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays market share trends from 2018 to 2023. Based on the data labels, which of the following statements is correct?",
+  "options": {
+    "A": "The market share in 2021 increases by more than 10 percentage points compared to 2020.",
+    "B": "The market share decreases from 2021 to 2022.",
+    "C": "The market share in 2023 is lower than in 2019.",
+    "D": "The market share in 2018 is higher than in 2020."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The line is drawn using a different 'height' value for 2021 than the actual share, so the visual suggests a dramatic spike while the true share is 26%."
+}

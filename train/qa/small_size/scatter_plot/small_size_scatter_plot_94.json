@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot displays income by age. Based on this chart, which of the following conclusions is most appropriate?",
+  "options": {
+    "A": "Individuals in a specific 5-year age band clearly earn the highest income.",
+    "B": "The chart does not clearly show which age group has the highest income because the points are too small and close together.",
+    "C": "Individuals between ages 48 and 52 definitely have higher incomes than those between 58 and 63.",
+    "D": "Individuals between ages 58 and 63 definitely have higher incomes than all younger age groups."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 52 and 58 have the highest income. The small size of the chart may cause difficulty in accurately identifying the specific trends of income in certain age ranges."
+}

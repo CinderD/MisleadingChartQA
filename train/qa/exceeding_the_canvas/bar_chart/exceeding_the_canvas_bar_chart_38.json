@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, what can we conclude about the performance index in the last two years?",
+  "options": {
+    "A": "The chart does not reveal whether the index in the last two years is equal or different, because the bars exceed the displayed scale.",
+    "B": "The index was lower in the last year than in the previous year.",
+    "C": "The index was highest in the first year and then declined.",
+    "D": "The index is the same for the last two years."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is below the data maximum, so the top bars are truncated and appear equal."
+}

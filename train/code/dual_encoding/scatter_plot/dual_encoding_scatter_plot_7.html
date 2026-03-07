@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Screen Time vs Sleep (Dual Encoded)</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    .axis-label { font-size: 16px; font-family: Arial, sans-serif; }
+  </style>
+</head>
+<body>
+  <h1>Screen Time vs Sleep</h1>
+  <svg width="1000" height="750"></svg>
+  <script>
+    const margin = { top: 60, right: 60, bottom: 60, left: 80 };
+    const width = 1000 - margin.left - margin.right;
+    const height = 750 - margin.top - margin.bottom;
+    const svg = d3.select("svg").append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    d3.csv("../../../../data/dual_encoding/scatter_plot/dual_encoding_scatter_plot_7.csv").then(data => {
+      data.forEach(d => { d.screen = +d.screen; d.sleep = +d.sleep; });
+      const x = d3.scaleLinear().domain([0, 12]).range([0, width]);
+      const y = d3.scaleLinear().domain([4, 10]).range([height, 0]);
+
+      const color = d3.scaleSequential(d3.interpolateYlOrRd).domain(d3.extent(data, d => d.sleep));
+      const radius = d3.scaleLinear().domain(d3.extent(data, d => d.sleep)).range([6, 22]);
+
+      svg.selectAll("circle").data(data).enter().append("circle")
+        .attr("cx", d => x(d.screen))
+        .attr("cy", d => y(d.sleep))
+        .attr("r", d => radius(d.sleep))
+        .attr("fill", d => color(d.sleep))
+        .attr("opacity", 0.9);
+
+      const fmt = d3.format(",.0f");
+      svg.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x).ticks(6));
+      svg.append("g").call(d3.axisLeft(y).ticks(6));
+
+      svg.append("text").attr("class", "axis-label").attr("x", width/2).attr("y", height+45).style("text-anchor","middle").text("Daily Screen Time (hrs)");
+      svg.append("text").attr("class", "axis-label").attr("transform","rotate(-90)").attr("x", -height/2).attr("y", -50).style("text-anchor","middle").text("Sleep (hrs)");
+    }).catch(err => console.error('Error loading CSV data:', err));
+  </script>
+</body>
+</html>

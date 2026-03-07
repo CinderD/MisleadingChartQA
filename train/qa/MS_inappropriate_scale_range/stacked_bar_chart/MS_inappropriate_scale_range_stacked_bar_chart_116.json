@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, on which day does Takeout revenue make up the largest share of the restaurant’s total revenue for that day?",
+  "options": {
+    "A": "May 06",
+    "B": "May 07",
+    "C": "May 08",
+    "D": "May 09"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 1500 instead of 0, which compresses the visible differences between stacked totals. That can make Dinner look as large as (or larger than) Lunch even though the totals favor Lunch."
+}

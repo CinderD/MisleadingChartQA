@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher prevalence based on the chart, CT or MA?",
+  "options": {
+    "A": "Both states have the same prevalence",
+    "B": "CT",
+    "C": "MA",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although MA appears darker, CT has the higher assigned value when the inversion is considered."
+}

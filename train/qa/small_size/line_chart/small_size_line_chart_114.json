@@ -1,0 +1,17 @@
+{
+  "question": "Which statement best describes the main difficulty in interpreting this annual revenue chart from 1924 to 2024?",
+  "options": {
+    "A": "The chart is so small that it is hard to clearly see detailed changes and exact values over time.",
+    "B": "Annual revenue decreased sharply from 1970 to 1980.",
+    "C": "Annual revenue remained constant throughout the entire period.",
+    "D": "There are large seasonal spikes every few years."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows a steady increase throughout. Small size can lead to misreading a segment as a decline."
+}

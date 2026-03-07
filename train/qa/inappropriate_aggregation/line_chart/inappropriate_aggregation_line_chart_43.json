@@ -1,0 +1,17 @@
+{
+  "question": "A company tracks copies of a board game sold each year. Based on the chart, which of the following statements is best supported by the data shown?",
+  "options": {
+    "A": "It is not possible to determine the full-year trend for the most recent year from this chart alone.",
+    "B": "The most recent year clearly has the lowest total copies sold of the entire period.",
+    "C": "The chart proves that copies sold will continue to decline in future years.",
+    "D": "The most recent year shows a sharp drop in sales compared with previous years."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The latest year in the chart only includes about 5 months of data, while previous years show full 12‑month totals. Comparing the partial-year value (493 copies) directly to full-year values like 1,140 copies creates the illusion of a sharp decline. We cannot draw full‑year conclusions from this incomplete aggregate."
+}

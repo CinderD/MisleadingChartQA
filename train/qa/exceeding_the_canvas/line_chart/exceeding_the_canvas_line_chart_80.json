@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows earnings from 2018 to 2020 (later years extend beyond the visible scale). Which of the following statements is supported by the chart?",
+  "options": {
+    "A": "Earnings were highest in 2019.",
+    "B": "Earnings more than tripled from 2019 to 2020.",
+    "C": "Earnings decreased from 2018 to 2019.",
+    "D": "Earnings increased every year from 2018 to 2020."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The scale is set so that the highest bars exceed the visible area, leading to a misleading impression of equality."
+}

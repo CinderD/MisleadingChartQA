@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows sales from 1924 to 2024. What is the main difficulty in interpreting detailed changes over specific years from this chart?",
+  "options": {
+    "A": "The chart is too small and the year labels are hard to read, making precise trends difficult to identify.",
+    "B": "Sales clearly peaked in exactly 1970 and then steadily declined.",
+    "C": "Sales remained exactly constant throughout the entire period.",
+    "D": "There is a clear and sharp drop in sales between 1960 and 1970 that can be read accurately."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The data shows a decline from 1960 to 1970, then a rise. Small text size can make it difficult to identify which decade had the decline."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual sales from 1924 to 2024. Which statement best describes the main limitation in interpreting this chart?",
+  "options": {
+    "A": "The chart is drawn so small that it is difficult to judge detailed changes and exact turning points in sales over time.",
+    "B": "Sales increased at a perfectly steady rate from 1924 to 2024.",
+    "C": "Sales clearly peaked around 1975 and then consistently declined afterward.",
+    "D": "Sales remained almost completely flat over the entire period."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows sales rising to a peak around 1975 and then declining. Small visual elements can lead to misreading the trend as a steady increase."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "A company tracks how many copies of a board game are sold each year. According to the chart, which statement about the most recent year is most appropriate?",
+  "options": {
+    "A": "The most recent year proves that annual copies sold will stay lower from now on.",
+    "B": "The most recent year clearly has the lowest annual sales of the entire period.",
+    "C": "The most recent year shows a sharp drop in sales compared with previous full years.",
+    "D": "The chart only shows sales up to part of the most recent year, so it is not possible to judge the full-year trend yet."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The latest year in the chart only includes about 2 months of data, while previous years show full 12‑month totals. Comparing the partial-year value (330 copies) directly to full-year values like 1,832 copies creates the illusion of a sharp decline. We cannot draw full‑year conclusions from this incomplete aggregate."
+}

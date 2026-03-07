@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows quarterly customer support tickets. Based on the data, which of the following statements is accurate?",
+  "options": {
+    "A": "Q1 (next year) has the highest number of tickets among all the quarters shown.",
+    "B": "Q4 has more tickets than Q1 (next year).",
+    "C": "The number of tickets in Q1 (next year) is about three times that in Q1.",
+    "D": "Q2 (next year) and Q3 have approximately the same number of tickets."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

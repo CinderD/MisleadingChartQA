@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following is true about the Air Quality Index (AQI) trend during 2023 in City M?",
+  "options": {
+    "A": "The AQI was highest in September and lowest in March.",
+    "B": "The AQI remained constant throughout the year.",
+    "C": "The AQI steadily declined from January to December.",
+    "D": "The AQI was highest in March and lowest in September."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes it appear that the series is flipped vertically, which can swap the perceived highs and lows. The correct option matches the actual data values."
+}

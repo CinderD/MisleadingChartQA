@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Chart</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart { width: 1000px; height: 750px; margin: 60px auto; }
+        .line { fill: none; stroke: steelblue; stroke-width: 3px; }
+        .axis path, .axis line { stroke: black; }
+    </style>
+</head>
+<body>
+    <h1>Decreasing Number of New Tourists in Town Z from 1880 to 1891</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+        const g = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+        const data = [
+            {"year": "1880", "tourists": 950},
+            {"year": "1881", "tourists": 1224},
+            {"year": "1882", "tourists": 1682},
+            {"year": "1883", "tourists": 1620},
+            {"year": "1884", "tourists": 1709},
+            {"year": "1885", "tourists": 2064},
+            {"year": "1886", "tourists": 2463},
+            {"year": "1887", "tourists": 2740},
+            {"year": "1888", "tourists": 2861},
+            {"year": "1889", "tourists": 2879},
+            {"year": "1890", "tourists": 3123},
+            {"year": "1891", "tourists": 2921}
+        ];
+        const x = d3.scalePoint().domain(data.map(d => d.year)).range([0, width]);
+        const y = d3.scaleLinear().domain([0, 3435.3]).range([height, 0]);
+        const line = d3.line().x(d => x(d.year)).y(d => y(d.tourists));
+        g.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x));
+        g.append("g").call(d3.axisLeft(y));
+        g.append("text").attr("x", width/2).attr("y", height + 35).attr("text-anchor", "middle").text("Year");
+        g.append("text").attr("transform", "rotate(-90)").attr("x", -height/2).attr("y", -45).attr("text-anchor", "middle").text("Number of Tourists");
+        g.append("path").datum(data).attr("class", "line").attr("d", line);
+    </script>
+</body>
+</html>

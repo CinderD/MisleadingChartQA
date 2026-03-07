@@ -1,0 +1,17 @@
+{
+  "question": "From the quarterly platform engagement distribution, what can be concluded about the pattern of 'Support Tickets' over the year based on this chart?",
+  "options": {
+    "A": "The absolute number of support tickets increases quarter by quarter, because the share increases in later quarters.",
+    "B": "The share of support tickets is lowest in Q1 and highest in Q4, but this does not prove that the absolute number of tickets is lowest in Q1 and highest in Q4.",
+    "C": "Support tickets steadily decrease in both share and absolute number from Q1 to Q4.",
+    "D": "Q2 and Q3 must have the same absolute number of support tickets because their shares are similar."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart normalizes unrelated categories to 100% within each quarter. It can suggest that the share of a metric is higher in later quarters, but it cannot establish an absolute increasing trend without the underlying totals. A higher percentage share does not necessarily mean a higher absolute quantity."
+}

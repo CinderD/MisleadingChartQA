@@ -1,0 +1,17 @@
+{
+  "question": "What do these sales figures suggest about growth over the broader period from 2012 to 2025?",
+  "options": {
+    "A": "Sales show sustained growth, so the business is clearly expanding over the long run.",
+    "B": "The data shows a consistent decline over the entire period.",
+    "C": "We need sales data for the full 2012–2025 period to judge long-term growth.",
+    "D": "Sales remain flat with no noticeable changes in any year."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Only a subset of years is plotted; growth in this window may not generalize to the full range."
+}

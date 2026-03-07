@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average housing prices ($1000s) across different cities. Which statement best describes what is misleading about this visualization?",
+  "options": {
+    "A": "The chart shows a generally increasing pattern in housing prices from left to right, revealing a clear upward trend across the cities.",
+    "B": "Using a single continuous filled area across these separate cities suggests a smooth trend where there is no inherent progression between categories.",
+    "C": "The chart incorrectly places the cities in alphabetical order, which hides the true pattern in the data.",
+    "D": "The housing prices for all cities are nearly identical, so no meaningful comparison can be made."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for city into a continuous filled region. However, the x‑axis categories (e.g., Seattle, Nashville, Boston, New York, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

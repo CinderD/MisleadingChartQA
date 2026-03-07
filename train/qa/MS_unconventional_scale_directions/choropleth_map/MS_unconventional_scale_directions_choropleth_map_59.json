@@ -1,0 +1,17 @@
+{
+  "question": "Which state has a higher incidence of Condition A based on the chart, ND or AL?",
+  "options": {
+    "A": "AL",
+    "B": "Both states have the same incidence",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "ND"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although AL appears darker, ND has the higher assigned value when the inversion is considered."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "How does the population change from 2022 to 2026 in Region P?",
+  "options": {
+    "A": "It steadily increases each year.",
+    "B": "It steadily decreases each year.",
+    "C": "It first increases and then decreases.",
+    "D": "It first decreases and then increases."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes the series appear increasing when it is actually decreasing."
+}

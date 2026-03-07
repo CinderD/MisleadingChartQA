@@ -1,0 +1,17 @@
+{
+  "question": "What is the overall trend in the number of daily package deliveries from January 16 to January 21?",
+  "options": {
+    "A": "Generally increasing",
+    "B": "Generally decreasing",
+    "C": "Constant",
+    "D": "Fluctuating without any overall increase or decrease"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, reversing the time order and making the trend appear opposite to the actual chronological pattern."
+}

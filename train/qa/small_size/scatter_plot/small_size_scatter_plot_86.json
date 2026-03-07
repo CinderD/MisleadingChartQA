@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatterplot of age and income, which of the following statements is best supported by the chart?",
+  "options": {
+    "A": "Income rises with age up to a point, but the exact peak age cannot be clearly determined from this chart.",
+    "B": "Individuals in their early 50s clearly earn more than all other age groups.",
+    "C": "Individuals in their early 30s clearly have the lowest income among all ages shown.",
+    "D": "Income remains exactly the same for all ages shown in the scatterplot."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 55 and 60 have the highest income. The small size of the chart may cause difficulty in accurately identifying the specific trends of income in certain age ranges."
+}

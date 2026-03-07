@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows browser usage share by product (%). Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Firefox accounts for less than 20% of the market.",
+    "B": "Chrome has a larger market share than Others.",
+    "C": "Edge holds over half of the market.",
+    "D": "Safari has the largest market share among the products shown."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, Edge has the highest share (62%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking Edge is largest when relying on visual comparison."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows revenue by year. Which of the following statements is true based on the chart?",
+  "options": {
+    "A": "Revenue increased each year and 2020 has the highest revenue.",
+    "B": "Revenue in 2018 and 2019 is identical.",
+    "C": "Revenue in 2019 is higher than in 2020.",
+    "D": "Revenue declined from 2018 to 2019."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is set below the data maximum, so the top three bars are clipped and appear equal; the true values cannot be compared from the chart alone."
+}

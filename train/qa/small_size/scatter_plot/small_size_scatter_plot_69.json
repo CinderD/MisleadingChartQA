@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot shows the relationship between years of experience and sales. Based on the chart, which statement is most appropriate?",
+  "options": {
+    "A": "Employees with 20 years of experience clearly achieve much higher sales than those with 25 years of experience.",
+    "B": "Employees with 25 and 30 years of experience have almost identical sales, making it difficult to tell who sells more from this chart.",
+    "C": "Employees with 15 years of experience have the lowest sales by a large margin compared to all other experience levels.",
+    "D": "Sales suddenly drop after 30 years of experience."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 65 and 70 have the highest sales. The small size of the chart may cause difficulty in accurately identifying the specific trends of sales in certain age ranges."
+}

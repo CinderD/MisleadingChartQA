@@ -1,0 +1,17 @@
+{
+  "question": "Which labelled region has the lowest level of internet penetration among the highlighted countries on the map?",
+  "options": {
+    "A": "Region A",
+    "B": "Region B",
+    "C": "Region C",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "At least one of the labelled regions appears grey, indicating missing data rather than a true zero or low value. Because we do not know that region's value, we cannot safely say which labelled region truly has the lowest value."
+}

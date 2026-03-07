@@ -1,0 +1,17 @@
+{
+  "question": "For brand C, between 2016 and 2021, how does its market share change over time?",
+  "options": {
+    "A": "It generally increases over the years.",
+    "B": "It generally decreases over the years.",
+    "C": "It stays roughly constant across the years.",
+    "D": "It first decreases and then increases back to the initial level."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Extremum",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The years along the x‑axis are presented in a scrambled order rather than true chronological order. If you reorder the columns by year and inspect only the segments for brand C, you will see that 2017 has the largest share. Simply picking the tallest segment based on the current left‑to‑right sequence can lead to choosing the wrong year."
+}

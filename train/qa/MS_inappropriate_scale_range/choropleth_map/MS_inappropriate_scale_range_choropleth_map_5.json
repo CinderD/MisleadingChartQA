@@ -1,0 +1,17 @@
+{
+  "question": "Based on the maps, which type of education spending shows more variation across U.S. states?",
+  "options": {
+    "A": "Per student spending shows more variation",
+    "B": "Per school spending shows more variation",
+    "C": "Both types show similar variation",
+    "D": "Cannot be determined from these maps"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The maps use the same scale ranges for per student (11k-13k+) and per school (11k-13k+) spending, making direct comparison possible but misleading. Per school spending appears more uniform because most fall into the 'High' category (13k+), while per student spending shows more color variation due to their lower actual values. However, this is due to inappropriate scale ranges rather than actual variation."
+}

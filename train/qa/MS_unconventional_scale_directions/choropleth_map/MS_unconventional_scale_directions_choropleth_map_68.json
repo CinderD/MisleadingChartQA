@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher incidence based on the chart, OK or VA?",
+  "options": {
+    "A": "Both states have the same prevalence",
+    "B": "OK",
+    "C": "VA",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although OK appears darker, VA has the higher assigned value when the inversion is considered."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Based on the two maps, what can be concluded about whether urban or rural areas have higher population density across states?",
+  "options": {
+    "A": "Urban areas clearly have higher population density than rural areas in most states",
+    "B": "Rural areas clearly have higher population density than urban areas in most states",
+    "C": "Urban and rural areas have nearly identical population density patterns across states",
+    "D": "The maps do not provide enough information to determine which has higher population density overall"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Both maps reuse the same threshold scale, but their underlying distributions differ. This can make one map appear more intense simply because more states fall into the top bin. In the underlying data, Urban Population Density has the higher average value, so that is the only reliable conclusion."
+}

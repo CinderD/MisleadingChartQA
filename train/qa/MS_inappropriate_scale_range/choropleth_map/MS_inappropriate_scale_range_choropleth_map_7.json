@@ -1,0 +1,17 @@
+{
+  "question": "From these maps alone, what can be concluded about overall unemployment levels among youth compared with the overall population across U.S. states?",
+  "options": {
+    "A": "Overall unemployment clearly has higher levels than youth unemployment across states",
+    "B": "Youth unemployment clearly has higher levels than overall unemployment across states",
+    "C": "The maps do not provide enough detail to determine which has higher overall levels across states",
+    "D": "Youth and overall unemployment have exactly the same levels in every state"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Both maps reuse the same threshold scale, but their underlying distributions differ. This can make one map appear more intense simply because more states fall into the top bin. In the underlying data, Youth Unemployment has the higher average value, so that is the only reliable conclusion."
+}

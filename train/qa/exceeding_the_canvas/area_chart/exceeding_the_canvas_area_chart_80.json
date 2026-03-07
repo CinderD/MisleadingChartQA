@@ -1,0 +1,17 @@
+{
+  "question": "Considering the area chart of cost from 2018 to 2022, which statement is supported by the chart as drawn?",
+  "options": {
+    "A": "Cost was lowest in the final year.",
+    "B": "Cost in the last two years is equal.",
+    "C": "The chart does not clearly show how the two highest cost years compare because their values extend beyond the visible range.",
+    "D": "Cost increased by the same amount every year."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis cap causes the top bars to be cut off, so they appear the same height although true values may differ."
+}

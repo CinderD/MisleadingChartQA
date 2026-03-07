@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in energy usage from February 16 to February 20?",
+  "options": {
+    "A": "Consistently increasing",
+    "B": "Increasing, then decreasing, and finally increasing",
+    "C": "Decreasing, then increasing, and finally decreasing",
+    "D": "Consistently decreasing"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, reversing the time order and making the trend appear opposite to the actual chronological pattern."
+}

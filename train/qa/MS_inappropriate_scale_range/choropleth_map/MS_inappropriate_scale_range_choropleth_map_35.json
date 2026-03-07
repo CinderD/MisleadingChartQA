@@ -1,0 +1,17 @@
+{
+  "question": "Which category shows more variation in population density across U.S. states?",
+  "options": {
+    "A": "Rural population density shows more variation across states",
+    "B": "Both maps show similar variation across states",
+    "C": "Urban population density shows more variation across states",
+    "D": "It cannot be determined from these maps alone"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The two maps use the SAME threshold scale even though their value distributions differ. That makes one map saturate in a single color while the other uses multiple colors, creating a misleading impression about which has more variation. The reliable conclusion is that variation cannot be judged from these maps alone."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual profit from 2018 to 2022. Which of the following statements is best supported by the chart as presented?",
+  "options": {
+    "A": "Profit peaked in 2022.",
+    "B": "Profit was the same in 2019 and 2022.",
+    "C": "The chart cuts off the highest profit value, so the exact peak cannot be read.",
+    "D": "Profit decreased in every year shown."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Bars for the highest years exceed the canvas and are clipped, making them look the same height; the true relationship cannot be inferred from the visual."
+}

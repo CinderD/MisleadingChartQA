@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot shows revenue for individuals of different ages. What can be reliably concluded from this chart given its size and level of detail?",
+  "options": {
+    "A": "It clearly shows that individuals in their early 30s earn the most revenue.",
+    "B": "It clearly shows that individuals in their late 50s earn the least revenue.",
+    "C": "It is difficult to determine which specific age group has the highest or lowest revenue from this chart alone.",
+    "D": "It clearly shows that revenue increases steadily with every additional year of age."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 50 and 60 have the highest revenue. The small size of the chart may cause difficulty in accurately identifying the specific trends of revenue in certain age ranges."
+}

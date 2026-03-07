@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows sales trends from 1924 to 2024. Which statement best describes the main limitation of this chart for detailed analysis?",
+  "options": {
+    "A": "The chart is so small that it is difficult to judge precise changes in sales between nearby decades.",
+    "B": "Sales increased at a perfectly constant rate over the entire period.",
+    "C": "Sales clearly declined between 1960 and 1970 before rising again.",
+    "D": "Sales clearly stayed flat from 1970 to 1980."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The data shows a decline from 1960 to 1970, then a rise. Small text size can make it difficult to identify which decade had the decline."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, between which years is the overall change in river water level from the start year to the end year larger in size?",
+  "options": {
+    "A": "2006-2008",
+    "B": "Both periods have about the same overall change",
+    "C": "It cannot be determined from the chart",
+    "D": "2010-2013"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2006-2008: 156 cm → 158 cm (change 2 cm); 2010-2013: 34 cm → 33 cm (change 1 cm)."
+}

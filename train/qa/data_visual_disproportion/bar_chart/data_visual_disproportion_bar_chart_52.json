@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is supported by the chart data on browser usage share?",
+  "options": {
+    "A": "Chrome has the largest market share among the browsers shown.",
+    "B": "Edge has the smallest market share among the browsers shown.",
+    "C": "Firefox and Others together account for more than 20% of usage.",
+    "D": "Safari and Edge have nearly identical market shares."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, Chrome has the highest share (73%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking Safari is largest when relying on visual comparison."
+}

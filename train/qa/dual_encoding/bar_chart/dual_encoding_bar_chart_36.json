@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays the number of working days lost over several years. Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "The number of working days lost in 2007-08 is higher than in 2012-13.",
+    "B": "The number of working days lost in 2008-09 is the second-highest among all the years shown.",
+    "C": "The number of working days lost in 2014-15 is nearly four times that in 2010-11.",
+    "D": "The number of working days lost in 2009-10 is higher than in 2007-08."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

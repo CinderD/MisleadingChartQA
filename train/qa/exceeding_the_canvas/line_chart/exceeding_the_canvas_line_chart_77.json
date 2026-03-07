@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows revenue for various years. Which of the following statements is most appropriate based on the chart as drawn?",
+  "options": {
+    "A": "Revenue in 2021 appears to be limited by the top of the chart, so its exact value relative to other years is unclear.",
+    "B": "Revenue increased by the same amount every year.",
+    "C": "Revenue in 2019 and 2021 is clearly the same.",
+    "D": "Revenue was lowest in 2019."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The bar tops are clipped outside the visible plotting area, so equality or ordering for the clipped bars cannot be inferred."
+}

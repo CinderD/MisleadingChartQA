@@ -1,0 +1,17 @@
+{
+  "question": "Based on the stacked bar chart showing quarterly performance indicators for Store X in 2023, what can be concluded about which quarter has the best overall performance?",
+  "options": {
+    "A": "Q1 has the best overall performance because it has fewer customer comments than the other quarters.",
+    "B": "The chart cannot determine overall performance accurately because it combines indicators with different units that cannot be meaningfully added together.",
+    "C": "Q4 has the best overall performance because it has the highest total height across all stacked segments.",
+    "D": "Q3 has the best overall performance because electricity consumption there is highest."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart stacks unrelated metrics (Store Visits, Electricity Consumption, etc.) into a single total. These metrics have different units and meanings (e.g., counts, temperatures, consumption), so adding them together creates a meaningless sum. The stacked height cannot be used to assess overall performance. Only individual metric comparisons are valid."
+}

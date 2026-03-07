@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the product rating share for different categories, with each point labeled by its value. Based on these values, which statement is correct?",
+  "options": {
+    "A": "Price has the highest value among the categories.",
+    "B": "Design has the highest value among the categories.",
+    "C": "Delivery has the highest value among the categories.",
+    "D": "Quality has the highest value among the categories."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

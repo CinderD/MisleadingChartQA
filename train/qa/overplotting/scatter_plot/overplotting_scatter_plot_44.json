@@ -1,0 +1,17 @@
+{
+  "question": "Do HR employees have salaries above 15 thousand?",
+  "options": {
+    "A": "Yes",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "No",
+    "D": "Only certain departments have salaries above 15 thousand"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 15 thousand salaries position, making it difficult to accurately discern if any members of HR has the salarie higher than 15 thousand."
+}

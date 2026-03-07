@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of production at factory F from 2018 to 2023?",
+  "options": {
+    "A": "Generally increasing",
+    "B": "Generally decreasing",
+    "C": "Generally constant",
+    "D": "Cannot be inferred / Inadequate Information"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misleading_annotations",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "The chart shows a clear decreasing trend in production from 2916 in 2018 to 1889 in 2023. However, the misleading title contradicts the visual data and is designed to mislead viewers into thinking the trend is increasing."
+}

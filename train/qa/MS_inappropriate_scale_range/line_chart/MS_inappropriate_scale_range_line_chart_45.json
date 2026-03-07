@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows average student test scores from 1990 to 2000 (on a 0–100 scale). Based on this information, what is the most accurate assessment of the overall change in scores over this period?",
+  "options": {
+    "A": "The trend cannot be determined from this chart",
+    "B": "There was a dramatic improvement in scores",
+    "C": "Scores declined sharply over the period",
+    "D": "Average scores changed only slightly over the period"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (70.95–71.54) instead of a more informative 0–100 context, which visually exaggerates variability. The actual net change is about 0.43 over the period, which is modest in the full context."
+}

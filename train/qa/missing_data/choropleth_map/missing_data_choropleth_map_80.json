@@ -1,0 +1,17 @@
+{
+  "question": "Based on the map, which of the following regions has the highest average precipitation over the 15-year period?",
+  "options": {
+    "A": "Brazil",
+    "B": "Canada",
+    "C": "Russia",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "At least one of the labelled regions appears grey, indicating missing data rather than a low value. Because we do not know that region's value, we cannot safely say which labelled region truly has the highest value."
+}

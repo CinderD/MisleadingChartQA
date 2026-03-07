@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US population map, which statement below is the most accurate?",
+  "options": {
+    "A": "The population gap between Texas and California might exceed that between Texas and North Carolina.",
+    "B": "Texas and California have very similar populations.",
+    "C": "North Carolina and Delaware have more diverse population levels than Texas and California.",
+    "D": "The population differences are impossible to determine from this visualization."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Tennessee (16.0M) and Wisconsin (20.8M) have a 4.8M population difference, while Oregon (24.9M) and West Virginia (27.3M) have only a 2.4M difference. However, the categorical color encoding groups Tennessee and Wisconsin into the same color bin (15-25M range), making their large difference appear similar, while Oregon and West Virginia appear more different due to different color bins."
+}

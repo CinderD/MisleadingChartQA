@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following best describes the trend in the Air Quality Index in City M during 2023?",
+  "options": {
+    "A": "The AQI was highest in the early months and lowest in late summer.",
+    "B": "The AQI steadily declined from January to December.",
+    "C": "The AQI was highest in late summer and lowest in the early months.",
+    "D": "The AQI remained constant throughout the year."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes it appear that the series is flipped vertically, which can swap the perceived highs and lows. The correct option matches the actual data values."
+}

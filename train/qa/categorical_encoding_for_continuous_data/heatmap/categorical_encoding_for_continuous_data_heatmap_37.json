@@ -1,0 +1,17 @@
+{
+  "question": "Based on the performance heatmap, which statement best describes the relationship between Product D and Product E on the displayed metrics?",
+  "options": {
+    "A": "Product D clearly outperforms Product E on all metrics, and the colors precisely show how large the differences are.",
+    "B": "The performances might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "C": "The overall performance ranking between Product D and Product E cannot be determined from this visualization.",
+    "D": "It can be infered that their performances are very similar."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Product D (95.9points) and Product E (102.4points) have a 6.5points difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of performance relationships."
+}

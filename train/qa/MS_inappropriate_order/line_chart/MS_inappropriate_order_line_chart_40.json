@@ -1,0 +1,17 @@
+{
+  "question": "This line chart shows average test scores in an Advanced Mathematics course across the semester. Based on the data from January to August, which statement best describes the true trend in student performance?",
+  "options": {
+    "A": "Student performance generally improves over the semester, ending higher in August than in January.",
+    "B": "Student performance generally declines over the semester, ending lower in August than in January.",
+    "C": "Student performance is highly volatile with no clear overall direction.",
+    "D": "Student performance remains almost unchanged throughout the semester."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

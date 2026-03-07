@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows the performance index by year. Which of the following statements is true based on the chart?",
+  "options": {
+    "A": "The index decreases after 2019.",
+    "B": "The index is identical in 2021 and 2022.",
+    "C": "The highest visible index on the chart is in 2020.",
+    "D": "The chart does not show whether the index values in 2021 and 2022 are equal or different, because they exceed the scale."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is below the data maximum, so the top bars are truncated and appear equal."
+}

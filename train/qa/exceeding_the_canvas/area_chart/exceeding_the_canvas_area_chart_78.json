@@ -1,0 +1,17 @@
+{
+  "question": "Based on the area chart of output by year, which statement is most appropriate?",
+  "options": {
+    "A": "Output declined throughout the period.",
+    "B": "The two highest years touch the top of the chart area, so their relative output levels cannot be determined from the chart alone.",
+    "C": "Output in the last two years is identical.",
+    "D": "Output in the middle year was highest."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Values exceeding the y-axis range are clipped, making the top bars look the same and misleading viewers."
+}

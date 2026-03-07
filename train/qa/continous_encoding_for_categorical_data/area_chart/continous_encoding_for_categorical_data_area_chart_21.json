@@ -1,0 +1,17 @@
+{
+  "question": "This area chart displays average housing prices across different cities. Which statement best describes a problem with this visualization?",
+  "options": {
+    "A": "Austin clearly has the lowest average housing price among all the cities shown.",
+    "B": "The chart shows a smooth progression across the cities, implying a meaningful trend from left to right.",
+    "C": "Seattle clearly has the highest average housing price among all the cities shown.",
+    "D": "The chart uses a continuous filled area across distinct city categories, creating a misleading impression of a smooth trend between them."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for city into a continuous filled region. However, the x‑axis categories (e.g., Austin, Portland, Atlanta, Boston, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

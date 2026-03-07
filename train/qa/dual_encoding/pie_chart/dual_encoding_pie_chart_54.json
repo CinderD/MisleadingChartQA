@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows smartphone market share. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Brand A has the largest market share among all categories.",
+    "B": "Brand D has a larger market share than Brand A.",
+    "C": "Brand C and Brand B together have a larger market share than Others.",
+    "D": "Others account for the smallest market share."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Brand A: 40%; Others: 25%; Brand D: 15%; Brand C: 10%; Brand B: 10%."
+}

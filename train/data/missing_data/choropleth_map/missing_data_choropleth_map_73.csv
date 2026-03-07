@@ -1,0 +1,10 @@
+id,region,average_precipitation,code,representation,latitude,longitude
+643,Russia,0.00,A,M,61.0,105.0
+036,Australia,11624.94,B,Z,-25.0,135.0
+356,India,6059.33,C,Z,20.0,78.0
+250,France,10236.84,D,Z,46.0,2.0
+710,South Africa,4369.78,E,Z,-30.0,25.0
+840,United States,3317.52,,Z,39.0,-98.0
+156,China,17350.24,,Z,35.0,105.0
+124,Canada,0.00,,M,60.0,-96.0
+484,Mexico,6568.89,,Z,23.0,-102.0

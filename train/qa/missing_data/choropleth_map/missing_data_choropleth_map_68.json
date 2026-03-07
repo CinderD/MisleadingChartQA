@@ -1,0 +1,17 @@
+{
+  "question": "Which statement best describes the average unemployment rate for Australia (A) compared with China (D)?",
+  "options": {
+    "A": "Australia (A) had the lowest unemployment rate.",
+    "B": "Australia (A) had a lower unemployment rate than China (D).",
+    "C": "Australia (A) had a higher unemployment rate than China (D).",
+    "D": "Australia (A) has no reported unemployment data on this map."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "Canada and China both have measured data, so we can compare them numerically. Canada is 13.5% vs 12.1% for China."
+}

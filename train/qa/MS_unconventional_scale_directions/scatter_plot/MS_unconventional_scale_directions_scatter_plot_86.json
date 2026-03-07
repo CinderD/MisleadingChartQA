@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, how does the exam score appear to change as the study time (in hours) appears to increase?",
+  "options": {
+    "A": "Exam scores appear to increase with more study time.",
+    "B": "Exam scores appear to decrease with more study time.",
+    "C": "Exam scores appear to stay roughly constant as study time changes.",
+    "D": "The relationship between study time and exam score cannot be determined from the chart."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted x-axis, which can flip the apparent direction of the relationship. The correct option reflects the actual pattern in the data."
+}

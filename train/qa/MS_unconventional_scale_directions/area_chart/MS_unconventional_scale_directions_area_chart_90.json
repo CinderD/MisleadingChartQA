@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in daily energy usage from Mar 16 to Mar 23?",
+  "options": {
+    "A": "Consistently decreasing",
+    "B": "Decreasing, then increasing",
+    "C": "Increasing, then decreasing",
+    "D": "Consistently increasing"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, reversing the time order and making the trend appear opposite to the actual chronological pattern."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in the number of museums in Region T from 2006 to 2020?",
+  "options": {
+    "A": "Fluctuating",
+    "B": "Constant",
+    "C": "Increasing",
+    "D": "Decreasing"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted Y-axis, making the data appear as if the trend is increasing, but the data actually shows a decreasing trend."
+}

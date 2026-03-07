@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows how time is allocated on a typical day. Based on the data, which of the following statements is most accurate?",
+  "options": {
+    "A": "Chores take up less time than Leisure.",
+    "B": "The combined time for Commute and Work is greater than the time spent on Chores.",
+    "C": "Chores take up about as much time as all other activities combined.",
+    "D": "The combined time for Leisure, Work, and Commute is greater than the time spent on Chores."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Chores: 45%; Leisure: 22%; Work: 18%; Commute: 15%."
+}

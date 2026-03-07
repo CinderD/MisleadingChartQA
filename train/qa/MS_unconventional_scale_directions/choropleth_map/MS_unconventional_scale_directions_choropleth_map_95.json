@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher risk index based on the chart, WA or GA?",
+  "options": {
+    "A": "Both states have the same risk index",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "WA",
+    "D": "GA"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although WA appears darker, GA has the higher assigned value when the inversion is considered."
+}

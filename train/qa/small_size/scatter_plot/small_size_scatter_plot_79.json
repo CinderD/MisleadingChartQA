@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot illustrates the relationship between age and earnings. Based on what can be reliably seen in the chart, which statement is most appropriate?",
+  "options": {
+    "A": "Earnings clearly peak for individuals in a specific 5-year age range.",
+    "B": "Earnings appear to increase with age, but the chart is too small to reliably identify which exact ages have the highest earnings.",
+    "C": "Earnings are highest for individuals under 30 years old.",
+    "D": "Earnings clearly decline after age 50."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 60 and 65 have the highest earnings. The small size of the chart may cause difficulty in accurately identifying the specific trends of earnings in certain age ranges."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The market research project will conclude after Phase 3. Based on this chart from Phase 1, which of the following is true?",
+  "options": {
+    "A": "The final store location has already been decided.",
+    "B": "Cannot be determined.",
+    "C": "Los Angeles will be selected as the store location.",
+    "D": "Chicago will be selected as the store location."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "concealed_uncertainty",
+  "chartType": "bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While Chicago currently has the highest preference (54.4%), the chart shows results as of Phase 1, but the research project concludes in Phase 3. The remaining research period could dramatically change the outcome, making it premature to predict a winner. The concealed uncertainty lies in the incomplete research project that is not reflected in the chart."
+}

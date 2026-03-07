@@ -1,0 +1,17 @@
+{
+  "question": "Based on the sales trend shown, what can be concluded about the company’s long-term performance?",
+  "options": {
+    "A": "Sales show sustained growth, indicating the business is clearly expanding over the long run.",
+    "B": "The data shows a consistent decline in sales over the period.",
+    "C": "Sales remain essentially flat with no noticeable change over time.",
+    "D": "The chart only covers a limited span of years, so it does not by itself establish the company’s overall long-term performance."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Only a subset of years is plotted; growth in this window may not generalize to the full range."
+}

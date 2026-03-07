@@ -1,0 +1,17 @@
+{
+  "question": "Based on the map, which of the following statements about the countries shown is most accurate?",
+  "options": {
+    "A": "Australia has one of the highest average unemployment rates among the highlighted countries.",
+    "B": "South Africa has one of the lowest average unemployment rates among the highlighted countries.",
+    "C": "Brazil has no unemployment data reported on the map.",
+    "D": "India has a lower average unemployment rate than South Korea."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "At least one of the labelled regions appears grey, indicating missing data rather than a true zero or low value. Because we do not know that region's value, we cannot safely say which labelled region truly has the lowest value."
+}

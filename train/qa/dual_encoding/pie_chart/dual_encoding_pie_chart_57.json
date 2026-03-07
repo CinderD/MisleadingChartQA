@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, which of the following statements about the energy sources is accurate?",
+  "options": {
+    "A": "Fossil Fuels account for a smaller share of energy use than Renewables.",
+    "B": "The combined share of Nuclear and Hydroelectric is less than the share of Other.",
+    "C": "Fossil Fuels account for the largest share of energy use.",
+    "D": "Renewables and Hydroelectric together account for more than half of the total energy use."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Other: 50%; Renewables: 20%; Hydroelectric: 15%; Nuclear: 8%; Fossil Fuels: 7%."
+}

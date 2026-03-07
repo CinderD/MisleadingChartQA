@@ -1,0 +1,17 @@
+{
+  "question": "Across all months shown, how does Product C's total revenue compare to Product A's total revenue?",
+  "options": {
+    "A": "Product C's total revenue is slightly higher than Product A's total revenue.",
+    "B": "Product C's total revenue is less than half of Product A's total revenue.",
+    "C": "Product C's total revenue is a little over twice Product A's total revenue.",
+    "D": "Product C's total revenue is more than three times Product A's total revenue."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_area_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 12 instead of 0, which visually exaggerates smaller components in a stacked area chart. In Apr, C is about 200% of A (data: 16.5 vs 8.7), but the truncated baseline can make it appear closer to 80%."
+}

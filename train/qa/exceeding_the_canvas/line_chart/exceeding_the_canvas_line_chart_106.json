@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows adjusted revenue from 2018 to 2022. Based on how the chart is drawn, which statement is most accurate?",
+  "options": {
+    "A": "Adjusted revenue peaked in 2018.",
+    "B": "Adjusted revenue forms a straight, steady increase from 2018 through 2022.",
+    "C": "The line segment for the last visible year is clipped at the top, so we cannot determine the exact peak level from the chart.",
+    "D": "Revenues in 2019 and 2020 are identical."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-scale is set so that the largest values are cut off, creating a misleading impression that the top two years are equal."
+}

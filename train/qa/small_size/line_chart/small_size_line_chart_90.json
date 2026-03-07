@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual revenue from 1924 to 2024. What is the main challenge in interpreting this chart accurately?",
+  "options": {
+    "A": "The overall size and fine details make it hard to distinguish precise changes over time.",
+    "B": "Revenue clearly decreased between 1970 and 1980.",
+    "C": "Revenue stayed exactly the same from 1960 to 1980.",
+    "D": "The chart shows that revenue doubled every decade."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows a steady increase throughout. Small size can lead to misreading a segment as a decline."
+}

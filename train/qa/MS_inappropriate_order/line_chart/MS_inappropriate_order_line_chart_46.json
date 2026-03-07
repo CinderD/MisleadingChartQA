@@ -1,0 +1,17 @@
+{
+  "question": "Based on the data shown for average test scores in the Advanced Mathematics course from January to August, which statement best describes the overall change in student performance over the semester?",
+  "options": {
+    "A": "Student performance generally improves over the semester, with scores ending higher than they began.",
+    "B": "Student performance steadily declines over the semester, with scores ending lower than they began.",
+    "C": "Student performance fluctuates but shows no overall change between the start and end of the semester.",
+    "D": "Student performance drops sharply in the middle of the semester and never recovers to earlier levels."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

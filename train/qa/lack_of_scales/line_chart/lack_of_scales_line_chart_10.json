@@ -1,0 +1,17 @@
+{
+  "question": "What is the website visitors trend pattern throughout the week?",
+  "options": {
+    "A": "The number of visitors shows a steady upward trend with consistent increases over the week.",
+    "B": "Visitor numbers peak in the middle of the week and then decline sharply toward the weekend.",
+    "C": "Cannot determine the exact visitors trend pattern without Y-axis scales to verify the magnitude of changes.",
+    "D": "The visitors trend is relatively flat with only minor day-to-day changes."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "line_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays website traffic trend with a line chart, but provides no Y-axis scales or numerical labels. While the visual data shows fluctuations in the line, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the true magnitude and pattern of visitors changes. Visual estimation of visitors movement patterns without proper scales is unreliable for accurate traffic analysis."
+}

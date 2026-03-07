@@ -1,0 +1,17 @@
+{
+  "question": "Which state has a higher risk index, MI or RI?",
+  "options": {
+    "A": "RI",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "Both states have the same prevalence",
+    "D": "MI"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although MI appears darker, RI has the higher assigned value when the inversion is considered."
+}

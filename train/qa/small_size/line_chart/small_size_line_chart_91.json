@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual sales data from 1920 to 2024. Which statement best describes the main difficulty in interpreting this chart?",
+  "options": {
+    "A": "The chart’s small size and thin line make it hard to see detailed changes in sales over time.",
+    "B": "The chart clearly shows that sales decreased steadily from 1920 to 2024.",
+    "C": "The chart clearly shows that sales were constant throughout the entire period.",
+    "D": "The chart clearly identifies the exact year when sales were highest."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The sales data indicates that sales rose from 1924 to 1970, fell from 1970 to 1980, and then began rising again from 1980 to 2024. However, the use of small text or data markers makes these trends hard to discern."
+}

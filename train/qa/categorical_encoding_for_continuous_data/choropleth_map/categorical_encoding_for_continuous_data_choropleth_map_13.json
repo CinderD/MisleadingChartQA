@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US median income map, which statement below is the most accurate?",
+  "options": {
+    "A": "The median income differences are impossible to determine from this visualization.",
+    "B": "The median income gap between Oklahoma and Illinois might exceeds that between California and North Carolina.",
+    "C": "All states have very diverse median income levels.",
+    "D": "Oklahoma and Illinois have similar median incomes."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Oklahoma (56.0$k) and Illinois (59.0$k) have a 3.0$k median income difference, while California (64.7$k) and North Carolina (66.5$k) have only a 1.8$k difference. However, the categorical color encoding groups Oklahoma and Illinois into the same color bin (55-65$k range), making their large difference appear similar, while California and North Carolina appear more different due to different color bins."
+}

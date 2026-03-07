@@ -1,0 +1,17 @@
+{
+  "question": "Was the average unemployment rate in China higher than in Russia over the 10-year period shown?",
+  "options": {
+    "A": "No, it was lower",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "They had exactly the same value",
+    "D": "Yes, it was higher"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "China and Russia both have measured data, so we can compare them numerically. China is 8.7% vs 7.1% for Russia."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the percentage of people who value different Valentine's gifts. Based on the percentages shown next to the points, which statement is supported by the data?",
+  "options": {
+    "A": "Flowers have the highest value among all the categories.",
+    "B": "Cards and Candy have nearly the same value.",
+    "C": "Dining Out is valued more than Flowers.",
+    "D": "Jewelry has the lowest value among all the categories."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

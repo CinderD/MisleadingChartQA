@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the company’s expense breakdown by category. Based on this data, which of the following statements is correct?",
+  "options": {
+    "A": "Salaries take up a larger share of expenses than all the other categories combined.",
+    "B": "The combined share of Utilities and Other is greater than the share of Salaries.",
+    "C": "Other accounts for a larger share of expenses than Utilities.",
+    "D": "Marketing has the smallest share of the company’s expenses."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Salaries: 40%; Other: 30%; Utilities: 20%; Marketing: 10%."
+}

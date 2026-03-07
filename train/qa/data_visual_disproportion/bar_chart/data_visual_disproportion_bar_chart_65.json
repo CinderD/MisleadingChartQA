@@ -1,0 +1,17 @@
+{
+  "question": "According to the percentages shown in the chart, which statement is correct?",
+  "options": {
+    "A": "Chrome accounts for more than 80% of usage.",
+    "B": "Safari has the second-largest share, above 20%.",
+    "C": "Edge and Firefox together make up more than 10% of usage.",
+    "D": "Others account for less than 5% of usage."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, Chrome has the highest share (83%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking Chrome is largest when relying on visual comparison."
+}

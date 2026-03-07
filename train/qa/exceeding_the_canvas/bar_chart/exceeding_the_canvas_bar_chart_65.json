@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows the annual profit for a company from 2018 to 2022. Which statement best describes the trend in profits over this period?",
+  "options": {
+    "A": "Profit remained roughly constant throughout the period.",
+    "B": "Profit was highest in 2018.",
+    "C": "Profit generally increased from 2018 to 2022, with a dip in 2020.",
+    "D": "Profit fell steadily every year from 2018 to 2022."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Bars for the highest years exceed the canvas and are clipped, making them look the same height; the true relationship cannot be inferred from the visual."
+}

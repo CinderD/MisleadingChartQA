@@ -1,0 +1,17 @@
+{
+  "question": "Based on the unemployment rate map, which statement best describes the relationship between states?",
+  "options": {
+    "A": "The unemployment rate gap between Kansas and New York might exceed that between Vermont and Wyoming.",
+    "B": "The unemployment rate differences are impossible to determine from this visualization.",
+    "C": "Kansas and New York have similar unemployment rates.",
+    "D": "All highlighted states have almost identical unemployment rates."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Kansas (12.8%) and New York (14.7%) have a 1.9% unemployment rate difference, while Vermont (3.7%) and Wyoming (4.4%) have only a 0.7% difference. However, the categorical color encoding groups Kansas and New York into the same color bin (10%+ range), making their large difference appear similar, while Vermont and Wyoming appear more different due to different color bins."
+}

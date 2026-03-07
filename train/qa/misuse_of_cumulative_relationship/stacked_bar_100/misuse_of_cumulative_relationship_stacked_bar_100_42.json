@@ -1,0 +1,17 @@
+{
+  "question": "For the quarterly online platform data, what can be concluded from the chart about the trend in the number of 'Complaints Received' over the year?",
+  "options": {
+    "A": "The absolute number of complaints increases each quarter, because the complaint segment becomes larger in later quarters.",
+    "B": "The chart only shows the share of complaints each quarter, so it cannot show whether the absolute number of complaints is increasing or decreasing.",
+    "C": "The absolute number of complaints stays exactly the same in every quarter, since each bar reaches 100%.",
+    "D": "Complaints are always the smallest metric, so they must be decreasing over time."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart normalizes unrelated categories to 100% within each quarter. It can suggest that the share of a metric is higher in later quarters, but it cannot establish an absolute increasing trend without the underlying totals. A higher percentage share does not necessarily mean a higher absolute quantity."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays the percentage share of product ratings by category. Based on the percentage values shown next to each point, which of the following statements is correct?",
+  "options": {
+    "A": "Quality has the lowest percentage share among all the categories.",
+    "B": "Price has a higher percentage share than Support.",
+    "C": "Support has the highest percentage share among the categories.",
+    "D": "Design has a higher percentage share than Delivery."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Given the chart, what is the perceived trend in sales as advertising spend appears to increase?",
+  "options": {
+    "A": "Sales appear to decrease.",
+    "B": "Sales appear constant.",
+    "C": "Sales appear to increase.",
+    "D": "Cannot be determined."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted Y-axis, which can flip the apparent direction of the relationship. The correct option reflects the actual pattern in the data."
+}

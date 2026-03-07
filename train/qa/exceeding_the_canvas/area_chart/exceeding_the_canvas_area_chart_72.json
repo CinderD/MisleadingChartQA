@@ -1,0 +1,17 @@
+{
+  "question": "According to the area chart of revenue by year, which statement is supported by the data shown?",
+  "options": {
+    "A": "The last two years have the same revenue.",
+    "B": "Revenue in the first year was the lowest.",
+    "C": "Revenue declined every year.",
+    "D": "Revenue in the first year was the highest."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is set below the data maximum, so the top bars are clipped and appear equal; the true values cannot be compared from the chart alone."
+}

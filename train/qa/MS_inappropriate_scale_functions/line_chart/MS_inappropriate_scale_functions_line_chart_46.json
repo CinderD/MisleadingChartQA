@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, during which period did temperature increase by the larger amount?",
+  "options": {
+    "A": "2016-2018",
+    "B": "2019-2021",
+    "C": "Both periods show about the same increase",
+    "D": "It cannot be determined from the chart"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2016-2018: 10.7°C → 14.4°C (+3.7°C); 2019-2021: 16.0°C → 20.0°C (+4.0°C)."
+}

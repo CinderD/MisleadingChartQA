@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, during which period did the number of daily active users increase by the larger amount?",
+  "options": {
+    "A": "1995-1998",
+    "B": "Both periods have about the same increase",
+    "C": "2000-2003",
+    "D": "The change is too unclear to determine"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 1995-1998: 5087 → 872 (change 4215); 2000-2003: 200 → 2823 (change 2623)."
+}

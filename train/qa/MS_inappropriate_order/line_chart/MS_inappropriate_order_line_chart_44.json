@@ -1,0 +1,17 @@
+{
+  "question": "Based on the data for average test scores from January to August, which statement best describes how student performance changes over the semester?",
+  "options": {
+    "A": "Student performance gradually improves over the semester, with higher scores toward the end.",
+    "B": "Student performance remains nearly unchanged, with scores staying at about the same level all semester.",
+    "C": "Student performance steadily declines over the semester as scores consistently drop month after month.",
+    "D": "Student performance shows large, irregular swings from month to month without any overall upward or downward pattern."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

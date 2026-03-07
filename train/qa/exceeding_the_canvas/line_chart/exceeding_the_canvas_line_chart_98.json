@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following statements is true based on the chart of the performance index by year?",
+  "options": {
+    "A": "The performance index increased each year from 2018 to 2020.",
+    "B": "The performance index in 2019 was higher than in 2020.",
+    "C": "The chart clearly shows the exact performance index value for 2020.",
+    "D": "The performance index was the same in all displayed years."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is below the data maximum, so the top bars are truncated and appear equal."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Based on the bar chart of sales from 2018 to 2022, what can be concluded about the sales in 2021 and 2022?",
+  "options": {
+    "A": "Sales in 2021 and 2022 appear to be the same height in the chart, but the actual values could be different.",
+    "B": "Sales in 2021 and 2022 are identical.",
+    "C": "Sales in 2022 are clearly lower than in 2021.",
+    "D": "Sales dropped sharply after 2019 and then recovered in 2022."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart clips the tallest bars by using a y-axis max below the data maximum, misleading viewers into thinking the top values are equal."
+}

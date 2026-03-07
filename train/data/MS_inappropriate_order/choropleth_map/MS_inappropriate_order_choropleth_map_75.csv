@@ -1,0 +1,11 @@
+id,region,prevalence,longitude,latitude
+A,USA,Intermediate,-100.0,40
+B,France,Intermediate,2.5,46
+C,Brazil,Intermediate,-55.0,-10
+D,Australia,Intermediate,133.0,-25
+E,Antarctica,Low,50.0,-72
+F,Nigeria,High,8.0,8
+G,China,Intermediate,105.0,35
+H,Greenland,Low,-40.0,70
+I,Saudi Arabia,High,45.0,24
+J,India,Low,78.0,21

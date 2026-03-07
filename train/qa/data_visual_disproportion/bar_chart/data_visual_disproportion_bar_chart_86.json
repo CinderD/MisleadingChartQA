@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows regional sales share. According to the percentage labels, which region has the highest market share?",
+  "options": {
+    "A": "North has the highest market share among the regions.",
+    "B": "West has the highest market share among the regions.",
+    "C": "South has the highest market share among the regions.",
+    "D": "East and Central together have the highest market share."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, North has the highest share (47%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking West is largest when relying on visual comparison."
+}

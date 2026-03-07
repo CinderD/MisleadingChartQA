@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the company expense breakdown. Which of the following statements is correct based on the data?",
+  "options": {
+    "A": "Rent accounts for a smaller share of expenses than Salaries.",
+    "B": "Salaries is the largest expense category.",
+    "C": "Other accounts for more than half of the total expenses.",
+    "D": "The combined share of Utilities and Rent is greater than the share of Other."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Other: 45%; Utilities: 22%; Rent: 18%; Salaries: 15%."
+}

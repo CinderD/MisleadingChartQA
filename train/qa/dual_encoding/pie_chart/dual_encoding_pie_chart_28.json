@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the annual budget distribution of City A in various sectors. Based on this data, which of the following conclusions is accurate?",
+  "options": {
+    "A": "The combined budget for Infrastructure and Healthcare is less than the budget for Education.",
+    "B": "The budget for Education is less than the combined budget for Infrastructure and Healthcare.",
+    "C": "The budget for Safety is larger than the budget for Infrastructure.",
+    "D": "The budgets for Healthcare and Others are equal."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Education: 40%; Infrastructure: 20%; Others: 18%; Healthcare: 15%; Safety: 7%."
+}

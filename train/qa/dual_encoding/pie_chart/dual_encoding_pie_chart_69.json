@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows time allocation on a typical day. Which of the following statements is correct according to the actual percentage values?",
+  "options": {
+    "A": "Sleep accounts for a larger share of time than Work.",
+    "B": "Work and Sleep together account for more than two-thirds of the day.",
+    "C": "Chores take up more time than Sleep.",
+    "D": "Leisure takes up more time than Work."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Work: 35%; Sleep: 32%; Chores: 18%; Commute: 8%; Leisure: 7%."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which state has a higher incidence of Condition A based on the chart, OH or MS?",
+  "options": {
+    "A": "MS",
+    "B": "OH",
+    "C": "Both states have the same incidence",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although MS appears darker, OH has the higher assigned value when the inversion is considered."
+}

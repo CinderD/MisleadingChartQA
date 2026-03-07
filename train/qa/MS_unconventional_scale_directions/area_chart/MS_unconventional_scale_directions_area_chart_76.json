@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend based on the chart from May 7 to May 14?",
+  "options": {
+    "A": "Increasing, then decreasing, and finally increasing",
+    "B": "Consistently decreasing",
+    "C": "Decreasing, then increasing, and finally decreasing",
+    "D": "Consistently increasing"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, reversing the time order and making the trend appear opposite to the actual chronological pattern."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows ad spend and sales for top product lines. What can we say about campaign performance across all product lines?",
+  "options": {
+    "A": "The campaign is very effective for every product line, since each one shown responds well to more spend.",
+    "B": "The campaign is ineffective overall because only a few points show improvement.",
+    "C": "The campaign appears effective for these top product lines, but we cannot infer performance for all lines without seeing average or poor performers.",
+    "D": "The campaign harms performance because higher spend always reduces sales in these points."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Infer Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Showing only the best product lines hides those that may respond little to additional ad spend, so the chart encourages overgeneralization."
+}

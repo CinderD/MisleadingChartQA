@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following best describes the overall change in annual population in Region P from 2012 to 2030?",
+  "options": {
+    "A": "It generally increases over the period.",
+    "B": "It generally decreases over the period.",
+    "C": "It remains roughly constant over the period.",
+    "D": "It shows no clear pattern over the period."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes the series appear decreasing when it is actually increasing."
+}

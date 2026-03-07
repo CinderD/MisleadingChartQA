@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in the number of daily package deliveries from April 11 to April 16?",
+  "options": {
+    "A": "Increasing, then decreasing, and finally increasing",
+    "B": "Decreasing, then increasing, and finally decreasing",
+    "C": "Consistently decreasing",
+    "D": "Consistently increasing"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, reversing the time order and making the trend appear opposite to the actual chronological pattern."
+}

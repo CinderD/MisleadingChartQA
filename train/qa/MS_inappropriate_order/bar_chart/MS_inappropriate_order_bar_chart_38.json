@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart of rainfall (mm) over the recent 14‑day period, which statement is most accurate?",
+  "options": {
+    "A": "Total rainfall over the first 7 days of the period was higher than over the last 7 days.",
+    "B": "Total rainfall was greater in the last 7 days of the period than in the first 7 days.",
+    "C": "The totals for the first and last 7 days of the period were exactly the same.",
+    "D": "It is impossible to compare rainfall between the first and last 7 days of the period using this chart."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x‑axis order has been scrambled: the bars are not shown in true chronological sequence. If you reorder the days from Day 1 to Day 14 and sum the first and last 7 days, you see that the first segment actually has the greater total. Judging only from the apparent left‑to‑right pattern would give the wrong conclusion."
+}

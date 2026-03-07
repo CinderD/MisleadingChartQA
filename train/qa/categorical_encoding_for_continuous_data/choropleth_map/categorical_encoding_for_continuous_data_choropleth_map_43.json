@@ -1,0 +1,17 @@
+{
+  "question": "Based on the population map, which statement best describes the relationship between states?",
+  "options": {
+    "A": "All highlighted states have very diverse population levels.",
+    "B": "The population gap between Tennessee and Texas might be larger than that between Kentucky and Missouri.",
+    "C": "The population differences are impossible to determine from this visualization.",
+    "D": "Tennessee and Kentucky have similar populations."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Tennessee (21.2M) and Kentucky (25.6M) have a 4.4M population difference, while Oregon (4.6M) and New Mexico (5.1M) have only a 0.5M difference. However, the categorical color encoding groups Tennessee and Kentucky into the same color bin (20-30M range), making their large difference appear similar, while Oregon and New Mexico appear more different due to different color bins."
+}

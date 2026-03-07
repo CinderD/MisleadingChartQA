@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the number of working days lost over several years due to industrial actions. Based on the data, which of the following statements is supported?",
+  "options": {
+    "A": "2014-15 has the lowest number of lost working days among all the years shown.",
+    "B": "2013-14 and 2009-10 have approximately the same number of lost working days.",
+    "C": "The number of lost working days in 2011-12 is more than three times that in 2013-14.",
+    "D": "2008-09 has nearly three times as many lost working days as 2012-13, as indicated by the much larger bar and stronger color."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

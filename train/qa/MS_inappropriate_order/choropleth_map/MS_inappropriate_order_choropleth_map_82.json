@@ -1,0 +1,17 @@
+{
+  "question": "Based on the prevalence levels shown on the map, which statement is most accurate?",
+  "options": {
+    "A": "Region B has a higher prevalence level than Region G.",
+    "B": "Region G has a higher prevalence level than Region B.",
+    "C": "Regions B and G share the same prevalence level.",
+    "D": "Region B has the highest prevalence level among all labeled regions."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is ordered in a way that does not reflect the true ranking of prevalence levels, and the colors themselves are not in an intuitive Low→High sequence. From the underlying data, Region G is classified at a higher level than Region B, even though the legend ordering may make the opposite appear plausible at first glance."
+}

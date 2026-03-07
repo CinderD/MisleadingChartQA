@@ -1,0 +1,17 @@
+{
+  "question": "Based on these maps, which type of area appears to show more variation in population density across U.S. states?",
+  "options": {
+    "A": "Urban areas show more variation",
+    "B": "Rural areas show more variation",
+    "C": "Both types of areas show similar variation",
+    "D": "Cannot be determined from these maps"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The two maps use the SAME threshold scale even though their value distributions differ. That makes one map saturate in a single color while the other uses multiple colors, creating a misleading impression about which has more variation. The reliable conclusion is that variation cannot be judged from these maps alone."
+}

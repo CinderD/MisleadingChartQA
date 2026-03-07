@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, how does sales appear to change as advertising spend increases?",
+  "options": {
+    "A": "Sales appear to increase with higher advertising spend.",
+    "B": "Sales appear to stay about the same as advertising spend increases.",
+    "C": "Sales appear to decrease with higher advertising spend.",
+    "D": "The relationship between sales and advertising spend cannot be determined."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted x-axis, which can flip the apparent direction of the relationship. The correct option reflects the actual pattern in the data."
+}

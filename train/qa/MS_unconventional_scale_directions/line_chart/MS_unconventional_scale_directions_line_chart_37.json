@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following best describes the overall pattern of population growth in Region P from 2010 to 2019?",
+  "options": {
+    "A": "It fluctuates over the years.",
+    "B": "It consistently increases over the years.",
+    "C": "It remains constant over the years.",
+    "D": "It consistently decreases over the years."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes the series appear decreasing when it is actually increasing."
+}

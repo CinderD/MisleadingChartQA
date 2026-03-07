@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map displays unemployment rates for selected US states. Which statement is most supported by the map?",
+  "options": {
+    "A": "It is easy to identify the exact unemployment rate for each labeled state.",
+    "B": "One specific state can be clearly seen as having the lowest unemployment rate.",
+    "C": "The map reveals a strong and obvious regional pattern in unemployment.",
+    "D": "Because the states and numbers are shown so small, it is hard to read precise unemployment rates."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific unemployment percentages accurately. While the color scheme may suggest relative differences, the inability to read exact values prevents precise comparison."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the annual budget distribution of City A in various sectors. Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "Infrastructure is the largest category by percentage.",
+    "B": "Others and Safety together account for the same percentage as Infrastructure.",
+    "C": "Safety receives a larger share than Education.",
+    "D": "Infrastructure receives a larger share than the combined share of Education, Healthcare, and Others."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Infrastructure: 32%; Education: 30%; Healthcare: 18%; Others: 10%; Safety: 10%."
+}

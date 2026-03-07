@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, which statement about Apple's market share compared with Others is most accurate?",
+  "options": {
+    "A": "Apple's market share is about 15 percentage points higher than Others'.",
+    "B": "Apple and Others have roughly the same market share.",
+    "C": "Apple's market share is only slightly higher than Others'.",
+    "D": "Apple's market share is more than 30 percentage points higher than Others'."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie chart uses an adjusted scaling function for slice sizes, which can shrink or inflate differences between categories. That makes the true ratio (1.5:1) look closer to 1.2:1 when judging by the wedge areas."
+}

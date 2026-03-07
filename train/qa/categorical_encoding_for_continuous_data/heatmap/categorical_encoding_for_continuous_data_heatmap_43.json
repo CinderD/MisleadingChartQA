@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the temperature heatmap, which statement best describes the relationship between San Antonio's January temperature and San Jose's January temperature?",
+  "options": {
+    "A": "The temperatures might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "B": "It can be inferred that their temperatures are very similar because they share the same color.",
+    "C": "San Antonio is clearly warmer than San Jose, and the heatmap precisely shows how many degrees higher it is.",
+    "D": "The temperature is impossible to determine from this visualization."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "San Antonio (40.0°C) and San Jose (36.8°C) have a 3.2°C difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of temperature relationships."
+}

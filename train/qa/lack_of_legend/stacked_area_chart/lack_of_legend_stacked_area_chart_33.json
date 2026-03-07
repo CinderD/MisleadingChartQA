@@ -1,0 +1,17 @@
+{
+  "question": "Which revenue stream contributes the most to total revenue in the last quarter shown?",
+  "options": {
+    "A": "The red area (Subscriptions) has the largest share.",
+    "B": "The green area (Advertising) has the largest share.",
+    "C": "The purple area (Licensing) has the largest share.",
+    "D": "Cannot determine which revenue stream has the largest share without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows different colored areas but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category holds the largest share; options that assign a category to a color are guessing."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows CO₂ emissions vs. temperature anomaly. Which statement best describes the relationship shown by the plotted data?",
+  "options": {
+    "A": "Higher CO₂ emissions are generally associated with higher temperature anomalies.",
+    "B": "Higher CO₂ emissions are generally associated with lower temperature anomalies.",
+    "C": "The points form two completely separate clusters with no overlap in emissions.",
+    "D": "There is no noticeable relationship between CO₂ emissions and temperature anomaly."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the y-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

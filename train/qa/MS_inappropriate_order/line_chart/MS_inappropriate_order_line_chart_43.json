@@ -1,0 +1,17 @@
+{
+  "question": "Based on the data shown, what best describes the pattern of average test scores over the semester from January to August?",
+  "options": {
+    "A": "Average scores generally increase over the semester, despite a small dip early on.",
+    "B": "Average scores steadily decline over the semester as students become less engaged.",
+    "C": "Average scores remain nearly constant throughout the semester with no meaningful change.",
+    "D": "Average scores move up and down sharply from month to month with no overall direction."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows the revenue for several years. Which statement best reflects what can be concluded from this chart?",
+  "options": {
+    "A": "Revenue was clearly lowest in the first year shown.",
+    "B": "The last two years have exactly the same revenue.",
+    "C": "The exact highest revenue cannot be determined because the tallest bars extend beyond the top of the chart.",
+    "D": "Revenue increased by the same fixed amount every year."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The bar tops are clipped outside the visible plotting area, so equality or ordering for the clipped bars cannot be inferred."
+}

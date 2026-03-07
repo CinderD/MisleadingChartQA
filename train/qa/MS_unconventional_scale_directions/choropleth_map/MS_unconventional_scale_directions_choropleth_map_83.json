@@ -1,0 +1,17 @@
+{
+  "question": "Which state has a higher prevalence of species Z based on the chart, MA or OH?",
+  "options": {
+    "A": "MA",
+    "B": "Both states have the same prevalence",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "OH"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although MA appears darker, OH has the higher assigned value when the inversion is considered."
+}

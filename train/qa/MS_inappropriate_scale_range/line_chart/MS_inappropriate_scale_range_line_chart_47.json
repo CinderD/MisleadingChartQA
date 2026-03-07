@@ -1,0 +1,17 @@
+{
+  "question": "What does the chart suggest about the change in defect rate over the years shown?",
+  "options": {
+    "A": "The defect rate appears to change only slightly over time",
+    "B": "The defect rate appears to remain perfectly constant",
+    "C": "The defect rate appears to rise and fall in dramatic swings",
+    "D": "The trend in defect rate cannot be determined from this chart"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (2.58–3.17%) instead of a more informative 0–10% context, which visually exaggerates variability. The actual net change is about 0.57% over the period, which is modest in the full context."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows different Valentine’s Day gift categories with percentage values labeled next to each point. Based on these labeled percentages, which statement is correct?",
+  "options": {
+    "A": "Gift Card has the highest percentage among the categories.",
+    "B": "Candy has the highest percentage among the categories.",
+    "C": "Jewelry has the highest percentage among the categories.",
+    "D": "Cards has the highest percentage among the categories."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

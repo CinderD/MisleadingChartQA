@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays regional internet usage statistics (2020-2025). Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "North America has the highest internet usage among all the regions shown.",
+    "B": "Latin America and Asia Pacific have the same internet usage.",
+    "C": "Middle East has higher internet usage than North America.",
+    "D": "Africa has the lowest internet usage among the regions shown."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

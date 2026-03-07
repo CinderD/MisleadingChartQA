@@ -1,0 +1,17 @@
+{
+  "question": "What does this high-performing regions data suggest about the impact of increased advertising spend on sales?",
+  "options": {
+    "A": "Higher advertising spend clearly boosts sales across all regions in the market.",
+    "B": "The campaign is ineffective because sales do not increase with higher advertising spend in any region.",
+    "C": "In these top regions, higher advertising spend is associated with higher sales, but we cannot generalize this pattern to the entire market.",
+    "D": "Higher advertising spend consistently lowers sales in these regions."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Infer Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "By only showing regions with strong response, the chart exaggerates how universally effective the campaign is, hiding regions where the effect may be smaller or absent."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual sales data from 1920 to 2024. What is the main limitation when trying to interpret detailed changes in sales over this period?",
+  "options": {
+    "A": "The chart is so small that it is difficult to distinguish precise changes and specific years in the sales trend.",
+    "B": "Sales remained almost perfectly constant across the entire period.",
+    "C": "Sales clearly decreased between 1940 and 1950.",
+    "D": "Sales clearly decreased between 1970 and 1980."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The sales data indicates that sales rose from 1924 to 1970, fell from 1970 to 1980, and then began rising again from 1980 to 2024. However, the use of small text or data markers makes these trends hard to discern."
+}

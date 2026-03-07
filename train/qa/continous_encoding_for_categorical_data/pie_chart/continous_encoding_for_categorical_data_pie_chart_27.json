@@ -1,0 +1,17 @@
+{
+  "question": "This pie chart shows quarterly sales distribution across different segments. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "Online‑only holds the largest share among all categories shown.",
+    "B": "The color gradient encodes the chronological order in which each category entered the market.",
+    "C": "All categories have nearly equal shares because the slices look similar in size.",
+    "D": "The darker slices indicate a progression from less to more advanced or important categories."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "pie_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie slices represent purely categorical groups (e.g., regions or product categories). Using a continuous blue gradient suggests an ordered numeric scale where darker colors mean 'more' of something (such as sophistication, maturity, or time), even though these categories have no inherent order. The only meaningful quantitative comparison is the slice size / percentage; colors should be distinct but unordered to avoid implying relationships that do not exist."
+}

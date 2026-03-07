@@ -1,0 +1,10 @@
+id,region,average_temperature,code,representation,latitude,longitude
+250,France,0.00,A,M,46.0,2.0
+840,United States,18.35,B,Z,39.0,-98.0
+710,South Africa,0.00,C,M,-30.0,25.0
+076,Brazil,28.56,D,Z,-10.0,-60.0
+643,Russia,12.51,E,Z,61.0,105.0
+036,Australia,18.15,,Z,-25.0,135.0
+124,Canada,31.51,,Z,60.0,-96.0
+356,India,32.33,,Z,20.0,78.0
+484,Mexico,22.78,,Z,23.0,-102.0

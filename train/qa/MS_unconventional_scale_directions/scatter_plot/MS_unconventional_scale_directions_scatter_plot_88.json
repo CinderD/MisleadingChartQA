@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, how do sales appear to change as advertising spend appears to increase?",
+  "options": {
+    "A": "Sales appear to increase.",
+    "B": "Sales appear to decrease.",
+    "C": "Sales appear to remain roughly constant.",
+    "D": "The relationship cannot be determined."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted Y-axis, which can flip the apparent direction of the relationship. The correct option reflects the actual pattern in the data."
+}

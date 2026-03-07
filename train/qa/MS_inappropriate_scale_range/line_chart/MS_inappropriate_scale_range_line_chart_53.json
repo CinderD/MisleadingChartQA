@@ -1,0 +1,17 @@
+{
+  "question": "What does the chart suggest about the approval rating over the years shown?",
+  "options": {
+    "A": "The approval rating changed only slightly overall",
+    "B": "The approval rating cannot be evaluated from this chart",
+    "C": "The approval rating stayed exactly the same every year",
+    "D": "The approval rating experienced a dramatic swing over the period"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (42.58–43.46%) instead of a more informative 0–100% context, which visually exaggerates variability. The actual net change is about 0.07% over the period, which is modest in the full context."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatterplot of age and income, which of the following conclusions is most appropriate?",
+  "options": {
+    "A": "The chart clearly shows that individuals around age 70 earn the highest incomes.",
+    "B": "The chart clearly shows that individuals around age 40 earn the lowest incomes.",
+    "C": "The chart suggests that income generally increases with age, but the exact highest-earning age is hard to determine from this view.",
+    "D": "The chart shows no relationship at all between age and income."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 65 and 70 have the highest income. The small size of the chart may cause difficulty in accurately identifying the specific trends of income in certain age ranges."
+}

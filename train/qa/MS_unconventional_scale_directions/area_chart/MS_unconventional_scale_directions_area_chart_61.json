@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in daily energy usage in Building Z from March 20 to March 24?",
+  "options": {
+    "A": "Increasing, then decreasing, and then increasing again",
+    "B": "Decreasing over the entire period",
+    "C": "Fluctuating without a consistent pattern",
+    "D": "Decreasing, then increasing, and then decreasing again"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, reversing the time order and making the trend appear opposite to the actual chronological pattern."
+}

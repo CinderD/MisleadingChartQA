@@ -1,0 +1,17 @@
+{
+  "question": "Based on this scatterplot of age and revenue, which statement is most supported by the chart?",
+  "options": {
+    "A": "There is a clear positive relationship between age and revenue.",
+    "B": "There is a clear negative relationship between age and revenue.",
+    "C": "Revenue appears roughly constant across ages, with no visible relationship.",
+    "D": "The chart is too small to judge any relationship between age and revenue."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 25 and 30 have the highest revenue. The small size of the chart may cause difficulty in accurately identifying the specific trends of revenue in certain age ranges."
+}

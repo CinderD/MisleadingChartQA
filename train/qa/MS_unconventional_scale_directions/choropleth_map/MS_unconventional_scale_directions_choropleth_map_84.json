@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher incidence based on the chart, MA or KS?",
+  "options": {
+    "A": "Cannot be inferred / inadequate information",
+    "B": "KS",
+    "C": "MA",
+    "D": "Both states have the same prevalence"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although MA appears darker, KS has the higher assigned value when the inversion is considered."
+}

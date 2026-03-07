@@ -1,0 +1,17 @@
+{
+  "question": "Which segment has the largest share of the population in 2023?",
+  "options": {
+    "A": "Segment A has the largest share, represented by the green area.",
+    "B": "Segment B has the largest share, represented by the red area.",
+    "C": "Segment C has the largest share, represented by the purple area.",
+    "D": "Cannot determine which segment has the largest share without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows different colored areas but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category holds the largest share; options that assign a category to a color are guessing."
+}

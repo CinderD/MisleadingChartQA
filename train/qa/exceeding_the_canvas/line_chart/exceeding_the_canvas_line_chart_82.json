@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows site visits from 2018 to 2022. Which of the following statements is supported by the chart?",
+  "options": {
+    "A": "Site visits increased every year from 2018 through 2022.",
+    "B": "Visits in 2021 and 2022 are exactly the same.",
+    "C": "2021 has the highest number of visits.",
+    "D": "None of the above statements is supported by the chart."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The visible y-range is set below the maximum value, so the top bar is truncated and looks identical."
+}

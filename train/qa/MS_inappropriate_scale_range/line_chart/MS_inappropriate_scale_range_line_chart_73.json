@@ -1,0 +1,17 @@
+{
+  "question": "What does the chart suggest about changes in average student test scores from 2010 to 2020?",
+  "options": {
+    "A": "Scores fell sharply over the period",
+    "B": "Scores show a small overall decline",
+    "C": "Scores rose significantly over the period",
+    "D": "Scores fluctuated wildly without any clear direction"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (34.15–35.95) instead of a more informative 0–100 context, which visually exaggerates variability. The actual net change is about 1.80 over the period, which is modest in the full context."
+}

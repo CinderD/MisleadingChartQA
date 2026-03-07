@@ -1,0 +1,17 @@
+{
+  "question": "Given the chart, what is the trend in plant growth as the amount of sunlight exposure appears to increase?",
+  "options": {
+    "A": "The growth seems to increase.",
+    "B": "The growth seems constant.",
+    "C": "The growth seems to decrease.",
+    "D": "Cannot be determined."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted x-axis, which can flip the apparent direction of the relationship. The correct option reflects the actual pattern in the data."
+}

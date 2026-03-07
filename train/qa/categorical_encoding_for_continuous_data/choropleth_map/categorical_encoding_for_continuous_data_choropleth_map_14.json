@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US median income map, which statement below is the most accurate?",
+  "options": {
+    "A": "The median income gap between Washington and Florida might exceeds that between Louisiana and Ohio.",
+    "B": "Washington and Florida have similar median incomes.",
+    "C": "The median income differences are impossible to determine from this visualization.",
+    "D": "All states shown have nearly identical median income levels."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Washington (72.9$k) and Florida (88.4$k) have a 15.5$k median income difference, while Louisiana (29.7$k) and Ohio (30.2$k) have only a 0.5$k difference. However, the categorical color encoding groups Washington and Florida into the same color bin (60$k+ range), making their large difference appear similar, while Louisiana and Ohio appear more different due to different color bins."
+}

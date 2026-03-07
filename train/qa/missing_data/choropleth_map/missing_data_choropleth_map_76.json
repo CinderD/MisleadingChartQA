@@ -1,0 +1,17 @@
+{
+  "question": "Was the average unemployment rate in Brazil (E) higher than in India (C)?",
+  "options": {
+    "A": "Cannot be inferred / inadequate information",
+    "B": "Yes, Brazil (E) had higher unemployment",
+    "C": "No, India (C) had higher unemployment",
+    "D": "Brazil (E) had the lowest unemployment among all labeled regions"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "Brazil or India appears grey on the map, which represents missing data, not a true value. Since one of the regions has no data, we cannot reliably compare their values, even though the color scale may tempt viewers to do so."
+}

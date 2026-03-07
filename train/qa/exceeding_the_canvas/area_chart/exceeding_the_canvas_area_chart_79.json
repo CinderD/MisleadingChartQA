@@ -1,0 +1,17 @@
+{
+  "question": "Considering the area chart of earnings over years, which statement is best supported by the visualization?",
+  "options": {
+    "A": "Earnings reached a visible local peak in 2019 before dropping in 2020.",
+    "B": "It is clear from the chart that 2022 had the lowest earnings of all the years shown.",
+    "C": "The exact earnings value for 2022 cannot be read because the top of the area for that year is clipped by the chart boundary.",
+    "D": "Earnings in 2019 and 2022 appear to be the same because both years reach the top of the chart."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The scale is set so that the highest bars exceed the visible area, leading to a misleading impression of equality."
+}

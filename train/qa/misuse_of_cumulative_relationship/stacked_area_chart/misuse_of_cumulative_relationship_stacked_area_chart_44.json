@@ -1,0 +1,17 @@
+{
+  "question": "Which quarter demonstrates the best overall restaurant performance based on the stacked area chart?",
+  "options": {
+    "A": "Q1 shows the best performance with the lowest kitchen temperature and customer complaints.",
+    "B": "Q4 shows the best performance with the highest total stacked area.",
+    "C": "The chart cannot determine overall performance accurately because it combines unrelated performance indicators.",
+    "D": "Q2 shows the best performance with balanced values across all indicators."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart stacks unrelated metrics (Sales, Kitchen Temperature, etc.) into a cumulative area. These metrics have different units and meanings, so adding them together creates a meaningless total. The stacked area cannot be used to assess overall performance. Only individual metric analysis is valid."
+}

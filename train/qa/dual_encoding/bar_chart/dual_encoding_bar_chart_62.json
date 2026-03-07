@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the number of working days lost over several years. Based on the data, which statement is accurate?",
+  "options": {
+    "A": "2010-11 has more lost working days than 2011-12.",
+    "B": "2012-13 has nearly four times as many lost working days as 2007-08.",
+    "C": "2008-09 has the lowest number of lost working days among all the years shown.",
+    "D": "2012-13 and 2013-14 have the same number of lost working days."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

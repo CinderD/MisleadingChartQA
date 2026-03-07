@@ -1,0 +1,17 @@
+{
+  "question": "This pie chart shows quarterly sales distribution across different regions using a blue color gradient for the slices. What is the most accurate interpretation of this color scheme?",
+  "options": {
+    "A": "Darker blue slices indicate regions with better performance and more mature markets.",
+    "B": "The gradient in color represents a progression over time from older to newer regions.",
+    "C": "The lightest slice must correspond to the lowest possible value on a continuous numeric scale.",
+    "D": "Each shade of blue is just assigned to a different region, and the gradient does not show an ordered numeric scale."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "pie_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie slices represent purely categorical groups (e.g., regions or product categories). Using a continuous blue gradient suggests an ordered numeric scale where darker colors mean 'more' of something (such as sophistication, maturity, or time), even though these categories have no inherent order. The only meaningful quantitative comparison is the slice size / percentage; colors should be distinct but unordered to avoid implying relationships that do not exist."
+}

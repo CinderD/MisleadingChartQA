@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual sales from 1924 to 2024. Which statement best describes the main difficulty in drawing precise conclusions from this chart?",
+  "options": {
+    "A": "The chart is so small that it is hard to read exact values and subtle changes in the sales trend.",
+    "B": "Sales increased at a perfectly steady rate every year from 1924 to 2024.",
+    "C": "Sales stayed exactly the same from 1924 to 2024.",
+    "D": "Sales clearly declined throughout the entire period shown."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows sales rising to a peak around 1975 and then declining. Small visual elements can lead to misreading the trend as a steady increase."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in the number of libraries reported in the chart from 2008 to 2021?",
+  "options": {
+    "A": "Decreasing",
+    "B": "Increasing",
+    "C": "Constant",
+    "D": "Fluctuating"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted Y-axis, making the data appear as if the trend is decreasing, but the data actually shows a fluctuating trend."
+}

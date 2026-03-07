@@ -1,0 +1,17 @@
+{
+  "question": "Based on the data shown, which statement best describes how the average test scores change from January to August?",
+  "options": {
+    "A": "Average scores are highest at the beginning of the semester in January and generally decrease by August.",
+    "B": "Average scores start relatively low in January, rise to a peak around mid‑semester, and then decline toward August.",
+    "C": "Average scores remain nearly unchanged from January through August, with no noticeable variation.",
+    "D": "Average scores steadily increase from January through August, with each month higher than the last."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Was the average unemployment rate in India higher than in the United States over the 10-year period?",
+  "options": {
+    "A": "Yes, India had a higher average unemployment rate",
+    "B": "No, the United States had a higher average unemployment rate",
+    "C": "They had equal average unemployment rates",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "India or United States appears grey on the map, which represents missing data, not a true value. Since one of the regions has no data, we cannot reliably compare their values, even though the color scale may tempt viewers to do so."
+}

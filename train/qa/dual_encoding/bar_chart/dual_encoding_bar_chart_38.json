@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the number of working days lost over several years due to industrial actions. Based on the data, which of the following statements is accurate?",
+  "options": {
+    "A": "2009-10 has the lowest number of lost working days among all the years shown.",
+    "B": "2012-13 has nearly six times as many lost days as 2011-12, as suggested by the bar size and color.",
+    "C": "2013-14 has the highest number of lost working days among all the years shown.",
+    "D": "2007-08 and 2008-09 have identical numbers of lost working days."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

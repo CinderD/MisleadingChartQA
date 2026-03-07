@@ -1,0 +1,17 @@
+{
+  "question": "A company sells a board game. According to the chart, which statement about the latest year is appropriate?",
+  "options": {
+    "A": "The latest year proves that copies sold is now permanently declining.",
+    "B": "From this chart, we cannot make a reliable conclusion about the latest full-year trend because the year is only partial.",
+    "C": "The latest year clearly has the lowest copies sold of the entire period.",
+    "D": "The latest year shows a sharp decline in annual sales compared to previous years."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The latest year in the chart only includes about 3 months of data, while previous years show full 12‑month totals. Comparing the partial-year value (578 copies) directly to full-year values like 2,464 copies creates the illusion of a sharp decline. We cannot draw full‑year conclusions from this incomplete aggregate."
+}

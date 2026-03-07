@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Website Visitors</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    #chart {
+      width: 1000px;
+      height: 750px;
+      margin: 60px auto;
+    }
+    .bar { fill: steelblue; }
+    .axis path, .axis line { stroke: #000; }
+  </style>
+</head>
+<body>
+  <h1>Website Visitors per Day</h1>
+  <div id="chart"></div>
+  <script>
+    const margin = {top: 40, right: 20, bottom: 50, left: 60};
+    const width = 1000 - margin.left - margin.right;
+    const height = 750 - margin.top - margin.bottom;
+
+    const svg = d3.select("#chart").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom);
+
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    d3.csv("../../../../data/MS_inappropriate_order/bar_chart/MS_inappropriate_order_bar_chart_68.csv").then(data => {
+      data.forEach(d => {
+        d.visitors = +d.visitors;
+      });
+
+      // Scramble the natural temporal order to obscure the true pattern
+      const indices = d3.range(data.length);
+      const scrambled = d3.shuffle(indices.slice());
+      const reordered = scrambled.map(i => data[i]);
+
+      const x = d3.scaleBand()
+        .domain(reordered.map(d => d.day))
+        .range([0, width])
+        .padding(0.3);
+
+      const y = d3.scaleLinear()
+        .domain([0, d3.max(reordered, d => d.visitors) * 1.1])
+        .nice()
+        .range([height, 0]);
+
+      g.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x).tickSize(0))
+        .selectAll("text")
+        .attr("transform", "rotate(-45)")
+        .style("text-anchor", "end");
+
+      g.append("g").call(d3.axisLeft(y));
+
+      g.selectAll(".bar")
+        .data(reordered)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", d => x(d.day))
+        .attr("y", d => y(d.visitors))
+        .attr("width", x.bandwidth())
+        .attr("height", d => height - y(d.visitors));
+
+      g.append("text")
+        .attr("x", width / 2)
+        .attr("y", height + 45)
+        .attr("text-anchor", "middle")
+        .text("Day");
+
+      g.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -height / 2)
+        .attr("y", -45)
+        .attr("text-anchor", "middle")
+        .text("Visitors");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "question": "What best describes the change in CO2 emissions in Country N from 2009 to 2018?",
+  "options": {
+    "A": "They generally decreased over the period.",
+    "B": "They remained roughly constant over the period.",
+    "C": "They first declined slightly and then increased overall.",
+    "D": "They consistently increased every year."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes the series appear increasing when it is actually decreasing."
+}

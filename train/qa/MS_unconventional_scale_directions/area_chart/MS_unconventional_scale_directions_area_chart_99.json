@@ -1,0 +1,17 @@
+{
+  "question": "What is the overall trend in daily energy usage from January 13 to January 19?",
+  "options": {
+    "A": "Overall increasing, despite some fluctuations",
+    "B": "Overall decreasing, despite some fluctuations",
+    "C": "Perfectly constant with no changes",
+    "D": "Random fluctuations with no clear overall trend"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, reversing the time order and making the trend appear opposite to the actual chronological pattern."
+}

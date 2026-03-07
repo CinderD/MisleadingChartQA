@@ -1,0 +1,17 @@
+{
+  "question": "What is the approximate percentage of visits on Sun compared to Tue?",
+  "options": {
+    "A": "80%",
+    "B": "125%",
+    "C": "36%",
+    "D": "83%"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 909 instead of 0, which visually distorts proportions. Although Tue (8,300) is about 83% of Sun (10,000), the truncated range makes it look closer to 80%."
+}

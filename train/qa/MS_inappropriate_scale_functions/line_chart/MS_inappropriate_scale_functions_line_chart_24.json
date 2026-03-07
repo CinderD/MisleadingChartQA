@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, during which period did GDP fall by the larger total amount?",
+  "options": {
+    "A": "2005-2007",
+    "B": "2012-2014",
+    "C": "Both periods have about the same total decrease",
+    "D": "The pattern is too irregular to determine"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2005-2007: 3720 → 2587 (-1133); 2008-2011: 2360 → 1510 (-850)."
+}

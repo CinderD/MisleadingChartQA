@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows the average housing price ($1000s) for different cities. Which statement is best supported by the chart?",
+  "options": {
+    "A": "The cities follow a natural continuous sequence that makes it appropriate to read the area as a time‑like trend.",
+    "B": "San Francisco has the highest average housing price among the cities shown.",
+    "C": "Denver and San Francisco must be next to each other because their prices differ the most.",
+    "D": "The smooth area shape indicates an underlying progression where changes between neighboring cities are more meaningful than differences between cities farther apart."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for city into a continuous filled region. However, the x‑axis categories (e.g., Denver, New York, Atlanta, Portland, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

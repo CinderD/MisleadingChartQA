@@ -1,0 +1,17 @@
+{
+  "question": "On Day 2, approximately what proportion of total visits came from Search compared with Direct?",
+  "options": {
+    "A": "Search visits are roughly three-quarters of Direct visits",
+    "B": "Search visits are about one-third of Direct visits",
+    "C": "Search visits are about half of Direct visits",
+    "D": "Search visits are nearly equal to Direct visits"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 1200 instead of 0, which compresses the visible differences between stacked totals. That can make Search look as large as (or larger than) Direct even though the totals favor Direct."
+}

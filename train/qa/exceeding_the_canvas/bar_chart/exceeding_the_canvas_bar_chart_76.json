@@ -1,0 +1,17 @@
+{
+  "question": "Based on the bar chart of adjusted revenue from 2018 to 2022, which statement is best supported?",
+  "options": {
+    "A": "Adjusted revenue decreased each year from 2018 through 2020, then rose afterward.",
+    "B": "Adjusted revenue was the same in 2021 and 2022.",
+    "C": "Adjusted revenue peaked in 2018 and then steadily declined.",
+    "D": "Adjusted revenue remained roughly constant over the entire period."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-scale is set so that the largest values are cut off, creating a misleading impression that the top two years are equal."
+}

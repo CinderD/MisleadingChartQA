@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows the percentage of adults with a bachelor's degree or higher by state. Which statement is correct?",
+  "options": {
+    "A": "The map clearly identifies which state has the highest attainment rate.",
+    "B": "The extremely small text size makes it difficult to read specific percentage values accurately.",
+    "C": "It is easy to distinguish small differences in attainment rates between the highlighted states.",
+    "D": "The map makes precise comparisons between individual states straightforward."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it difficult to read exact attainment percentages. Color may suggest relative levels but specific values cannot be verified."
+}

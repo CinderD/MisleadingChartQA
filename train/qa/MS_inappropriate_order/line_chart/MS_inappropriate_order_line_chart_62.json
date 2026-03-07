@@ -1,0 +1,17 @@
+{
+  "question": "This line chart shows average test scores in an Advanced Mathematics course across the semester. Which statement best describes how student performance changes from January to August?",
+  "options": {
+    "A": "Student performance stays roughly the same from January to August, with only minor fluctuations.",
+    "B": "Student performance moves up and down dramatically from month to month, with no clear overall direction.",
+    "C": "Student performance generally improves over time, with scores in the later months higher than in the earlier months.",
+    "D": "Student performance steadily worsens over the semester, with scores in the later months clearly below those at the beginning."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

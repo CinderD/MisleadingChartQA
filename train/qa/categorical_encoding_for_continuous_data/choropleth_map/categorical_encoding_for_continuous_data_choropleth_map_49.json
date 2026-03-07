@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US median income map, which statement below is the most accurate?",
+  "options": {
+    "A": "The median income gap between Tennessee and Georgia might exceed that between Georgia and Florida.",
+    "B": "Tennessee and Georgia have similar median incomes.",
+    "C": "Florida has the highest median income among the highlighted states.",
+    "D": "The median income differences are impossible to determine from this visualization."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Indiana (45.9$k) and Delaware (49.7$k) have a 3.8$k median income difference, while Iowa (24.7$k) and North Carolina (25.1$k) have only a 0.4$k difference. However, the categorical color encoding groups Indiana and Delaware into the same color bin (45-55$k range), making their large difference appear similar, while Iowa and North Carolina appear more different due to different color bins."
+}

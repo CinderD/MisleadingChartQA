@@ -1,0 +1,17 @@
+{
+  "question": "How does Jun revenue compare to Jan revenue?",
+  "options": {
+    "A": "Jun revenue appears higher than Jan based on the chart.",
+    "B": "Jun and Jan have similar revenue.",
+    "C": "Jun revenue is about 0.5 times higher than Jan.",
+    "D": "Cannot determine the exact relationship between Jun and Jan revenue without Y-axis scales."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart displays monthly revenue trend with an area chart, but provides no Y-axis scales or numerical labels. While the visual data clearly shows Jun has higher revenue than Jan, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or even reversed scale, it is impossible to determine the exact relationship between the two months. Visual estimation of relative proportions without proper scales is unreliable for accurate comparison."
+}

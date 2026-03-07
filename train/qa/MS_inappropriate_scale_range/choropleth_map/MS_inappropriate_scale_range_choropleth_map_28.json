@@ -1,0 +1,17 @@
+{
+  "question": "Based on these maps, which statement about differences in crime rates across states is most justified?",
+  "options": {
+    "A": "Property crime rates vary much more across states than violent crime rates",
+    "B": "Violent crime rates vary much more across states than property crime rates",
+    "C": "Both violent and property crime rates show similar variation across states",
+    "D": "The maps alone do not provide enough information to determine which type of crime varies more across states"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The two maps use the SAME threshold scale even though their value distributions differ. That makes one map saturate in a single color while the other uses multiple colors, creating a misleading impression about which has more variation. The reliable conclusion is that variation cannot be judged from these maps alone."
+}

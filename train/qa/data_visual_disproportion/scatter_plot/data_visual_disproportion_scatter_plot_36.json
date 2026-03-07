@@ -1,0 +1,17 @@
+{
+  "question": "Based on the percentage labels shown in the chart, which statement about the values for Valentine’s gifts is correct?",
+  "options": {
+    "A": "Jewelry has the highest value among the categories.",
+    "B": "Dining Out has the highest value among the categories.",
+    "C": "Cards and Candy have the same value.",
+    "D": "Gift Card has a higher value than Flowers."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

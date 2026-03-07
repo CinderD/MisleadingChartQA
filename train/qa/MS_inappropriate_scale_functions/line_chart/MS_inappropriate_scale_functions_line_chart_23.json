@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, during which period did the temperature decrease by the larger amount?",
+  "options": {
+    "A": "2005-2008",
+    "B": "2011-2014",
+    "C": "Both periods have about the same decrease",
+    "D": "The pattern is too irregular to determine"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2007-2010: 21.4°C → 15.5°C (-5.9°C); 2011-2014: 15.3°C → 10.1°C (-5.2°C)."
+}

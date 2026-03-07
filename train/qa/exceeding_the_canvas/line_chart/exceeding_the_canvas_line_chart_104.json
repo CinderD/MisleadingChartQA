@@ -1,0 +1,17 @@
+{
+  "question": "Based on the line chart of sales from 2018 to 2020, which statement is correct?",
+  "options": {
+    "A": "Sales stayed roughly the same from 2018 through 2020.",
+    "B": "Sales increased each year from 2018 to 2020.",
+    "C": "Sales peaked in 2019 and then declined in 2020.",
+    "D": "Sales in 2018 and 2020 were identical."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart clips the tallest bars by using a y-axis max below the data maximum, misleading viewers into thinking the top values are equal."
+}

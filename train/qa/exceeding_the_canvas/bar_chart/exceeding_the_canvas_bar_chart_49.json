@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows the output by year from 2018 to 2022. Which statement about the trend in output is best supported by the chart?",
+  "options": {
+    "A": "Output increased in every year from 2018 to 2022.",
+    "B": "Output in 2019 was higher than in 2018.",
+    "C": "The middle year had the highest output.",
+    "D": "Output in the last two years is identical."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Values exceeding the y-axis range are clipped, making the top bars look the same and misleading viewers."
+}

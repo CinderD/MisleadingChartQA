@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows earnings for a company from 2018 to 2022. Which of the following statements is true based on the chart?",
+  "options": {
+    "A": "Earnings were highest in 2018.",
+    "B": "It cannot be determined from the chart which year had the highest earnings.",
+    "C": "Earnings fell each year after 2019.",
+    "D": "Earnings in 2022 are higher than in any other year shown."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The scale is set so that the highest bars exceed the visible area, leading to a misleading impression of equality."
+}

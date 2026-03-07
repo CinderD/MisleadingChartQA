@@ -1,0 +1,17 @@
+{
+  "question": "Between Mexico and Brazil, which country has a higher percentage of internet users?",
+  "options": {
+    "A": "Mexico has a higher percentage of internet users",
+    "B": "Brazil has a higher percentage of internet users",
+    "C": "They have equal percentages of internet users",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "At least one of the labelled regions appears grey, indicating missing data rather than a low value. Because we do not know that region's value, we cannot safely say which labelled region truly has the highest value."
+}

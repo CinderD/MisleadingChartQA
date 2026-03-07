@@ -1,0 +1,17 @@
+{
+  "question": "On May 06, what is the approximate revenue from takeout compared to lunch according to the chart?",
+  "options": {
+    "A": "About 110% of lunch revenue",
+    "B": "About 140% of lunch revenue",
+    "C": "About 160% of lunch revenue",
+    "D": "About 200% of lunch revenue"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 1200 instead of 0, which compresses the visible differences between stacked totals. That can make Dinner look as large as (or larger than) Takeout even though the totals favor Takeout."
+}

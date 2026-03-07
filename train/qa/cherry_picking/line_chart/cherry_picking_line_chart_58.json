@@ -1,0 +1,17 @@
+{
+  "question": "What do these earnings suggest about the company’s profitability over a longer 15-year period?",
+  "options": {
+    "A": "Earnings grew consistently, so the company was profitable throughout the entire 15-year period.",
+    "B": "The data shows a consistent decline over the entire period.",
+    "C": "This 8-year window cannot reliably indicate profitability over a 15-year period.",
+    "D": "The data exhibits random fluctuations with no clear pattern."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The cherry-picked years show growth; omitted years could show declines or volatility."
+}

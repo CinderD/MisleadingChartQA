@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following best describes the pattern of rainfall in City Q over 2023?",
+  "options": {
+    "A": "Rainfall steadily increased from January to June and then decreased toward December.",
+    "B": "Rainfall steadily decreased from January to June and then increased toward December.",
+    "C": "Rainfall was highest in February and lowest in June.",
+    "D": "Rainfall remained roughly constant throughout the year."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes it appear that the series is flipped vertically, which can swap the perceived highs and lows. The correct option matches the actual data values."
+}

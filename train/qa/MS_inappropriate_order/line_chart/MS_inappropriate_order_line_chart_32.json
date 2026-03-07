@@ -1,0 +1,17 @@
+{
+  "question": "Based on the data shown, what is the overall trend in average test scores from January to August?",
+  "options": {
+    "A": "Scores fluctuate up and down with no clear overall improvement or decline.",
+    "B": "Scores steadily decline over the semester from January to August.",
+    "C": "Scores show a generally consistent increase from January to August, despite some month-to-month variation.",
+    "D": "Scores rise to a mid-semester peak and then return to about their initial level by August."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

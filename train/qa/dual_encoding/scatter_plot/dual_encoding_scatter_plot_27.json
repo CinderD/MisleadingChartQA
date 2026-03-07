@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows CO₂ emissions index vs. temperature anomaly. Which statement is best supported by the data?",
+  "options": {
+    "A": "Higher CO₂ emission index values generally correspond to lower temperature anomalies.",
+    "B": "Higher CO₂ emission index values generally correspond to higher temperature anomalies.",
+    "C": "There is no consistent relationship between CO₂ emissions and temperature anomaly.",
+    "D": "The largest, darkest point indicates that very high CO₂ emissions always produce the highest temperature anomalies."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the y-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

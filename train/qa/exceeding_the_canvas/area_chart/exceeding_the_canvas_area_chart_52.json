@@ -1,0 +1,17 @@
+{
+  "question": "Analyzing the area chart of revenue by year, which statement is most appropriate?",
+  "options": {
+    "A": "The revenues in 2020, 2021, and 2022 are all equal.",
+    "B": "Revenue was highest in the first year shown.",
+    "C": "The revenue for 2020, 2021, and 2022 cannot be reliably compared because the upper part of the chart is not fully visible.",
+    "D": "Revenue decreased every year over the period."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is set below the data maximum, so the top three bars are clipped and appear equal; the true values cannot be compared from the chart alone."
+}

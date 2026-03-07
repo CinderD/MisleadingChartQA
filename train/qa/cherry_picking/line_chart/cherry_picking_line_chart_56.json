@@ -1,0 +1,17 @@
+{
+  "question": "What does this cost data indicate about the broader 1985–2000 period?",
+  "options": {
+    "A": "Costs rose steadily across the entire 1985–2000 period, reflecting consistent inflation.",
+    "B": "Costs declined over most of the 1985–2000 period, with only a brief increase.",
+    "C": "This short 1988–1995 snapshot cannot reliably indicate cost trends for the full 1985–2000 period.",
+    "D": "The data shows no clear direction in costs even within the years displayed."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows a cherry-picked segment; other years might show different cost patterns."
+}

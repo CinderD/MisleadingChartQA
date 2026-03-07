@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, how does the number of Social visits on Tuesday compare to Social visits on Monday?",
+  "options": {
+    "A": "Tuesday has slightly more Social visits than Monday, with only a modest increase.",
+    "B": "Tuesday has more than triple the Social visits of Monday.",
+    "C": "Tuesday and Monday have the same number of Social visits.",
+    "D": "Tuesday has fewer Social visits than Monday."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 1200 instead of 0, which compresses the visible differences between stacked totals. That can make Search look as large as (or larger than) Social even though the totals favor Social."
+}

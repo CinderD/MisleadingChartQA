@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the approval rating trend over the displayed years (out of a possible 0–100%). What is the most appropriate conclusion about how the approval rating changed overall?",
+  "options": {
+    "A": "Approval ratings fluctuated slightly but overall changes were small.",
+    "B": "Approval ratings stayed exactly the same over the whole period.",
+    "C": "Approval ratings experienced a major and sustained decline.",
+    "D": "Approval ratings cannot be assessed from the information provided."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (66.41–68.51%) instead of a more informative 0–100% context, which visually exaggerates variability. The actual net change is about 0.88% over the period, which is modest in the full context."
+}

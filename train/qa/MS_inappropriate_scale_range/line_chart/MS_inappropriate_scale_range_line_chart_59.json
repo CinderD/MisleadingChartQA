@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows average student test scores from 2010 to 2020 on a 0–100 scale. What is the most appropriate conclusion about how the scores changed over this period?",
+  "options": {
+    "A": "The scores experienced large swings over time.",
+    "B": "The scores showed only small fluctuations around a similar level.",
+    "C": "The scores increased sharply throughout the entire period.",
+    "D": "The scores decreased steadily throughout the entire period."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (40.26–41.32) instead of a more informative 0–100 context, which visually exaggerates variability. The actual net change is about 0.39 over the period, which is modest in the full context."
+}

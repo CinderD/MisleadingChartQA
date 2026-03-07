@@ -1,0 +1,17 @@
+{
+  "question": "Is the percentage of internet users in China (A) higher than in Canada (D)?",
+  "options": {
+    "A": "Yes, China (A) has a higher percentage of internet users",
+    "B": "No, Canada (D) has a higher percentage of internet users",
+    "C": "They have the same percentage of internet users",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "China or Canada appears grey on the map, which represents missing data, not a true value. Since one of the regions has no data, we cannot reliably compare their values, even though the color scale may tempt viewers to do so."
+}

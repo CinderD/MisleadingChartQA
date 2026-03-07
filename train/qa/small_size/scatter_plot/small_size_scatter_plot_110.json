@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot shows income by age. Based on this chart, what can be most reliably concluded about which age group has the highest income?",
+  "options": {
+    "A": "Individuals between ages 30 and 35 clearly have the highest income.",
+    "B": "Individuals between ages 35 and 40 clearly have the highest income.",
+    "C": "Individuals between ages 25 and 30 clearly have the highest income.",
+    "D": "The chart is too small to determine which age group has the highest income."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 30 and 35 have the highest income. The small size of the chart may cause difficulty in accurately identifying the specific trends of income in certain age ranges."
+}

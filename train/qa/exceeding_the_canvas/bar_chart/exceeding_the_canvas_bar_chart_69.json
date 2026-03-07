@@ -1,0 +1,17 @@
+{
+  "question": "Which statement about the output levels over the years is best supported by the chart?",
+  "options": {
+    "A": "Output declined in every consecutive year shown.",
+    "B": "The chart does not allow a clear comparison of output between the last two years.",
+    "C": "Output in the last two years is identical.",
+    "D": "Output in the middle year was the highest of the period."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Values exceeding the y-axis range are clipped, making the top bars look the same and misleading viewers."
+}

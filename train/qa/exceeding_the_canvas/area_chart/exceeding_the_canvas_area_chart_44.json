@@ -1,0 +1,17 @@
+{
+  "question": "Based on the area chart of annual profit from 2018 to 2022, which statement about the profits is most accurate?",
+  "options": {
+    "A": "Profit was highest in 2020.",
+    "B": "Profit in the last two years appears to be the same.",
+    "C": "Profit decreased after 2020.",
+    "D": "Profit in 2019 was lower than in 2018."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Bars for the highest years exceed the canvas and are clipped, making them look the same height; the true relationship cannot be inferred from the visual."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart data, during which period did daily active users decrease by the larger amount in absolute numbers?",
+  "options": {
+    "A": "Both periods have about the same decrease",
+    "B": "From 2021 to 2024",
+    "C": "The decrease cannot be determined from the chart",
+    "D": "From 2015 to 2017"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2015-2017: 5200 → 4037 (-1163); 2022-2024: 935 → 200 (-735)."
+}

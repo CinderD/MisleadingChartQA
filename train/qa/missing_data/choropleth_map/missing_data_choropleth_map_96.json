@@ -1,0 +1,17 @@
+{
+  "question": "Which statement about countries shown in grey on the map is best supported by the chart?",
+  "options": {
+    "A": "They represent countries with very low internet penetration, close to 0%.",
+    "B": "They represent countries with the highest internet penetration, above 75%.",
+    "C": "They indicate countries for which internet penetration data is not available.",
+    "D": "They indicate countries whose internet penetration is exactly equal to the world average."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "In the legend, grey is used as a 'No data' category. It does not correspond to a numeric bin in the color scale. Treating grey regions as very low values leads to incorrect comparisons and conclusions."
+}

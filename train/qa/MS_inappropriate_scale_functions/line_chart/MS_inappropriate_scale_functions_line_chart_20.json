@@ -1,0 +1,17 @@
+{
+  "question": "Between which two-year period did online orders increase by the larger amount in the underlying data?",
+  "options": {
+    "A": "The increase is too small to determine from the chart",
+    "B": "2017-2019",
+    "C": "2022-2024",
+    "D": "Both periods show about the same increase"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2017-2019: 645 → 84 (change 561); 2022-2024: 540 → 1506 (change 966)."
+}

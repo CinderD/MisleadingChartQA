@@ -1,0 +1,17 @@
+{
+  "question": "What is the main difficulty in drawing detailed conclusions from this sales chart?",
+  "options": {
+    "A": "The chart is too small to clearly distinguish sales changes across specific years or decades.",
+    "B": "Sales clearly declined only from 1970 to 1980.",
+    "C": "Sales patterns for each decade can be read precisely from the chart.",
+    "D": "Sales increased by exactly the same amount in every decade."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The data shows two declines: 1955-1965 and 1975-1985. Small text can make it difficult to see both dips."
+}

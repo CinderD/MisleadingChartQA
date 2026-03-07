@@ -1,0 +1,17 @@
+{
+  "question": "Based on the quarterly platform engagement distribution, what can be concluded about the pattern of 'User Registrations' over the year from this chart?",
+  "options": {
+    "A": "The share of user registrations increases steadily from Q1 to Q4, proving that the absolute number of registrations also rises each quarter.",
+    "B": "The share of user registrations is highest in Q3, but the chart alone does not indicate whether the absolute number of registrations is highest in that quarter.",
+    "C": "User registrations have the lowest share in Q2, and this proves that Q2 has the lowest absolute number of registrations.",
+    "D": "The combined height of all segments in Q4 is greater than in earlier quarters, so total platform activity is highest in Q4."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart normalizes unrelated categories to 100% within each quarter. It can suggest that the share of a metric is higher in later quarters, but it cannot establish an absolute increasing trend without the underlying totals. A higher percentage share does not necessarily mean a higher absolute quantity."
+}

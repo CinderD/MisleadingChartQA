@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average housing prices ($1000s) for several cities. Which statement is best supported by the data shown?",
+  "options": {
+    "A": "New York has the highest average housing price among the cities shown.",
+    "B": "The chart demonstrates a steady increase in prices from left to right, as if following a time trend.",
+    "C": "Atlanta has the lowest average housing price among the cities shown.",
+    "D": "Housing prices decrease consistently as you move from Atlanta to New York along the x-axis."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for city into a continuous filled region. However, the x‑axis categories (e.g., Atlanta, Portland, Boston, Seattle, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

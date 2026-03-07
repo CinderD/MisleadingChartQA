@@ -1,0 +1,17 @@
+{
+  "question": "This area chart presents average housing prices ($1000s) for several cities. Which statement below best reflects what we can reliably conclude from the data shown?",
+  "options": {
+    "A": "Portland has the highest average housing price among the cities shown.",
+    "B": "Average housing prices steadily increase from Miami to Portland in a meaningful progression.",
+    "C": "All cities have nearly identical average housing prices.",
+    "D": "The chart indicates that prices in Austin are the lowest among all cities."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for city into a continuous filled region. However, the x‑axis categories (e.g., Miami, Seattle, Nashville, New York, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

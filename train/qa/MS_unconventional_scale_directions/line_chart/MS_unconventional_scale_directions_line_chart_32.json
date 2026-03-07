@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following is true about the electricity demand trend in Region R during 2023?",
+  "options": {
+    "A": "Demand was highest in February and lowest in September.",
+    "B": "Demand remained nearly constant throughout the year.",
+    "C": "Demand steadily declined over the first half of the year.",
+    "D": "Demand was highest in September and lowest in February."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes it appear that the series is flipped vertically, which can swap the perceived highs and lows. The correct option matches the actual data values."
+}

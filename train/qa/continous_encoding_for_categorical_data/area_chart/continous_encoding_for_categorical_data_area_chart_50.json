@@ -1,0 +1,17 @@
+{
+  "question": "This area chart presents average housing prices ($1000s) for several cities. Which statement below best reflects what we can reliably conclude?",
+  "options": {
+    "A": "Atlanta has the highest recorded price among the cities shown.",
+    "B": "The chart shows a smooth left‑to‑right trend, so the cities can be interpreted as forming a continuous progression.",
+    "C": "Average housing prices are identical for all of the cities in the chart.",
+    "D": "Seattle and New York have the same average housing price."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for city into a continuous filled region. However, the x‑axis categories (e.g., Seattle, San Francisco, Miami, Denver, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US population map, which statement below is the most accurate?",
+  "options": {
+    "A": "The population differences are impossible to determine from this visualization.",
+    "B": "North Carolina and Delaware have similar populations.",
+    "C": "All of the highlighted states have nearly identical population levels.",
+    "D": "The population gap between North Carolina and Delaware might exceed that between Florida and Texas."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "North Carolina (36.4M) and Delaware (53.0M) have a 16.6M population difference, while Florida (29.6M) and Texas (32.5M) have only a 2.9M difference. However, the categorical color encoding groups North Carolina and Delaware into the same color bin (30M+ range), making their large difference appear similar, while Florida and Texas appear more different due to different color bins."
+}

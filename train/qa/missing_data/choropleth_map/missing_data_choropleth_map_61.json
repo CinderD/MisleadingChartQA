@@ -1,0 +1,17 @@
+{
+  "question": "Was the average unemployment rate over 10 years in South Africa higher than in China?",
+  "options": {
+    "A": "They had exactly the same unemployment rate",
+    "B": "Yes, South Africa had a higher unemployment rate",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "No, China had a higher unemployment rate"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "South Africa and China both have measured data, so we can compare them numerically. South Africa is 12.9% vs 7.1% for China."
+}

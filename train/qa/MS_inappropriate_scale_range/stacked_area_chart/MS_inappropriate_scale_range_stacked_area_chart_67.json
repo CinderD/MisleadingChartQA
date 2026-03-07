@@ -1,0 +1,17 @@
+{
+  "question": "Approximately, what is Park C's visitors as a proportion of Park A's visitors in April?",
+  "options": {
+    "A": "50%",
+    "B": "80%",
+    "C": "150%",
+    "D": "200%"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_area_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 15 instead of 0, which visually exaggerates smaller components in a stacked area chart. In Apr, C is about 50% of A (data: 11.8 vs 18.2), but the truncated baseline can make it appear closer to 80%."
+}

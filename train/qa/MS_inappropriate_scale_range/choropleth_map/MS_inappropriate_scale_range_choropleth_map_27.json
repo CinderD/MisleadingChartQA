@@ -1,0 +1,17 @@
+{
+  "question": "Which category shows more variation across U.S. states?",
+  "options": {
+    "A": "It cannot be determined from these maps alone",
+    "B": "Youth Unemployment shows more variation across states",
+    "C": "Both maps show similar variation across states",
+    "D": "Overall Unemployment shows more variation across states"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The two maps use the SAME threshold scale even though their value distributions differ. That makes one map saturate in a single color while the other uses multiple colors, creating a misleading impression about which has more variation. The reliable conclusion is that variation cannot be judged from these maps alone."
+}

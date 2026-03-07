@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US GDP map, which statement below is the most accurate?",
+  "options": {
+    "A": "The GDP differences are impossible to determine from this visualization.",
+    "B": "All the highlighted states have nearly identical GDP levels.",
+    "C": "The GDP gap between Utah and Arizona might exceed that between New Hampshire and New Jersey.",
+    "D": "Utah and Arizona have similar GDPs."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Utah (189.7$B) and Arizona (245.5$B) have a 55.8$B GDP difference, while New Hampshire (39.8$B) and New Jersey (40.4$B) have only a 0.6$B difference. However, the categorical color encoding groups Utah and Arizona into the same color bin (180-350$B range), making their large difference appear similar, while New Hampshire and New Jersey appear more different due to different color bins."
+}

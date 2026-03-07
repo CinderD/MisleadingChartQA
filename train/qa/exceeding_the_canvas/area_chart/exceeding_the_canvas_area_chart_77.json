@@ -1,0 +1,17 @@
+{
+  "question": "Analyzing the performance index by year, which statement is best supported by the chart?",
+  "options": {
+    "A": "The index is the same for the last two years.",
+    "B": "The index was highest in the last two years, but their exact values are not fully shown on the chart.",
+    "C": "The index decreased every year.",
+    "D": "The index was highest in the first year."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is below the data maximum, so the top bars are truncated and appear equal."
+}

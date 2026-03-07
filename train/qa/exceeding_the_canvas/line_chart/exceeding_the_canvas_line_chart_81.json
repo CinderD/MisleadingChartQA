@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows the cost from 2018 to 2022. Which of the following statements is true based on the chart as displayed?",
+  "options": {
+    "A": "The cost in 2022 is equal to the cost in 2019.",
+    "B": "The chart does not allow an exact comparison of the 2022 cost with earlier years because the 2022 value extends beyond the visible scale.",
+    "C": "The cost was lowest in 2022.",
+    "D": "Cost increased by the same amount every year."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis cap causes the top bar to be cut off, so they appear the same height although true values may differ."
+}

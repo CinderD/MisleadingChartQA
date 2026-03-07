@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the annual budget distribution of City A across different sectors. Based on the data in the chart, which statement is correct?",
+  "options": {
+    "A": "Safety receives the largest share of the budget.",
+    "B": "Healthcare receives the largest share of the budget.",
+    "C": "Education receives the largest share of the budget.",
+    "D": "Infrastructure receives the largest share of the budget."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Safety: 35%; Healthcare: 25%; Education: 20%; Others: 10%; Infrastructure: 10%."
+}

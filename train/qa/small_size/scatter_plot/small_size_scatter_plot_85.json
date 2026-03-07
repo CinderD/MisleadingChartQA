@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot shows sales for individuals with different years of experience. Based on this chart, which statement is most appropriate?",
+  "options": {
+    "A": "There is a clear positive relationship between years of experience and sales.",
+    "B": "Individuals with 50 to 55 years of experience have the highest sales among all experience levels.",
+    "C": "Individuals with 10 to 15 years of experience have the highest sales among all experience levels.",
+    "D": "Because the plot is very small and points are hard to distinguish, it is difficult to judge precisely which experience level has the highest sales."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 50 and 55 have the highest sales. The small size of the chart may cause difficulty in accurately identifying the specific trends of sales in certain age ranges."
+}

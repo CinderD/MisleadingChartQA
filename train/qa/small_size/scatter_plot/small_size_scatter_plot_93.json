@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot shows years of experience and sales. Based on the chart, what can be reliably concluded about how sales vary with experience?",
+  "options": {
+    "A": "Sales for employees with 20–30 years of experience are clearly the highest among all experience levels.",
+    "B": "Sales for employees with 40–50 years of experience are clearly the highest among all experience levels.",
+    "C": "The chart does not clearly show which experience group has the highest sales because the points are too small and close together.",
+    "D": "Sales for employees with 10–20 years of experience are clearly the highest among all experience levels."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 65 and 70 have the highest sales. The small size of the chart may cause difficulty in accurately identifying the specific trends of sales in certain age ranges."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is valid given the chart as shown?",
+  "options": {
+    "A": "Cost was lowest in the final year.",
+    "B": "Cost in the last two years is equal.",
+    "C": "Cost increased each year from 2018 to 2022.",
+    "D": "Cost decreased after 2020."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis cap causes the top bars to be cut off, so they appear the same height although true values may differ."
+}

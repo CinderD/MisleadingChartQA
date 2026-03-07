@@ -1,0 +1,17 @@
+{
+  "question": "For the quarterly platform engagement distribution, which interpretation best reflects what can (and cannot) be inferred from the 100% stacked bar chart?",
+  "options": {
+    "A": "The sum of all metrics indicates overall engagement volume trends across the year.",
+    "B": "Q3 has the highest absolute number of support tickets because it has the largest support ticket share.",
+    "C": "Valid inferences include within-quarter ranking comparisons. Invalid inferences include cross-quarter absolute quantity comparisons.",
+    "D": "User registrations represent the smallest share in every quarter."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "100% stacking normalizes unrelated categories to 100% within each quarter. Valid inferences include within-quarter ranking (e.g., one metric > another in every quarter). Invalid inferences include cross-quarter total comparisons or combining unrelated categories."
+}

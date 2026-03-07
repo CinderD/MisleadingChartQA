@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the distribution of energy use by source. Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "The share of Renewables is roughly equal to the combined share of Nuclear and Other.",
+    "B": "Renewables accounts for less than one-third of total energy use.",
+    "C": "The combined share of Fossil Fuels and Hydroelectric is smaller than the share of Other.",
+    "D": "Nuclear is the smallest single energy source."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Renewables: 40%; Other: 23%; Hydroelectric: 20%; Fossil Fuels: 10%; Nuclear: 7%."
+}

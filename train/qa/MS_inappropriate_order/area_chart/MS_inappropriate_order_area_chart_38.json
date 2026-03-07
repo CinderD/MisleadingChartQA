@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, do total sales in the calendar first half of the year (January–June) exceed those in the calendar second half (July–December)?",
+  "options": {
+    "A": "Yes, total sales are higher in January–June.",
+    "B": "No, total sales are higher in July–December.",
+    "C": "Both halves have equal total sales.",
+    "D": "The chart does not provide enough information to compare the two halves."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The months on the x‑axis are arranged in reverse (Dec back to Jan), so the filled area shape is misleading if read left‑to‑right. When you re‑order the months to the natural calendar sequence and sum Jan–Jun versus Jul–Dec, you find that the second half actually has higher total sales. The inappropriate month order can easily invert this interpretation."
+}

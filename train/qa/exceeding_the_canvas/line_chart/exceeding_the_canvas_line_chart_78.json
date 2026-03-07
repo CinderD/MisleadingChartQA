@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following statements is best supported by the chart?",
+  "options": {
+    "A": "The chart does not show how high the index in the last year really is, because it goes beyond the visible scale.",
+    "B": "The index was highest in the first year.",
+    "C": "The index decreased every year.",
+    "D": "The index is the same in the first and the last year."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is below the data maximum, so the top bars are truncated and appear equal."
+}

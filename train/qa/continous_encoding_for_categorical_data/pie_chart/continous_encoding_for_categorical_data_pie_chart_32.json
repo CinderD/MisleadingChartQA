@@ -1,0 +1,17 @@
+{
+  "question": "This pie chart shows quarterly sales distribution across different regions and store types. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "The darker slices represent more advanced or important markets than the lighter slices.",
+    "B": "Flagship Stores contribute the smallest share of quarterly sales among all categories shown.",
+    "C": "Asia Pacific accounts for the largest share of quarterly sales among all categories shown.",
+    "D": "All categories contribute almost the same share to quarterly sales, with no clear differences in slice sizes."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "pie_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie slices represent purely categorical groups (e.g., regions or product categories). Using a continuous blue gradient suggests an ordered numeric scale where darker colors mean 'more' of something (such as sophistication, maturity, or time), even though these categories have no inherent order. The only meaningful quantitative comparison is the slice size / percentage; colors should be distinct but unordered to avoid implying relationships that do not exist."
+}

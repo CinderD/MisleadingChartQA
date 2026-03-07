@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows revenue from 1924 to 2024. Which statement best describes a limitation when interpreting this chart?",
+  "options": {
+    "A": "The chart is too small to clearly distinguish exact revenue levels and small changes over time.",
+    "B": "Revenue can be read precisely for every year despite the small size of the chart.",
+    "C": "Revenue stayed exactly the same throughout the entire period.",
+    "D": "Revenue clearly decreased in every decade shown."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Revenue declined from 1980 to 1990. The extremely small axis labels can make it hard to read which period had the decline."
+}

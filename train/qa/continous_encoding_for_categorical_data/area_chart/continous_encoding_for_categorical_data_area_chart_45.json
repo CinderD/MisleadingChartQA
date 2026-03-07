@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average test scores in different subjects. What makes this visualization potentially misleading?",
+  "options": {
+    "A": "Geography has the highest average score among the subjects shown.",
+    "B": "The smooth filled area suggests a continuous progression across subjects that do not have a natural order.",
+    "C": "The chart hides that Math actually has the lowest average score.",
+    "D": "The use of an area chart proves that neighboring subjects are more closely related than non‑neighboring ones."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for subject into a continuous filled region. However, the x‑axis categories (e.g., Science, Music, English, Art, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

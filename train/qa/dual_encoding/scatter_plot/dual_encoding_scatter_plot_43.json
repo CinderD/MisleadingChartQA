@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows training hours vs test score. Which statement best describes the relationship between training hours and test score in the data?",
+  "options": {
+    "A": "Test scores tend to increase steadily as training hours rise.",
+    "B": "Test scores tend to decrease as training hours increase.",
+    "C": "There is little to no consistent relationship between training hours and test scores.",
+    "D": "Participants with the most training hours achieve by far the highest test scores, as indicated by the largest and darkest points."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

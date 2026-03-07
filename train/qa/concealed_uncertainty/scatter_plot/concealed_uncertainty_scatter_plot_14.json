@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, what can be concluded about the test score after 60 hours of study?",
+  "options": {
+    "A": "The test score will definitely be lower than any score shown on the chart",
+    "B": "The trend suggests the test score will be around 700",
+    "C": "Cannot be determined due to data variability.",
+    "D": "The test score will definitely be at least 500"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "concealed_uncertainty",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While the trend line suggests decreasing test score, the data shows significant variability and only goes up to 38 hours. Extrapolating to 60 hours involves uncertainty, and option B implies a level of certainty that cannot be guaranteed given the scatter in the data. The concealed uncertainty lies in the variability around the trend line and the act of extrapolation beyond the observed data range."
+}

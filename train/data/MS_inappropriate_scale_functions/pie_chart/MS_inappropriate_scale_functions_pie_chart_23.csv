@@ -1,0 +1,5 @@
+energy_source,consumption_percentage,adjusted_scale
+Fossil Fuels,30,70.000000
+Hydroelectric,10,90.000000
+Renewables,15,85.000000
+Nuclear,45,55.000000

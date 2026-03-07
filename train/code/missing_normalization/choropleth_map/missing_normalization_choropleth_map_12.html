@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choropleth_map Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <style>
+        #chart { width: 1000px; height: 750px; margin: 60px auto; }
+        .legend text { font-size: 12px; }
+        .country-label {
+            font-size: 18px;
+            font-weight: bold;
+            fill: black;
+            stroke: white;
+            stroke-width: 3px;
+            paint-order: stroke fill;
+        }
+    </style>
+</head>
+<body>
+    <h1>International Tourists (Total Arrivals)</h1>
+    <div id="chart"></div>
+    <script>
+        const width = 1000;
+        const height = 750;
+        const svg = d3.select("#chart").append("svg").attr("width", width).attr("height", height);
+        const projection = d3.geoMercator().scale(150).translate([width / 2.5, height / 2.5]);
+        const path = d3.geoPath().projection(projection);
+        const colorScale = d3.scaleSequential(d3.interpolatePurples).domain([0, 20000]);
+        const offsetsX = {"124": 28, "356": 5, "392": -8, "840": -22, "250": 0};
+        const offsetsY = {"124": 52, "356": 0, "392": 0, "840": 28, "250": 0};
+
+        Promise.all([
+            d3.json("https://d3js.org/world-110m.v1.json"),
+            d3.csv("../../../../data/missing_normalization/choropleth_map/missing_normalization_choropleth_map_12.csv")
+        ]).then(([world, data]) => {
+            const countries = topojson.feature(world, world.objects.countries).features;
+            const measureById = {};
+            data.forEach(d => measureById[d.id] = +d.visitors);
+
+            svg.append("g").selectAll("path").data(countries).enter().append("path")
+                .attr("d", path).attr("fill", "#efefef").attr("stroke", "#666").attr("stroke-width", 0.8);
+
+            svg.append("g").selectAll("path").data(countries).enter().append("path")
+                .attr("d", path)
+                .attr("fill", d => {
+                    const m = measureById[d.id] || 0;
+                    return m ? colorScale(m) : 'transparent';
+                })
+                .attr("stroke", d => (measureById[d.id] ? "#fff" : "none"))
+                .attr("stroke-width", d => (measureById[d.id] ? 0.8 : 0));
+
+            svg.selectAll("text").data(data).enter().append("text")
+                .attr("class", "country-label")
+                .text(d => d.label)
+                .attr("x", d => {
+                    const c = countries.find(x => x.id == d.id);
+                    const ct = c ? path.centroid(c) : [0, 0];
+                    return ct[0] + (offsetsX[d.id] || 0);
+                })
+                .attr("y", d => {
+                    const c = countries.find(x => x.id == d.id);
+                    const ct = c ? path.centroid(c) : [0, 0];
+                    return ct[1] + (offsetsY[d.id] || 0);
+                });
+
+            const legendHeight = 200;
+            const domainMax = 20000;
+            const numRects = 6;
+            const legendStep = domainMax / numRects;
+            const rectHeight = legendHeight * legendStep / domainMax;
+            const legendScale = d3.scaleLinear().domain([0, domainMax]).range([legendHeight, 0]);
+            const legendAxis = d3.axisRight(legendScale).ticks(6).tickFormat(d3.format(",.0f"));
+            const legend = svg.append("g").attr("class", "legend").attr("transform", `translate(${width - 150}, 100)`);
+            legend.append("text").text("Visitors (thousands)").attr("x", 0).attr("y", legendHeight + 40);
+            legend.selectAll("rect")
+                .data(d3.range(numRects).map(i => i * legendStep))
+                .enter().append("rect")
+                .attr("x", 0)
+                .attr("y", d => legendScale(d + legendStep))
+                .attr("width", 20)
+                .attr("height", rectHeight)
+                .attr("fill", d => colorScale(d + 1666.6666666666667));
+            legend.append("g").attr("transform", "translate(20, 0)").call(legendAxis);
+        });
+    </script>
+</body>
+</html>

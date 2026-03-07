@@ -1,0 +1,17 @@
+{
+  "question": "Between NJ and LA, which state actually has the higher risk index according to the chart?",
+  "options": {
+    "A": "LA",
+    "B": "NJ",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Both states have the same risk index"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although LA appears darker, NJ has the higher assigned value when the inversion is considered."
+}

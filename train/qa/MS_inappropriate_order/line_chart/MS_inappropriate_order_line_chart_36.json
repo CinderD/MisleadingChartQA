@@ -1,0 +1,17 @@
+{
+  "question": "Based on the line chart, what is the overall trend in average test scores from January to August?",
+  "options": {
+    "A": "Average scores stay roughly the same from the beginning to the end of the semester.",
+    "B": "Average scores fluctuate up and down with no clear overall direction.",
+    "C": "Average scores show a general increase from January to August.",
+    "D": "Average scores show a general decrease from January to August."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

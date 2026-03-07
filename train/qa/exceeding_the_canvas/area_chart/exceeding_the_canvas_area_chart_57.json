@@ -1,0 +1,17 @@
+{
+  "question": "Considering the performance index shown over the years, which statement is best supported by the chart?",
+  "options": {
+    "A": "The performance index decreased every year from 2018 to 2022.",
+    "B": "The performance index appears to be the same in 2021 and 2022.",
+    "C": "The performance index reached its highest visible level in the final year shown.",
+    "D": "The chart does not show whether the index in the last two years is equal or different, as values exceed the scale."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is below the data maximum, so the top bars are truncated and appear equal."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, during which period did the number of Daily Active Users (DAU) increase by the larger amount?",
+  "options": {
+    "A": "1990-1992",
+    "B": "1992-1993",
+    "C": "Both periods have about the same increase",
+    "D": "It cannot be determined from the chart"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 1994-1996: 2687 → 3759 (+1072); 1997-1999: 3900 → 5200 (+1300)."
+}

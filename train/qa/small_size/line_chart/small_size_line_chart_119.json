@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows sales over the years. Which statement best describes a limitation when interpreting this chart?",
+  "options": {
+    "A": "The chart is so small that it is difficult to distinguish precise year-by-year changes and exact values.",
+    "B": "Sales clearly doubled every decade shown in the chart.",
+    "C": "Sales in 1960 can be read precisely and compared accurately with 1970.",
+    "D": "Sales remained exactly the same throughout the entire period."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Sales were roughly flat from 1960 to 1970, with rises before and after. Small font sizes can make it easy to misread the flat segment as a decline."
+}

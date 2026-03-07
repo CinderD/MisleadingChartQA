@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows the output from 2018 to 2022. Which statement best describes what can be concluded from the chart?",
+  "options": {
+    "A": "The two highest bars are cut off by the axis range, so their relative sizes cannot be determined from the chart.",
+    "B": "Output decreased every year from 2018 to 2022.",
+    "C": "Output in the last two years is the same.",
+    "D": "Output in 2020 was higher than in both 2021 and 2022."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Values exceeding the y-axis range are clipped, making the top bars look the same and misleading viewers."
+}

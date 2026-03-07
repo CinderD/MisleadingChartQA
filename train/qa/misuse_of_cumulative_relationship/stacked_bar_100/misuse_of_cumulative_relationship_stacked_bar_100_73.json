@@ -1,0 +1,17 @@
+{
+  "question": "Based on this 100% stacked bar chart for the platform, what can we conclude about the quarterly number of 'Complaints Received'?",
+  "options": {
+    "A": "The chart shows only the proportion of complaints each quarter, so we cannot determine whether the absolute number of complaints increased or decreased over the year.",
+    "B": "The absolute number of complaints received increases each quarter because the complaints segment takes up a larger share in later quarters.",
+    "C": "The absolute number of complaints received is the same in every quarter because all bars reach 100%.",
+    "D": "The absolute number of complaints received is lowest in Q3 because its segment is smallest there."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart normalizes unrelated categories to 100% within each quarter. It can suggest that the share of a metric is higher in later quarters, but it cannot establish an absolute increasing trend without the underlying totals. A higher percentage share does not necessarily mean a higher absolute quantity."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot shows the relationship between years of experience and sales. Based on this chart, which statement is most appropriate?",
+  "options": {
+    "A": "The chart clearly shows that sales increase by exactly the same amount with every additional year of experience.",
+    "B": "The chart makes it difficult to judge small differences in sales between nearby experience levels.",
+    "C": "Sales clearly peak for individuals with exactly 25 years of experience and then decline.",
+    "D": "Sales are identical for all levels of experience shown."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 60 and 65 have the highest sales. The small size of the chart may cause difficulty in accurately identifying the specific trends of sales in certain age ranges."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows GDP (in billions) for selected US states. Which statement is correct?",
+  "options": {
+    "A": "It is easy to see the exact GDP value for each labeled state from the map.",
+    "B": "The state with the darkest shading clearly has the lowest GDP among the shown states.",
+    "C": "The very small map text and legend make it difficult to read specific GDP values accurately.",
+    "D": "The map allows precise comparison of GDP differences between all neighboring states."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific GDP figures accurately. Rankings and exact values cannot be verified."
+}

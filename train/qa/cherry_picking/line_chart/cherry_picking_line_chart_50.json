@@ -1,0 +1,17 @@
+{
+  "question": "What do these earnings suggest about the company’s performance from 2005 to 2020?",
+  "options": {
+    "A": "The steady rise from 2008 to 2015 proves strong earnings growth throughout 2005–2020.",
+    "B": "The data shows a consistent decline in earnings over 2005–2020.",
+    "C": "This 8-year sample from 2008 to 2015 cannot reliably indicate earnings performance over 2005–2020.",
+    "D": "Earnings were flat with no noticeable change over 2005–2020."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The cherry-picked years show growth; omitted years could show declines or volatility."
+}

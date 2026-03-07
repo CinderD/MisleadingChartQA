@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, which statement about the most recent year is justified?",
+  "options": {
+    "A": "The most recent year shows a sharp decline in copies sold compared to earlier years.",
+    "B": "The most recent year proves that copies sold will continue to fall in future years.",
+    "C": "None of the above conclusions about the full-year trend are justified, since the latest year only shows data up to June 1.",
+    "D": "The most recent year clearly has the lowest annual copies sold in the period shown."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The latest year in the chart only includes about 2 months of data, while previous years show full 12‑month totals. Comparing the partial-year value (299 copies) directly to full-year values like 1,613 copies creates the illusion of a sharp decline. We cannot draw full‑year conclusions from this incomplete aggregate."
+}

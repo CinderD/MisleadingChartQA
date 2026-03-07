@@ -1,0 +1,17 @@
+{
+  "question": "Based on the time allocation chart, which of the following statements is accurate?",
+  "options": {
+    "A": "Sleep accounts for a larger share of time than Chores.",
+    "B": "Leisure is the largest category by percentage.",
+    "C": "Leisure is larger than the combined share of Chores and Work.",
+    "D": "Sleep and Work together account for half of the total time."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Leisure: 50%; Chores: 25%; Work: 15%; Sleep: 10%."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which state has a higher prevalence of species Z based on the chart, NC or MN?",
+  "options": {
+    "A": "Cannot be inferred / inadequate information",
+    "B": "Both states have the same prevalence",
+    "C": "MN",
+    "D": "NC"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although MN appears darker, NC has the higher assigned value when the inversion is considered."
+}

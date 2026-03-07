@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher prevalence of species Z based on the chart, MD or PA?",
+  "options": {
+    "A": "PA",
+    "B": "Both states have the same prevalence",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "MD"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although MD appears darker, AL has the higher assigned value when the inversion is considered."
+}

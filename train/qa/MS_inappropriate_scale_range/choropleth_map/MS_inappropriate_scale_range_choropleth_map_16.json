@@ -1,0 +1,17 @@
+{
+  "question": "Based on these maps, what can be concluded about differences in population density across states for urban versus rural areas?",
+  "options": {
+    "A": "Urban areas clearly show more variation in population density across states than rural areas",
+    "B": "Rural areas clearly show more variation in population density across states than urban areas",
+    "C": "Both urban and rural areas show similar levels of variation in population density across states",
+    "D": "These maps do not provide enough information to determine which type of area has more variation in population density across states"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The two maps use the SAME threshold scale even though their value distributions differ. That makes one map saturate in a single color while the other uses multiple colors, creating a misleading impression about which has more variation. The reliable conclusion is that variation cannot be judged from these maps alone."
+}

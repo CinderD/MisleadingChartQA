@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot shows the relationship between age and annual earnings for a group of people. Based on what can be clearly seen in this chart, which statement is most appropriate?",
+  "options": {
+    "A": "Older individuals in the chart always earn more than younger individuals, with no exceptions.",
+    "B": "There is a general upward pattern, but the exact differences in earnings between specific ages cannot be determined clearly from this chart.",
+    "C": "Individuals aged 45 to 50 clearly have the highest annual earnings in the group.",
+    "D": "Earnings clearly peak for individuals aged 55 to 60, who earn more than all other ages."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 50 and 55 have the highest annual. The small size of the chart may cause difficulty in accurately identifying the specific trends of annual in certain age ranges."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows earnings from 2018 to 2022. Which of the following statements is true based on the chart?",
+  "options": {
+    "A": "Earnings increased every single year.",
+    "B": "The final year clearly has the highest earnings, but the exact peak value is not fully visible on the chart.",
+    "C": "2020 has the lowest earnings.",
+    "D": "Earnings in 2019 and 2020 are identical."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The scale is set so that the highest bars exceed the visible area, leading to a misleading impression of equality."
+}

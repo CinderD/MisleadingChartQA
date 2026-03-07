@@ -1,0 +1,17 @@
+{
+  "question": "Among the labelled regions A, B, C, D, and E, which one appears to have the lowest average temperature over the period?",
+  "options": {
+    "A": "Region A",
+    "B": "Region B",
+    "C": "Region C",
+    "D": "Region D"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "E",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "At least one of the labelled regions appears grey, indicating missing data rather than a low value. Because we do not know that region's value, we cannot safely say which labelled region truly has the highest value."
+}

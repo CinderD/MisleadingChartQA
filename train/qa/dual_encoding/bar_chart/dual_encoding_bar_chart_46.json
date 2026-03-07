@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays the number of working days lost over several years due to industrial actions worldwide. Based on this data, which of the following conclusions is correct?",
+  "options": {
+    "A": "2013-14 has the highest number of lost working days among all the years shown.",
+    "B": "2014-15 has fewer lost working days than 2010-11.",
+    "C": "2009-10 has the lowest number of lost working days among all the years shown.",
+    "D": "2013-14 has more than three times as many lost working days as 2014-15, as suggested by the bar size and color."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

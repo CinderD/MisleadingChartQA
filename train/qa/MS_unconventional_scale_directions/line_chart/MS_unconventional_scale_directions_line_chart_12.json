@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following best describes the trend in the unemployment rate in Country K from 2001 to 2018?",
+  "options": {
+    "A": "Decreasing",
+    "B": "Fluctuating",
+    "C": "Increasing",
+    "D": "Constant"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes the series appear increasing when it is actually fluctuating."
+}

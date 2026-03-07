@@ -1,0 +1,17 @@
+{
+  "question": "What does this chart of top regions suggest about advertising performance more broadly?",
+  "options": {
+    "A": "The campaign is highly effective everywhere, since higher ad spend clearly drives strong sales in all regions.",
+    "B": "The campaign is ineffective overall because only a small number of regions show any sales improvement.",
+    "C": "The campaign appears effective in the regions shown, but results for all regions are needed to judge overall performance.",
+    "D": "The campaign reduces sales in most regions, since higher ad spend is associated with lower sales here."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Infer Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "By only showing regions with strong response, the chart exaggerates how universally effective the campaign is, hiding regions where the effect may be smaller or absent."
+}

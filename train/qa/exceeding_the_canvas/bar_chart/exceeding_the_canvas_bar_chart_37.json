@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows the revenue for several years. Which statement about the revenues is most appropriate based on the chart?",
+  "options": {
+    "A": "The last two years clearly have different revenues, with 2021 higher than 2022.",
+    "B": "The last two years have exactly the same revenue.",
+    "C": "Revenue decreased steadily from 2018 to 2022.",
+    "D": "We cannot determine which of the last two years has higher revenue because their bars extend beyond the top of the chart."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The bar tops are clipped outside the visible plotting area, so equality or ordering for the clipped bars cannot be inferred."
+}

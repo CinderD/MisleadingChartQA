@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot chart shows the relationship between age and wealth for a number of individuals. Based on this chart, which statement is most appropriate?",
+  "options": {
+    "A": "Individuals in their early 40s clearly have higher wealth than those in their late 60s.",
+    "B": "The scatterplot suggests that wealth generally increases with age, but the exact differences between specific ages are hard to determine from this chart.",
+    "C": "Individuals in their early 20s clearly have the highest wealth among all ages shown.",
+    "D": "There is a clear decline in wealth as age increases across the entire range."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 60 and 65 have the highest wealth. The small size of the chart may cause difficulty in accurately identifying the specific trends of wealth in certain age ranges."
+}

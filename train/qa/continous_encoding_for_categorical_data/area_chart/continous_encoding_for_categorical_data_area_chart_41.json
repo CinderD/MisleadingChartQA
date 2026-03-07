@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average housing prices ($1000s) across different cities. What is the most accurate statement according to the chart?",
+  "options": {
+    "A": "San Francisco appears to have the highest average housing price among the cities shown.",
+    "B": "Atlanta appears to have the lowest average housing price among the cities shown.",
+    "C": "The chart shows a generally increasing or decreasing pattern across the cities, indicating an underlying continuous progression.",
+    "D": "The chart incorrectly applies a continuous filled area over unrelated city categories, creating a false impression of a smooth trend between them."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for city into a continuous filled region. However, the x‑axis categories (e.g., Austin, Atlanta, New York, Portland, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

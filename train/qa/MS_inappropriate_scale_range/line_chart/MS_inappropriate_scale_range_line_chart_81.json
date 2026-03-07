@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the defect rate in production from 2012 to 2022 (out of a possible 0–10%). What is the most appropriate description of the changes over this period?",
+  "options": {
+    "A": "There was a sharp increase in the defect rate",
+    "B": "The defect rate remained perfectly constant",
+    "C": "The defect rate showed large year-to-year swings",
+    "D": "The defect rate changed only slightly over time"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (5.22–5.59%) instead of a more informative 0–10% context, which visually exaggerates variability. The actual net change is about 0.01% over the period, which is modest in the full context."
+}

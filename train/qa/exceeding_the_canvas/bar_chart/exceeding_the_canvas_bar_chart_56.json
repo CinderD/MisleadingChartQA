@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows the adjusted revenue from 2018 to 2022. Based on what is visible, which statement is most accurate?",
+  "options": {
+    "A": "The adjusted revenue is lowest in 2018 and highest in 2021.",
+    "B": "Adjusted revenue is identical in 2021 and 2022.",
+    "C": "Adjusted revenue decreases every year from 2019 to 2022.",
+    "D": "All five years shown have the same adjusted revenue."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-scale is set so that the largest values are cut off, creating a misleading impression that the top two years are equal."
+}

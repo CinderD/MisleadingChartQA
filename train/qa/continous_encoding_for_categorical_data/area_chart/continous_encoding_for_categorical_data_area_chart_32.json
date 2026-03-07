@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average housing prices ($1000s) for different cities. Which statement is best supported by the data?",
+  "options": {
+    "A": "The smooth area indicates a gradual upward trend in housing prices from Denver to Boston, as if the cities followed a time sequence.",
+    "B": "San Francisco has the highest average housing price among the cities shown.",
+    "C": "Denver and Austin have nearly identical average housing prices.",
+    "D": "Average housing prices are exactly the same in Seattle and Miami."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for city into a continuous filled region. However, the x‑axis categories (e.g., Denver, Austin, Nashville, Atlanta, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Analyzing the area chart of the performance index from 2018 to 2022, which statement is best supported by the data shown?",
+  "options": {
+    "A": "The chart does not provide enough information to determine whether the index values in 2021 and 2022 are equal or different.",
+    "B": "The performance index is exactly the same in 2021 and 2022.",
+    "C": "The performance index was highest in 2018.",
+    "D": "The performance index decreased every year from 2018 to 2022."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is below the data maximum, so the top bars are truncated and appear equal."
+}

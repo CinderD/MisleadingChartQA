@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays the percentage of people who prefer different gifts for Valentine's Day. Based on the percentage labels, which of the following statements is correct?",
+  "options": {
+    "A": "Cards have the highest preference among all the options.",
+    "B": "Flowers have the highest preference among all the options.",
+    "C": "Jewelry has a higher preference than Clothing.",
+    "D": "Gift Card has a higher preference than Dining Out."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

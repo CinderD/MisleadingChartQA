@@ -1,0 +1,17 @@
+{
+  "question": "What is the overall trend in the number of hospitals in District W from 2015 to 2024?",
+  "options": {
+    "A": "Increasing",
+    "B": "Decreasing",
+    "C": "Fluctuating",
+    "D": "Constant"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted x-axis makes it appear that the trend is decreasing, when in reality the data shows a fluctuating trend from 2015 to 2024."
+}

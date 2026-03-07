@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows revenue by year. Which of the following statements is supported by the chart as drawn?",
+  "options": {
+    "A": "Revenue increased every year shown on the chart.",
+    "B": "2020 has the highest visible revenue on the chart.",
+    "C": "Revenue in 2021 and 2022 appears to reach the same visible level on the chart.",
+    "D": "Revenue decreased from 2018 to 2020."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is set below the data maximum, so the top bars are clipped and appear equal; the true values cannot be compared from the chart alone."
+}

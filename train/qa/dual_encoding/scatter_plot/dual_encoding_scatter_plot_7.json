@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows daily screen time (x-axis) and hours of sleep (y-axis), with point size and color also varying. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "People with about 5–6 hours of daily screen time tend to have the most sleep, around 9.5–9.8 hours.",
+    "B": "People with about 10–11 hours of daily screen time clearly get the most sleep, above 10 hours.",
+    "C": "People with about 1–2 hours of daily screen time consistently sleep more than all other groups.",
+    "D": "Across all screen-time levels, average sleep time is roughly the same, with no noticeable pattern."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the y-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

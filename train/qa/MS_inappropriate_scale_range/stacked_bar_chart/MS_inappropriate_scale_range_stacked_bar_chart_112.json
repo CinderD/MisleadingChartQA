@@ -1,0 +1,17 @@
+{
+  "question": "Across all shown dates, which station has the lowest total number of visitors?",
+  "options": {
+    "A": "Station X",
+    "B": "Station Y",
+    "C": "Station Z",
+    "D": "All three stations have about the same total"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 1000 instead of 0, which compresses the visible differences between stacked totals. That can make Station Y look as large as (or larger than) Station Z even though the totals favor Station Z."
+}

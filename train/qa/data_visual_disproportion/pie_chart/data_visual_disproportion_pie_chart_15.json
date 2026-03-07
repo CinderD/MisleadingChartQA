@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows market share by company. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Company A accounts for around 70% of the market.",
+    "B": "Company D has the largest market share among all companies.",
+    "C": "Company A and Company B together hold less than half of the market.",
+    "D": "Company C and Company E together hold more than a quarter of the market."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "pie_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Labels show Company A has the highest percentage. The pie uses visual_size for slice angles, so Company D's slice can appear larger, misleading viewers."
+}

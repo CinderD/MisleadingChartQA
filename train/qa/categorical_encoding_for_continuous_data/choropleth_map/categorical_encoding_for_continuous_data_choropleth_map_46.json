@@ -1,0 +1,17 @@
+{
+  "question": "Based on the median income map, which statement best describes the relationship between these states?",
+  "options": {
+    "A": "The highlighted states all have very diverse median income levels.",
+    "B": "The median income differences are impossible to determine from this visualization.",
+    "C": "The median income gap between Pennsylvania and Montana might exceed that between Vermont and Wyoming.",
+    "D": "Pennsylvania and Montana have similar median incomes."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Pennsylvania (56.1$k) and Montana (60.3$k) have a 4.2$k median income difference, while Vermont (54.8$k) and Wyoming (55.3$k) have only a 0.5$k difference. However, the categorical color encoding groups Pennsylvania and Montana into the same color bin (55-65$k range), making their large difference appear similar, while Vermont and Wyoming appear more different due to different color bins."
+}

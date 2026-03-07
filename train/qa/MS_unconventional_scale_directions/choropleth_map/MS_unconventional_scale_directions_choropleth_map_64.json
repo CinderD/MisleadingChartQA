@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher incidence based on the chart, AR or GA?",
+  "options": {
+    "A": "Cannot be inferred / inadequate information",
+    "B": "Both states have the same prevalence",
+    "C": "AR",
+    "D": "GA"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although GA appears darker, AR has the higher assigned value when the inversion is considered."
+}

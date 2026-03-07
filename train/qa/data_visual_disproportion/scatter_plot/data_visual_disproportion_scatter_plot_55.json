@@ -1,0 +1,17 @@
+{
+  "question": "Based on the percentages shown next to each category in the chart, which statement is correct?",
+  "options": {
+    "A": "Jewelry has the highest value among the categories.",
+    "B": "Clothing has the highest value among the categories.",
+    "C": "Cards have a higher value than Flowers.",
+    "D": "Dining Out has a higher value than Candy."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

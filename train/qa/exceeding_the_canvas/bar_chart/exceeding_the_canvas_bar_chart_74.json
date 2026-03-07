@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows sales from 2018 to 2022. Which statement best describes the sales pattern shown?",
+  "options": {
+    "A": "Sales stayed roughly the same from 2018 through 2020.",
+    "B": "Sales decreased steadily from 2018 to 2022.",
+    "C": "Sales in 2021 and 2022 are identical.",
+    "D": "We cannot tell from the chart whether the last two years are equal or different because the bars exceed the visible range."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart clips the tallest bars by using a y-axis max below the data maximum, misleading viewers into thinking the top values are equal."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Based on the prevalence levels shown on the map, which comparison between regions is correct?",
+  "options": {
+    "A": "Region A has a higher prevalence level than Region C.",
+    "B": "Region I has a higher prevalence level than Region D.",
+    "C": "Region D has a higher prevalence level than Region I.",
+    "D": "Region G has a lower prevalence level than Region J."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is ordered in a way that does not reflect the true ranking of prevalence levels, and the colors themselves are not in an intuitive Low→High sequence. From the underlying data, Region D is classified at a higher level than Region I, even though the legend ordering may make the opposite appear plausible at first glance."
+}

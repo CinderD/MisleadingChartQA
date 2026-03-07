@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Units Sold by Product (Weekend Pop-up)</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    #chart {
+      width: 1000px;
+      height: 750px;
+      margin: 60px auto;
+    }
+    .bar { fill: #8B0000; }
+    .axis path, .axis line { stroke: #000; }
+    .axis-label { font-size: 14px; font-weight: bold; text-anchor: middle; }
+  </style>
+</head>
+<body>
+  <h1>Units Sold by Product (Weekend Pop-up)</h1>
+  <div id="chart"></div>
+  <script>
+    const margin = {top: 40, right: 30, bottom: 50, left: 80};
+    const width = 1000 - margin.left - margin.right;
+    const height = 750 - margin.top - margin.bottom;
+
+    const svg = d3.select("#chart").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom);
+
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    d3.csv("../../../../data/MS_inappropriate_scale_range/bar_chart/MS_inappropriate_scale_range_bar_chart_60.csv").then(data => {
+      data.forEach(d => d.Units = +d.Units);
+
+      const x = d3.scaleBand()
+        .domain(data.map(d => d.Product))
+        .range([0, width])
+        .padding(0.2);
+
+      const y = d3.scaleLinear()
+        .domain([7385.507078407059, d3.max(data, d => d.Units)])
+        .range([height, 0]);
+
+      g.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x));
+      g.append("g").call(d3.axisLeft(y).ticks(6).tickFormat(d3.format(",.0f")));
+
+      svg.append("text")
+        .attr("class", "axis-label")
+        .attr("x", width / 2 + margin.left)
+        .attr("y", height + margin.top + 40)
+        .text("Product");
+
+      svg.append("text")
+        .attr("class", "axis-label")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -height / 2 - margin.top)
+        .attr("y", margin.left - 60)
+        .text("Units Sold");
+
+      g.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("x", d => x(d.Product))
+        .attr("y", d => y(d.Units))
+        .attr("height", d => height - y(d.Units))
+        .attr("width", x.bandwidth());
+    }).catch(err => console.error('Error loading CSV data:', err));
+  </script>
+</body>
+</html>

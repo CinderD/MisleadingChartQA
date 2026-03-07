@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average housing prices ($1000s) for different cities. Which statement is best supported by the data in the chart?",
+  "options": {
+    "A": "Austin has one of the highest average housing prices among the cities shown.",
+    "B": "The smooth area suggests that small changes between neighboring cities are more important than differences between distant cities.",
+    "C": "The cities follow a natural progression where housing prices steadily increase from left to right.",
+    "D": "Because New York and Nashville differ greatly in price, they must be next to each other on the x-axis."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for city into a continuous filled region. However, the x‑axis categories (e.g., New York, Atlanta, Miami, Seattle, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

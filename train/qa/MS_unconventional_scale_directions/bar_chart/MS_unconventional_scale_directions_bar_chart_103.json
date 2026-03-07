@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in the number of restaurants in City Y from 2010 to 2023 shown in the chart?",
+  "options": {
+    "A": "Decreasing",
+    "B": "Increasing",
+    "C": "Constant",
+    "D": "Fluctuating"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted Y-axis, making the data appear as if the trend is decreasing, but the data actually shows an increasing trend."
+}

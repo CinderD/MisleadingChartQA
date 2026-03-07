@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the company expense breakdown by category. Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "Marketing accounts for the largest share of expenses.",
+    "B": "Salaries account for the largest share of expenses.",
+    "C": "R&D accounts for the largest share of expenses.",
+    "D": "Utilities and Rent together account for more than half of the expenses."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Marketing: 40%; Salaries: 20%; R&D: 15%; Rent: 10%; Other: 8%; Utilities: 7%."
+}

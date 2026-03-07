@@ -1,0 +1,17 @@
+{
+  "question": "This pie chart shows market share by product category. Based on the chart, which statement is most accurate?",
+  "options": {
+    "A": "Asia Pacific holds the smallest share of the market among the categories shown.",
+    "B": "Online-only accounts for the largest share of the market among the categories shown.",
+    "C": "The darkest blue slice represents the most mature and highest quality product category.",
+    "D": "Latin America and Europe together account for more than half of the total market."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "pie_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie slices represent purely categorical groups (e.g., regions or product categories). Using a continuous blue gradient suggests an ordered numeric scale where darker colors mean 'more' of something (such as sophistication, maturity, or time), even though these categories have no inherent order. The only meaningful quantitative comparison is the slice size / percentage; colors should be distinct but unordered to avoid implying relationships that do not exist."
+}

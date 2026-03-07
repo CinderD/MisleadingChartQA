@@ -1,0 +1,17 @@
+{
+  "question": "Which quarter shows the best overall platform performance based on the stacked bar chart of engagement indicators?",
+  "options": {
+    "A": "Q1 shows the best performance because it has the highest combined bar height.",
+    "B": "Q2 shows the best performance because it has the highest combined bar height.",
+    "C": "The chart cannot determine overall performance accurately because it stacks indicators with different units that cannot be meaningfully added together.",
+    "D": "Q4 shows the best performance because it has the lowest total height of support tickets."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart stacks unrelated metrics (Page Views, Server Uptime, etc.) into a single total. These metrics have different units and meanings (e.g., counts, temperatures, consumption), so adding them together creates a meaningless sum. The stacked height cannot be used to assess overall performance. Only individual metric comparisons are valid."
+}

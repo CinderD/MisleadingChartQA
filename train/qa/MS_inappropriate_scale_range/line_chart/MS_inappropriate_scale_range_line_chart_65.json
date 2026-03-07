@@ -1,0 +1,17 @@
+{
+  "question": "What does the chart most accurately suggest about average student test scores from 2010 to 2020?",
+  "options": {
+    "A": "They fell only slightly over the period.",
+    "B": "They remained exactly the same throughout.",
+    "C": "They dropped dramatically over the period.",
+    "D": "The trend in scores cannot be determined from this chart."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (52.43–53.94) instead of a more informative 0–100 context, which visually exaggerates variability. The actual net change is about 1.49 over the period, which is modest in the full context."
+}

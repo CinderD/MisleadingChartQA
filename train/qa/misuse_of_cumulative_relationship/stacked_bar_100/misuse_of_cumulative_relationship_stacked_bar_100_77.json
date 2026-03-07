@@ -1,0 +1,17 @@
+{
+  "question": "For the quarterly data platform, which statement is best supported by the 100% stacked bar chart?",
+  "options": {
+    "A": "Q3 has the highest proportion of online searches among all quarters.",
+    "B": "Q1 has the highest number of online searches compared to the other quarters.",
+    "C": "The sum of all three metrics in each quarter can be used to measure overall platform performance.",
+    "D": "All three metrics have identical patterns across the four quarters because each bar reaches 100%."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "100% stacking normalizes unrelated categories to 100% within each quarter. Valid inferences include within-quarter ranking (e.g., one metric > another in every quarter). Invalid inferences include cross-quarter total comparisons or combining unrelated categories."
+}

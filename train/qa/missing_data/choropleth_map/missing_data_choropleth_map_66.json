@@ -1,0 +1,17 @@
+{
+  "question": "Was the average precipitation over 15 years in France (A) higher than in South Africa (D)?",
+  "options": {
+    "A": "They had equal precipitation",
+    "B": "Yes, France (A) had higher precipitation",
+    "C": "No, South Africa (D) had higher precipitation",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "France or South Africa appears grey on the map, which represents missing data, not a true value. Since one of the regions has no data, we cannot reliably compare their values, even though the color scale may tempt viewers to do so."
+}

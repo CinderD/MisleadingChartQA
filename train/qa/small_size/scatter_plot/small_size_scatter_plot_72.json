@@ -1,0 +1,17 @@
+{
+  "question": "From the scatterplot of years versus wealth, what can be reliably concluded about which year has the highest wealth?",
+  "options": {
+    "A": "A specific year in the late 1990s clearly has the highest wealth.",
+    "B": "A specific year in the early 2000s clearly has the highest wealth.",
+    "C": "The exact year with the highest wealth cannot be identified from this scatterplot.",
+    "D": "All years in the chart have exactly the same wealth."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 52 and 58 have the highest wealth. The small size of the chart may cause difficulty in accurately identifying the specific trends of wealth in certain age ranges."
+}

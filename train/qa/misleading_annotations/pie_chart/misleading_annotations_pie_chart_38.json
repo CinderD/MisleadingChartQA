@@ -1,0 +1,17 @@
+{
+  "question": "Which statement about transport preferences in region R is most accurate?",
+  "options": {
+    "A": "More people in region R prefer public transit than prefer cars.",
+    "B": "More people in region R prefer cars than prefer public transit.",
+    "C": "About half prefer cars and half prefer public transit.",
+    "D": "Only a small minority prefer public transit."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misleading_annotations",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The Public Transit slice is 55%, which is less than half. The misleading angle encourages choosing that more than half prefer public transit, but the majority is actually the Car slice (45%)."
+}

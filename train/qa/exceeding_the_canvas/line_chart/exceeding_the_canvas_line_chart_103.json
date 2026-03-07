@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows revenue by year from 2018 to 2021, with the last point extending beyond the visible y-axis range. Which statement is accurate based on the chart?",
+  "options": {
+    "A": "Revenue increased every year from 2018 to 2021.",
+    "B": "Revenue in 2020 and 2021 is the same.",
+    "C": "Revenue in 2021 is higher than in 2020, but the exact amount is not fully visible because it exceeds the chart’s y-axis range.",
+    "D": "Revenue in 2018 was higher than in 2019."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is set below the data maximum, so the top bars are clipped and appear equal; the true values cannot be compared from the chart alone."
+}

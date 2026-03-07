@@ -1,0 +1,17 @@
+{
+  "question": "For the quarterly platform engagement distribution, which statement is supported by the 100% stacked bar chart?",
+  "options": {
+    "A": "Q3 has the highest number of support tickets among all quarters.",
+    "B": "The chart shows overall engagement volume increasing steadily from Q1 to Q4.",
+    "C": "Support tickets account for a larger percentage than page views in every quarter.",
+    "D": "User registrations and support tickets can be summed to measure total platform usage in each quarter."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "100% stacking normalizes unrelated categories to 100% within each quarter. Valid inferences include within-quarter ranking (e.g., one metric > another in every quarter). Invalid inferences include cross-quarter total comparisons or combining unrelated categories."
+}

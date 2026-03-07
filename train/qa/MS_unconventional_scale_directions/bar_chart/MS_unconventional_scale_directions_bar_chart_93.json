@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in the number of libraries in County V from 2008 to 2021?",
+  "options": {
+    "A": "Decreasing",
+    "B": "Increasing",
+    "C": "Constant",
+    "D": "Fluctuating"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inverted x-axis makes it appear that the trend is increasing, when in reality the data shows a decreasing trend from 2008 to 2021."
+}

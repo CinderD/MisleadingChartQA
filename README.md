@@ -1,119 +1,64 @@
 # Misleading ChartQA
 
-This repository contains the sample dataset for Misleading ChartQA.
+Dataset of chart-based QA pairs designed to probe model sensitivity to common misleading visualization practices (cherry-picking, inappropriate scales, missing data, dual encoding, etc.). Each case includes a chart figure, underlying data, and multiple-choice QA with a correct option and a "misleader" option that is plausible from the chart but wrong from the data.
 
-## Directory Structure
+## Full train set (`train/`)
+
+The **`train/`** folder is the complete training set used for model development and evaluation.
+
+- **Total cases:** 2,755  
+- **Total files:** ~11,027 (figures, code, QA, data per case)  
+- **Composition:** 393 manually-checked expansion cases + 2,362 LLM-reviewed expansion cases (same schema and quality flow).
+
+### Directory structure
+
 ```
-.
-├── code/           # HTML visualization code
+train/
+├── code/           # HTML visualization code (one file per case)
 ├── data/           # CSV data files
-├── figures/        # JPEG image files (image for each case)
-└── qa/            # JSON question-answer files (QA, misleader, explanation and other meta data for each case)
+├── figures/        # JPEG chart images
+└── qa/             # JSON question-answer files (question, options, correct, wrongDueToMisleader)
 ```
 
-## Case Categories
+Paths under `code/`, `data/`, `figures/`, and `qa/` follow the same hierarchy:  
+`<misleader_type>/<plot_type>/<case_name>.<ext>` (e.g. `MS_inappropriate_order/bar_chart/MS_inappropriate_order_bar_chart_4.json` in `qa/`).
 
-### Cherry Picking
-- Scatter Plot: 5 cases
-- Line Chart: 5 cases
+### QA JSON schema (per case)
 
-### Exceeding The Canvas
-- Bar Chart: 5 cases
-- Area Chart: 5 cases
-- Line Chart: 5 cases
+Each `qa/*.json` file typically contains:
 
-### Small Size
-- Scatter Plot: 5 cases
-- Line Chart: 5 cases
-- Choropleth Map: 5 cases
+- `question`: string  
+- `options`: list of four option strings  
+- `correct`: index (0–3) of the correct answer  
+- `wrongDueToMisleader`: index of the option that is tempting from the chart but wrong given the data  
 
-### Ms Inappropriate Scale Functions
-- Bar Chart: 5 cases
-- Pie Chart: 5 cases
-- Line Chart: 5 cases
+Other fields (e.g. task, difficulty) may be present for compatibility.
 
-### Dual Encoding
-- Bar Chart: 5 cases
-- Pie Chart: 5 cases
-- Scatter Plot: 5 cases
+## Case categories (misleader types)
 
-### Ms Inappropriate Scale Range 
-- Bar Chart: 5 cases
-- Stacked Area Chart: 5 cases
-- Stacked Bar Chart: 5 cases
-- Line Chart: 5 cases
-- Choropleth Map: 5 cases
+The dataset covers many misleading visualization types, including (names may use underscores, e.g. `MS_inappropriate_order`):
 
-### Missing Data
-- Choropleth Map: 5 cases
+- Cherry Picking, Exceeding The Canvas, Small Size  
+- MS Inappropriate Scale Functions / Scale Range / Inappropriate Order / Unconventional Scale Directions  
+- Dual Encoding, Missing Data, Inappropriate Aggregation  
+- Continuous Encoding For Categorical Data, Categorical Encoding For Continuous Data  
+- Misuse Of Cumulative Relationship, Data Visual Disproportion  
+- Concealed Uncertainty, Overplotting, Lack Of Legend, Lack Of Scales  
+- Misleading Annotations, Missing Normalization  
 
-### Inappropriate Aggregation
-- Bar Chart: 5 cases
-- Scatter Plot: 5 cases
-- Stacked Bar Chart: 5 cases
-- Area Chart: 5 cases
-- Line Chart: 5 cases
+Plot types include bar_chart, line_chart, area_chart, scatter_plot, pie_chart, stacked_bar_chart, choropleth_map, heatmap, etc.
 
-### Continous Encoding For Categorical Data (Mismatched Encoding)
-- Pie Chart: 5 cases
-- Area Chart: 5 cases
-- Line Chart: 5 cases
+## Usage
 
-### Ms Inappropriate Order 
-- Bar Chart: 5 cases
-- Choropleth Map: 5 cases
-- Scatter Plot: 5 cases
-- Stacked Bar Chart: 5 cases
-- Area Chart: 5 cases
-- Line Chart: 5 cases
+- **Training / evaluation:** Use `train/figures/` as images and `train/qa/` as labels; align by case name (filename without extension).  
+- **Reproducing charts:** Use `train/code/*.html` with `train/data/*.csv` (e.g. local HTTP server) to re-render the same charts.
 
-### Misuse Of Cumulative Relationship
-- Stacked Bar 100: 5 cases
-- Stacked Bar Chart: 5 cases
-- Stacked Area Chart: 5 cases
+## Repository contents
 
-### Data Visual Disproportion
-- Bar Chart: 5 cases
-- Scatter Plot: 5 cases
-- Pie Chart: 5 cases
-- Line Chart: 5 cases
+- **`train/`** — Full train set (2,755 cases) as above.  
+- **`README.md`** — This file.  
+- Root-level `code/`, `data/`, `figures/`, `qa/` — Full project sources; the `train/` set is a curated subset exported for training.
 
-### Ms Unconventional Scale Directions
-- Bar Chart: 5 cases
-- Choropleth Map: 5 cases
-- Scatter Plot: 5 cases
-- Area Chart: 5 cases
-- Line Chart: 5 cases
+## Citation & license
 
-### Concealed Uncertainty
-- Bar Chart: 5 cases
-- Choropleth Map: 5 cases
-- Scatter Plot: 5 cases
-
-### Overplotting
-- Scatter Plot: 5 cases
-
-### Lack Of Legend (Lack of Labeling)
-- Stacked Area Chart: 5 cases
-- Stacked Bar Chart: 5 cases
-
-### Lack Of Scales (Lack of Labeling)
-- Bar Chart: 5 cases
-- Area Chart: 5 cases
-- Line Chart: 5 cases
-
-### Categorical Encoding For Continuous Data (Mismatched Encoding)
-- Heatmap: 5 cases
-- Choropleth Map: 5 cases
-
-### Misleading Annotations (Deceptive Labeling)
-- Bar Chart: 5 cases
-- Line Chart: 5 cases
-- Pie Chart: 5 cases
-
-### Missing Normalization
-- Choropleth Map: 5 cases
-
-## Statistics
-- Total sample cases: 305
-- Total files expected: 1220
+Please cite the dataset and follow the repository license when using the data.

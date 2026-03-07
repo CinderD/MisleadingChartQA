@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, approximately what fraction of the total monthly budget is allocated to Housing?",
+  "options": {
+    "A": "About one-third",
+    "B": "About one-half",
+    "C": "About one-quarter",
+    "D": "About one-fifth"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie chart uses an adjusted scaling function for slice sizes, which can shrink or inflate differences between categories. That makes the true ratio (1.5:1) look closer to 1.2:1 when judging by the wedge areas."
+}

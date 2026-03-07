@@ -1,0 +1,17 @@
+{
+  "question": "What does the chart suggest about the percentage of Bacteria Z detected from 2000 to 2009?",
+  "options": {
+    "A": "It shows a dramatic decline over the period",
+    "B": "It remains perfectly constant throughout the period",
+    "C": "It varies only slightly around a similar level",
+    "D": "The trend over the period cannot be determined"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (37.56–38.28%) instead of a more informative 0–100% context, which visually exaggerates variability. The actual net change is about 0.72% over the period, which is modest in the full context."
+}

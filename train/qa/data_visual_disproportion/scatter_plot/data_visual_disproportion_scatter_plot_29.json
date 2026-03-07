@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the product rating share by category. Based on the percentage values shown, which statement is correct?",
+  "options": {
+    "A": "Price has the highest rating share among the categories.",
+    "B": "The categories have nearly identical rating shares.",
+    "C": "Delivery has the highest rating share among the categories.",
+    "D": "Support has the lowest rating share among the categories."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Based on this chart, which statement about the latest year's customer subscriptions is most appropriate?",
+  "options": {
+    "A": "The latest year has already recorded more subscriptions than any previous year.",
+    "B": "The latest year’s total subscriptions are exactly equal to the average of all earlier years.",
+    "C": "From this chart, we cannot tell whether the latest year will finish with more or fewer subscriptions than previous years.",
+    "D": "The latest year clearly shows a sharp drop in subscriptions compared with previous years."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The area and line for the latest year include only about 4 months of data, while earlier years show totals for the full year. Visually, the latest year appears much lower, but this is purely because the period is shorter, not because the underlying performance has collapsed. Without the remaining months, we cannot judge the full-year outcome."
+}

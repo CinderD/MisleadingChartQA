@@ -1,0 +1,17 @@
+{
+  "question": "Was the average temperature over 15 years in the United States higher than in Brazil?",
+  "options": {
+    "A": "Yes, the United States had a higher average temperature",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "They had exactly the same average temperature",
+    "D": "No, Brazil had a higher average temperature"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "United States and Brazil both have measured data, so we can compare them numerically. United States is 18.3°C vs 28.6°C for Brazil."
+}

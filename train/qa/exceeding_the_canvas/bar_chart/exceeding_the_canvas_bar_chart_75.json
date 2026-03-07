@@ -1,0 +1,17 @@
+{
+  "question": "Based on the bar chart of annual profit, which statement is best supported?",
+  "options": {
+    "A": "Profit was highest in 2019 and then declined through 2022.",
+    "B": "Profit fluctuated but was lowest in 2018.",
+    "C": "Profit in 2021 and 2022 was exactly the same.",
+    "D": "Profit fell steadily over the period."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Bars for the highest years exceed the canvas and are clipped, making them look the same height; the true relationship cannot be inferred from the visual."
+}

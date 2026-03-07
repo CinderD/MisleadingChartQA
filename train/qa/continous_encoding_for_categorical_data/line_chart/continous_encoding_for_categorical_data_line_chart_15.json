@@ -1,0 +1,17 @@
+{
+  "question": "This line chart shows average customer ratings (1–5 stars) for different restaurant types. Which statement is most accurate based on the chart?",
+  "options": {
+    "A": "French restaurants have the highest average rating among the listed types.",
+    "B": "The chart shows a clear left‑to‑right trend in which the categories gradually improve or worsen.",
+    "C": "The categories on the left are inherently more basic than those on the right.",
+    "D": "The categories on the right have lower average ratings than those on the left."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart uses a continuous line over restaurant type that are purely categorical (e.g., Japanese, Mexican, Indian, ...). Connecting points suggests there is a meaningful smooth progression from left to right, which is conceptually incorrect — these categories have no inherent numeric order. The y‑axis values are on a 1 to 5 scale, but any comparison across categories should be made with a discrete chart such as a bar chart, not by reading trends from the connecting line."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Considering the area chart of revenue by year, which statement is best supported by the data shown?",
+  "options": {
+    "A": "Revenue in 2021 and 2022 appears to reach the same level on the chart.",
+    "B": "Revenue in 2018 was higher than in 2020.",
+    "C": "Revenue declined in each year shown.",
+    "D": "Revenue in 2018 and 2019 appears to be identical."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is set below the data maximum, so the top bars are clipped and appear equal; the true values cannot be compared from the chart alone."
+}

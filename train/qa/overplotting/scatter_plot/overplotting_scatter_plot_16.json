@@ -1,0 +1,17 @@
+{
+  "question": "Do Spring months have humidity values above 16%?",
+  "options": {
+    "A": "Yes",
+    "B": "No",
+    "C": "Only other seasons have humidity above 16%",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 16% humidity position, making it difficult to accurately discern if any members of Spring has the humidity higher than 16%."
+}

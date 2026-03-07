@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US population map, which statement below is the most accurate?",
+  "options": {
+    "A": "The population gap between Montana and Michigan might exceed that between Michigan and Wisconsin.",
+    "B": "Montana and Michigan have very similar populations.",
+    "C": "All highlighted states have nearly identical populations.",
+    "D": "The population differences are impossible to determine from this visualization."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Montana (12.7M) and Michigan (18.3M) have a 5.6M population difference, while Minnesota (1.6M) and Wyoming (2.1M) have only a 0.5M difference. However, the categorical color encoding groups Montana and Michigan into the same color bin (12-20M range), making their large difference appear similar, while Minnesota and Wyoming appear more different due to different color bins."
+}

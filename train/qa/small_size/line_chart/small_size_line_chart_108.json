@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows sales from 1924 to 2024. What is the main difficulty in interpreting this chart?",
+  "options": {
+    "A": "The chart is too small to clearly see detailed changes in sales over specific years.",
+    "B": "Sales remained exactly constant from 1924 to 2024.",
+    "C": "The chart shows that sales declined sharply in every decade.",
+    "D": "Sales values for each year can be read precisely from the chart."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The data shows a decline from 1960 to 1970, then a rise. Small text size can make it difficult to identify which decade had the decline."
+}

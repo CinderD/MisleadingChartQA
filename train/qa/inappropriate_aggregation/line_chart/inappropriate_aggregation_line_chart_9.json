@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, which of the following statements is true?",
+  "options": {
+    "A": "The latest year shows a sharp decline compared to previous years.",
+    "B": "The latest year has the lowest sign-ups in the entire period.",
+    "C": "The latest year proves that sign-ups are now permanently declining.",
+    "D": "The chart does not provide enough information to draw conclusions about the full-year trend in sign-ups for the latest year."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The latest year in the chart only includes about 3 months of data, while previous years show full 12‑month totals. Comparing the partial-year value (793 sign-ups) directly to full-year values like 2,869 sign-ups creates the illusion of a sharp decline. We cannot draw full‑year conclusions from this incomplete aggregate."
+}

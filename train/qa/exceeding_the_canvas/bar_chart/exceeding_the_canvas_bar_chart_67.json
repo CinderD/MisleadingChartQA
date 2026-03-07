@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows revenue for the company from 2018 to 2022. Which statement about the revenues is most accurate?",
+  "options": {
+    "A": "Revenue in 2021 and 2022 was the same.",
+    "B": "Revenue increased by the same amount each year.",
+    "C": "Revenue in 2020 was lower than in 2019.",
+    "D": "Revenue was highest in 2022."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The bar tops are clipped outside the visible plotting area, so equality or ordering for the clipped bars cannot be inferred."
+}

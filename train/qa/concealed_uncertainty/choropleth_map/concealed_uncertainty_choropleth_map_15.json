@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is Jan 20, and half of the votes from each state for a favorite candidate have been counted. The color of each state corresponds to the candidate that has received the most votes in that state so far. The candidate with the most number of colored states will be the most popular candidate, and the results will be finalized on Feb 5. Which of the following is true?",
+  "options": {
+    "A": "C will be the least popular candidate.",
+    "B": "B will be the most popular candidate.",
+    "C": "A will be the most popular candidate.",
+    "D": "Cannot be determined."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "concealed_uncertainty",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While Candidate B currently dominates the map with the most colored states, the chart shows results as of Jan 20, but the voting ends on Feb 5. The remaining voting period could dramatically change the outcome, making it premature to predict which candidate will be most popular. The concealed uncertainty lies in the incomplete voting process that is not reflected in the chart."
+}

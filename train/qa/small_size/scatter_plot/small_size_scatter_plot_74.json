@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot chart shows the relationship between age and wealth for a group of individuals. Which of the following best describes the pattern shown?",
+  "options": {
+    "A": "Wealth is clearly highest for individuals between ages 55 and 60 compared with all other ages.",
+    "B": "Wealth is clearly highest for individuals between ages 45 and 50 compared with all other ages.",
+    "C": "Wealth is clearly highest for individuals between ages 50 and 55 compared with all other ages.",
+    "D": "The chart suggests that wealth generally increases with age, but it is hard to identify a single age range as clearly having the highest wealth."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 50 and 55 have the highest wealth. The small size of the chart may cause difficulty in accurately identifying the specific trends of wealth in certain age ranges."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows the annual profit from 2018 to 2022. Which statement best describes the profits as depicted in the chart?",
+  "options": {
+    "A": "Profit is the same in 2021 and 2022.",
+    "B": "Profit is highest in 2020.",
+    "C": "Profit decreases from 2019 to 2022.",
+    "D": "Profit is higher in 2018 than in 2020."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Bars for the highest years exceed the canvas and are clipped, making them look the same height; the true relationship cannot be inferred from the visual."
+}

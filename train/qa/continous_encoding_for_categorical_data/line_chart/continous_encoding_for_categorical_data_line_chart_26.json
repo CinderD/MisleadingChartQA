@@ -1,0 +1,17 @@
+{
+  "question": "This line chart displays average customer ratings (1–5 stars) for different restaurant types. Which of the following statements is most accurate based on the data shown?",
+  "options": {
+    "A": "Thai restaurants have the highest average rating among all the restaurant types shown.",
+    "B": "Japanese restaurants have the highest average rating among all the restaurant types shown.",
+    "C": "The chart indicates a smooth and predictable improvement in ratings from the first to the last restaurant type.",
+    "D": "The ratings are roughly the same for every restaurant type, with almost no variation."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart uses a continuous line over restaurant type that are purely categorical (e.g., Italian, Japanese, Mexican, ...). Connecting points suggests there is a meaningful smooth progression from left to right, which is conceptually incorrect — these categories have no inherent numeric order. The y‑axis values are on a 1 to 5 scale, but any comparison across categories should be made with a discrete chart such as a bar chart, not by reading trends from the connecting line."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, at approximately how many training hours do test scores reach their highest level?",
+  "options": {
+    "A": "Around 10 hours",
+    "B": "Around 20 hours",
+    "C": "Around 25 hours",
+    "D": "Around 40 hours"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the y-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following best describes the rainfall pattern in City Q during 2023?",
+  "options": {
+    "A": "Rainfall was highest in January and lowest in July.",
+    "B": "Rainfall was lowest in January and highest in July.",
+    "C": "Rainfall remained nearly constant throughout the year.",
+    "D": "Rainfall steadily declined from January through June without changing afterward."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes it appear that the series is flipped vertically, which can swap the perceived highs and lows. The correct option matches the actual data values."
+}

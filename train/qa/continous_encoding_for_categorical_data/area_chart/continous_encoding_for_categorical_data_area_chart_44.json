@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average housing prices for several cities. Which statement best describes a problem with this visualization?",
+  "options": {
+    "A": "It incorrectly suggests a smooth progression in prices from one city to the next, even though the cities are just separate categories.",
+    "B": "It proves that each city’s prices are increasing over time.",
+    "C": "It shows that cities located next to each other on the x-axis must also be geographically close.",
+    "D": "It indicates that only the first and last cities have reliably measured prices."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for city into a continuous filled region. However, the x‑axis categories (e.g., Miami, Denver, Austin, Nashville, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

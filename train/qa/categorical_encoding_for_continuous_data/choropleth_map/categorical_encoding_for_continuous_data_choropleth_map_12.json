@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US population map, which statement below is the most accurate?",
+  "options": {
+    "A": "Iowa and Massachusetts appear to have similar populations because they share the same color category, but their actual populations might still differ substantially within that range.",
+    "B": "North Dakota and Maryland clearly have nearly identical populations since they fall into different color categories.",
+    "C": "Iowa and Massachusetts have similar populations.",
+    "D": "The population differences between these states are impossible to determine from this visualization."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Iowa (12.8M) and Massachusetts (19.2M) have a 6.4M population difference, while North Dakota (5.8M) and Maryland (6.3M) have only a 0.5M difference. However, the categorical color encoding groups Iowa and Massachusetts into the same color bin (12-20M range), making their large difference appear similar, while North Dakota and Maryland appear more different due to different color bins."
+}

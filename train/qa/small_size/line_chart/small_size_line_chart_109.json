@@ -1,0 +1,17 @@
+{
+  "question": "What is the main difficulty in interpreting this revenue chart from 1924 to 2024?",
+  "options": {
+    "A": "The chart is so small that it is hard to distinguish detailed changes in revenue over time.",
+    "B": "Revenue clearly increased at a constant rate throughout the entire period.",
+    "C": "Revenue clearly decreased in every decade shown.",
+    "D": "The chart shows that revenue was identical in all years."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Revenue declined from 1980 to 1990. The extremely small axis labels can make it hard to read which period had the decline."
+}

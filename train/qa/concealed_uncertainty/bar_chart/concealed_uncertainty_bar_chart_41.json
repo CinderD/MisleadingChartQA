@@ -1,0 +1,17 @@
+{
+  "question": "The testing phase ends in Week 8. Which of the following is true?",
+  "options": {
+    "A": "Cannot be determined.",
+    "B": "Product A will be selected.",
+    "C": "Product B will be selected.",
+    "D": "Product C will be selected for launch."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "concealed_uncertainty",
+  "chartType": "bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While Product C currently has the highest rating (57.4), the chart shows results as of Week 3, but the testing phase concludes in Week 8. The remaining testing period could dramatically change the outcome, making it premature to predict a winner. The concealed uncertainty lies in the incomplete testing phase that is not reflected in the chart."
+}

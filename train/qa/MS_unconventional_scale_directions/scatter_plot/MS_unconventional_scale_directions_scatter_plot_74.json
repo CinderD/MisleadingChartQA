@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, what is the perceived relationship between Advertising Spend and Sales as Advertising Spend appears to increase?",
+  "options": {
+    "A": "Sales appear to increase.",
+    "B": "Sales appear to remain roughly constant.",
+    "C": "Sales appear to decrease.",
+    "D": "The relationship cannot be determined."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted Y-axis, which can flip the apparent direction of the relationship. The correct option reflects the actual pattern in the data."
+}

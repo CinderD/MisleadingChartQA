@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the annual budget distribution of City A in various sectors. Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "The budget allocated to Others is the largest among all sectors.",
+    "B": "The budget allocated to Education is the largest among all sectors.",
+    "C": "The budget allocated to Infrastructure is larger than that for Healthcare.",
+    "D": "The budget allocated to Safety is the smallest among all sectors."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Others: 45%; Education: 20%; Safety: 15%; Healthcare: 10%; Infrastructure: 10%."
+}

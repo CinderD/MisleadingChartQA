@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Annual CO2 Emissions in Country N</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h1>Annual CO2 Emissions in Country N</h1>
+    <svg width="1000" height="750"></svg>
+    <script>
+        const margin = { top: 60, right: 60, bottom: 60, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/MS_unconventional_scale_directions/line_chart/MS_unconventional_scale_directions_line_chart_25.csv").then(data => {
+            data.forEach(d => {
+                d.year = +d.year;
+                d.value = +d.value;
+            });
+
+            const x = d3.scaleLinear()
+                .domain([2000, 2011])
+                .range([0, width]);
+
+            const y = d3.scaleLinear()
+                .domain([74.52, 0])
+                .range([height, 0]);
+
+            const line = d3.line()
+                .x(d => x(d.year))
+                .y(d => y(d.value));
+
+            svg.append("path")
+                .datum(data)
+                .attr("fill", "none")
+                .attr("stroke", "red")
+                .attr("stroke-width", 3)
+                .attr("d", line);
+
+            svg.selectAll("circle")
+                .data(data)
+                .enter().append("circle")
+                .attr("cx", d => x(d.year))
+                .attr("cy", d => y(d.value))
+                .attr("r", 5)
+                .attr("fill", "red");
+
+            svg.append("g")
+                .attr("transform", `translate(0, ${height})`)
+                .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+            svg.append("g").call(d3.axisLeft(y));
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width / 2)
+                .attr("y", height + 50)
+                .style("text-anchor", "middle")
+                .text("Year");
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -40)
+                .style("text-anchor", "middle")
+                .text("CO2 Emissions (Mt)");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "question": "Is there a negative relationship between training hours per month and productivity index within each team?",
+  "options": {
+    "A": "Yes, both Team X and Team Y show a negative relationship",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "No, there is a strong positive relationship for both teams",
+    "D": "Only one of the teams shows a negative relationship; the other does not"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The trend line is fitted to all data points combined, mixing the two groups. It may suggest a negative overall relationship between the variables, but it does not tell us what the relationship looks like within School/Team A or B separately. Each group could have a different pattern (e.g., positive or flat), so we cannot infer within‑group relationships from this aggregated trend alone."
+}

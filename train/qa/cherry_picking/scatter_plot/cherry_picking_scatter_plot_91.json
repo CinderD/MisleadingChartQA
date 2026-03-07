@@ -1,0 +1,17 @@
+{
+  "question": "This chart shows advertising spend and sales for several consecutive high‑performing months. What can we conclude about the campaign's overall effectiveness across the entire year?",
+  "options": {
+    "A": "The campaign is highly effective year-round, since sales rise sharply as spending increases in all months shown.",
+    "B": "The campaign is ineffective overall, because sales are only high in a few isolated months.",
+    "C": "The campaign appears effective during the holiday season shown, but we need non‑holiday months to judge year‑round effectiveness.",
+    "D": "The campaign is ineffective in the holiday season, since sales remain flat as spending increases."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Infer Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The scatter plot only includes five months clustered around the holiday season (September–January), where both spend and sales increase together. This cherry‑picked subset makes the campaign look consistently successful, encouraging the impression that higher spending always drives higher sales (option A). However, without seeing non‑holiday months—when spending and sales may behave very differently—we cannot reliably assess the campaign's effectiveness for the entire year, so the cautious conclusion in option C is correct."
+}

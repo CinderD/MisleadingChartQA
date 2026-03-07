@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows global smartphone market share in 2024. Which statement is correct according to the chart data labels?",
+  "options": {
+    "A": "Apple has the largest market share among the brands shown.",
+    "B": "Samsung has the largest market share among the brands shown.",
+    "C": "Xiaomi has the largest market share among the brands shown.",
+    "D": "Huawei has a larger share than Others."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, Samsung has the highest share (50%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking Xiaomi is largest when relying on visual comparison."
+}
