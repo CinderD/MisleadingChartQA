@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of the total number of apples harvested based on the chart from Jan 10 to Jan 14?",
+  "options": {
+    "A": "Increasing, then decreasing, and finally increasing",
+    "B": "Decreasing, then increasing, and finally decreasing",
+    "C": "Consistently increasing",
+    "D": "Consistently decreasing"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, showing dates from Jan 14 to Jan 10, making the chart appear as though the number of apples initially decreases and then increases. In reality, based on the data, the apples harvested increase first and then decrease. The variation between generated and original CSV arises from this unconventional x-axis direction, leading to misinterpretation of the data trend."
+}

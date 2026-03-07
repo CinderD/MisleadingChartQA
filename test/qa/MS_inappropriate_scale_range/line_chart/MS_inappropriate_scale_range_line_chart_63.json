@@ -1,0 +1,17 @@
+{
+  "question": "What best describes the change in the percentage of Bacteria Z detected over the years shown?",
+  "options": {
+    "A": "It remained exactly constant",
+    "B": "There was a dramatic improvement",
+    "C": "It decreased substantially",
+    "D": "It showed only a very small increase"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (71.11–71.63%) instead of a more informative 0–100% context, which visually exaggerates variability. The actual net change is about 0.46% over the period, which is modest in the full context."
+}

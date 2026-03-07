@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, which of the following is correct?",
+  "options": {
+    "A": "Company D has the largest market share among all companies.",
+    "B": "Company A has the largest market share among all companies.",
+    "C": "The chart does not allow comparing shares across companies.",
+    "D": "Company E has the largest market share among all companies."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "pie_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Labels show Company D has the highest percentage. The pie uses visual_size for slice angles, so Company A's slice can appear larger, misleading viewers."
+}

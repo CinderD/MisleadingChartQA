@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Market Share Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .area {
+            fill: #e74c3c;
+            opacity: 0.7;
+        }
+        .axis path,
+        .axis line {
+            shape-rendering: crispEdges;
+            stroke: #333;
+        }
+        .grid line {
+            stroke: lightgrey;
+            stroke-opacity: 0.7;
+            shape-rendering: crispEdges;
+        }
+    </style>
+</head>
+<body>
+    <h2>Market Share Performance by Brand</h2>
+    <svg width="1000" height="750"></svg>
+    
+    <script>
+        const margin = { top: 30, right: 40, bottom: 100, left: 80 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/continous_encoding_for_categorical_data/area_chart/continous_encoding_for_categorical_data_area_chart_6.csv").then(data => {
+
+            // Correct data types
+            data.forEach(d => {
+                d.market_share = +d.market_share;
+            });
+
+            const x = d3.scalePoint()
+                .domain(data.map(d => d.brand))
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.market_share)])
+                .nice()
+                .range([height, 0]);
+
+            const area = d3.area()
+                .x(d => x(d.brand))
+                .y0(height)
+                .y1(d => y(d.market_share));
+
+            svg.append("path")
+                .data([data])
+                .attr("class", "area")
+                .attr("d", area);
+
+            const xAxis = svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+
+            const yAxis = svg.append("g")
+                .call(d3.axisLeft(y));
+
+            svg.append("text")
+                .attr("transform", "translate(" + (width / 2) + "," + (height + margin.bottom - 10) + ")")
+                .style("text-anchor", "middle")
+                .text("Brand");
+
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left + 20)
+                .attr("x", 0 - (height / 2))
+                .style("text-anchor", "middle")
+                .text("Market Share (%)");
+            
+   
+
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

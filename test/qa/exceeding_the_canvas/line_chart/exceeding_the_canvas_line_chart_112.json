@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows site visits by year from 2018 to 2022. Which of the following statements is correct based on the chart?",
+  "options": {
+    "A": "Site visits stayed about the same from 2020 to 2022.",
+    "B": "Site visits in 2022 were the highest, but the exact value is not fully visible because the top of the line is clipped.",
+    "C": "Site visits decreased from 2019 to 2020.",
+    "D": "Site visits in 2018 and 2019 were identical."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The visible y-range is set below the maximum value, so the top bars are truncated and looks identical."
+}

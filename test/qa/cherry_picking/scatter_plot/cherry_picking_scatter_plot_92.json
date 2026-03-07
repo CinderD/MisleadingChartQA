@@ -1,0 +1,17 @@
+{
+  "question": "This chart plots advertising spend and sales for a set of particularly strong quarters. What can we infer about the campaign's effectiveness over the full set of quarters in the year?",
+  "options": {
+    "A": "The campaign is reliably effective across all quarters, since higher spend always leads to much higher sales in the quarters shown.",
+    "B": "The campaign is ineffective in most quarters because sales are low at the beginning.",
+    "C": "The campaign appears effective in these strong quarters, but we would need data from weaker or average quarters to judge its overall effectiveness.",
+    "D": "The campaign is ineffective overall because sales do not respond to spend in these quarters."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Infer Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart only shows a set of unusually strong quarters where both spend and sales increase together. This cherry‑picked subset encourages the impression that the campaign reliably works in every quarter (option A), but quarters with weaker or flat performance are missing. Without those, we cannot assess overall effectiveness across the full year, so option C is correct."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Do Spring have humidity above 23%?",
+  "options": {
+    "A": "No",
+    "B": "Only certain categories have humidity above 23",
+    "C": "Yes",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 23% humidity position, making it difficult to accurately discern if any members of Spring has the humidity higher than 23%."
+}

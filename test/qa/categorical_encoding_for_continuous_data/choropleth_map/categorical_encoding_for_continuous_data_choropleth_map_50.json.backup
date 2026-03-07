@@ -1,0 +1,17 @@
+{
+  "question": "Based on the unemployment rate map, which statement best describes the relationship between states?",
+  "options": {
+    "A": "The unemployment rate gap between Iowa and Maine might exceeds that between Michigan and California.",
+    "B": "The unemployment rate differences are impossible to determine from this visualization.",
+    "C": "Iowa and Maine have similar unemployment rates.",
+    "D": "All states have very diverse unemployment rate levels."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Iowa (11.1%) and Maine (15.4%) have a 4.3% unemployment rate difference, while Michigan (4.6%) and California (5.4%) have only a 0.8% difference. However, the categorical color encoding groups Iowa and Maine into the same color bin (9%+ range), making their large difference appear similar, while Michigan and California appear more different due to different color bins."
+}

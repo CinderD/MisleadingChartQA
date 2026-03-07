@@ -1,0 +1,17 @@
+{
+  "question": "Do people in the East region have incomes above 20 thousand?",
+  "options": {
+    "A": "Yes",
+    "B": "No",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Only North and South regions have people with incomes above 22 thousand"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 20 thousand income position, making it difficult to accurately discern if any members of East region has the income higher than 20 thousand."
+}

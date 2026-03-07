@@ -1,0 +1,17 @@
+{
+  "question": "What do these price movements suggest about market trends from 1995 to 2010?",
+  "options": {
+    "A": "The pattern of growth followed by decline indicates cyclical market behavior throughout the period.",
+    "B": "Market performance shows consistent decline across the entire timeframe.",
+    "C": "The market exhibits random fluctuations with no discernible pattern.",
+    "D": "This limited sample cannot reliably indicate the whole market trends."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "While the visible data shows a clear pattern of growth (2000-2004) followed by decline (2005), this cherry-picked 6-year window cannot reliably indicate market behavior across the full 15-year period (1995-2010). Other periods within this timeframe could show significantly different patterns that would alter our understanding of long-term market trends."
+}

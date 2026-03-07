@@ -1,0 +1,17 @@
+{
+  "question": "Comparing the first half to the second half of the year: which period has higher total sales?",
+  "options": {
+    "A": "Both periods show equal total sales.",
+    "B": "First half of the year",
+    "C": "Second half of the year",
+    "D": "Cannot be determined from the chart."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The months on the x‑axis are arranged in reverse (Dec back to Jan), so the filled area shape is misleading if read left‑to‑right. When you re‑order the months to the natural calendar sequence and sum Jan–Jun versus Jul–Dec, you find that the second half actually has higher total sales. The inappropriate month order can easily invert this interpretation."
+}

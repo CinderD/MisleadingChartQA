@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot chart portrays the income and ages of a group of people. Which statement best reflects what can be concluded from the chart?",
+  "options": {
+    "A": "Individuals around their early 50s appear to earn more than those in their 20s or 60s, but the exact age with the highest income is hard to determine from the chart.",
+    "B": "Individuals between ages 45 and 55 clearly have the highest annual income, well above all other ages.",
+    "C": "Individuals in their 20s consistently earn more than those in their 40s and 50s.",
+    "D": "There is no visible relationship at all between age and income in this chart."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 45 and 55 have the highest annual. The small size of the chart may cause difficulty in accurately identifying the specific trends of annual in certain age ranges."
+}

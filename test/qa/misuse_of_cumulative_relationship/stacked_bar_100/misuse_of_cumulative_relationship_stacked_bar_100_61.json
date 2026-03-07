@@ -1,0 +1,17 @@
+{
+  "question": "For the quarterly platform engagement distribution, which interpretation best reflects what can (and cannot) be inferred from the 100% stacked bar chart?",
+  "options": {
+    "A": "The chart allows comparison of the absolute number of page views between quarters.",
+    "B": "Valid inferences include within-quarter ranking comparisons of the metrics; invalid inferences include cross-quarter comparisons of their absolute quantities.",
+    "C": "User registrations, support tickets, and page views all follow the same trend over the year because the bars are normalized to 100%.",
+    "D": "Q3 has the highest overall platform engagement because its stacked bar appears most balanced across the three metrics."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "100% stacking normalizes unrelated categories to 100% within each quarter. Valid inferences include within-quarter ranking (e.g., one metric > another in every quarter). Invalid inferences include cross-quarter total comparisons or combining unrelated categories."
+}

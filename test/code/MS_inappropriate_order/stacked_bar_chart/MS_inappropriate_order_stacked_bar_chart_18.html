@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Bar Chart - Sales Data Over Years</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .label {
+            font-size: 14px;
+            font-weight: bold;
+            fill: white;
+            text-anchor: middle;
+        }
+    </style>
+</head>
+<body>
+    <h1>R&D Budget Allocation by Department</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 80, bottom: 100, left: 80};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const categories = ["Research", "Development", "Testing"];
+        const color = d3.scaleOrdinal()
+            .domain(categories)
+            .range(["#2a9d8f", "#e76f51", "#6a4c93"]);
+
+        const legend = svg.append("g")
+            .attr("transform", `translate(${width + 50}, ${height / 3})`);
+
+        categories.forEach((key, index) => {
+            legend.append("rect")
+                .attr("x", 0)
+                .attr("y", index * 25)
+                .attr("width", 18)
+                .attr("height", 18)
+                .attr("fill", color(key));
+            
+            legend.append("text")
+                .attr("x", 25)
+                .attr("y", index * 25 + 9)
+                .attr("dy", "0.35em")
+                .style("font-size", "14px")
+                .style("text-anchor", "start")
+                .text(key);
+        });
+
+        d3.csv("../../../../data/MS_inappropriate_order/stacked_bar_chart/MS_inappropriate_order_stacked_bar_chart_18.csv").then(data => {
+            // Manipulate the order of years: 2020, 2022, 2021, 2023, 2024, 2025
+            // This makes Development appear to have steady decline
+            data.sort((a, b) => {
+                const order = ["2020", "2022", "2024", "2021", "2023", "2025"];
+                return order.indexOf(a.year) - order.indexOf(b.year);
+            });
+
+            const stackedData = d3.stack()
+                .keys(categories)
+                (data);
+
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.year))
+                .range([0, width])
+                .padding(0.3);
+
+            const y = d3.scaleLinear()
+                .domain([0, 100])
+                .range([height, 0]);
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", -height / 2 - 25)
+                .attr("y", +25)
+                .attr("transform", "rotate(-90)")
+                .text("Sales (%)");
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width / 2 + 45)
+                .attr("y", height + 70)
+                .text("Year");
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            g.append("g").call(d3.axisLeft(y).ticks(5).tickFormat(d => d + "%"));
+
+            g.selectAll(".layer")
+                .data(stackedData)
+                .enter().append("g")
+                .attr("fill", d => color(d.key))
+                .selectAll("rect")
+                .data(d => d)
+                .enter().append("rect")
+                .attr("x", d => x(d.data.year))
+                .attr("y", d => y(d[1]))
+                .attr("height", d => y(d[0]) - y(d[1]))
+                .attr("width", x.bandwidth());
+        }).catch(function(error) {
+            console.error('Error loading CSV data:', error);
+        });
+    </script>
+</body>
+</html>

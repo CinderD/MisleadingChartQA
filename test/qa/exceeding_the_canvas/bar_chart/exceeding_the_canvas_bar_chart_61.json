@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows the cost from 2018 to 2022. Which statement best describes what can be concluded from the chart as drawn?",
+  "options": {
+    "A": "The cost was highest in 2022, but the chart does not show how much higher it is than 2021.",
+    "B": "The costs in 2021 and 2022 are the same.",
+    "C": "The chart clearly shows that the cost increase each year is by the same amount.",
+    "D": "The cost in 2019 is lower than in 2018."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis cap causes the top bar to be cut off, so they appear the same height although true values may differ."
+}

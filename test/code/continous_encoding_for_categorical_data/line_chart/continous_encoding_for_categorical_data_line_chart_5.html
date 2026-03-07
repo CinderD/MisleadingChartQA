@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Salary by Profession</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .line {
+            fill: none;
+            stroke: #9b59b6;
+            stroke-width: 3;
+        }
+        .dot {
+            fill: #8e44ad;
+            stroke: #fff;
+            stroke-width: 2;
+        }
+        .axis path,
+        .axis line {
+            shape-rendering: crispEdges;
+            stroke: #333;
+        }
+        .grid line {
+            stroke: lightgrey;
+            stroke-opacity: 0.7;
+            shape-rendering: crispEdges;
+        }
+    </style>
+</head>
+<body>
+    <h2>Annual Average Salary by Professional Field</h2>
+    <svg width="1000" height="750"></svg>
+    
+    <script>
+        const margin = { top: 40, right: 40, bottom: 120, left: 100 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/continous_encoding_for_categorical_data/line_chart/continous_encoding_for_categorical_data_line_chart_5.csv").then(data => {
+            
+            data.forEach(d => {
+                d.salary = +d.salary;
+            });
+
+            const x = d3.scalePoint()
+                .domain(data.map(d => d.profession))
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.salary) * 1.1])
+                .nice()
+                .range([height, 0]);
+
+            const line = d3.line()
+                .x(d => x(d.profession))
+                .y(d => y(d.salary));
+
+            svg.append("path")
+                .datum(data)
+                .attr("class", "line")
+                .attr("d", line);
+
+            svg.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.profession))
+                .attr("cy", d => y(d.salary))
+                .attr("r", 5);
+
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x))
+                .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("dx", "-.8em")
+                .attr("dy", ".15em")
+                .attr("transform", "rotate(-40)");
+
+            svg.append("g")
+                .call(d3.axisLeft(y).tickFormat(d => "$" + (d/1000) + "K"));
+
+            // Add grid lines
+            svg.append("g")
+                .attr("class", "grid")
+                .call(d3.axisLeft(y)
+                    .tickSize(-width)
+                    .tickFormat("")
+                );
+
+            svg.append("text")
+                .attr("transform", "translate(" + (width / 2) + "," + (height + 100) + ")")
+                .style("text-anchor", "middle")
+                .text("Professional Field");
+
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left + 20)
+                .attr("x", 0 - (height / 2))
+                .style("text-anchor", "middle")
+                .text("Average Annual Salary (USD)");
+        });
+    </script>
+</body>
+</html>

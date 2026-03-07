@@ -1,0 +1,21 @@
+id,territory,avg_precipitation,abbr,note,latitude,longitude
+840,United States,12000,BD,A,39.0,-98.0
+156,China,11500,CN,B,35.0,105.0
+124,Canada,0,CA,C,60.0,-95.0
+036,Australia,4100,JP,D,-25.0,135.0
+356,India,8500,IN,E,20.0,78.0
+076,Brazil,8500,,Z,-14.235,-51.9253
+276,Germany,7300,,Z,51.1657,10.4515
+250,France,7500,,Z,46.6034,1.8883
+484,Mexico,8700,,Z,23.6345,-102.5528
+643,Russia,8600,,Z,61.524,105.3188
+826,United Kingdom,7700,,Z,55.3781,-3.436
+566,Nigeria,8800,,Z,9.082,8.6753
+360,Philippines,12500,,Z,12.8797,121.774
+554,New Zealand,10700,,Z,-40.9006,174.886
+710,South Africa,4600,,Z,-30.5595,22.9375
+372,Ireland,6500,,Z,53.4129,-8.2439
+528,Netherlands,6800,,Z,52.1326,5.2913
+300,Greece,4500,,Z,39.0742,21.8243
+233,Estonia,6200,,Z,58.5953,25.0136
+208,Denmark,7000,,Z,56.2639,9.5018

@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows CO₂ emissions vs. temperature anomaly. Which statement is most consistent with the data in the chart?",
+  "options": {
+    "A": "Temperature anomalies tend to increase as CO₂ emissions increase.",
+    "B": "Higher CO₂ emissions are associated with lower temperature anomalies.",
+    "C": "There is no visible relationship between CO₂ emissions and temperature anomaly.",
+    "D": "The points with the largest size and darkest color show that temperature anomalies stay roughly constant as CO₂ emissions rise."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

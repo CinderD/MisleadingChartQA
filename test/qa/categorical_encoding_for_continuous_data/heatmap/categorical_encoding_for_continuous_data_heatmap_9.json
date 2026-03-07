@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the performance heatmap, which statement best describes the relationship between Product D's User_Satisfaction performance and Product C's User_Satisfaction performance?",
+  "options": {
+    "A": "It can be infered that their performances are very similar.",
+    "B": "Product D clearly outperforms Product C, and the color difference shows a large gap between them.",
+    "C": "The performance is impossible to determine from this visualization.",
+    "D": "The performances might be significantly different, but the discrete color bins make them appear more similar than they actually are."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Product D (70.4points) and Product C (75.2points) have a 4.8points difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of performance relationships."
+}

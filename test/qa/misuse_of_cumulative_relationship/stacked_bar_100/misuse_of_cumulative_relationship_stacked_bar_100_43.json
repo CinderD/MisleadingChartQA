@@ -1,0 +1,17 @@
+{
+  "question": "Based on the quarterly platform engagement distribution, what can be concluded about 'User Registrations' over the year from this chart alone?",
+  "options": {
+    "A": "'User Registrations' takes up the largest share in Q4, so it must also have the highest absolute number there.",
+    "B": "The chart only shows the percentage share of 'User Registrations' each quarter, so it does not reveal whether its absolute number is increasing or decreasing.",
+    "C": "'User Registrations' has a lower percentage share in Q2 than in Q1.",
+    "D": "Because each bar reaches 100%, the combined engagement level is the same in every quarter."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart normalizes unrelated categories to 100% within each quarter. It can suggest that the share of a metric is higher in later quarters, but it cannot establish an absolute increasing trend without the underlying totals. A higher percentage share does not necessarily mean a higher absolute quantity."
+}

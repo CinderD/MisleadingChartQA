@@ -1,0 +1,17 @@
+{
+  "question": "In village V, what is the approximate average number of products sold at shop E from Jan to Mar?",
+  "options": {
+    "A": "50",
+    "B": "100",
+    "C": "150",
+    "D": "200"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misleading_annotations",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows products sold for January (100), February (200), and March (150). The correct average is (100 + 200 + 150) / 3 = 150. However, the misleading annotation shows a dashed line labeled 'Average' at 50, which is incorrect and designed to mislead viewers into selecting 50 as the answer."
+}

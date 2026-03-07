@@ -1,0 +1,17 @@
+{
+  "question": "Which competitor holds the largest market share in the last period shown?",
+  "options": {
+    "A": "The red area (Company D) represents the dominant share.",
+    "B": "Cannot determine which competitor holds the largest share without a legend to explain what each color represents.",
+    "C": "The green area (Company C) indicates the highest share.",
+    "D": "The green area (Company C) represents the dominant share."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows different colored areas but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category holds the largest share; options that assign a category to a color are guessing."
+}

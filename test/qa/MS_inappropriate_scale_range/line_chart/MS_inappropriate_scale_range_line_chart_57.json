@@ -1,0 +1,17 @@
+{
+  "question": "What does the chart suggest about the change in average student test scores over the years shown?",
+  "options": {
+    "A": "There was a sharp increase in scores",
+    "B": "Scores fluctuated wildly from year to year",
+    "C": "Scores changed only slightly over the period",
+    "D": "Scores declined overall"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (50.97–52.46) instead of a more informative 0–100 context, which visually exaggerates variability. The actual net change is about 1.49 over the period, which is modest in the full context."
+}

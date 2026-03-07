@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows rainfall vs. crop yield. Which statement is most supported by the data?",
+  "options": {
+    "A": "Higher rainfall is associated with sharply lower crop yields.",
+    "B": "On average, more rainfall tends to be associated with lower crop yields.",
+    "C": "There is a strong positive relationship between rainfall and crop yield.",
+    "D": "There is no relationship between rainfall and crop yield."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the y-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

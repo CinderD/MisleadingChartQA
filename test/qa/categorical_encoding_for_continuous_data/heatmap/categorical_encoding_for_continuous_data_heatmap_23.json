@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the performance heatmap, which statement best describes the relationship between Product A's Speed performance and Product F's Speed performance?",
+  "options": {
+    "A": "Product A has a much higher Speed score than Product F, and the color difference clearly shows this large gap.",
+    "B": "Product F has a much higher Speed score than Product A, and the color difference clearly shows this large gap.",
+    "C": "It can be infered that their Speed performances are very similar.",
+    "D": "Their Speed performances might differ substantially, but the discrete color bins make them appear more similar than they actually are."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Product A (66.6points) and Product F (70.4points) have a 3.8points difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of performance relationships."
+}

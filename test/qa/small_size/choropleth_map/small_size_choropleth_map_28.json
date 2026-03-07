@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows GDP (in billions) for selected US states. Which statement is correct?",
+  "options": {
+    "A": "Texas has the highest GDP among the states shown.",
+    "B": "New Hampshire and Alabama have nearly identical GDP values.",
+    "C": "The extremely small text size makes it difficult to read specific GDP values accurately.",
+    "D": "The map clearly shows detailed GDP differences for each individual state."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific GDP figures accurately. Rankings and exact values cannot be verified."
+}

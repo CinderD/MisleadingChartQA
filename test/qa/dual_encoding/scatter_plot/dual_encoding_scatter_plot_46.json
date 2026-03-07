@@ -1,0 +1,17 @@
+{
+  "question": "The plot shows marketing spend vs revenue. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "There is no relationship between marketing spend and revenue.",
+    "B": "There is a generally negative relationship between marketing spend and revenue.",
+    "C": "As marketing spend increases, revenue tends to increase overall.",
+    "D": "Revenue increases at an accelerating rate with higher marketing spend."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

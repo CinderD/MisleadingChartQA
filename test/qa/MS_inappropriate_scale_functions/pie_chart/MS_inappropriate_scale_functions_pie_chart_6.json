@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, which major appears to have the highest enrollment percentage?",
+  "options": {
+    "A": "Computer Science",
+    "B": "Business",
+    "C": "Engineering",
+    "D": "Arts"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie chart uses adjusted scaling that completely reverses the enrollment order, making Arts appear as the largest segment despite having the same enrollment as Engineering and less than Computer Science."
+}

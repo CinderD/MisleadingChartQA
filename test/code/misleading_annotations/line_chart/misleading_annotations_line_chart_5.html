@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>line_chart Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .lineA {
+            fill: none;
+            stroke: #1F77B4;
+            stroke-width: 3px;
+        }
+        .lineB {
+            fill: none;
+            stroke: #D3D3D3;
+            stroke-dasharray: 5,5;
+            stroke-width: 3px;
+        }
+        .legend text {
+            font-size: 12px;
+        }
+        .axis path, .axis line {
+            stroke: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Monthly Performance for Products A and B</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Load data from CSV
+        d3.csv("../../../../data/misleading_annotations/line_chart/misleading_annotations_line_chart_5.csv").then(data => {
+            data.forEach(d => {
+                d.month = d.month;
+                d.productA = +d.productA;
+                d.productB = +d.productB;
+            });
+
+            const x = d3.scalePoint().domain(data.map(d => d.month)).range([0, width]);
+            const y = d3.scaleLinear().domain([0, 3000]).range([height, 0]);
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+            g.append("g").call(d3.axisLeft(y));
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 35)
+                .attr("text-anchor", "middle")
+                .text("Month");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -45)
+                .attr("text-anchor", "middle")
+                .text("Performance Score");
+
+            const lineA = d3.line()
+                .x(d => x(d.month))
+                .y(d => y(d.productA));
+
+            g.append("path")
+                .datum(data)
+                .attr("class", "lineA")
+                .attr("d", lineA);
+
+            const lineB = d3.line()
+                .x(d => x(d.month))
+                .y(d => y(d.productB));
+
+            g.append("path")
+                .datum(data)
+                .attr("class", "lineB")
+                .attr("d", lineB);
+
+            const legend = g.append("g")
+                .attr("transform", `translate(${width - 100}, 0)`);
+
+            legend.append("line")
+                .attr("x1", 0).attr("y1", 10).attr("x2", 20).attr("y2", 10)
+                .attr("class", "lineA");
+            legend.append("text").attr("x", 25).attr("y", 13).text("Product A");
+
+            legend.append("line")
+                .attr("x1", 0).attr("y1", 30).attr("x2", 20).attr("y2", 30)
+                .attr("class", "lineB");
+            legend.append("text").attr("x", 25).attr("y", 33).text("Product B");
+        });
+    </script>
+</body>
+</html>

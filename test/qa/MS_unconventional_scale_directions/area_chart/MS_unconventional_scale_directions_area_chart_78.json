@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in daily energy usage in Building Z from April 8 to April 13?",
+  "options": {
+    "A": "Increasing, then decreasing, and finally increasing",
+    "B": "Decreasing, then increasing, and finally decreasing",
+    "C": "Consistently increasing",
+    "D": "Consistently decreasing"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, reversing the time order and making the trend appear opposite to the actual chronological pattern."
+}

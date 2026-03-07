@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Conversion Rate</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart { width: 1000px; height: 600px; margin: 60px auto; }
+        .axis path, .axis line { stroke: #000; }
+        .line { fill: none; stroke: #2ca02c; stroke-width: 2; }
+        .dot { fill: #2ca02c; }
+    </style>
+</head>
+<body>
+    <h1>Website Conversion Rate</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 40, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const data = [
+            {week: "Week 1", rate: 2.1},
+            {week: "Week 2", rate: 2.8},
+            {week: "Week 3", rate: 3.2},
+            {week: "Week 4", rate: 3.9},
+            {week: "Week 5", rate: 4.5},
+            {week: "Week 6", rate: 5.1},
+            {week: "Week 7", rate: 5.8},
+            {week: "Week 8", rate: 6.2}
+        ];
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.week))
+            .range([0, width])
+            .padding(0.1);
+
+        const y = d3.scaleLinear()
+            .domain([d3.min(data, d => d.rate), d3.max(data, d => d.rate)])
+            .range([height, 0]);
+
+        const line = d3.line()
+            .x(d => x(d.week) + x.bandwidth() / 2)
+            .y(d => y(d.rate));
+
+        g.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x).tickFormat(d => d));
+
+        g.append("g")
+            .call(d3.axisLeft(y).tickFormat("").ticks(0));
+
+        g.append("path")
+            .datum(data)
+            .attr("class", "line")
+            .attr("d", line);
+
+        g.selectAll(".dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("class", "dot")
+            .attr("cx", d => x(d.week) + x.bandwidth() / 2)
+            .attr("cy", d => y(d.rate))
+            .attr("r", 3);
+
+        g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 35)
+            .attr("text-anchor", "middle")
+            .text("Week");
+
+        g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -40)
+            .attr("x", -height / 2)
+            .attr("text-anchor", "middle")
+            .text("Conversion Rate (%)");
+    </script>
+</body>
+</html>

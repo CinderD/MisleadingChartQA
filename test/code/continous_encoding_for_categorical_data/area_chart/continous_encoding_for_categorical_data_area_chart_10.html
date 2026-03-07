@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Rating Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .area {
+            fill: #f39c12;
+            opacity: 0.7;
+        }
+        .line {
+            fill: none;
+            stroke: #e67e22;
+            stroke-width: 2;
+        }
+        .dot {
+            fill: #e67e22;
+            stroke: #fff;
+            stroke-width: 2;
+        }
+        .axis path,
+        .axis line {
+            shape-rendering: crispEdges;
+            stroke: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Average Customer Ratings by Product Category</h2>
+    <svg width="1000" height="750"></svg>
+    
+    <script>
+        const margin = { top: 40, right: 40, bottom: 90, left: 80 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/continous_encoding_for_categorical_data/area_chart/continous_encoding_for_categorical_data_area_chart_10.csv").then(data => {
+
+            data.forEach(d => {
+                d.rating = +d.rating;
+            });
+
+            const x = d3.scalePoint()
+                .domain(data.map(d => d.product))
+                .range([0, width])
+                .padding(0.3);
+
+            const y = d3.scaleLinear()
+                .domain([0, 5])
+                .range([height, 0]);
+
+            const area = d3.area()
+                .x(d => x(d.product))
+                .y0(height)
+                .y1(d => y(d.rating));
+
+            const line = d3.line()
+                .x(d => x(d.product))
+                .y(d => y(d.rating));
+
+            svg.append("path")
+                .data([data])
+                .attr("class", "area")
+                .attr("d", area);
+
+            svg.append("path")
+                .data([data])
+                .attr("class", "line")
+                .attr("d", line);
+
+            svg.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.product))
+                .attr("cy", d => y(d.rating))
+                .attr("r", 4);
+
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x))
+                .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("dx", "-.8em")
+                .attr("dy", ".15em")
+                .attr("transform", "rotate(-35)");
+
+            svg.append("g")
+                .call(d3.axisLeft(y).tickFormat(d => d + " ★"));
+
+            svg.append("text")
+                .attr("transform", "translate(" + (width / 2) + "," + (height + 80) + ")")
+                .style("text-anchor", "middle")
+                .text("Product Category");
+
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left + 20)
+                .attr("x", 0 - (height / 2))
+                .style("text-anchor", "middle")
+                .text("Average Rating (1-5 stars)");
+
+        });
+    </script>
+</body>
+</html>

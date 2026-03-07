@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays market share trends from 2018 to 2023. Based on this data, which of the following is correct?",
+  "options": {
+    "A": "The market share in 2022 is higher than in 2020.",
+    "B": "The market share in 2023 shows exceptional improvement compared to the previous year.",
+    "C": "The market share in 2018 is higher than in 2023.",
+    "D": "The trend cannot be determined from the chart alone."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The line is drawn using a different 'height' value for 2023 than the actual share, so the visual suggests a dramatic spike while the true share is 27%."
+}

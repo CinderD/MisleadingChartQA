@@ -1,0 +1,17 @@
+{
+  "question": "Considering the chart, what proportion of tickets sold on Aug 10 compared to Aug 11 is depicted?",
+  "options": {
+    "A": "60%",
+    "B": "79%",
+    "C": "95%",
+    "D": "100%"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The Y-axis is manipulated, leading to a misleading visual of the differences (looks like the sell on Aug 10 is only around 60% of the sale on Aug 11). The proportion is approximately 80% based on the real data."
+}

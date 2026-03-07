@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of revenue of company C from Q1 to Q4?",
+  "options": {
+    "A": "Cannot be inferred / Inadequate Information",
+    "B": "Generally constant",
+    "C": "Generally decreasing",
+    "D": "Generally increasing"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misleading_annotations",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "The chart shows a clear increasing trend in revenue from 1115 in Q1 to 1573 in Q4. However, the misleading title contradicts the visual data and is designed to mislead viewers into thinking the trend is constant."
+}

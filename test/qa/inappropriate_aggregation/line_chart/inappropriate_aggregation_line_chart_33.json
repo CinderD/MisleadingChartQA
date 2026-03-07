@@ -1,0 +1,17 @@
+{
+  "question": "Company A sells a board game. According to the chart, which of the following statements is true?",
+  "options": {
+    "A": "The latest year shows a sharp decline compared to previous years.",
+    "B": "The latest year has the lowest copies sold in the entire period.",
+    "C": "The overall trend in copies sold has been permanently downward since the latest year.",
+    "D": "From this chart we cannot make a justified conclusion about the latest full-year sales performance."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The latest year in the chart only includes about 5 months of data, while previous years show full 12‑month totals. Comparing the partial-year value (319 copies) directly to full-year values like 834 copies creates the illusion of a sharp decline. We cannot draw full‑year conclusions from this incomplete aggregate."
+}

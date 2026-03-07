@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Temperature by Region</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        path {
+            stroke: #fff;
+        }
+        .legend {
+            font-size: 12px;
+        }
+        .region-label {
+            font-size: 24px;
+            fill: black;
+            font-weight: bold;
+        }
+        .missing-data {
+            fill: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Average Temperature by Region over 15 Years</h1>
+    <div id="chart">
+        <svg width="1000" height="750"></svg>
+    </div>
+
+    <script>
+        const width = 1000, height = 750;
+        const svg = d3.select("svg");
+
+        const projection = d3.geoNaturalEarth1()
+            .scale(220)
+            .translate([width / 2.5, height / 2]);
+
+        const path = d3.geoPath().projection(projection);
+
+        const defs = svg.append("defs");
+
+        d3.json("https://d3js.org/world-110m.v1.json").then(world => {
+            d3.csv("../../../../data/missing_data/choropleth_map/missing_data_choropleth_map_11.csv").then(data => {
+                const countries = topojson.feature(world, world.objects.countries).features;
+
+                const colorScale = d3.scaleThreshold()
+                    .domain([20, 25, 30])
+                    .range(["#fee5d9", "#fcae91", "#fb6a4a", "#de2d26"]);
+
+                const temperatureById = {};
+                const labels = {};
+                data.forEach(d => {
+                    temperatureById[d.id] = +d.average_temperature;
+                    labels[d.id] = d.region;
+                });
+
+                svg.selectAll("path")
+                    .data(countries)
+                    .join("path")
+                    .attr("d", path)
+                    .attr("fill", d => {
+                        const temperature = temperatureById[d.id];
+                        // Missing data regions (Africa, Nigeria)
+                        if (d.id === '124' || d.id === '566') {
+                            return "#ccc";
+                        }
+                        return temperature ? colorScale(temperature) : "#ccc";
+                    });
+
+                // Only show labels for key regions (A, B, C, D, E)
+                svg.selectAll(".region-label")
+                    .data(data.filter(d => ['R-A', 'R-B', 'R-C', 'R-D', 'R-E'].includes(d.code)))
+                    .join("text")
+                    .attr("class", "region-label")
+                    .attr("x", d => {
+                        const coords = projection([d.longitude, d.latitude]);
+                        return coords ? coords[0] : -10;
+                    })
+                    .attr("y", d => {
+                        const coords = projection([d.longitude, d.latitude]);
+                        return coords ? coords[1] : -10;
+                    })
+                    .text(d => d.code.replace('R-', ''));
+
+                // Create proper threshold legend (place between Australia and Antarctica)
+                const legendWidth = 300;
+                const legendHeight = 20;
+                const legendX = 500;
+                const legendY = 550;
+
+                // Create legend rectangles
+                const legendData = [
+                    { color: "#fee5d9", label: "0-20" },
+                    { color: "#fcae91", label: "20-25" },
+                    { color: "#fb6a4a", label: "25-30" },
+                    { color: "#de2d26", label: "30+" },
+                    { color: "#ccc", label: "No data" }
+                ];
+
+                svg.selectAll(".legend-rect")
+                    .data(legendData)
+                    .join("rect")
+                    .attr("class", "legend-rect")
+                    .attr("x", (d, i) => legendX + i * (legendWidth / 5))
+                    .attr("y", legendY)
+                    .attr("width", legendWidth / 5 - 2)
+                    .attr("height", legendHeight)
+                    .attr("fill", d => d.color)
+                    .attr("stroke", "#000");
+
+                // Add legend labels
+                svg.selectAll(".legend-label")
+                    .data(legendData)
+                    .join("text")
+                    .attr("class", "legend-label")
+                    .attr("x", (d, i) => legendX + i * (legendWidth / 5) + (legendWidth / 5) / 2)
+                    .attr("y", legendY + legendHeight + 15)
+                    .attr("text-anchor", "middle")
+                    .style("font-size", "10px")
+                    .text(d => d.label);
+
+                // Add legend title
+                svg.append("text")
+                    .attr("x", legendX + legendWidth / 2)
+                    .attr("y", legendY - 10)
+                    .attr("text-anchor", "middle")
+                    .style("font-size", "12px")
+                    .style("font-weight", "bold")
+                    .text("Average Temperature (°C)");
+            });
+        });
+    </script>
+</body>
+</html>

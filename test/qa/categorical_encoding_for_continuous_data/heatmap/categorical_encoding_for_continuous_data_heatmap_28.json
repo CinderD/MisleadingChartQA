@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the performance heatmap, which statement best describes the relationship between Product E's Reliability performance and Product C's Reliability performance?",
+  "options": {
+    "A": "The performances might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "B": "The exact difference in their performances cannot be determined from this visualization.",
+    "C": "It can be infered that their performances are very similar.",
+    "D": "Product E clearly outperforms Product C in Reliability, and the color difference precisely reflects this gap."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Product E (50.9points) and Product C (55.4points) have a 4.6points difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of performance relationships."
+}

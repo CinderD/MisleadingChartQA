@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Sales Trend for Product A</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .line {
+            fill: none;
+            stroke-width: 0.5; /* Further reduce line thickness for misleader description */
+        }
+        .axis path,
+        .axis line {
+            shape-rendering: crispEdges;
+        }
+        .grid line {
+            stroke: lightgrey;
+            stroke-opacity: 0.7;
+            shape-rendering: crispEdges;
+        }
+        text {
+            font-size: 2px; /* Further reduce font size to enhance the misleader */
+        }
+    </style>
+</head>
+<body>
+    <h2>Annual Sales Trend for Product A</h2>
+    <svg width="1000" height="750"></svg>
+    
+    <script>
+        const margin = { top: 30, right: 40, bottom: 70, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+        const tick_label_size = "2px"; // Further reduced label size
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        
+        d3.csv("../../../../data/small_size/line_chart/small_size_line_chart_10.csv").then(function(data) {
+            data.forEach(d => {
+                d.TinyYear = +d.TinyYear;
+                d.TinySales = +d.TinySales;
+            });
+
+            const x = d3.scaleTime()
+                .domain([d3.min(data, d => new Date(d.TinyYear, 0)), d3.max(data, d => new Date(d.TinyYear, 0))])
+                .range([0, width]);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.TinySales)])
+                .nice()
+                .range([height, 0]);
+
+            const line = d3.line()
+                .x(d => x(new Date(d.TinyYear, 0)))
+                .y(d => y(d.TinySales));
+
+            const xAxis = svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x)
+                    .ticks(d3.timeYear.every(10))
+                    .tickFormat(d3.timeFormat("%Y")))
+                .style("font-size", tick_label_size);
+
+            const yAxis = svg.append("g")
+                .call(d3.axisLeft(y))
+                .style("font-size", tick_label_size);
+
+            svg.append("g")
+                .attr("class", "grid")
+                .call(d3.axisLeft(y)
+                    .ticks(10)
+                    .tickSize(-width)
+                    .tickFormat(""));
+
+            svg.append("g")
+                .attr("class", "grid")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x)
+                    .ticks(d3.timeYear.every(10))
+                    .tickSize(-height)
+                    .tickFormat(""));
+
+            svg.append("path")
+                .data([data])
+                .attr("class", "line")
+                .attr("stroke", "steelblue")
+                .attr("d", line);
+
+            svg.append("text")
+                .attr("transform", "translate(" + (width / 2) + "," + (height + margin.bottom - 10) + ")")
+                .style("text-anchor", "middle")
+                .style("font-size", tick_label_size)
+                .text("Year");
+
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left)
+                .attr("x", 0 - (height / 2))
+                .attr("dy", "1em")
+                .style("text-anchor", "middle")
+                .style("font-size", tick_label_size)
+                .text("Sales");
+        });
+    </script>
+</body>
+</html>

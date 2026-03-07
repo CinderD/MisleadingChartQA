@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following best describes the overall trend in the unemployment rate from 2007 to 2022?",
+  "options": {
+    "A": "It remains roughly constant throughout the period.",
+    "B": "It shows substantial fluctuations over the period.",
+    "C": "It steadily decreases over the entire period.",
+    "D": "It steadily increases over the entire period."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes the series appear increasing when it is actually decreasing."
+}

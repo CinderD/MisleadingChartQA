@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the temperature heatmap, which statement best describes the relationship between San Antonio and Houston in July?",
+  "options": {
+    "A": "The temperatures might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "B": "It can be infered that their July temperatures are very similar.",
+    "C": "San Antonio is clearly much hotter than Houston in July, and the color difference precisely reflects this large gap.",
+    "D": "The July temperatures for these cities cannot be compared using this chart."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "San Antonio (5.5°C) and Houston (12.2°C) have a 6.8°C difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of temperature relationships."
+}

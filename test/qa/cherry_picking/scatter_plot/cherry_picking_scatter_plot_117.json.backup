@@ -1,0 +1,17 @@
+{
+  "question": "The plot shows ad spend and sales only for age groups with strong response. What can we say about effectiveness across the entire audience?",
+  "options": {
+    "A": "The campaign is highly effective across the entire audience, since the age groups shown clearly respond to more spend.",
+    "B": "The campaign is ineffective overall because only a few points show improvement.",
+    "C": "The campaign appears effective for these high-response age groups, but we cannot conclude it works for all age groups without seeing lower-response segments.",
+    "D": "The campaign harms performance because higher spend always reduces sales in these points."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Infer Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Focusing only on high-response demographics hides those that respond less or not at all, so the chart cannot support a conclusion about the whole audience."
+}

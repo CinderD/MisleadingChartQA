@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows the percentage of adults with a bachelor's degree or higher by state. Which statement is correct?",
+  "options": {
+    "A": "The map makes it easy to read the exact percentage value for each labeled state.",
+    "B": "The extremely small text size makes it difficult to read specific percentage values accurately.",
+    "C": "New York clearly has an attainment rate of 35.2%, as shown on the map.",
+    "D": "Mississippi clearly has an attainment rate of 21.7%, as shown on the map."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it difficult to read exact attainment percentages. Color may suggest relative levels but specific values cannot be verified."
+}

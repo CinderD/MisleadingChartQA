@@ -1,0 +1,17 @@
+{
+  "question": "Examine the area chart depicting Company Y's revenue from 2018 to 2022. Which statement accurately describes the revenue trends shown?",
+  "options": {
+    "A": "Revenues have a steady increase every year.",
+    "B": "Years 2021 and 2022 have significantly higher revenues than previous years.",
+    "C": "Revenues have a fluctuating growth in these years.",
+    "D": "2020 had the highest revenue up until 2022."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The values for 2021 and 2022 are too large, causing them to exceed the chart’s visible area. This results in both points being shown out of scope, which could mislead viewers into thinking about the revenues trend."
+}

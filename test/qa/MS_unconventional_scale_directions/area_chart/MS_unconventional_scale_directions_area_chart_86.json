@@ -1,0 +1,17 @@
+{
+  "question": "What is the overall trend in daily website visits from April 8 to April 15?",
+  "options": {
+    "A": "Overall increasing",
+    "B": "Overall decreasing",
+    "C": "No clear trend",
+    "D": "Constant"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, reversing the time order and making the trend appear opposite to the actual chronological pattern."
+}

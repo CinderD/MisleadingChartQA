@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend based on the chart from Feb 19 to Feb 23?",
+  "options": {
+    "A": "Decreasing, then increasing, and finally decreasing",
+    "B": "Increasing, then decreasing, and finally increasing",
+    "C": "Consistently increasing",
+    "D": "Consistently decreasing"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, reversing the time order and making the trend appear opposite to the actual chronological pattern."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "What is the main difficulty in drawing precise conclusions from this revenue chart?",
+  "options": {
+    "A": "The chart is so small that it is hard to distinguish exact changes between decades.",
+    "B": "Revenue clearly decreased in every decade shown.",
+    "C": "Revenue clearly increased in every decade shown.",
+    "D": "Revenue stayed exactly the same from 1924 to 2024."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Revenue declined from 1980 to 1990. The extremely small axis labels can make it hard to read which period had the decline."
+}

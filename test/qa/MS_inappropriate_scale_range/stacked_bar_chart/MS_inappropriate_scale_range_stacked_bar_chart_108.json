@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, how does the total number of visitors at Station Z compare to Station X over all days shown?",
+  "options": {
+    "A": "Station Z has a little over twice as many visitors as Station X.",
+    "B": "Station Z has slightly fewer visitors than Station X.",
+    "C": "Station Z has more than three times as many visitors as Station X.",
+    "D": "Station Z and Station X have approximately the same number of visitors."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 800 instead of 0, which compresses the visible differences between stacked totals. That can make Station Z look as large as (or larger than) Station X even though the totals favor Station X."
+}

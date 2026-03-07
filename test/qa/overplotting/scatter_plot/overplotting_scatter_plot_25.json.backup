@@ -1,0 +1,17 @@
+{
+  "question": "Do Sales employees have salaries above 23 thousand?",
+  "options": {
+    "A": "No",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "Yes",
+    "D": "Only certain categories have salaries above 23"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 23 thousand salaries position, making it difficult to accurately discern if any members of Sales has the salarie higher than 23 thousand."
+}

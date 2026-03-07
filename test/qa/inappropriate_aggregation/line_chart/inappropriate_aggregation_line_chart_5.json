@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is October 10, 2024, which statement most accurately describes the production efficiency pattern?",
+  "options": {
+    "A": "Production efficiency has consistently improved from 2019 to 2023, with a slight decline in 2024.",
+    "B": "Efficiency peaked in 2023 and is now declining, suggesting potential operational challenges in 2024.",
+    "C": "The overall trend shows significant improvement year by year with 2024 maintaining high efficiency levels.",
+    "D": "2024 efficiency data is partial and cannot be meaningfully compared to complete annual data."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart displays annual production efficiency data with 2024 showing only partial-year results (as of October 10, 2024, representing approximately 10 months or 83% of the year). The inappropriate aggregation misleadingly compares incomplete 2024 data (89.5% efficiency for 10 months) with complete annual data from previous years. While 2024 appears to show a decline from 2023, this is premature since the year is not complete. The correct answer focuses on the overall positive trend while acknowledging that 2024 maintains relatively high efficiency levels, avoiding conclusions about year-end performance."
+}

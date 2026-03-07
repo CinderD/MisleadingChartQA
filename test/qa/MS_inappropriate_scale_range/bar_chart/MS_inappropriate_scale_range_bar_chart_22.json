@@ -1,0 +1,17 @@
+{
+  "question": "According to the updated chart, how do the tickets sold on Aug 10 compare to those sold on Aug 11?",
+  "options": {
+    "A": "80% of Aug 11",
+    "B": "60% of Aug 11",
+    "C": "35% of Aug 11",
+    "D": "5% of Aug 11"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Aug 10 tickets sold (4000) are 80% of Aug 11 (5000), but the Y-axis scale exaggerates the differences."
+}

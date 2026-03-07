@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, what is the actual percentage share of Hydroelectric in global energy consumption?",
+  "options": {
+    "A": "About 35%",
+    "B": "About 45%",
+    "C": "About 55%",
+    "D": "About 65%"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie uses an adjusted scaling function for slice sizes, so the largest-looking wedge may not correspond to the largest true percentage. This can make Fossil Fuels appear largest even though the data show Hydroelectric is largest."
+}

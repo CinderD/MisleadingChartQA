@@ -1,0 +1,17 @@
+{
+  "question": "The line chart illustrates the sales data from 1924 to 2024. Which statement is true?",
+  "options": {
+    "A": "Sales increased from 1924 to 2024.",
+    "B": "Sales decreased from 1970 to 1980.",
+    "C": "Sales dropped between 1940 to 1950.",
+    "D": "No corerect answer."
+  },
+  "correctAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Identify Trends",
+  "explanation": "The sales data indicates that sales rose from 1924 to 1970, fell from 1970 to 1980, and then began rising again from 1980 to 2024. However, the use of small text or data markers makes these trends hard to discern.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "C"
+}

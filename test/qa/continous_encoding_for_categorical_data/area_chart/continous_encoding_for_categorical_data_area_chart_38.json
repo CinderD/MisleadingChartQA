@@ -1,0 +1,17 @@
+{
+  "question": "This area chart presents average housing prices ($1000s) for several cities. Which statement below best reflects what we can reliably conclude?",
+  "options": {
+    "A": "The connected area correctly represents a gradual, time-like progression across the cities.",
+    "B": "The smooth area shape means that small changes between neighboring cities are more important than differences between non-adjacent cities.",
+    "C": "San Francisco has the highest recorded average housing price among the cities shown.",
+    "D": "New York and San Francisco must be adjacent along the x-axis because their prices differ the most."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for city into a continuous filled region. However, the x‑axis categories (e.g., New York, Portland, Boston, Nashville, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

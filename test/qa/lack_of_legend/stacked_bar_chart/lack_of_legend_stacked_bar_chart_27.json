@@ -1,0 +1,17 @@
+{
+  "question": "Which income level segment has the largest share in the final year shown?",
+  "options": {
+    "A": "Cannot determine which income level has the largest share without a legend explaining what each color represents.",
+    "B": "The orange segment (low income) has the largest share.",
+    "C": "The purple segment (middle income) has the largest share.",
+    "D": "The red segment (high income) has the largest share."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays different colored segments but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category has the largest share; options that assign a category to a color are guessing."
+}

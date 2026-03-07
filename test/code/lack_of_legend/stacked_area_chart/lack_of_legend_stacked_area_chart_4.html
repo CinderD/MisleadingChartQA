@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Share Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 600px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .area {
+            opacity: 0.8;
+        }
+        .area:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quarterly Market Share Distribution</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 150, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Sample data for market share
+        const data = [
+            {quarter: "Q1", company1: 35, company2: 25, company3: 20, company4: 20},
+            {quarter: "Q2", company1: 33, company2: 27, company3: 22, company4: 18},
+            {quarter: "Q3", company1: 31, company2: 29, company3: 24, company4: 16},
+            {quarter: "Q4", company1: 29, company2: 31, company3: 26, company4: 14}
+        ];
+
+        const keys = ["company1", "company2", "company3", "company4"];
+        const color = d3.scaleOrdinal()
+            .domain(keys)
+            .range(["#2ca02c", "#d62728", "#9467bd", "#8c564b"]);
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.quarter))
+            .range([0, width])
+            .padding(0.3);
+
+        const y = d3.scaleLinear()
+            .domain([0, 100])
+            .range([height, 0]);
+
+        const stack = d3.stack()
+            .keys(keys)
+            .order(d3.stackOrderNone)
+            .offset(d3.stackOffsetNone);
+
+        const series = stack(data);
+
+        g.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x).tickFormat(d => d));
+
+        g.append("g")
+            .call(d3.axisLeft(y).ticks(5).tickFormat(d => d + "%"));
+
+        const area = d3.area()
+            .x(d => x(d.data.quarter) + x.bandwidth() / 2)
+            .y0(d => y(d[0]))
+            .y1(d => y(d[1]));
+
+        g.selectAll(".area")
+            .data(series)
+            .enter().append("path")
+            .attr("class", "area")
+            .attr("fill", d => color(d.key))
+            .attr("d", area);
+
+        g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 35)
+            .attr("text-anchor", "middle")
+            .text("Quarter");
+
+        g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -40)
+            .attr("x", -height / 2)
+            .attr("text-anchor", "middle")
+            .text("Market Share (%)");
+
+        // Intentionally no legend to create the misleader
+    </script>
+</body>
+</html>

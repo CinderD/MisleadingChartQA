@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US population map, which statement below is the most accurate?",
+  "options": {
+    "A": "The population gap between Virginia and Illinois might exceed that between Maryland and New York.",
+    "B": "Virginia and Illinois have similar populations.",
+    "C": "The population differences are impossible to determine from this visualization.",
+    "D": "All highlighted states have nearly identical population levels."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Virginia (35.5M) and Illinois (48.6M) have a 13.1M population difference, while Louisiana (4.6M) and Mississippi (5.2M) have only a 0.6M difference. However, the categorical color encoding groups Virginia and Illinois into the same color bin (30M+ range), making their large difference appear similar, while Louisiana and Mississippi appear more different due to different color bins."
+}

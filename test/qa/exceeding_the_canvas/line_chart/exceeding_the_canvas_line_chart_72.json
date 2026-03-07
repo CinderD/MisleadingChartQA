@@ -1,0 +1,17 @@
+{
+  "question": "Based on the line chart showing revenue from 2018 to 2022, which statement is most accurate?",
+  "options": {
+    "A": "Revenue increased steadily from 2018 to 2022.",
+    "B": "2022 revenue appears to be slightly higher than 2021.",
+    "C": "The revenue in 2022 was significantly higher than 2021.",
+    "D": "Revenue growth was consistent throughout the period."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis scale is set too low, causing the 2022 data point to be clipped at the top of the chart while 2021 remains fully visible. This visual distortion makes 2022 appear only slightly higher than 2021, tempting answer B, but the actual values show 2022 (15,000) was 50% higher than 2021 (10,000)."
+}

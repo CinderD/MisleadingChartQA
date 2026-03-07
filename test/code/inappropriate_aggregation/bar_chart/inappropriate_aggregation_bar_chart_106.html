@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Energy Usage Trend Analysis - Data as of Thursday</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .bar {
+            fill: steelblue;
+        }
+        .avg-line {
+            stroke: black;
+            stroke-dasharray: 4, 4;
+            stroke-width: 2;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weekly Energy Usage Trend Analysis</h1>
+    <p style="text-align: center; font-size: 14px; color: #666; margin-top: -10px;">
+        Current Status: Thursday - Weekend data collection in progress
+    </p>
+    <div id="chart"></div>
+    <script>
+        const margin = { top: 40, right: 20, bottom: 50, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/inappropriate_aggregation/bar_chart/inappropriate_aggregation_bar_chart_106.csv").then(data => {
+          data.forEach(d => d.EnergyUsage_Monday_Thursday = +d.EnergyUsage_Monday_Thursday);
+
+          const x = d3.scaleBand()
+            .domain(data.map(d => d.Day))
+            .range([0, width])
+            .padding(0.3);
+
+          const y = d3.scaleLinear()
+            .domain([0, d3.max(data.slice(0, 4), d => d.EnergyUsage_Monday_Thursday) + 15])
+            .nice()
+            .range([height, 0]);
+
+          g.selectAll(".bar")
+            .data(data.slice(0, 4))
+            .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", d => x(d.Day))
+            .attr("y", d => y(d.EnergyUsage_Monday_Thursday))
+            .attr("width", x.bandwidth())
+            .attr("height", d => height - y(d.EnergyUsage_Monday_Thursday));
+
+          // Calculate average of available data (Monday-Thursday)
+          const avgValue = d3.mean(data.slice(0, 4), d => d.EnergyUsage_Monday_Thursday);
+          
+          g.append("line")
+            .attr("class", "avg-line")
+            .attr("x1", 0)
+            .attr("y1", y(avgValue))
+            .attr("x2", width)
+            .attr("y2", y(avgValue));
+            
+          // Add misleading average label
+          g.append("text")
+            .attr("x", width - 10)
+            .attr("y", y(avgValue) - 5)
+            .attr("text-anchor", "end")
+            .attr("font-size", "12px")
+            .attr("fill", "black")
+            .text(`Weekly Average: ${avgValue.toFixed(1)} kWh`);
+
+          g.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x));
+          g.append("g").call(d3.axisLeft(y));
+
+          g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 40)
+            .attr("text-anchor", "middle")
+            .text("Day of the Week");
+
+          g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -40)
+            .attr("text-anchor", "middle")
+            .text("Energy Usage (kWh)");
+        });
+    </script>
+</body>
+</html>

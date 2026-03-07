@@ -1,0 +1,17 @@
+{
+  "question": "Approximately, what is C's value as a proportion of A's value in Q4 2023?",
+  "options": {
+    "A": "400%",
+    "B": "200%",
+    "C": "80%",
+    "D": "125%"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_area_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 18 instead of 0, which visually exaggerates smaller components in a stacked area chart. In Q4 2023, C is about 50% of A (data: 14.5 vs 32.5), but the truncated baseline can make it appear closer to 80%."
+}

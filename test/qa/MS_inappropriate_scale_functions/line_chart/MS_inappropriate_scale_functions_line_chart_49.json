@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, during which period did GDP increase by the larger amount?",
+  "options": {
+    "A": "1996-1999",
+    "B": "1991-1994",
+    "C": "Both periods show about the same increase",
+    "D": "The change is too irregular to compare these periods"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 1991-1994: 2080 → 80 (change 2000); 1996-1999: 662 → 3800 (change 3138)."
+}

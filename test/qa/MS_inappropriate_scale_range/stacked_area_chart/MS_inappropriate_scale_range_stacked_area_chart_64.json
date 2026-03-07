@@ -1,0 +1,17 @@
+{
+  "question": "In Q1 2024, approximately what percent is C relative to A?",
+  "options": {
+    "A": "50%",
+    "B": "100%",
+    "C": "150%",
+    "D": "200%"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_area_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 18 instead of 0, which visually exaggerates smaller components in a stacked area chart. In Q1 2024, C is about 100% of A (data: 24.2 vs 22.3), but the truncated baseline can make it appear closer to 80%."
+}

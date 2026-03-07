@@ -1,0 +1,17 @@
+{
+  "question": "Based on the shading patterns, which type of crime appears more unevenly distributed across states?",
+  "options": {
+    "A": "Both violent and property crimes appear similarly distributed across states",
+    "B": "Violent crimes appear more unevenly distributed across states",
+    "C": "It cannot be determined from these maps alone",
+    "D": "Property crimes appear more unevenly distributed across states"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The two maps use the SAME threshold scale even though their value distributions differ. That makes one map saturate in a single color while the other uses multiple colors, creating a misleading impression about which has more variation. The reliable conclusion is that variation cannot be judged from these maps alone."
+}

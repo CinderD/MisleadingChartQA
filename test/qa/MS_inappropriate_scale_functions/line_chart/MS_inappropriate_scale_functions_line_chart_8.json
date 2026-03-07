@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, which period shows the larger increase in population?",
+  "options": {
+    "A": "2000 to 2003",
+    "B": "2005 to 2008",
+    "C": "Both periods show equal increase",
+    "D": "The increase pattern is unclear"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a logarithmic y-scale (base 2), which visually expands lower values relative to higher values. This makes the 2000-2003 period appear steeper, even though the actual increase is larger during 2005-2008 (1M vs 1.1M)."
+}

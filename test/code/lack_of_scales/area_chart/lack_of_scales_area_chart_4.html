@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarterly Growth Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart { width: 1000px; height: 600px; margin: 60px auto; }
+        .axis path, .axis line { stroke: #000; }
+        .area { fill: #e377c2; opacity: 0.7; }
+        .line { fill: none; stroke: #bcbd22; stroke-width: 2; }
+    </style>
+</head>
+<body>
+    <h1>Quarterly Growth Analysis</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 40, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const data = [
+            {quarter: "Q1", growth: 15},
+            {quarter: "Q2", growth: 28},
+            {quarter: "Q3", growth: 42},
+            {quarter: "Q4", growth: 65}
+        ];
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.quarter))
+            .range([0, width])
+            .padding(0.1);
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.growth)])
+            .range([height, 0]);
+
+        const area = d3.area()
+            .x(d => x(d.quarter) + x.bandwidth() / 2)
+            .y0(height)
+            .y1(d => y(d.growth));
+
+        const line = d3.line()
+            .x(d => x(d.quarter) + x.bandwidth() / 2)
+            .y(d => y(d.growth));
+
+        g.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x).tickFormat(d => d));
+
+        g.append("g")
+            .call(d3.axisLeft(y).tickFormat("").ticks(0));
+
+        g.append("path")
+            .datum(data)
+            .attr("class", "area")
+            .attr("d", area);
+
+        g.append("path")
+            .datum(data)
+            .attr("class", "line")
+            .attr("d", line);
+
+        g.selectAll(".dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("class", "dot")
+            .attr("cx", d => x(d.quarter) + x.bandwidth() / 2)
+            .attr("cy", d => y(d.growth))
+            .attr("r", 4)
+            .attr("fill", "#bcbd22");
+
+        g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 35)
+            .attr("text-anchor", "middle")
+            .text("Quarter");
+
+        g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -40)
+            .attr("x", -height / 2)
+            .attr("text-anchor", "middle")
+            .text("Growth Rate (%)");
+    </script>
+</body>
+</html>
+
+
+

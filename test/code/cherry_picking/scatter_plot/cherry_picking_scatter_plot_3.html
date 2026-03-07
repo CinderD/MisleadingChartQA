@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertising Budget vs Revenue (High-Performing Regions)</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .dot {
+            fill: steelblue;
+            opacity: 0.8;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .month-label { 
+            font-size: 10px; 
+            fill: #333; 
+            text-anchor: middle;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Advertising Budget vs Revenue (High-Performing Regions)</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 30, bottom: 50, left: 70};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/cherry_picking/scatter_plot/cherry_picking_scatter_plot_3.csv").then(data => {
+          data.forEach(d => {
+            d.AdSpend = +d.AdSpend;
+            d.Sales = +d.Sales;
+          });
+
+          const x = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.AdSpend) + 10])
+            .range([0, width]);
+
+          const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.Sales) + 10])
+            .range([height, 0]);
+
+          g.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x));
+          g.append("g").call(d3.axisLeft(y));
+
+          g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 40)
+            .attr("text-anchor", "middle")
+            .style("font-size", "12px")
+            .text("Advertising Budget ($)");
+
+          g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -50)
+            .attr("text-anchor", "middle")
+            .style("font-size", "12px")
+            .text("Revenue ($)");
+
+          // 添加数据点和月份标签
+          g.selectAll(".dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("class", "dot")
+            .attr("cx", d => x(d.AdSpend))
+            .attr("cy", d => y(d.Sales))
+            .attr("r", 5);
+
+          // 添加月份标签
+          g.selectAll(".month-label")
+            .data(data)
+            .enter().append("text")
+            .attr("class", "month-label")
+            .attr("x", d => x(d.AdSpend))
+            .attr("y", d => y(d.Sales) - 15)
+            .text(d => d.Month);
+
+          // 移除回归线，让数据点自己说话
+          // 这样更符合 cherry picking 的特征，不强制显示趋势线
+        });
+    </script>
+</body>
+</html>

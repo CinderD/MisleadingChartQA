@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, what is the approximate ratio between Instagram and Twitter usage time?",
+  "options": {
+    "A": "2.5:1",
+    "B": "2:1",
+    "C": "1.5:1",
+    "D": "1:1"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie chart uses adjusted scaling that significantly reduces the visual difference between Instagram and Twitter, making the 2.5:1 ratio appear closer to 1.5:1, thus misleading viewers about the true usage gap."
+}

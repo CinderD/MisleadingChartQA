@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of the total number of apples harvested in the given time period?",
+  "options": {
+    "A": "Increasing, then decreasing, and finally increasing",
+    "B": "Decreasing, then increasing, and finally decreasing",
+    "C": "Consistently increasing",
+    "D": "Consistently decreasing"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The X-axis is inverted, making the chart appear as though the number of apples initially decreases and then increases. In reality, the apples harvested increase first and then decrease, misleading the viewer."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, during which period did the value change more overall?",
+  "options": {
+    "A": "It cannot be determined from the chart",
+    "B": "Both periods show about the same overall change",
+    "C": "2002-2005",
+    "D": "1995-1998"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 1995-1998: 260 cm → 35 cm (change 225 cm); 2002-2005: 30 cm → 250 cm (change 220 cm)."
+}

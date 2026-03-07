@@ -1,0 +1,17 @@
+{
+  "question": "What is the energy usage in April as a percentage of that in May?",
+  "options": {
+    "A": "60%",
+    "B": "80%",
+    "C": "100%",
+    "D": "120%"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 3,387 instead of 0, which visually distorts proportions. Although Apr (9,960) is about 83% of May (12,000), the truncated range makes it look closer to 80%."
+}

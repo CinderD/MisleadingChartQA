@@ -1,0 +1,17 @@
+{
+  "question": "Which period experienced the greater increase in the underlying data?",
+  "options": {
+    "A": "It cannot be determined from the chart",
+    "B": "2000-2003",
+    "C": "Both periods show about the same increase",
+    "D": "2004-2007"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2000-2003: 40 → 49 (+9); 2004-2007: 1449 → 1475 (+26)."
+}

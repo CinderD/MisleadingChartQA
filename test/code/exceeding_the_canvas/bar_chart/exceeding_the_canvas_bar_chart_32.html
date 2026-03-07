@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Revenue Bar Chart</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .bar {
+            fill: steelblue;
+        }
+        .axis path,
+        .axis line {
+            shape-rendering: crispEdges;
+        }
+        .grid line {
+            stroke: lightgrey;
+            stroke-opacity: 0.7;
+            shape-rendering: crispEdges;
+        }
+        .label {
+            font-size: 12px;
+            text-anchor: middle;
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Annual Revenue Trend (2018-2022)</h2>
+    <svg width="1000" height="750"></svg>
+    
+    <script>
+        const margin = { top: 30, right: 40, bottom: 70, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/exceeding_the_canvas/bar_chart/exceeding_the_canvas_bar_chart_32.csv").then(function(data) {
+            data.forEach(d => {
+                d.Revenue = +d.Revenue;
+            });
+
+            const maxRevenue = d3.max(data, d => d.Revenue);
+            const secondMaxRevenue = d3.max(data.filter(d => d.Revenue !== maxRevenue), d => d.Revenue);
+
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.Year))
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([0, secondMaxRevenue * 0.6])
+                .nice()
+                .range([height, 0]);
+
+            svg.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.Year))
+                .attr("y", d => y(d.Revenue))
+                .attr("width", x.bandwidth())
+                .attr("height", d => height - y(d.Revenue));
+
+            svg.selectAll(".label")
+                .data(data)
+                .enter().append("text")
+                .attr("class", "label")
+                .attr("x", d => x(d.Year) + x.bandwidth() / 2)
+                .attr("y", height - 30)
+                .text(d => d.Revenue);
+
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+
+            svg.append("g")
+                .call(d3.axisLeft(y));
+
+            svg.append("text")
+                .attr("transform", "translate(" + (width / 2) + "," + (height + margin.bottom - 10) + ")")
+                .style("text-anchor", "middle")
+                .attr("class", "x-axis-label")
+                .text("Year");
+
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left + 20)
+                .attr("x", 0 - (height / 2))
+                .style("text-anchor", "middle")
+                .attr("class", "y-axis-label")
+                .text("Revenue");
+        });
+    </script>
+</body>
+</html>

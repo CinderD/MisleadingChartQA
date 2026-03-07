@@ -1,0 +1,17 @@
+{
+  "question": "Based on this plot of best-performing advertising channels, what conclusion about the overall campaign performance is most justified?",
+  "options": {
+    "A": "The campaign is very effective on every channel, since all channels shown respond strongly to increased spend.",
+    "B": "The campaign is ineffective overall because only a few points show improvement.",
+    "C": "The campaign appears effective on these channels, but we cannot assess performance across all channels from this plot alone.",
+    "D": "The campaign harms performance because higher advertising spend consistently reduces sales in these channels."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Infer Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart excludes channels where spend may not convert as well, so it overstates how broadly the campaign succeeds."
+}

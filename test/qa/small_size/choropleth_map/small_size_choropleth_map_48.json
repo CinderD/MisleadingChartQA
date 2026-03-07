@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows median household income for selected US states. Which statement is correct?",
+  "options": {
+    "A": "The map shows clear regional income disparities across all US states.",
+    "B": "The extremely small text size makes it difficult to read specific income values for the highlighted states.",
+    "C": "It is clear from the map that one specific state has the highest median income among those shown.",
+    "D": "Illinois and Mississippi can be easily compared by reading their exact income labels from the map."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific income values accurately. While the color coding may suggest relative income levels, the inability to read exact numbers prevents identification of the highest and lowest income states."
+}

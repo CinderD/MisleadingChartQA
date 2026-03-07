@@ -1,0 +1,17 @@
+{
+  "question": "What is the average number of website visits for the entire week shown?",
+  "options": {
+    "A": "Unable to calculate from this chart",
+    "B": "About 30 visits per day, based on the visible bars",
+    "C": "About 22 visits per day, using all seven days including zeros for missing days",
+    "D": "About 32 visits per day, using only the days with non-zero visits"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart only shows measured values for the first part of the week; the remaining days are effectively missing, but are drawn as zero-height bars. Computing an average across all seven days (including those zeros) assumes the missing days truly had zero values, which is not supported by the data. Therefore the weekly average cannot be reliably calculated."
+}

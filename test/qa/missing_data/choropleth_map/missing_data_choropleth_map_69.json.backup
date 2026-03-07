@@ -1,0 +1,17 @@
+{
+  "question": "Was the average average precipitation in China (D) higher than in Brazil (E)?",
+  "options": {
+    "A": "Cannot be inferred / inadequate information",
+    "B": "No, it was lower",
+    "C": "They had exactly the same value",
+    "D": "Yes, it was higher"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "China and Brazil both have measured data, so we can compare them numerically. China is 3,096 mm vs 801 mm for Brazil."
+}

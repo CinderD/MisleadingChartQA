@@ -1,0 +1,17 @@
+{
+  "question": "Which label represents the highest energy consumption per capita?",
+  "options": {
+    "A": "B",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "A",
+    "D": "E"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "missing_normalization",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Only total energy consumption are encoded. Per‑person energy consumption require dividing by population, which is not shown."
+}

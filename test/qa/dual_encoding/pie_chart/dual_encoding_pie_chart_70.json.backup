@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows energy use by source. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Nuclear and Other together equal Fossil Fuels.",
+    "B": "Renewables is larger than Nuclear.",
+    "C": "The combined share of Nuclear + Other exceeds Fossil Fuels.",
+    "D": "Fossil Fuels is larger than the combined share of Nuclear + Other."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Fossil Fuels: 40%; Nuclear: 30%; Other: 20%; Renewables: 10%."
+}

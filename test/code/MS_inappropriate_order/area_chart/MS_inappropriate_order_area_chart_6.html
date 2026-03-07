@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Shirt Sales Chart</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .area {
+            fill: #9370DB;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shirt Sales in 2021</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 40, left: 70};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g")
+            .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        const y = d3.scaleLinear().range([height, 0]);
+
+        d3.csv("../../../../data/MS_inappropriate_order/area_chart/MS_inappropriate_order_area_chart_6.csv")
+            .then(data => {
+                data.forEach(d => {
+                    d.month = d.month;
+                    d.sales = +d.sales;
+                });
+
+                const incorrectOrder = ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun"];
+                data.sort((a, b) => incorrectOrder.indexOf(a.month) - incorrectOrder.indexOf(b.month));
+
+                const x = d3.scalePoint()
+                    .domain(data.map(d => d.month))
+                    .range([0, width])
+                    .padding(0); 
+
+                y.domain([0, d3.max(data, d => d.sales)]);
+
+                const area = d3.area()
+                    .x(d => x(d.month))
+                    .y0(height)
+                    .y1(d => y(d.sales));
+
+                g.append("path")
+                    .datum(data)
+                    .attr("class", "area")
+                    .attr("d", area);
+
+                g.append("g")
+                    .attr("transform", `translate(0, ${height})`)
+                    .call(d3.axisBottom(x));
+
+                g.append("g")
+                    .call(d3.axisLeft(y));
+
+                // Add data points
+                g.selectAll(".dot")
+                    .data(data)
+                    .enter().append("circle")
+                    .attr("class", "dot")
+                    .attr("cx", d => x(d.month))
+                    .attr("cy", d => y(d.sales))
+                    .attr("r", 4)
+                    .attr("fill", "#db9370");
+
+                g.append("text")
+                    .attr("x", width / 2)
+                    .attr("y", height + 35)
+                    .attr("text-anchor", "middle")
+                    .text("Month");
+
+                g.append("text")
+                    .attr("transform", "rotate(-90)")
+                    .attr("y", -50)
+                    .attr("x", -height / 2)
+                    .attr("text-anchor", "middle")
+                    .text("Shirts Sold");
+            })
+            .catch(function(error) {
+                console.error('Error loading CSV data:', error);
+            });
+    </script>
+</body>
+</html>

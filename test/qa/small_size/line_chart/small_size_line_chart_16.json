@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows sales trends from 1924 to 2024. Which statement best describes the challenge in interpreting this chart?",
+  "options": {
+    "A": "The extremely small text size makes it difficult to read specific values and trends accurately.",
+    "B": "Sales increased steadily throughout the entire period.",
+    "C": "The chart shows clear seasonal patterns in sales.",
+    "D": "Sales peaked in 1970 and then declined."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses extremely small font sizes which makes it difficult to read specific values, identify trends, and verify conclusions. This small text size can lead to misinterpretation of data patterns, tempting answers like B, C, or D, but the main issue is the poor readability due to inadequate text sizing."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "What do these figures suggest about company performance over the full 2014–2029 period?",
+  "options": {
+    "A": "Revenue grew consistently over the entire 16-year period, indicating strong long-term performance.",
+    "B": "The data shows a consistent decline across the whole 2014–2029 span.",
+    "C": "This 8-year revenue sample cannot reliably indicate performance across the full 16-year period.",
+    "D": "The company experienced highly erratic revenue with no clear trend over the full period."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Only a subset of years is shown; missing years could show different or declining trends."
+}

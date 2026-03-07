@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual sales from 2018 to 2022. Which of the following statements is best supported by the chart?",
+  "options": {
+    "A": "Sales decreased over the period 2018–2022.",
+    "B": "Sales stayed roughly the same during 2019 and 2020.",
+    "C": "Sales in 2021 and 2022 are identical.",
+    "D": "We cannot tell from the chart whether the last two years have equal or different sales because their values extend beyond the visible range."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart clips the tallest bars by using a y-axis max below the data maximum, misleading viewers into thinking the top values are equal."
+}

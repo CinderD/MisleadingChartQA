@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Cybersecurity Incidents</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .text { fill: black; font-size: 14px; text-anchor: middle; }
+        .axis-label { font-size: 16px; font-weight: bold; }
+        .bar { stroke: black; stroke-width: 0.5px; }
+    </style>
+</head>
+<body>
+    <h1>Annual Cybersecurity Incidents</h1>
+    <svg width="1000" height="750"></svg>
+
+    <script>
+        const margin = { top: 60, right: 60, bottom: 100, left: 100 },
+              width = 1000 - margin.left - margin.right,
+              height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        d3.csv("../../../../data/dual_encoding/bar_chart/dual_encoding_bar_chart_1.csv").then(data => {
+            data.forEach(d => { d.days_lost = +d.days_lost; });
+
+            const x = d3.scaleBand().domain(data.map(d => d.period)).range([0, width]).padding(0.2);
+            const y = d3.scaleLinear().domain([0, d3.max(data, d => d.days_lost)]).nice().range([height, 0]);
+
+            const dualEncodingWidth = d3.scaleLinear().domain([0, d3.max(data, d => d.days_lost)]).range([10, x.bandwidth()]);
+
+            svg.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.period) + (x.bandwidth() - dualEncodingWidth(d.days_lost)) / 2)
+                .attr("y", d => y(d.days_lost))
+                .attr("width", d => dualEncodingWidth(d.days_lost))
+                .attr("height", d => height - y(d.days_lost))
+                .attr("fill", d => d.visual_cue);
+
+            svg.selectAll(".text")
+                .data(data)
+                .enter().append("text")
+                .attr("class", "text")
+                .attr("x", d => x(d.period) + x.bandwidth() / 2)
+                .attr("y", d => y(d.days_lost) - 10)
+                .text(d => d.days_lost.toLocaleString());
+
+            svg.append("g").attr("transform", `translate(0, ${height})`).call(d3.axisBottom(x));
+            svg.append("g").call(d3.axisLeft(y).ticks(6).tickFormat(d3.format(",.0f")));
+
+            svg.append("text").attr("class", "axis-label").attr("x", width / 2).attr("y", height + 50).style("text-anchor", "middle").text("Year");
+            svg.append("text").attr("class", "axis-label").attr("transform", "rotate(-90)").attr("x", -height / 2).attr("y", -70).style("text-anchor", "middle").text("Incidents (count)");
+        }).catch(error => { console.error('Error loading or parsing data:', error); });
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "question": "Based on the population map, which statement best describes the relationship between states?",
+  "options": {
+    "A": "All states have very diverse population levels.",
+    "B": "The population differences are impossible to determine from this visualization.",
+    "C": "The population gap between Iowa and Minnesota might exceeds that between Kansas and South Dakota.",
+    "D": "Iowa and Minnesota have similar populations."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Iowa (20.8M) and Minnesota (29.2M) have a 8.4M population difference, while Kansas (29.5M) and South Dakota (30.4M) have only a 0.9M difference. However, the categorical color encoding groups Iowa and Minnesota into the same color bin (20-30M range), making their large difference appear similar, while Kansas and South Dakota appear more different due to different color bins."
+}

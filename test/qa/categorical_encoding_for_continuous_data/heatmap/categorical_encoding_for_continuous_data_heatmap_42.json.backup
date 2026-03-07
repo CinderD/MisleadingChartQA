@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the sales heatmap, which statement best describes the relationship between Store B's Oct sales and Store E's Oct sales?",
+  "options": {
+    "A": "The sales is impossible to determine from this visualization.",
+    "B": "The saless might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "C": "It can be infered that their saless are very similar.",
+    "D": "Store B is higher than Store E, and the color difference accurately represents this 19.2$k difference."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Store B (62.5$k) and Store E (81.7$k) have a 19.2$k difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of sales relationships."
+}

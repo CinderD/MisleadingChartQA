@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows marketing spend vs. revenue. Which statement is most consistent with the data?",
+  "options": {
+    "A": "Higher marketing spend is clearly associated with lower revenue.",
+    "B": "There is a generally positive relationship between marketing spend and revenue.",
+    "C": "Marketing spend of around $80k–$100k generates far higher revenue than any other spend level, as suggested by the largest, darkest points.",
+    "D": "There is no relationship at all between marketing spend and revenue."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the y-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

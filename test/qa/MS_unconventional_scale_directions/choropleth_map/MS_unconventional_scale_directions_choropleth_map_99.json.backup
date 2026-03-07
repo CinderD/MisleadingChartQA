@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher incidence based on the chart, PA or NC?",
+  "options": {
+    "A": "PA",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "Both states have the same prevalence",
+    "D": "NC"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although NC appears darker, PA has the higher assigned value when the inversion is considered."
+}

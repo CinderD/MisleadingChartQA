@@ -1,0 +1,17 @@
+{
+  "question": "Which population segment holds the largest share in the final year shown?",
+  "options": {
+    "A": "Segment A has the largest share.",
+    "B": "Segment C has the largest share.",
+    "C": "Segment B has the largest share.",
+    "D": "Cannot determine which segment has the largest share without a legend to explain the color coding."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows different colored areas but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category holds the largest share; options that assign a category to a color are guessing."
+}

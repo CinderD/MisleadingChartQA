@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot chart shows the wealth of individuals at different ages. Based on what can be reliably seen from this chart, which statement is most appropriate?",
+  "options": {
+    "A": "It is clear that individuals in their 40s have the highest wealth among all ages shown.",
+    "B": "It is clear that individuals in their 30s have the highest wealth among all ages shown.",
+    "C": "The chart is too small to confidently determine which age group has the highest wealth.",
+    "D": "It is clear that individuals under 30 have the highest wealth among all ages shown."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 40 and 50 have the highest wealth. The small size of the chart may cause difficulty in accurately identifying the specific trends of wealth in certain age ranges."
+}

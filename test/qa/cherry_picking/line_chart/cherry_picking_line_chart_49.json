@@ -1,0 +1,17 @@
+{
+  "question": "What does this output trend suggest about productivity over the broader period from 1995 to 2010?",
+  "options": {
+    "A": "Output increased steadily, indicating sustained productivity gains throughout 1995–2010.",
+    "B": "Productivity shows a consistent decline over the entire 1995–2010 period.",
+    "C": "This limited 1998–2005 sample does not allow firm conclusions about productivity across 1995–2010.",
+    "D": "Productivity fluctuated randomly with no clear pattern during 1995–2010."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Only selected years are shown; productivity in other subperiods may differ."
+}

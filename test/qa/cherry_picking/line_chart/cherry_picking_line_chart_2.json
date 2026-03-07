@@ -1,0 +1,17 @@
+{
+  "question": "What does this price data from 1968-1975 indicate about economic conditions during this period?",
+  "options": {
+    "A": "The data shows steady economic growth with consistent price increases during this era.",
+    "B": "Economic conditions were declining throughout this timeframe.",
+    "C": "This pattern suggests similar growth continued throughout the 1960s and 1970s.",
+    "D": "This limited 8-year period cannot reveal meaningful economic insights."
+  },
+  "correctAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "explanation": "The visible data from 1968-1975 shows a clear upward trend with consistent price increases, indicating steady economic growth during this specific period. However, extrapolating this cherry-picked window to suggest similar growth throughout the broader 1960s and 1970s would be misleading, as other periods could show different patterns.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "C"
+}  

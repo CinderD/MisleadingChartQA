@@ -1,0 +1,17 @@
+{
+  "question": "What do these index movements suggest about the overall trend from 2000 to 2015?",
+  "options": {
+    "A": "The steady rise from 2005 to 2012 indicates a clear upward trend that likely held across the entire 2000–2015 period.",
+    "B": "The index clearly declined over most of the 2000–2015 period.",
+    "C": "Because this chart only shows values from 2005 to 2012, it cannot reliably indicate the full 2000–2015 trend.",
+    "D": "The index shows no discernible pattern even within the years displayed."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays a cherry-picked rising segment; other subperiods may show flat or declining behavior."
+}

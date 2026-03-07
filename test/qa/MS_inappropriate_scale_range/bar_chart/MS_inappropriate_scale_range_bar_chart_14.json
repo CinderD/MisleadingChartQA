@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, how does the number of concert tickets sold on Aug 11 compare as a proportion to those sold on Aug 9?",
+  "options": {
+    "A": "20%",
+    "B": "50%",
+    "C": "60%",
+    "D": "80%"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The Y-axis scale starts at a higher number, which visually shrinks the representation of the tickets sold on Aug 11. Despite this, Aug 11 tickets sold (20,000) are actually 80% of those sold on Aug 9 (25,000). Visually, they appear much lower due to scale manipulation, thus misleading the viewer into believing the difference is greater than it actually is."
+}

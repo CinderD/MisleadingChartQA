@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual GDP per Capita Trends</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .line { stroke: steelblue; stroke-width: 2; fill: none; }
+        .dot { fill: black; }
+        .axis-label { font-size: 14px; font-weight: bold; }
+        .title { font-size: 22px; font-weight: bold; text-anchor: middle; }
+    </style>
+</head>
+<body>
+    <h1>Annual GDP per Capita for Country Z</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = { top: 50, right: 30, bottom: 60, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/MS_inappropriate_scale_functions/line_chart/MS_inappropriate_scale_functions_line_chart_3.csv").then(data => {
+            data.forEach(d => {
+                d.year = +d.year;
+                d.transformed_gdp = +d.transformed_gdp;
+            });
+
+            const y = d3.scalePow()
+                .exponent(0.5) // Non-linear scale
+                .domain(d3.extent(data, d => d.transformed_gdp))
+                .range([height, 0]);
+
+            const x = d3.scaleLinear()
+                .domain(d3.extent(data, d => d.year))
+                .range([0, width]);
+
+            svg.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+
+            svg.append("g")
+                .call(d3.axisLeft(y).tickFormat(d => `${d / 1000}K`));
+
+            const line = d3.line()
+                .x(d => x(d.year))
+                .y(d => y(d.transformed_gdp));
+
+            svg.append("path")
+                .datum(data)
+                .attr("class", "line")
+                .attr("d", line);
+
+            svg.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.year))
+                .attr("cy", d => y(d.transformed_gdp))
+                .attr("r", 4);
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", -height / 2)
+                .attr("y", -40)
+                .attr("transform", "rotate(-90)")
+                .text("GDP per Capita ($)");
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width / 2)
+                .attr("y", height + 50)
+                .text("Year");
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

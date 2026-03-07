@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatter plot, which conclusion is most supported by the data?",
+  "options": {
+    "A": "There is a generally negative relationship between the variables.",
+    "B": "As the x-variable increases, the y-variable tends to increase overall.",
+    "C": "Increasing x is likely to more than double y over the range shown, as suggested by point size and color.",
+    "D": "There is no relationship at all."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

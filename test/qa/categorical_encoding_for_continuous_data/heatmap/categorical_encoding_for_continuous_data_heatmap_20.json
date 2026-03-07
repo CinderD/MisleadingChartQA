@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the performance heatmap, which statement best describes the relationship between Product F and Product D on the Quality metric?",
+  "options": {
+    "A": "The performances might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "B": "It can be infered that their performances on Quality are very similar because they share the same color.",
+    "C": "Product F clearly outperforms Product D on Quality by a small margin that is accurately reflected by the color difference.",
+    "D": "The performance on the Quality metric is impossible to determine from this visualization."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Product F (71.6points) and Product D (78.1points) have a 6.5points difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of performance relationships."
+}

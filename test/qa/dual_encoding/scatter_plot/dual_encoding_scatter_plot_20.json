@@ -1,0 +1,17 @@
+{
+  "question": "The plot shows training hours vs test score. Based on the chart data, which statement is correct?",
+  "options": {
+    "A": "Students with around 20 training hours achieve the highest test scores.",
+    "B": "Students with either very low (0–5) or very high (35–40) training hours achieve higher test scores than those with around 20 hours.",
+    "C": "Test scores stay roughly constant regardless of training hours.",
+    "D": "Students with around 15 training hours achieve the lowest test scores."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the y-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

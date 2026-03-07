@@ -1,0 +1,17 @@
+{
+  "question": "This pie chart displays music genre preferences among survey participants. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "The color intensity represents the musical preference level of each genre.",
+    "B": "Electronic music receives the highest preference count among all music genres.",
+    "C": "The orange gradient suggests an evolutionary progression from traditional to modern music styles.",
+    "D": "Jazz and Country combined have fewer preferences than Hip Hop alone."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "pie_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses continuous color encoding (orange gradient) for categorical music genre data. Music genres like Rock, Pop, Jazz, Classical, Hip Hop, Country, and Electronic are distinct, independent categories with no inherent order or continuous relationship that would justify a color gradient. The continuous color scale misleadingly suggests that darker colors represent higher musical complexity, sophistication, or some progressive relationship between genres, when in reality these are simply different categorical divisions of musical preferences. Each music genre should use distinct, unordered colors to avoid implying false relationships or hierarchies between the categories."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Overall, how did CO2 emissions in Country N change from 2006 to 2017?",
+  "options": {
+    "A": "They generally decreased despite some fluctuations.",
+    "B": "They showed no clear overall change and remained roughly constant.",
+    "C": "They generally increased despite some fluctuations.",
+    "D": "They stayed exactly the same every year."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes the series appear increasing when it is actually decreasing."
+}

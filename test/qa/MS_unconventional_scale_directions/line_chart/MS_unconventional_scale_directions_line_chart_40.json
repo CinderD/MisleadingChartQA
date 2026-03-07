@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following best describes the trend in electricity demand in Region R during 2023?",
+  "options": {
+    "A": "Demand generally increased from January to July and then decreased toward December.",
+    "B": "Demand remained roughly constant throughout the year.",
+    "C": "Demand generally decreased from January to July and then increased toward November.",
+    "D": "Demand peaked in January and then steadily declined for the rest of the year."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes it appear that the series is flipped vertically, which can swap the perceived highs and lows. The correct option matches the actual data values."
+}

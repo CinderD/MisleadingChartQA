@@ -1,0 +1,17 @@
+{
+  "question": "Based on the GDP map, which statement best describes the relationship between states?",
+  "options": {
+    "A": "The GDP differences are impossible to determine from this visualization.",
+    "B": "Nevada and Rhode Island have similar GDPs.",
+    "C": "The GDP gap between Nevada and Rhode Island might exceeds that between Kentucky and Missouri.",
+    "D": "All states have very diverse GDP levels."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Nevada (209.7$B) and Rhode Island (360.1$B) have a 150.4$B GDP difference, while Kentucky (399.9$B) and Missouri (437.7$B) have only a 37.8$B difference. However, the categorical color encoding groups Nevada and Rhode Island into the same color bin (200-400$B range), making their large difference appear similar, while Kentucky and Missouri appear more different due to different color bins."
+}

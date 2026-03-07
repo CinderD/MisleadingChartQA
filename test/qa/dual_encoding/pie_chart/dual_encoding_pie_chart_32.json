@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows time allocation on a typical day. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Work takes up the largest share of time.",
+    "B": "Sleep takes up more time than any other single activity.",
+    "C": "Chores is the smallest category by percentage.",
+    "D": "Leisure and Commute together account for more time than Work alone."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Work: 35%; Sleep: 25%; Leisure: 20%; Commute: 10%; Chores: 10%."
+}

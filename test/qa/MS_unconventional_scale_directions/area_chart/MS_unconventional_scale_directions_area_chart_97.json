@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in daily website visits from February 13 to February 18?",
+  "options": {
+    "A": "Consistently increasing",
+    "B": "Consistently decreasing",
+    "C": "Increasing, then decreasing, and finally increasing",
+    "D": "Fluctuating without a clear overall trend"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, reversing the time order and making the trend appear opposite to the actual chronological pattern."
+}

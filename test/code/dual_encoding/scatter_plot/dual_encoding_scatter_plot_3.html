@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>Screen Time vs Sleep (Dual Encoded)</title><script src="https://d3js.org/d3.v7.min.js"></script><style>.axis-label{font-size:16px;font-family:Arial,sans-serif}</style></head><body><h1>Screen Time vs Sleep </h1><svg width="1000" height="750"></svg><script>const M={top:60,right:60,bottom:60,left:80},W=1000-M.left-M.right,H=750-M.top-M.bottom,svg=d3.select("svg").append("g").attr("transform",`translate(${M.left},${M.top})`);d3.csv("../../../../data/dual_encoding/scatter_plot/dual_encoding_scatter_plot_3.csv").then(D=>{D.forEach(d=>{d.screen=+d.screen;d.sleep=+d.sleep});const x=d3.scaleLinear().domain([0,12]).range([0,W]);const y=d3.scaleLinear().domain([4,10]).range([H,0]);const c=d3.scaleSequential(d3.interpolateYlOrRd).domain([0,12]);const r=d3.scaleLinear().domain([0,12]).range([6,22]);svg.selectAll("circle").data(D).enter().append("circle").attr("cx",d=>x(d.screen)).attr("cy",d=>y(d.sleep)).attr("r",d=>r(d.screen)).attr("fill",d=>c(d.screen)).attr("opacity",0.9);svg.append("g").attr("transform",`translate(0,${H})`).call(d3.axisBottom(x));svg.append("g").call(d3.axisLeft(y));svg.append("text").attr("class","axis-label").attr("x",W/2).attr("y",H+45).style("text-anchor","middle").text("Daily Screen Time (hrs)");svg.append("text").attr("class","axis-label").attr("transform","rotate(-90)").attr("x",-H/2).attr("y",-50).style("text-anchor","middle").text("Sleep (hrs)");});</script><!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html> 

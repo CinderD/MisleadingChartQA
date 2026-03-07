@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage of Bacteria Z Detected in Population</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .line { fill: none; stroke: #8B0000; stroke-width: 2px; }
+        .axis path, .axis line { stroke: #000; }
+        .axis-label {
+            font-size: 14px;
+            font-weight: bold;
+            text-anchor: middle;
+        }
+    </style>
+</head>
+<body>
+    <h1>Percentage of Bacteria Z Detected in Population</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 30, bottom: 70, left: 80};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+        
+        d3.csv("../../../../data/MS_inappropriate_scale_range/line_chart/MS_inappropriate_scale_range_line_chart_21.csv").then(data => {
+            data.forEach(d => {
+                d.Year = +d.Year;
+                d.Percentage = +d.Percentage;
+            });
+
+            const x = d3.scaleLinear()
+                .domain(d3.extent(data, d => d.Year))
+                .range([0, width]);
+
+            const y = d3.scaleLinear()
+                .domain([0, 100]) // Full percentage scale to mislead
+                .range([height, 0]);
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x).ticks(10).tickFormat(d3.format("d")));
+
+            g.append("g").call(d3.axisLeft(y));
+
+            // X-Axis Label
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width / 2 + margin.left)
+                .attr("y", height + margin.top + 40)
+                .text("Year");
+
+            // Y-Axis Label
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2 - margin.top)
+                .attr("y", margin.left - 60)
+                .text("% of bacteria Z detected");
+
+            const line = d3.line()
+                .x(d => x(d.Year))
+                .y(d => y(d.Percentage));
+
+            g.append("path")
+                .datum(data)
+                .attr("class", "line")
+                .attr("d", line);
+        });
+    </script>
+</body>
+</html>
+
+
+In this revision:
+- I made sure that the CSV path is correctly specified.
+- The title was kept neutral without indicating the misleading nature of the chart.
+- The overall structure of the D3.js chart was preserved as requested.

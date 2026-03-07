@@ -1,0 +1,17 @@
+{
+  "question": "This pie chart shows quarterly sales distribution across different regions. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "The color gradient represents the chronological order in which each region began contributing to sales.",
+    "B": "North America and Europe together account for the smallest share of quarterly sales.",
+    "C": "Middle East & Africa holds the largest share of quarterly sales among all regions shown.",
+    "D": "The darker blue slices represent regions that are more advanced or strategically important than the lighter ones."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "pie_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie slices represent purely categorical groups (e.g., regions or product categories). Using a continuous blue gradient suggests an ordered numeric scale where darker colors mean 'more' of something (such as sophistication, maturity, or time), even though these categories have no inherent order. The only meaningful quantitative comparison is the slice size / percentage; colors should be distinct but unordered to avoid implying relationships that do not exist."
+}

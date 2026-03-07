@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is supported by the chart?",
+  "options": {
+    "A": "Delivery has the highest value among the categories.",
+    "B": "Design has the highest value among the categories.",
+    "C": "The categories have nearly identical values.",
+    "D": "Other has the highest value among the categories."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

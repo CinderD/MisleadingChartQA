@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows earnings from 2018 to 2022. Which statement is most accurate based on the chart?",
+  "options": {
+    "A": "Earnings in 2021 and 2022 are equal.",
+    "B": "Earnings decrease from 2020 to 2022.",
+    "C": "Earnings increase every year from 2018 to 2022.",
+    "D": "The chart does not reveal whether 2021 or 2022 had higher earnings because the tops of the bars are clipped."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The scale is set so that the highest bars exceed the visible area, leading to a misleading impression of equality."
+}

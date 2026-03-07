@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart represents the revenue for Company Y from 2018 to 2022. Which statement best describes the chart's depiction of revenues?",
+  "options": {
+    "A": "2020 and 2021 have the same revenue.",
+    "B": "There is no change in revenue from 2018 to 2020.",
+    "C": "2022 has higher revenue than 2021.",
+    "D": "The revenue consistently increased from 2018 to 2021."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The bars for 2019 to 2022 are too large, causing them to exceed the chart's visible area. This results in both bars being shown with the same height, misleading viewers into thinking their revenues are identical."
+}

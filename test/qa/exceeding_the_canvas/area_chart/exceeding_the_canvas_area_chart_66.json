@@ -1,0 +1,17 @@
+{
+  "question": "Analyzing the area chart of revenue from 2018 to 2022, which statement is best supported by the data shown?",
+  "options": {
+    "A": "The highest revenue is clearly higher in 2022 than in any previous year.",
+    "B": "The revenues in 2021 and 2022 appear to be about the same.",
+    "C": "Revenue decreased every year from 2018 to 2020.",
+    "D": "Revenue was lowest in 2020 among all the years shown."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The bar tops are clipped outside the visible plotting area, so equality or ordering for the clipped bars cannot be inferred."
+}

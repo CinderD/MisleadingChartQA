@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US population map, which statement below is the most accurate?",
+  "options": {
+    "A": "Illinois and New York have similar populations.",
+    "B": "The population gap between Illinois and New York might exceeds that between California and Ohio.",
+    "C": "All states shown have very similar population levels.",
+    "D": "The population differences are impossible to determine from this visualization."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Illinois (12.3M) and New York (18.2M) have a 5.9M population difference, while California (5.5M) and Ohio (6.2M) have only a 0.7M difference. However, the categorical color encoding groups Illinois and New York into the same color bin (12-20M range), making their large difference appear similar, while California and Ohio appear more different due to different color bins."
+}

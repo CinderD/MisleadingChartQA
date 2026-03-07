@@ -1,0 +1,17 @@
+{
+  "question": "What does this chart imply?",
+  "options": {
+    "A": "Visits in 2019 were the highest.",
+    "B": "We cannot tell if the last two years have the same or different visit counts because the bars are clipped.",
+    "C": "Visits declined from 2018 to 2022.",
+    "D": "Visits in 2021 and 2022 were the same."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The visible y-range is set below the maximum value, so the top bars are truncated and looks identical."
+}

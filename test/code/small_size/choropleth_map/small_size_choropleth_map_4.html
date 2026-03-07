@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choropleth Map of US Bachelor's Degree Attainment by State</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <style>
+        .state {
+            fill: lightgray;
+            stroke: white;
+            stroke-width: 0.5;
+        }
+        .state:hover {
+            opacity: 0.8;
+        }
+        .legend {
+            font-size: 8px;
+        }
+        text {
+            font-size: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Choropleth Map of US Bachelor's Degree Attainment by State</h2>
+    <svg width="960" height="600"></svg>
+    
+    <script>
+        const margin = { top: 20, right: 20, bottom: 60, left: 50 };
+        const width = 960 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+        
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        
+        const colorScale = d3.scaleQuantize()
+            .range(d3.schemeYlOrRd[9]);
+
+        Promise.all([
+            d3.json("https://d3js.org/us-10m.v1.json"),
+            d3.csv("../../../../data/small_size/choropleth_map/small_size_choropleth_map_4.csv")
+        ]).then(function([usData, data]) {
+            
+            const statesData = topojson.feature(usData, usData.objects.states).features;
+            
+            statesData.forEach(state => {
+                const stateData = data.find(d => d.id === state.id);
+                if (stateData) {
+                    state.BachelorsDegree = +stateData.BachelorsDegree;
+                    state.State = stateData.State;
+                }
+            });
+
+            colorScale.domain([25, 35]);
+            
+            const path = d3.geoPath();
+            
+            svg.selectAll(".state")
+                .data(statesData)
+                .enter().append("path")
+                .attr("class", "state")
+                .attr("d", path)
+                .style("fill", d => d.BachelorsDegree ? colorScale(d.BachelorsDegree) : "#ccc")
+                .on("mouseover", function(event, d) {
+                    d3.select(this).style("opacity", 0.7);
+                    svg.append("text")
+                        .attr("id", "tooltip")
+                        .attr("x", event.pageX + 5)
+                        .attr("y", event.pageY - 5)
+                        .text(d.State + ": " + (d.BachelorsDegree ? d.BachelorsDegree.toFixed(1) + "%" : "No Data"));
+                })
+                .on("mouseout", function() {
+                    d3.select(this).style("opacity", 1);
+                    d3.select("#tooltip").remove();
+                });
+            
+            svg.selectAll(".state-label")
+                .data(statesData)
+                .enter().append("text")
+                .attr("class", "state-label")
+                .attr("x", function(d) { return path.centroid(d)[0]; })
+                .attr("y", function(d) { return path.centroid(d)[1] - 10; })
+                .attr("text-anchor", "middle")
+                .text(function(d) {
+                    return d.BachelorsDegree ? d.BachelorsDegree.toFixed(1) + "%" : "";
+                });
+
+            svg.selectAll(".state-name")
+                .data(statesData)
+                .enter().append("text")
+                .attr("class", "state-name")
+                .attr("x", function(d) { return path.centroid(d)[0]; })
+                .attr("y", function(d) { return path.centroid(d)[1] + 10; })
+                .attr("text-anchor", "middle")
+                .text(function(d) { return d.State; });
+            
+            const legend = svg.append("g")
+                .attr("class", "legend")
+                .attr("transform", "translate(" + (width - 20) + "," + (height - 80) + ")");
+            
+            const legendScale = d3.scaleLinear()
+                .domain([25, 35])
+                .range([0, 200]);
+            
+            const legendAxis = d3.axisRight(legendScale)
+                .ticks(5)
+                .tickFormat(d => d.toFixed(0) + "%");
+            
+            legend.append("g")
+                .attr("class", "legend-axis")
+                .call(legendAxis);
+            
+            legend.selectAll("rect")
+                .data(colorScale.range())
+                .enter().append("rect")
+                .attr("x", -20)
+                .attr("y", (d, i) => i * 20)
+                .attr("width", 20)
+                .attr("height", 20)
+                .style("fill", d => d);
+        });
+    </script>
+</body>
+</html>

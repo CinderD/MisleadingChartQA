@@ -1,0 +1,17 @@
+{
+  "question": "Which statement follows from the chart?",
+  "options": {
+    "A": "Central and North have about the same share.",
+    "B": "North has the smallest market share.",
+    "C": "East has the largest market share among the categories shown.",
+    "D": "The chart does not support comparing shares across categories."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, East has the highest share (69%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking Central is largest when relying on visual comparison."
+}

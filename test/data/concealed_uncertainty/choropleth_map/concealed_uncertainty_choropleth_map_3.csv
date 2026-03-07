@@ -1,0 +1,51 @@
+id,state,Brand
+01,Alabama,A
+02,Alaska,A
+04,Arizona,A
+05,Arkansas,A
+06,California,A
+08,Colorado,A
+09,Connecticut,A
+10,Delaware,A
+11,Florida,A
+12,Georgia,A
+13,Hawaii,A
+16,Idaho,A
+17,Illinois,A
+18,Indiana,A
+19,Iowa,A
+20,Kansas,A
+21,Kentucky,A
+22,Louisiana,A
+23,Maine,A
+24,Maryland,A
+25,Massachusetts,A
+26,Michigan,A
+27,Minnesota,A
+28,Mississippi,A
+29,Missouri,A
+30,Montana,A
+31,Nebraska,A
+32,Nevada,A
+33,New Hampshire,A
+34,New Jersey,A
+35,New Mexico,A
+36,New York,A
+37,North Carolina,A
+38,North Dakota,A
+39,Ohio,A
+40,Oklahoma,A
+41,Oregon,A
+42,Pennsylvania,A
+44,Rhode Island,A
+45,South Carolina,A
+46,South Dakota,A
+47,Tennessee,A
+48,Texas,A
+49,Utah,A
+50,Vermont,A
+51,Virginia,A
+53,Washington,A
+54,West Virginia,A
+55,Wisconsin,A
+56,Wyoming,A

@@ -1,0 +1,17 @@
+{
+  "question": "Which category contributes the most in the final period?",
+  "options": {
+    "A": "The purple segment (45+) shows the largest share.",
+    "B": "The orange segment (35-44) indicates the largest share.",
+    "C": "The red segment (35-44) shows the largest share.",
+    "D": "Cannot determine the primary segment without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays different colored segments but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category has the largest share; options that assign a category to a color are guessing."
+}

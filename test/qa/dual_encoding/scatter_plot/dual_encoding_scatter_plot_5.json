@@ -1,0 +1,17 @@
+{
+  "question": "The plot shows marketing spend vs revenue. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Revenue decreases beyond $80k spend, as the smaller lighter points suggest.",
+    "B": "There is a generally positive relationship between marketing spend and revenue.",
+    "C": "There is no relationship.",
+    "D": "Revenue increases exponentially with spend, as indicated by the larger, darker points."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Both point size and color encode revenue, exaggerating high-revenue points visually. The reliable conclusion is a generally positive relationship."
+}

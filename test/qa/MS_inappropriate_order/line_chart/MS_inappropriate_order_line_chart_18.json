@@ -1,0 +1,17 @@
+{
+  "question": "True or False: The number of visitors at the tourist attraction is consistently decreasing from 2000 to 2005.",
+  "options": {
+    "A": "True",
+    "B": "False",
+    "C": "The trend is downward, with one brief rebound in the early middle period before continuing to decline steadily ",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to the x-axis being manipulated to display years in an incorrect order, it initially appears the trend is not consistently decreasing, leading to the misleading impression."
+}

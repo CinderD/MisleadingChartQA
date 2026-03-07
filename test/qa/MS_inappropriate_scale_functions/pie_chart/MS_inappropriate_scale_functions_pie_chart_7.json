@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, which energy source appears to account for the largest share of global consumption?",
+  "options": {
+    "A": "Fossil Fuels",
+    "B": "Renewables",
+    "C": "Nuclear",
+    "D": "Hydroelectric"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie chart uses adjusted scaling that completely reverses the consumption order, making Nuclear and Hydroelectric appear as the largest segments despite having much lower actual consumption than Fossil Fuels."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "What does this line chart show about the overall trend?",
+  "options": {
+    "A": "Sales peaked around 1975 and then declined through 2024.",
+    "B": "Sales declined from 1924 to 2024.",
+    "C": "No correct answer.",
+    "D": "Sales increased steadily from 1924 to 2024."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows sales rising to a peak around 1975 and then declining. Small visual elements can lead to misreading the trend as a steady increase."
+}

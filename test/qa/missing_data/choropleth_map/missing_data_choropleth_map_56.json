@@ -1,0 +1,17 @@
+{
+  "question": "Based on the map, which statement about internet penetration in the labelled countries is most accurate?",
+  "options": {
+    "A": "Countries shown in grey have the lowest internet penetration.",
+    "B": "Among the coloured countries, the United States has one of the highest internet penetration levels.",
+    "C": "All coloured countries have roughly the same internet penetration.",
+    "D": "Internet penetration is highest in countries shown in grey."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "At least one of the labelled regions appears grey, indicating missing data rather than a low value. Because we do not know that region's value, we cannot safely say which labelled region truly has the highest value."
+}

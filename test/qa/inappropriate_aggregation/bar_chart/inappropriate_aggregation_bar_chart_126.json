@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is Thursday, what can you say about the average website visits for the entire week?",
+  "options": {
+    "A": "The weekly average is about 11 visits, based on all seven days shown.",
+    "B": "The weekly average cannot be determined because data for some days are missing.",
+    "C": "The weekly average must be lower than 10 visits.",
+    "D": "The weekly average is about 19 visits, based only on Monday–Thursday."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart only shows measured values for the first part of the week; the remaining days are effectively missing, but are drawn as zero-height bars. Computing an average across all seven days (including those zeros) assumes the missing days truly had zero values, which is not supported by the data. Therefore the weekly average cannot be reliably calculated."
+}

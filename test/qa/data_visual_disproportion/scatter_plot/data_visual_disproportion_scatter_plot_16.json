@@ -1,0 +1,17 @@
+{
+  "question": "Based on the percentages shown for each category in the chart, which category has the highest product rating share?",
+  "options": {
+    "A": "Other has the highest value among the categories.",
+    "B": "Price has the highest value among the categories.",
+    "C": "Design has the highest value among the categories.",
+    "D": "Quality has the highest value among the categories."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

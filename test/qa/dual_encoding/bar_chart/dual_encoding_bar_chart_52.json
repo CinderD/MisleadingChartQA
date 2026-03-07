@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays quarterly customer support tickets. Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "Q4 has the lowest number of customer support tickets among all the quarters shown, excluding the quarter with zero tickets.",
+    "B": "Q1 and Q1 (next year) have exactly the same number of customer support tickets.",
+    "C": "Q2 has nearly three times as many customer support tickets as Q4.",
+    "D": "Q3 has fewer customer support tickets than Q1 (next year)."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

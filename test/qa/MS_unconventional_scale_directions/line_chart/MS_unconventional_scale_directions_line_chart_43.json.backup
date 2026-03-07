@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend from 2009 to 2018?",
+  "options": {
+    "A": "Constant",
+    "B": "Decreasing",
+    "C": "Fluctuating",
+    "D": "Increasing"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes the series appear increasing when it is actually decreasing."
+}

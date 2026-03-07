@@ -1,0 +1,17 @@
+{
+  "question": "The line chart depicts sales from 1924 to 2024. Which statement best describes the trend?",
+  "options": {
+    "A": "Sales declined from 1960 to 1970 before rising again.",
+    "B": "Sales declined from 1970 to 1980 before rising again.",
+    "C": "No correct answer.",
+    "D": "A steady increase from 1924 to 2024."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The data shows a decline from 1960 to 1970, then a rise. Small text size can make it difficult to identify which decade had the decline."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in the number of bookstores reported in the chart from 2000 to 2020?",
+  "options": {
+    "A": "Fluctuating",
+    "B": "Decreasing",
+    "C": "Increasing",
+    "D": "Constant"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes it appear that the trend is decreasing, when in reality the data shows a fluctuating trend from 2000 to 2020."
+}

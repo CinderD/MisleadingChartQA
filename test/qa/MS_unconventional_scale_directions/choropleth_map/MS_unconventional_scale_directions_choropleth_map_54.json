@@ -1,0 +1,17 @@
+{
+  "question": "True or False: Species Z is more prevalent in NC than in PA according to the chart.",
+  "options": {
+    "A": "True",
+    "B": "False",
+    "C": "Both states have the same prevalence ",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend for the prevalence scale is inverted, making lower values darker and higher values lighter. Although NC appears lighter, PA actually has a higher prevalence of species Z."
+}

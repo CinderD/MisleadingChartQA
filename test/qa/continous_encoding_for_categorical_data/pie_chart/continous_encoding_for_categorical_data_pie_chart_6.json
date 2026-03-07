@@ -1,0 +1,17 @@
+{
+  "question": "This pie chart shows the distribution of payment method usage. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "The intensity of the blue gradient represents the relative safety level of each payment method.",
+    "B": "Credit Card usage exceeds all other payment methods combined.",
+    "C": "Credit Card represents the most frequently used payment method among all options.",
+    "D": "The color progression indicates the chronological evolution of payment technologies from oldest to newest."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "pie_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses continuous color encoding (blue gradient) for categorical payment method data. Payment methods like cash, digital wallet, credit card, bank transfer, and debit card are distinct, independent categories with no inherent continuous relationship that would justify a color gradient. The continuous color scale misleadingly suggests that darker blues represent higher technological sophistication or safety levels, when in reality these are simply different categorical divisions. Each payment method should use distinct, unordered colors to avoid implying false relationships between the categories."
+}

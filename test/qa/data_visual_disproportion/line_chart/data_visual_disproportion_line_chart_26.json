@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is supported by the chart data?",
+  "options": {
+    "A": "The market share in 2022 is 28%.",
+    "B": "The market share rose by more than 10 percentage points from 2021 to 2022.",
+    "C": "The most recent value in 2023 is the highest in the entire period.",
+    "D": "Market share decreased every year from 2019 to 2021."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The line is drawn using a different 'height' value for 2020 than the actual share, so the visual suggests a dramatic spike while the true share is 17%."
+}

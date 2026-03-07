@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertising Spend vs Sales (Premium Customers)</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .dot {
+            fill: steelblue;
+            opacity: 0.8;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .month-label { 
+            font-size: 10px; 
+            fill: #333; 
+            text-anchor: middle;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Advertising Spend vs Sales (Premium Customers)</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 30, bottom: 50, left: 70};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/cherry_picking/scatter_plot/cherry_picking_scatter_plot_23.csv").then(data => {
+          data.forEach(d => {
+            d.AdSpend = +d.AdSpend;
+            d.Sales = +d.Sales;
+          });
+
+          const x = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.AdSpend) + 10])
+            .range([0, width]);
+
+          const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.Sales) + 10])
+            .range([height, 0]);
+
+          g.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x));
+          g.append("g").call(d3.axisLeft(y));
+
+          g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 40)
+            .attr("text-anchor", "middle")
+            .style("font-size", "12px")
+            .text("Advertising Spend ($)");
+
+          g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -50)
+            .attr("text-anchor", "middle")
+            .style("font-size", "12px")
+            .text("Sales ($)");
+
+          // 添加数据点和月份标签
+          g.selectAll(".dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("class", "dot")
+            .attr("cx", d => x(d.AdSpend))
+            .attr("cy", d => y(d.Sales))
+            .attr("r", 5);
+
+          // 添加月份标签
+          g.selectAll(".month-label")
+            .data(data)
+            .enter().append("text")
+            .attr("class", "month-label")
+            .attr("x", d => x(d.AdSpend))
+            .attr("y", d => y(d.Sales) - 15)
+            .text(d => d.Month);
+
+          // 移除回归线，让数据点自己说话
+          // 这样更符合 cherry picking 的特征，不强制显示趋势线
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

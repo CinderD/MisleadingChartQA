@@ -1,0 +1,17 @@
+{
+  "question": "The pie chart visualizes the employee distribution across various departments in Company Y. Which department appears to have the largest employee count due to color but does not?",
+  "options": {
+    "A": "Department A",
+    "B": "Department B",
+    "C": "Department C",
+    "D": "Department D"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "pie_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Although the 'Department C' has more employees, the largest angle mislead is due to color representation which makes it seem second larger."
+}

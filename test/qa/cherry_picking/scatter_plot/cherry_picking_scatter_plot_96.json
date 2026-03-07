@@ -1,0 +1,17 @@
+{
+  "question": "The plot shows ad spend and sales for several high-growth quarters. What can we infer about the campaign's effectiveness across all quarters?",
+  "options": {
+    "A": "The campaign is reliably effective in every quarter, since all quarters shown respond strongly to increased ad spend.",
+    "B": "The campaign is ineffective overall because only a few points show improvement.",
+    "C": "The campaign appears effective in these high-growth quarters, but we would need data from average or weak quarters to judge effectiveness across all quarters.",
+    "D": "The campaign harms performance because higher spend always reduces sales in these points."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Infer Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Only high-growth quarters are shown, where spend and sales both rise. This cherry-picked subset hides quarters that may respond weakly or not at all, so we cannot generalize to all quarters."
+}

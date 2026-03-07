@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the time allocation on a typical day across different activities. Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "The time spent on Leisure is greater than the time spent on Work.",
+    "B": "The combined time spent on Work and Chores is equal to the time spent on Sleep.",
+    "C": "The combined share of Work, Chores, and Leisure is greater than the share of Sleep.",
+    "D": "The time spent sleeping is greater than the combined time spent on Work, Chores, and Leisure."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Sleep: 40%; Work: 30%; Chores: 20%; Leisure: 10%."
+}

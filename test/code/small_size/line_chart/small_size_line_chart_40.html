@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Sales Trend for Product A (1924-2024)</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .line {
+            fill: none;
+            stroke-width: 2;
+        }
+        .axis path,
+        .axis line {
+            shape-rendering: crispEdges;
+        }
+        .grid line {
+            stroke: lightgrey;
+            stroke-opacity: 0.7;
+            shape-rendering: crispEdges;
+        }
+        .legend {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Annual Sales Trend for Product A (1924-2024)</h2>
+    <svg width="1000" height="750"></svg>
+    
+    <script>
+        const margin = { top: 30, right: 40, bottom: 70, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const tick_label_size = "4px";
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/small_size/line_chart/small_size_line_chart_40.csv").then(function(data) {
+            data.forEach(d => {
+                d.Yr = +d.Yr;
+                d.Sl = +d.Sl;
+            });
+
+            const x = d3.scaleTime()
+                .domain([d3.min(data, d => new Date(d.Yr, 0)), d3.max(data, d => new Date(d.Yr, 0))])
+                .range([0, width]);
+                
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.Sl)])
+                .nice()
+                .range([height, 0]);
+
+            const line = d3.line()
+                .x(d => x(new Date(d.Yr, 0)))
+                .y(d => y(d.Sl));
+
+            const xAxis = svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x)
+                    .ticks(d3.timeYear.every(10))
+                    .tickFormat(d3.timeFormat("%Y")))
+                .style("font-size", tick_label_size);
+
+            const yAxis = svg.append("g")
+                .call(d3.axisLeft(y))
+                .style("font-size", tick_label_size);
+
+            svg.append("g")
+                .attr("class", "grid")
+                .call(d3.axisLeft(y)
+                    .ticks(5)
+                    .tickSize(-width)
+                    .tickFormat("")
+                );
+
+            svg.append("g")
+                .attr("class", "grid")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x)
+                    .ticks(d3.timeYear.every(10))
+                    .tickSize(-height)
+                    .tickFormat("")
+                );
+
+            svg.append("path")
+                .data([data])
+                .attr("class", "line")
+                .attr("stroke", "steelblue")
+                .attr("d", line);
+
+            svg.append("text")
+                .attr("transform", "translate(" + (width / 2) + "," + (height + margin.top + 20) + ")")
+                .style("text-anchor", "middle")
+                .style("font-size", "5px")
+                .text("Year");
+
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left)
+                .attr("x", 0 - (height / 2))
+                .attr("dy", "1em")
+                .style("text-anchor", "middle")
+                .style("font-size", "5px")
+                .text("Sales");
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

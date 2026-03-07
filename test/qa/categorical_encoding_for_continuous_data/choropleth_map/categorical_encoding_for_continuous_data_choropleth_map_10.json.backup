@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US GDP map, which statement below is the most accurate?",
+  "options": {
+    "A": "West Virginia and Oklahoma have similar GDPs.",
+    "B": "All states have very diverse GDP levels.",
+    "C": "The GDP gap between West Virginia and Oklahoma might exceeds that between Tennessee and Florida.",
+    "D": "The GDP differences are impossible to determine from this visualization."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "West Virginia (216.8$B) and Oklahoma (319.2$B) have a 102.4$B GDP difference, while Tennessee (49.9$B) and Florida (50.1$B) have only a 0.2$B difference. However, the categorical color encoding groups West Virginia and Oklahoma into the same color bin (200-400$B range), making their large difference appear similar, while Tennessee and Florida appear more different due to different color bins."
+}

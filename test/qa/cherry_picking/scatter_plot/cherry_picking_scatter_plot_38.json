@@ -1,0 +1,17 @@
+{
+  "question": "Based on this advertising spend vs sales data, what can we conclude about the effectiveness of the advertising campaign?",
+  "options": {
+    "A": "The advertising campaign is highly effective, showing consistent growth in sales with increased spending throughout the year.",
+    "B": "The advertising campaign shows moderate effectiveness, with sales increasing but at a decreasing rate over the full year.",
+    "C": "The advertising campaign is ineffective, as the relationship between spend and sales is weak across the entire dataset.",
+    "D": "The advertising campaign appears effective for the months shown, but we need data from the entire year to make a complete assessment."
+  },
+  "correctAnswer": "D",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Infer Trends",
+  "explanation": "The chart only shows data for five months (April-August), which represents a selective subset of the complete dataset. While the visible data points suggest a strong positive correlation with increasing returns in later months, this cherry-picked sample cannot reliably indicate the overall effectiveness of the advertising campaign. The missing data from other months could reveal seasonal patterns, periods of decline, or other factors that would significantly alter our understanding of the campaign's true effectiveness.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "A"
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Do Fall have humidity above 19%?",
+  "options": {
+    "A": "Only Spring, Summer, Winter have humidity above 19",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "No",
+    "D": "Yes"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 19% humidity position, making it difficult to accurately discern if any members of Fall has the humidity higher than 19%."
+}

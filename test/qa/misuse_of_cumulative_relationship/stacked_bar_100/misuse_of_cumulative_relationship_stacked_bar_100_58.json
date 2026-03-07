@@ -1,0 +1,17 @@
+{
+  "question": "For the quarterly online platform data, what can be concluded about the pattern of 'Online Searches' from this 100% stacked bar chart?",
+  "options": {
+    "A": "The absolute number of online searches increases every quarter because the share is larger in later quarters.",
+    "B": "Online searches show a steady increase in both share and absolute numbers across all quarters.",
+    "C": "The chart normalizes unrelated categories to 100% per quarter, so it only shows the share of online searches and cannot reveal their absolute trend over time.",
+    "D": "Online searches have the same absolute value in every quarter because each bar reaches 100%."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart normalizes unrelated categories to 100% within each quarter. It can suggest that the share of a metric is higher in later quarters, but it cannot establish an absolute increasing trend without the underlying totals. A higher percentage share does not necessarily mean a higher absolute quantity."
+}

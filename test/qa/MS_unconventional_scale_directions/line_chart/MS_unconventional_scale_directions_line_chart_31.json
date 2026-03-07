@@ -1,0 +1,17 @@
+{
+  "question": "What is the overall trend in CO2 emissions in Country N from 2008 to 2020?",
+  "options": {
+    "A": "Increasing",
+    "B": "Decreasing",
+    "C": "Constant",
+    "D": "Fluctuating"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes the series appear increasing when it is actually decreasing."
+}

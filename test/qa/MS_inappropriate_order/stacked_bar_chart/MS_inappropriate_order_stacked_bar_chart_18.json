@@ -1,0 +1,17 @@
+{
+  "question": "In the given chart, which year appears to have the highest sales for brands A, B, and C?",
+  "options": {
+    "A": "2001",
+    "B": "2003",
+    "C": "2002",
+    "D": "2005"
+  },
+  "correctAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends, Make Comparisons, Find Extremum",
+  "explanation": "The x-axis is manipulated to display years in an incorrect order. Analysis shows 2001 has the highest sales due to the misleading arrangement.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "D"
+}

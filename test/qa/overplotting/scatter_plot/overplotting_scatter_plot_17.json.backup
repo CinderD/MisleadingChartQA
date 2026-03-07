@@ -1,0 +1,17 @@
+{
+  "question": "Do Marketing employees have salaries above 15 thousand?",
+  "options": {
+    "A": "Only Engineering, Sales, HR have salaries above 15",
+    "B": "Only certain categories have salaries above 15",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "No"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 15 thousand salaries position, making it difficult to accurately discern if any members of Marketing has the salarie higher than 15 thousand."
+}

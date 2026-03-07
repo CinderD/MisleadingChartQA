@@ -1,0 +1,17 @@
+{
+  "question": "Based on the restaurant revenue chart, which service type had the highest total revenue across all four days?",
+  "options": {
+    "A": "Lunch service had the highest total revenue",
+    "B": "Dinner service had the highest total revenue",
+    "C": "Takeout service had the highest total revenue",
+    "D": "Cannot be determined due to scale issues"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inappropriate scale range (1500-8000) that starts well above zero, making it difficult to accurately compare the relative revenue of different service types. While Lunch service does have the highest total revenue ($12,000), the truncated scale makes Dinner service appear to have a similar volume, potentially misleading viewers about the actual differences between service types."
+}

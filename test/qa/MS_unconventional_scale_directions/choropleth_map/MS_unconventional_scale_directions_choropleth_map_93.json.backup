@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher incidence based on the chart, WY or OR?",
+  "options": {
+    "A": "Both states have the same prevalence",
+    "B": "WY",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "OR"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although WY appears darker, OR has the higher assigned value when the inversion is considered."
+}

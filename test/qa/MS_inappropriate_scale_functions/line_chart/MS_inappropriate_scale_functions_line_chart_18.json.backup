@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart data, which period shows the larger net decrease in value?",
+  "options": {
+    "A": "It cannot be determined from the chart",
+    "B": "2016-2018",
+    "C": "2021-2023",
+    "D": "Both periods show about the same decrease"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2016-2018: 2483 → 2441 (-42); 2021-2023: 282 → 258 (-24)."
+}

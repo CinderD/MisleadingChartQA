@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is supported by this chart?",
+  "options": {
+    "A": "The two highest bars are cut off by the axis range, so their relative sizes cannot be determined from the chart.",
+    "B": "Output declined throughout the period.",
+    "C": "Output in the last two years is identical.",
+    "D": "Output in the middle year was highest."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Values exceeding the y-axis range are clipped, making the top bars look the same and misleading viewers."
+}

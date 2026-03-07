@@ -1,0 +1,17 @@
+{
+  "question": "How does the visitor count for Station X on May 09 compare to Station Y?",
+  "options": {
+    "A": "Station X on May 09 has more visitors",
+    "B": "Station Y on May 09 has more visitors",
+    "C": "Both have an approximately equal number of visitors",
+    "D": "Cannot be inferred"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 1000, exaggerating the differences and making Station X on May 09 (1800) appear similiar to Station Y (1100) than it is."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "What do these price movements suggest about long-term market trends from 1990 to 2010?",
+  "options": {
+    "A": "The consistent upward pattern indicates sustained market growth throughout the 1990s and 2000s.",
+    "B": "Market performance shows declining trends across the entire two-decade period.",
+    "C": "The market exhibits highly volatile behavior with unpredictable fluctuations.",
+    "D": "This limited 8-year sample cannot reliably indicate 20-year market trends."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While the visible data shows a clear upward trend from 1995-2002, this cherry-picked 8-year window cannot reliably indicate market behavior across the full 20-year period (1990-2010). Other periods within this timeframe could show different patterns that would significantly alter our understanding of long-term market trends."
+}

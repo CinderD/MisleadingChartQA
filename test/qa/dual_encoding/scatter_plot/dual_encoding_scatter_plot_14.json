@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows CO₂ emissions vs. temperature anomaly. Which statement is best supported by the data?",
+  "options": {
+    "A": "Temperature anomalies decrease as CO₂ emissions increase.",
+    "B": "The largest, darkest points suggest a strong positive relationship between CO₂ emissions and temperature anomaly.",
+    "C": "Across the full range of CO₂ emissions, the temperature anomaly stays within a fairly narrow band without a clear trend.",
+    "D": "There is a strong positive relationship between CO₂ emissions and temperature anomaly."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the y-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

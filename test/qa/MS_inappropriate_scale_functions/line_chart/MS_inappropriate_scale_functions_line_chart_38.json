@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, during which period did the number of Daily Active Users (DAU) increase by the larger amount?",
+  "options": {
+    "A": "2000-2001",
+    "B": "2001-2003",
+    "C": "2005-2008",
+    "D": "Both periods 2001-2003 and 2005-2008 have the same increase"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2001-2003: 1205 → 2045 (+840); 2005-2008: 2986 → 4004 (+1018)."
+}

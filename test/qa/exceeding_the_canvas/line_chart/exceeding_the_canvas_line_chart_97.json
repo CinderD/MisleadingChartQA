@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows revenue for various years. Which of the following statements is true based on the chart as shown?",
+  "options": {
+    "A": "Revenue decreases from 2018 to 2020 and then increases sharply afterward.",
+    "B": "Revenue is highest in the final visible year, but its exact value cannot be read because it extends beyond the top of the chart.",
+    "C": "Revenue remains constant across all the years shown.",
+    "D": "Revenue is lowest in 2018."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The bar tops are clipped outside the visible plotting area, so equality or ordering for the clipped bars cannot be inferred."
+}

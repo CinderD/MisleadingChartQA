@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows time allocation on a typical day. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Commute and Leisure together equal Work.",
+    "B": "Commute is larger than Leisure.",
+    "C": "Work is larger than the combined share of Leisure + Chores.",
+    "D": "Commute is the smallest category by percentage."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Work: 55%; Leisure: 20%; Chores: 15%; Commute: 10%."
+}

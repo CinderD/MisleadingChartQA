@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is Wednesday of the current week, what can be said about the average energy usage for the entire week?",
+  "options": {
+    "A": "The weekly average is about 11 kWh per day.",
+    "B": "The weekly average is about 25 kWh per day.",
+    "C": "The weekly average is about 35 kWh per day.",
+    "D": "The average for the entire week cannot be determined from this chart."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart only shows measured values for the first part of the week; the remaining days are effectively missing, but are drawn as zero-height bars. Computing an average across all seven days (including those zeros) assumes the missing days truly had zero values, which is not supported by the data. Therefore the weekly average cannot be reliably calculated."
+}

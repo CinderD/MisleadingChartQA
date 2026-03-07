@@ -1,0 +1,10 @@
+id,region,internet_penetration,code,representation,latitude,longitude
+250,France,101.89,A,Z,46.0,2.0
+356,India,0.00,B,M,20.0,78.0
+156,China,34.39,C,Z,35.0,105.0
+710,South Africa,70.60,D,Z,-30.0,25.0
+036,Australia,46.36,E,Z,-25.0,135.0
+643,Russia,0.00,,M,61.0,105.0
+076,Brazil,35.02,,Z,-10.0,-60.0
+840,United States,33.36,,Z,39.0,-98.0
+484,Mexico,51.75,,Z,23.0,-102.0

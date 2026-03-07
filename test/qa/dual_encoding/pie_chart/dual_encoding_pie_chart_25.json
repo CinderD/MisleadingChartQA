@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays the budget distribution across various sectors in City A. Based on this data, which of the following statements is correct?",
+  "options": {
+    "A": "The budget allocated to Education is significantly lower than the combined budget for Healthcare and Infrastructure.",
+    "B": "The budget allocation for Safety is the lowest among all sectors.",
+    "C": "The budget for Infrastructure and Healthcare combined is equal to the budget for Education.",
+    "D": "The combined budget allocated to Education and Safety is lower than the combined budget for Healthcare and Infrastructure."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart indicates that the budget for Education is less than the combined budget for Healthcare and Infrastructure. The combined budget for Healthcare and Infrastructure is just equal to the budget for Education adds Safety. Due to dual encoding, it exaggerating differences with angle and area representation."
+}

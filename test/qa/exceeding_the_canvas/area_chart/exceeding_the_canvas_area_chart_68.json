@@ -1,0 +1,17 @@
+{
+  "question": "Based on the area chart showing output from 2018 to 2022, which statement is most justified?",
+  "options": {
+    "A": "Output in 2021 and 2022 clearly differs in size.",
+    "B": "Output in 2020 was lower than in 2019.",
+    "C": "The early years show lower output than the later years.",
+    "D": "Output in the last two years appears identical in the chart."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Values exceeding the y-axis range are clipped, making the top bars look the same and misleading viewers."
+}

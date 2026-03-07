@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, which time period shows the larger increase in GDP amount?",
+  "options": {
+    "A": "2000-2003",
+    "B": "2005-2008",
+    "C": "Both periods were equally impressive",
+    "D": "The data is too inconsistent to judge"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a manipulated scale that visually inflates the 2000-2003 period, making it appear as the more impressive economic performance despite the actual data showing 2005-2008 had better growth rates."
+}

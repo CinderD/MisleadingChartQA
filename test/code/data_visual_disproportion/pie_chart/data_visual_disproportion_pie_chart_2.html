@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Allocation Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .slice {
+            stroke: white;
+            stroke-width: 2px;
+        }
+        .label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .percentage {
+            font-size: 14px;
+            font-weight: bold;
+            fill: white;
+            stroke: black;
+            stroke-width: 1px;
+            paint-order: stroke fill;
+        }
+    </style>
+</head>
+<body>
+    <h1>Department Budget Allocation</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 40, left: 20};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+        const radius = Math.min(width, height) / 2;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g")
+            .attr("transform", `translate(${width/2 + margin.left},${height/2 + margin.top})`);
+
+        d3.csv("../../../../data/data_visual_disproportion/pie_chart/data_visual_disproportion_pie_chart_2.csv").then(data => {
+            data.forEach(d => {
+                d.percentage = +d.percentage;
+                d.visual_size = +d.visual_size;
+            });
+
+            const pie = d3.pie()
+                .value(d => d.visual_size) // Use visual_size for slice proportions
+                .sort(null);
+
+            const arc = d3.arc()
+                .innerRadius(0)
+                .outerRadius(radius);
+
+            const color = d3.scaleOrdinal()
+                .domain(data.map(d => d.department))
+                .range(d3.schemeCategory10);
+
+            const slices = g.selectAll(".slice")
+                .data(pie(data))
+                .enter()
+                .append("g")
+                .attr("class", "slice");
+
+            slices.append("path")
+                .attr("d", arc)
+                .attr("fill", d => color(d.data.department))
+                .attr("class", "slice");
+
+            slices.append("text")
+                .attr("transform", d => `translate(${arc.centroid(d)})`)
+                .attr("text-anchor", "middle")
+                .attr("class", "percentage")
+                .text(d => d.data.percentage + "%");
+
+            slices.append("text")
+                .attr("transform", d => {
+                    const pos = arc.centroid(d);
+                    const midAngle = d.startAngle + (d.endAngle - d.startAngle) / 2;
+                    const sliceSize = d.endAngle - d.startAngle;
+                    
+                    // For very small slices, position labels outside the pie to avoid overlap
+                    if (sliceSize < 0.2) { // Very small slices
+                        const outerRadius = radius * 1.2;
+                        pos[0] = Math.cos(midAngle) * outerRadius;
+                        pos[1] = Math.sin(midAngle) * outerRadius;
+                    } else if (sliceSize < 0.4) { // Small slices - position closer to center
+                        pos[0] = pos[0] * 0.4;
+                        pos[1] = pos[1] * 0.4;
+                    } else { // Larger slices - position further out
+                        pos[0] = pos[0] * 0.8;
+                        pos[1] = pos[1] * 0.8;
+                    }
+                    
+                    return `translate(${pos})`;
+                })
+                .attr("text-anchor", d => {
+                    const midAngle = d.startAngle + (d.endAngle - d.startAngle) / 2;
+                    const sliceSize = d.endAngle - d.startAngle;
+                    
+                    if (sliceSize < 0.2) { // Very small slices
+                        if (midAngle < Math.PI / 2) return "end"; // Top-left
+                        else if (midAngle < Math.PI) return "start"; // Top-right
+                        else if (midAngle < 3 * Math.PI / 2) return "start"; // Bottom-right
+                        else return "end"; // Bottom-left
+                    } else {
+                        return "middle";
+                    }
+                })
+                .attr("class", "label")
+                .text(d => d.data.department)
+                .style("font-size", "14px")
+                .style("font-weight", "bold")
+                .style("fill", "white")
+                .style("stroke", "black")
+                .style("stroke-width", "1px")
+                .style("paint-order", "stroke fill");
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows sales over the years. Which statement best describes the main difficulty in interpreting this chart?",
+  "options": {
+    "A": "The chart is drawn so small that it is hard to read the axis labels and judge exact changes in sales.",
+    "B": "Sales clearly doubled every decade shown on the chart.",
+    "C": "Sales remained exactly the same throughout the entire period.",
+    "D": "The chart shows that sales dropped to zero midway through the period."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Sales were roughly flat from 1960 to 1970, with rises before and after. Small font sizes can make it easy to misread the flat segment as a decline."
+}

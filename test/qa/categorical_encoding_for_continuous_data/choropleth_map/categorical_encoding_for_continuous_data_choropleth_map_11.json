@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the median income map, which statement below is the most accurate?",
+  "options": {
+    "A": "Oklahoma and Utah have similar median incomes.",
+    "B": "The highlighted states span several different median income ranges.",
+    "C": "The median income differences are impossible to determine from this visualization.",
+    "D": "The median income gap between Oklahoma and Utah might exceed that between Nebraska and North Carolina."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Oklahoma (45.5$k) and Utah (48.5$k) have a 3.0$k median income difference, while Nebraska (34.8$k) and North Carolina (35.3$k) have only a 0.5$k difference. However, the categorical color encoding groups Oklahoma and Utah into the same color bin (45-55$k range), making their large difference appear similar, while Nebraska and North Carolina appear more different due to different color bins."
+}

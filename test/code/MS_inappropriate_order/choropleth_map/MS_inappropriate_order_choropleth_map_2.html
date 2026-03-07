@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geographic Distribution of Prevalence Levels</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .region {
+            stroke: #fff;
+            stroke-width: 0.5;
+        }
+        .label {
+            font-size: 12px;
+            font-weight: bold;
+            text-anchor: middle;
+            fill: black;
+        }
+        .legend {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Geographic Distribution of Prevalence Levels</h1>
+    <div id="chart"></div>
+    <script>
+        const width = 1000, height = 750;
+
+        const colorScale = d3.scaleOrdinal()
+            .domain(["Intermediate", "Very Low", "High", "Low", "Not Reported"])
+            .range(["#FF9999", "#FFE6E6", "#8B0000", "#FF3333", "#E0E0E0"]);
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        Promise.all([
+            d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"),
+            d3.csv("../../../../data/MS_inappropriate_order/choropleth_map/MS_inappropriate_order_choropleth_map_2.csv")
+        ]).then(([geoData, regionData]) => {
+
+            const projection = d3.geoMercator()
+                .scale(120)
+                .translate([width / 2, height / 2]);
+
+            const path = d3.geoPath().projection(projection);
+
+            const regionMap = {};
+            regionData.forEach(d => regionMap[d.region] = d.prevalence_level);
+
+            svg.selectAll("path")
+                .data(geoData.features)
+                .enter().append("path")
+                .attr("class", "region")
+                .attr("fill", d => colorScale(regionMap[d.properties.name] || "Not Reported"))
+                .attr("d", path);
+
+            regionData.forEach(d => {
+                const coords = projection([+d.longitude, +d.latitude]);
+                svg.append("text")
+                    .attr("class", "label")
+                    .attr("x", coords[0])
+                    .attr("y", coords[1])
+                    .text(d.id);
+            });
+
+            const legendData = ["High", "Intermediate", "Low", "Very Low", "Not Reported"];
+            const legend = svg.append("g").attr("class", "legend")
+                .attr("transform", "translate(900, 100)");
+
+            legend.selectAll("rect")
+                .data(legendData)
+                .enter().append("rect")
+                .attr("x", 0)
+                .attr("y", (d, i) => i * 20)
+                .attr("width", 20)
+                .attr("height", 20)
+                .attr("fill", d => colorScale(d));
+
+            legend.selectAll("text")
+                .data(legendData)
+                .enter().append("text")
+                .attr("x", 30)
+                .attr("y", (d, i) => i * 20 + 15)
+                .text(d => d);
+        }).catch(error => {
+            console.error('Error loading data:', error);
+        });
+    </script>
+</body>
+</html>

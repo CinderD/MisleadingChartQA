@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the customer satisfaction heatmap, which statement below is the most accurate?",
+  "options": {
+    "A": "The satisfaction gap between Engineering and Sales is smaller in Service than in Quality.",
+    "B": "Engineering and Sales may have similar differences in Service and Quality, but discrete color bins make Quality appear more dramatic.",
+    "C": "Engineering is clearly better than Sales in Support.",
+    "D": "The satisfaction level difference is impossible to determine from this visualization."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Engineering and Sales satisfaction differences in Service is 0.9 points and in Quality is only 0.2 points. But the categorical color encoding creates an artificial boundary at 5, making Quality appear as a dramatic color jump while Service appears as a smooth progression within the same color bin."
+}

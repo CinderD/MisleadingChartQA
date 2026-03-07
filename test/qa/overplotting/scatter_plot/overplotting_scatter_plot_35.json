@@ -1,0 +1,17 @@
+{
+  "question": "Do eleventh grade students have test scores above 15 points?",
+  "options": {
+    "A": "Yes",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "Only ninth, tenth, and twelfth grade students have test scores above 15 points",
+    "D": "No"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 15 points test scores position, making it difficult to accurately discern if any members of eleventh has the test score higher than 15 points."
+}

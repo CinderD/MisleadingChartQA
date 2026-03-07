@@ -1,0 +1,17 @@
+{
+  "question": "This line chart shows average rating (1–5 stars) across different genre. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "Sci‑Fi has the highest rating of all categories.",
+    "B": "The chart inappropriately connects distinct categories with a continuous line, implying a smooth progression that does not exist between these categories.",
+    "C": "The categories on the left are inherently more basic than those on the right.",
+    "D": "The chart shows a clear left‑to‑right trend in which the categories gradually improve or worsen."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart uses a continuous line over genre that are purely categorical (e.g., Sci‑Fi, Documentary, Action, ...). Connecting points suggests there is a meaningful smooth progression from left to right, which is conceptually incorrect — these categories have no inherent numeric order. The y‑axis values are on a 1 to 5 scale, but any comparison across categories should be made with a discrete chart such as a bar chart, not by reading trends from the connecting line."
+}

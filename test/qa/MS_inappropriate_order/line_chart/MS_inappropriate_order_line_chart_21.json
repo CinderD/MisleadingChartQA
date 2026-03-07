@@ -1,0 +1,17 @@
+{
+  "question": "Based on the data shown, which statement best describes how average test scores change over the semester months shown?",
+  "options": {
+    "A": "Average test scores fluctuate, with noticeable rises and falls rather than a smooth trend.",
+    "B": "Average test scores steadily decrease from the first month shown to the last.",
+    "C": "Average test scores steadily increase from the first month shown to the last.",
+    "D": "Average test scores remain almost perfectly constant from month to month."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

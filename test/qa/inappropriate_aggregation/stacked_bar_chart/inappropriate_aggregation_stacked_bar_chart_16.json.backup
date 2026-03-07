@@ -1,0 +1,17 @@
+{
+  "question": "What can we conclude about the overall performance across channels in the latest year?",
+  "options": {
+    "A": "Online has permanently lost effectiveness in the latest year",
+    "B": "The latest year proves that the marketing mix should be changed immediately",
+    "C": "We cannot make a valid statement about the latest year's full performance because the data only cover an early part of the year",
+    "D": "All channels clearly performed much worse in the latest year than in previous years"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The latest year includes only about 2 months of data, whereas earlier bars represent full-year totals. Stacking the partial-year totals next to full-year bars makes the latest year look dramatically worse across all channels, but this is a consequence of inappropriate aggregation of time, not a true performance collapse."
+}

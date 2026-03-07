@@ -1,0 +1,17 @@
+{
+  "question": "In January, approximately what proportion is Category C’s revenue compared to Category A’s revenue?",
+  "options": {
+    "A": "About half of A",
+    "B": "About the same as A",
+    "C": "About 80% of A",
+    "D": "About twice A"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_area_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 12 instead of 0, which visually exaggerates smaller components in a stacked area chart. In Jan, C is about 100% of A (data: 12.4 vs 10.9), but the truncated baseline can make it appear closer to 80%."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "What does this revenue trend suggest about the company’s performance from 2014 to 2021 in relation to its longer-term results from 2010 to 2025?",
+  "options": {
+    "A": "Revenue grew consistently from 2014 to 2021, proving strong performance across the entire 2010–2025 period.",
+    "B": "The data shows a consistent decline in revenue from 2014 to 2021.",
+    "C": "This 8-year revenue sample alone cannot reliably indicate performance across the full 2010–2025 period.",
+    "D": "Revenue appears unchanged between 2014 and 2021, so long-term performance cannot be evaluated."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Only a subset of years is shown; missing years could show different or declining trends."
+}

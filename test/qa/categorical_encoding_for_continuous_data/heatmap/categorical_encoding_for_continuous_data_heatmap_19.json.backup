@@ -1,0 +1,17 @@
+{
+  "question": "Based on the temperature heatmap, which statement is most accurate about Chicago and New York?",
+  "options": {
+    "A": "The temperature is impossible to determine from this visualization.",
+    "B": "The temperatures might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "C": "Chicago is higher than New York, and the color difference accurately represents this 7.9°C difference.",
+    "D": "It can be infered that their temperatures are very similar."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Chicago (25.9°C) and New York (33.8°C) have a 7.9°C difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of temperature relationships."
+}

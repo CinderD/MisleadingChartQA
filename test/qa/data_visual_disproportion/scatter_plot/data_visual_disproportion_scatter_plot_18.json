@@ -1,0 +1,17 @@
+{
+  "question": "Based on the percentage labels shown in the chart, which statement is correct?",
+  "options": {
+    "A": "Support has a higher value than Quality.",
+    "B": "Other has the lowest value among all the categories.",
+    "C": "Design has the highest value among all the categories.",
+    "D": "Quality and Price have the same value."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

@@ -1,0 +1,22 @@
+id,region,average_precipitation,code,representation,latitude,longitude
+840,United States,8500,R-A,Z,39.0,-98.0
+156,China,8000,R-B,Z,35.0,105.0
+076,South America,0,R-C,M,-10.0,-60.0
+036,Australia,12000,R-D,Z,-25.0,135.0
+356,India,11000,R-E,Z,20.0,78.0
+124,Canada,7500,,Z,60.0,-96.0
+276,Germany,6800,,Z,51.0,10.0
+250,France,7200,,Z,46.0,2.0
+484,Mexico,9500,,Z,23.0,-102.0
+643,Russia,6500,,Z,61.0,105.0
+826,United Kingdom,7000,,Z,55.0,-3.0
+566,Nigeria,9800,,Z,9.0,8.0
+360,Indonesia,12500,,Z,-5.0,120.0
+554,New Zealand,10500,,Z,-40.0,174.0
+710,South Africa,6500,,Z,-30.0,25.0
+372,Ireland,7500,,Z,53.0,-8.0
+528,Netherlands,7200,,Z,52.1326,5.2913
+300,Greece,6000,,Z,39.0742,21.8243
+076,Brazil,0,,M,-15.0,-48.0
+032,Argentina,0,,M,-34.0,-64.0
+208,Denmark,6800,,Z,56.2639,9.5018

@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, what is the proportion of visitors at train station B compared to train station A on May 06?",
+  "options": {
+    "A": "50%",
+    "B": "80%",
+    "C": "100%",
+    "D": "125%"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis does not start at zero, causing the ratio of Station B (2000) to Station A (2500) to appear distorted. The true proportion is 80%, but the scale exaggerates the visual difference."
+}

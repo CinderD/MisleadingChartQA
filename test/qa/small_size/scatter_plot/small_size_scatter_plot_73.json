@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatterplot, what can be reliably concluded about the relationship between age and salary?",
+  "options": {
+    "A": "Older individuals in the chart clearly earn the highest salaries.",
+    "B": "Younger individuals in the chart clearly earn the highest salaries.",
+    "C": "The chart is too small to clearly distinguish salary differences across ages.",
+    "D": "Individuals of all ages in the chart clearly earn exactly the same salary."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 50 and 60 have the highest salary. The small size of the chart may cause difficulty in accurately identifying the specific trends of salary in certain age ranges."
+}

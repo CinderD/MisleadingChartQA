@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, which statement about how time is allocated is supported by the data?",
+  "options": {
+    "A": "Work takes up the smallest share of time.",
+    "B": "Commute takes up more time than any other single activity.",
+    "C": "Leisure and Chores together account for more than half of the time.",
+    "D": "Sleep takes up the largest share of time."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Commute: 35%; Chores: 28%; Sleep: 22%; Work: 8%; Leisure: 7%."
+}

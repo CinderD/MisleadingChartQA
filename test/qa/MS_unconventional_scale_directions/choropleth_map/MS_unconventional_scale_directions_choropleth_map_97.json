@@ -1,0 +1,17 @@
+{
+  "question": "Which state has a higher risk index based on the chart, ME or IL?",
+  "options": {
+    "A": "ME",
+    "B": "IL",
+    "C": "Both states have the same risk index",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although IL appears darker, ME has the higher assigned value when the inversion is considered."
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportation Carbon Emissions</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .line {
+            fill: none;
+            stroke: #27ae60;
+            stroke-width: 3;
+        }
+        .dot {
+            fill: #229954;
+            stroke: #fff;
+            stroke-width: 2;
+        }
+        .axis path,
+        .axis line {
+            shape-rendering: crispEdges;
+            stroke: #333;
+        }
+        .grid line {
+            stroke: lightgrey;
+            stroke-opacity: 0.7;
+            shape-rendering: crispEdges;
+        }
+    </style>
+</head>
+<body>
+    <h2>Carbon Emissions by Transportation Method</h2>
+    <svg width="1000" height="750"></svg>
+    
+    <script>
+        const margin = { top: 40, right: 40, bottom: 100, left: 100 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/continous_encoding_for_categorical_data/line_chart/continous_encoding_for_categorical_data_line_chart_3.csv").then(data => {
+            
+            data.forEach(d => {
+                d.co2_emissions = +d.co2_emissions;
+            });
+
+            const x = d3.scalePoint()
+                .domain(data.map(d => d.transport_method))
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.co2_emissions) * 1.1])
+                .nice()
+                .range([height, 0]);
+
+            const line = d3.line()
+                .x(d => x(d.transport_method))
+                .y(d => y(d.co2_emissions));
+
+            svg.append("path")
+                .datum(data)
+                .attr("class", "line")
+                .attr("d", line);
+
+            svg.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.transport_method))
+                .attr("cy", d => y(d.co2_emissions))
+                .attr("r", 6);
+
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x))
+                .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("dx", "-.8em")
+                .attr("dy", ".15em")
+                .attr("transform", "rotate(-25)");
+
+            svg.append("g")
+                .call(d3.axisLeft(y));
+
+            svg.append("text")
+                .attr("transform", "translate(" + (width / 2) + "," + (height + 80) + ")")
+                .style("text-anchor", "middle")
+                .text("Transportation Method");
+
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left + 20)
+                .attr("x", 0 - (height / 2))
+                .style("text-anchor", "middle")
+                .text("CO2 Emissions (kg per 100km)");
+        });
+    </script>
+</body>
+</html>
+

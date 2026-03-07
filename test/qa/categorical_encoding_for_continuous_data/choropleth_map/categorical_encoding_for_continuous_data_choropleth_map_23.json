@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the unemployment rate map, which statement below is the most accurate?",
+  "options": {
+    "A": "Georgia and Pennsylvania likely have unemployment rates within a similar range.",
+    "B": "Illinois and Connecticut likely have unemployment rates within a similar range.",
+    "C": "Idaho likely has a much lower unemployment rate than Wyoming.",
+    "D": "The unemployment rate differences between any two states cannot be compared using this map."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Georgia (9.7%) and Pennsylvania (12.7%) have a 3.0% unemployment rate difference, while Illinois (5.6%) and Idaho (6.3%) have only a 0.7% difference. However, the categorical color encoding groups Georgia and Pennsylvania into the same color bin (8%+ range), making their large difference appear similar, while Illinois and Idaho appear more different due to different color bins."
+}

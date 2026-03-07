@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the sales performance heatmap, which statement best describes the relationship between North's Q1 sales and South's Q1 sales?",
+  "options": {
+    "A": "It can be inferred that their sales performances are very similar.",
+    "B": "The sales performances might be significantly different, but the discrete color bins make them appear more different than they actually are.",
+    "C": "North is clearly better than South, and the color difference accurately represents this sales gap.",
+    "D": "The sales performance difference among different locations is impossible to determine from this visualization."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continous_data",
+  "chartType": "heatmap",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "North (180.2) and South (120.3) have a 59.9-point difference in Q1 sales, but the categorical color encoding groups them into the same color bin (100-200 range), masking their actual difference."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Based on the hospital patient chart, which department had the most patients on Day 3?",
+  "options": {
+    "A": "Emergency department had the most patients",
+    "B": "Outpatient department had the most patients",
+    "C": "Surgery department had the most patients",
+    "D": "Cannot be determined from the chart as shown"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y‑axis is truncated to 50–300 while the stacked totals for each day exceed 300. This means upper segments (e.g., part of Surgery/Outpatient) are clipped outside the plotting area, so the visible heights do not represent full values. Because some portions are not shown, we cannot reliably determine which department truly has the most patients on Day 3 from the visualization alone."
+}

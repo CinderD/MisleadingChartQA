@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is early in the latest year shown (as of Mar 01, 2024, partial year), which statement is most appropriate?",
+  "options": {
+    "A": "We cannot determine whether the latest year will end higher or lower than previous years based on the partial data.",
+    "B": "The latest year clearly shows a sharp drop compared to previous years.",
+    "C": "The latest year has exactly the same total as the average of all previous years.",
+    "D": "The latest year has already recorded more than any previous year."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The area and line for the latest year include only about 4 months of data, while earlier years show totals for the full year. Visually, the latest year appears much lower, but this is purely because the period is shorter, not because the underlying performance has collapsed. Without the remaining months, we cannot judge the full-year outcome."
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Revenue</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart { width: 1000px; height: 600px; margin: 60px auto; }
+        .axis path, .axis line { stroke: #000; }
+        .bar { opacity: 0.8; }
+        .bar:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+    <h1>Quarterly Revenue by Product Category</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 40, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+        const g = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const data = [
+            {"quarter":"Q1", "series_1":8, "series_2":12, "series_3":74, "series_4":6},
+            {"quarter":"Q2", "series_1":10, "series_2":14, "series_3":6, "series_4":70},
+            {"quarter":"Q3", "series_1":11, "series_2":14, "series_3":70, "series_4":5},
+            {"quarter":"Q4", "series_1":10, "series_2":15, "series_3":70, "series_4":5}
+        ];
+        const keys = ["series_1", "series_2", "series_3", "series_4"];
+        const color = d3.scaleOrdinal().domain(keys).range(["#2ca02c", "#d62728", "#9467bd", "#8c564b"]);
+        const x = d3.scaleBand().domain(data.map(d => d["quarter"])).range([0, width]).padding(0.3);
+        const y = d3.scaleLinear().domain([0, 100]).range([height, 0]);
+        const stack = d3.stack().keys(keys).order(d3.stackOrderNone).offset(d3.stackOffsetNone);
+        const series = stack(data);
+        g.selectAll(".layer").data(series).enter().append("g").attr("class", "layer").attr("fill", d => color(d.key))
+            .selectAll("rect").data(d => d).enter().append("rect")
+            .attr("x", d => x(d.data["quarter"]))
+            .attr("y", d => y(d[1])).attr("height", d => y(d[0]) - y(d[1])).attr("width", x.bandwidth());
+        g.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x));
+        g.append("g").call(d3.axisLeft(y).ticks(5).tickFormat(d => d + "%"));
+        g.append("text").attr("x", width/2).attr("y", height + 35).attr("text-anchor", "middle").text("Quarter");
+        g.append("text").attr("transform", "rotate(-90)").attr("y", -40).attr("x", -height/2).attr("text-anchor", "middle").text("Revenue Share (%)");
+        // Intentionally no legend
+    </script>
+</body>
+</html>

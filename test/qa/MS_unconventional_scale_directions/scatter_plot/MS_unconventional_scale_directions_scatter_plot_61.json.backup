@@ -1,0 +1,17 @@
+{
+  "question": "Given the chart, what is the perceived trend as x appears to increase?",
+  "options": {
+    "A": "The relationship seems constant.",
+    "B": "The relationship appears to increase.",
+    "C": "Cannot be determined.",
+    "D": "The relationship appears to decrease."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted Y-axis, which can flip the apparent direction of the relationship. The correct option reflects the actual pattern in the data."
+}

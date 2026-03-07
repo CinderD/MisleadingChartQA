@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows crime rates (per 100,000) for selected US states. Which statement is correct?",
+  "options": {
+    "A": "The small size of the map and labels makes it difficult to distinguish exact crime rates for individual states.",
+    "B": "The map clearly identifies which state has the lowest crime rate among those shown.",
+    "C": "From the map, it is easy to read the precise crime rate value for each highlighted state.",
+    "D": "The legend allows an exact ranking of all shown states by crime rate."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific crime rate numbers accurately. Options that cite exact values or rankings cannot be verified."
+}

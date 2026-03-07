@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pie_chart Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .slice-text {
+            font-size: 14px;
+            font-weight: bold;
+            fill: white;
+        }
+        .legend rect {
+            width: 18px;
+            height: 18px;
+        }
+        .legend text {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transportation Mode for Students in District X</h1>
+    <div id="chart"></div>
+    <script>
+        const width = 800, height = 700, radius = Math.min(width, height) / 2;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + 200)
+            .attr("height", height + 50)
+            .append("g")
+            .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+        const color = d3.scaleOrdinal()
+            .domain(["Public", "Private"])
+            .range(["#2CA02C", "#D3D3D3"]);
+
+        d3.csv("../../../../data/misleading_annotations/pie_chart/misleading_annotations_pie_chart_3.csv").then(data => {
+            data.forEach(d => d.value = +d.value);
+
+            const pie = d3.pie().value(d => d.value);
+            const arc = d3.arc().innerRadius(0).outerRadius(radius);
+
+            svg.selectAll("path")
+                .data(pie(data))
+                .enter().append("path")
+                .attr("d", arc)
+                .attr("fill", d => color(d.data.label));
+
+            svg.selectAll("text.slice-text")
+                .data(pie(data))
+                .enter().append("text")
+                .attr("class", "slice-text")
+                .attr("transform", d => `translate(${arc.centroid(d)})`)
+                .attr("text-anchor", "middle")
+                .text(d => `${d.data.value}%`);
+
+            const legend = svg.append("g")
+                .attr("transform", `translate(${radius + 20}, ${-radius})`);
+
+            legend.selectAll("rect")
+                .data(data)
+                .enter().append("rect")
+                .attr("x", 0)
+                .attr("y", (d, i) => i * 25)
+                .attr("width", 18)
+                .attr("height", 18)
+                .attr("fill", d => color(d.label));
+
+            legend.selectAll("text")
+                .data(data)
+                .enter().append("text")
+                .attr("x", 25)
+                .attr("y", (d, i) => i * 25 + 13)
+                .text(d => d.label);
+        });
+    </script>
+</body>
+</html>

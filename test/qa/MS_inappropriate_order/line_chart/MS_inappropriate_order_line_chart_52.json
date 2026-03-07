@@ -1,0 +1,17 @@
+{
+  "question": "This line chart shows average test scores in an Advanced Mathematics course across the semester. Which statement best describes the pattern of scores from January to August?",
+  "options": {
+    "A": "Student test scores generally improve over the semester when the months are considered in calendar order.",
+    "B": "Student test scores steadily decline from January to August.",
+    "C": "Student test scores fluctuate up and down with no clear overall improvement or decline.",
+    "D": "Student test scores remain almost unchanged throughout the semester."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

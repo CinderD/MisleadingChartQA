@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertising Spend vs Sales</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart { width: 1000px; height: 750px; margin: 60px auto; }
+        .axis path, .axis line { stroke: black; }
+        .axis-label { font-size: 16px; font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body>
+    <h1>Advertising Spend vs Sales</h1>
+    <div id="chart"><svg width="1000" height="750"></svg></div>
+    <script>
+        const margin = { top: 60, right: 60, bottom: 60, left: 80 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+        const svg = d3.select("svg").append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/MS_unconventional_scale_directions/scatter_plot/MS_unconventional_scale_directions_scatter_plot_81.csv").then(data => {
+            data.forEach(d => { d.ad_spend_inverted = +d.ad_spend_inverted; d.sales_inverted = +d.sales_inverted; });
+            const x = d3.scaleLinear().domain(d3.extent(data, d => d.ad_spend_inverted)).range([0, width]);
+            const y = d3.scaleLinear().domain(d3.extent(data, d => d.sales_inverted)).range([0, height]);
+
+            svg.selectAll("circle")
+                .data(data)
+                .enter().append("circle")
+                .attr("cx", d => x(d.ad_spend_inverted))
+                .attr("cy", d => y(d.sales_inverted))
+                .attr("r", 4)
+                .attr("fill", "black");
+
+            svg.append("g").attr("transform", `translate(0, ${height})`).call(d3.axisBottom(x));
+            svg.append("g").call(d3.axisLeft(y));
+
+            svg.append("text").attr("class", "axis-label").attr("x", width/2).attr("y", height+50)
+                .style("text-anchor", "middle").text("Advertising Spend ($k)");
+            svg.append("text").attr("class", "axis-label").attr("transform", "rotate(-90)")
+                .attr("x", -height/2).attr("y", -50).style("text-anchor", "middle").text("Sales ($k)");
+        });
+    </script>
+</body>
+</html>

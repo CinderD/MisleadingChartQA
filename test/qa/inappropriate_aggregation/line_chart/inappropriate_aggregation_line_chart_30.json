@@ -1,0 +1,17 @@
+{
+  "question": "Average website sign-ups per year are shown in the chart. Which of the following statements is true?",
+  "options": {
+    "A": "The latest year shows a sharp decline compared to previous years.",
+    "B": "The chart does not provide enough information to judge the full-year trend for the latest year.",
+    "C": "The latest year has the lowest sign-ups of the entire period, even for the full year.",
+    "D": "The latest year proves that website sign-ups are now permanently declining."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The latest year in the chart only includes about 4 months of data, while previous years show full 12‑month totals. Comparing the partial-year value (385 sign-ups) directly to full-year values like 1,143 sign-ups creates the illusion of a sharp decline. We cannot draw full‑year conclusions from this incomplete aggregate."
+}

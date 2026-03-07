@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hours of Sunlight vs. Growth for Plant Species P</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: black;
+        }
+        .dot {
+            fill: steelblue;
+            stroke: black;
+            stroke-width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hours of Sunlight per Month vs. Growth for Plant Species P</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = { top: 60, right: 60, bottom: 60, left: 80 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+        
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/MS_unconventional_scale_directions/scatter_plot/MS_unconventional_scale_directions_scatter_plot_4.csv").then(data => {
+            data.forEach(d => {
+                d.sunlight = +d.sunlight;
+                d.growth_inverted = +d.growth_inverted;
+            });
+
+            const x = d3.scaleLinear()
+                .domain(d3.extent(data, d => d.sunlight))
+                .range([0, width]);
+
+            const y = d3.scaleLinear()
+                .domain(d3.extent(data, d => d.growth_inverted).reverse())
+                .range([height, 0]);
+
+            svg.selectAll("circle")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.sunlight))
+                .attr("cy", d => y(d.growth_inverted))
+                .attr("r", 4);
+
+            svg.append("g")
+                .attr("class", "axis x-axis")
+                .attr("transform", `translate(0, ${height})`)
+                .call(d3.axisBottom(x).tickFormat(d => `${d} hours`));
+
+            svg.append("g")
+                .attr("class", "axis y-axis")
+                .call(d3.axisLeft(y).tickFormat(d => `${d} mm`));
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width / 2)
+                .attr("y", height + 50)
+                .style("text-anchor", "middle")
+                .text("Sunlight Exposure (hours)");
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -50)
+                .style("text-anchor", "middle")
+                .text("Growth (mm)");
+        });
+    </script>
+</body>
+</html>

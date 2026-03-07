@@ -1,0 +1,17 @@
+{
+  "question": "Approximately, what is C's revenue as a proportion of A's revenue in May?",
+  "options": {
+    "A": "50%",
+    "B": "80%",
+    "C": "125%",
+    "D": "200%"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_area_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 12 instead of 0, which visually exaggerates smaller components in a stacked area chart. In Aug, C is about 80% of A (data: 15.2 vs 18.0), but the truncated baseline can make it appear closer to 50%."
+}

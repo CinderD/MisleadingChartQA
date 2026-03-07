@@ -1,0 +1,17 @@
+{
+  "question": "Which statement follows from the chart?",
+  "options": {
+    "A": "Firefox has the smallest market share.",
+    "B": "Edge has the largest market share among the categories shown.",
+    "C": "Chrome has the largest market share among the categories shown.",
+    "D": "Firefox accounts for more than 15% of the total."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, Edge has the highest share (66%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking Edge is largest when relying on visual comparison."
+}

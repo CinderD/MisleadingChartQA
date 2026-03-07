@@ -1,0 +1,17 @@
+{
+  "question": "Which age group segment has the largest share in the final year shown?",
+  "options": {
+    "A": "The red segment (35–44) represents the largest share.",
+    "B": "The purple segment (45+) represents the largest share.",
+    "C": "The green segment (18–24) represents the largest share.",
+    "D": "Cannot determine which age group segment has the largest share without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays different colored segments but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category has the largest share; options that assign a category to a color are guessing."
+}

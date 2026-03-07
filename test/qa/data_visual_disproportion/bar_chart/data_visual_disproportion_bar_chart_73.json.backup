@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows regional sales share. Which statement is supported by the chart data?",
+  "options": {
+    "A": "East has the largest market share among the categories shown.",
+    "B": "Others accounts for more than 15% of the market.",
+    "C": "East and South have about the same share.",
+    "D": "The chart does not support comparing shares across categories."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, East has the highest share (73%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking East is largest when relying on visual comparison."
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Preference Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .line {
+            fill: none;
+            stroke: #f39c12;
+            stroke-width: 3;
+        }
+        .dot {
+            fill: #e67e22;
+            stroke: #fff;
+            stroke-width: 2;
+        }
+        .axis path,
+        .axis line {
+            shape-rendering: crispEdges;
+            stroke: #333;
+        }
+        .grid line {
+            stroke: lightgrey;
+            stroke-opacity: 0.7;
+            shape-rendering: crispEdges;
+        }
+    </style>
+</head>
+<body>
+    <h2>Color Popularity in Fashion Design Survey</h2>
+    <svg width="1000" height="750"></svg>
+    
+    <script>
+        const margin = { top: 40, right: 40, bottom: 80, left: 80 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/continous_encoding_for_categorical_data/line_chart/continous_encoding_for_categorical_data_line_chart_6.csv").then(data => {
+            
+            data.forEach(d => {
+                d.popularity_score = +d.popularity_score;
+            });
+
+            const x = d3.scalePoint()
+                .domain(data.map(d => d.color))
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([0, 100])
+                .range([height, 0]);
+
+            const line = d3.line()
+                .x(d => x(d.color))
+                .y(d => y(d.popularity_score));
+
+            svg.append("path")
+                .datum(data)
+                .attr("class", "line")
+                .attr("d", line);
+
+            svg.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.color))
+                .attr("cy", d => y(d.popularity_score))
+                .attr("r", 6);
+
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+
+            svg.append("g")
+                .call(d3.axisLeft(y).tickFormat(d => d + "%"));
+
+            // Add grid lines
+            svg.append("g")
+                .attr("class", "grid")
+                .call(d3.axisLeft(y)
+                    .tickSize(-width)
+                    .tickFormat("")
+                );
+
+            svg.append("text")
+                .attr("transform", "translate(" + (width / 2) + "," + (height + 60) + ")")
+                .style("text-anchor", "middle")
+                .text("Color");
+
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left + 20)
+                .attr("x", 0 - (height / 2))
+                .style("text-anchor", "middle")
+                .text("Popularity Score (%)");
+        });
+    </script>
+</body>
+</html>
+

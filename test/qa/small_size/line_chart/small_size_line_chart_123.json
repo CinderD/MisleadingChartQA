@@ -1,0 +1,17 @@
+{
+  "question": "The line chart illustrates annual sales from 1920 to 2024. Which statement best describes what can be concluded from this chart as shown?",
+  "options": {
+    "A": "The chart is too small to determine precise changes in sales between specific years or decades.",
+    "B": "Sales clearly decreased between 1940 and 1950.",
+    "C": "Sales clearly decreased between 1970 and 1980.",
+    "D": "Sales remained exactly constant after 1980."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The sales data indicates that sales rose from 1924 to 1970, fell from 1970 to 1980, and then began rising again from 1980 to 2024. However, the use of small text or data markers makes these trends hard to discern."
+}

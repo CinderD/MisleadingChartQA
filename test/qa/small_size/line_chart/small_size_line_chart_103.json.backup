@@ -1,0 +1,17 @@
+{
+  "question": "Which statement accurately describes the chart from 1960 to 1970?",
+  "options": {
+    "A": "No correct answer.",
+    "B": "Sales declined between 1960 and 1970.",
+    "C": "Sales were roughly flat between 1960 and 1970.",
+    "D": "Sales increased sharply in that period."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Sales were roughly flat from 1960 to 1970, with rises before and after. Small font sizes can make it easy to misread the flat segment as a decline."
+}

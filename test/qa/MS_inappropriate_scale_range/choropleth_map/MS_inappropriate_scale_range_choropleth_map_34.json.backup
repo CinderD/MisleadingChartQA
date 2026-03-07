@@ -1,0 +1,17 @@
+{
+  "question": "Based on the maps, which type tends to have higher values overall across states?",
+  "options": {
+    "A": "Overall Unemployment tends to have higher values overall across states",
+    "B": "It cannot be determined from these maps alone",
+    "C": "Youth Unemployment tends to have higher values overall across states",
+    "D": "Both types have similar overall levels across states"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Both maps reuse the same threshold scale, but their underlying distributions differ. This can make one map appear more intense simply because more states fall into the top bin. In the underlying data, Youth Unemployment has the higher average value, so that is the only reliable conclusion."
+}

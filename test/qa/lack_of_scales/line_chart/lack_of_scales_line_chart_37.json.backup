@@ -1,0 +1,17 @@
+{
+  "question": "What is the temperature movement pattern throughout the day?",
+  "options": {
+    "A": "The pattern is volatile with significant fluctuations.",
+    "B": "Cannot determine the exact temperature movement pattern without Y-axis scales to verify the magnitude of changes.",
+    "C": "The temperature movement is relatively flat with minimal changes.",
+    "D": "The temperature movement is relatively flat with minimal changes except for a late-period surge."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "lack_of_scales",
+  "chartType": "line_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays temperature variation with a line chart, but provides no Y-axis scales or numerical labels. While the visual data shows a downward trend in the line, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the true magnitude and pattern of temperature changes. Visual estimation of temperature movement patterns without proper scales is unreliable for accurate temperature analysis."
+}

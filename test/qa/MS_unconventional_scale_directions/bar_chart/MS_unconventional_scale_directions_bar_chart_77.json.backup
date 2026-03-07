@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of the number of in from 2011 to 2024 based on the chart?",
+  "options": {
+    "A": "Increasing",
+    "B": "Constant",
+    "C": "Fluctuating",
+    "D": "Decreasing"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted x-axis, making the data appear as if the trend is decreasing, but the data actually shows an increasing trend."
+}

@@ -1,0 +1,9 @@
+transport_method,co2_emissions
+Walking,0
+Bicycle,0
+Electric Bus,4.2
+Train,14.0
+Car,19.5
+Motorcycle,10.8
+Airplane,28.5
+

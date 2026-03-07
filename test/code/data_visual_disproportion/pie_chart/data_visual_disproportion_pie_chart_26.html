@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Share Distribution</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    #chart { width: 1000px; height: 750px; margin: 60px auto; }
+    .slice { stroke: white; stroke-width: 2px; }
+    .percentage { font-size: 14px; font-weight: bold; fill: white; stroke: black; stroke-width: 1px; paint-order: stroke fill; }
+    .legend { font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h1>Market Share Distribution</h1>
+  <div id="chart"></div>
+  <script>
+    const margin = {top: 40, right: 220, bottom: 40, left: 20};
+    const width = 1000 - margin.left - margin.right;
+    const height = 750 - margin.top - margin.bottom;
+    const radius = Math.min(width, height) / 2;
+    const g = d3.select("#chart").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", `translate(${width/2 + margin.left},${height/2 + margin.top})`);
+
+    d3.csv("../../../../data/data_visual_disproportion/pie_chart/data_visual_disproportion_pie_chart_26.csv").then(data => {
+      data.forEach(d => { d.percentage = +d.percentage; d.visual_size = +d.visual_size; });
+      const pie = d3.pie().value(d => d.visual_size).sort(null);
+      const arc = d3.arc().innerRadius(0).outerRadius(radius);
+      const color = d3.scaleOrdinal().domain(data.map(d => d.company)).range(d3.schemeCategory10);
+      const slices = g.selectAll(".slice").data(pie(data)).enter().append("g").attr("class", "slice");
+      slices.append("path").attr("d", arc).attr("fill", d => color(d.data.company)).attr("class", "slice");
+      slices.append("text").attr("transform", d => `translate(${arc.centroid(d)})`).attr("text-anchor", "middle")
+        .attr("class", "percentage").text(d => d.data.percentage + "%");
+
+      const legend = g.append("g").attr("class", "legend").attr("transform", `translate(${radius + 50}, -${radius * 0.6})`);
+      data.forEach((d, i) => {
+        const row = legend.append("g").attr("transform", `translate(0, ${i * 22})`);
+        row.append("rect").attr("width", 16).attr("height", 16).attr("fill", color(d.company));
+        row.append("text").attr("x", 22).attr("y", 12).attr("dy", "0.35em").style("font-size", "14px").text(d.company);
+      });
+    });
+  </script>
+</body>
+</html>

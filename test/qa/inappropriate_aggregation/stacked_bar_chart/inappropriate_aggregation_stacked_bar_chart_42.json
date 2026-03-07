@@ -1,0 +1,17 @@
+{
+  "question": "Based on this product revenue chart (as of March 2024), what can we reasonably conclude about the latest year shown?",
+  "options": {
+    "A": "Total revenue from all channels has clearly collapsed for the entire latest year compared with previous years.",
+    "B": "We cannot make a reliable statement about the latest year's full-year revenue because the data only cover the early part of the year.",
+    "C": "All channels have permanently lost effectiveness in generating revenue in the latest year.",
+    "D": "Retail is now the only significant contributor to total revenue in the latest year."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The latest year includes only about 3 months of data, whereas earlier bars represent full-year totals. Stacking the partial-year totals next to full-year bars makes the latest year look dramatically worse across all channels, but this is a consequence of inappropriate aggregation of time, not a true performance collapse."
+}

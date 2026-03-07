@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the product rating share for different categories. Based on the percentage labels, which category has the highest value?",
+  "options": {
+    "A": "Delivery",
+    "B": "Price",
+    "C": "Design",
+    "D": "Other"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows output by year. Which of the following statements is supported by the chart?",
+  "options": {
+    "A": "Output declined throughout the period.",
+    "B": "Output in the middle year was the highest visible before the last year.",
+    "C": "The values for the last year and the previous year are identical.",
+    "D": "The point for the last year is cut off by the axis range, so its exact value cannot be read from the chart."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Values exceeding the y-axis range are clipped, making the top bars look the same and misleading viewers."
+}

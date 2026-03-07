@@ -1,0 +1,17 @@
+{
+  "question": "Based on the performance heatmap, which statement is most accurate about Product E and Product F on the Reliability metric?",
+  "options": {
+    "A": "The performances might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "B": "It can be infered that their performances are very similar.",
+    "C": "Product E clearly outperforms Product F by a large numeric margin that is accurately shown by the color difference.",
+    "D": "The performance is impossible to determine from this visualization."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Product E (60.4points) and Product F (69.1points) have a 8.7points difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of performance relationships."
+}

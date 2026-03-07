@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the scatterplot of years versus wealth, what can you reliably conclude about how wealth varies across the ages shown?",
+  "options": {
+    "A": "Wealth is clearly highest for individuals between ages 55 and 60 compared with all other ages.",
+    "B": "Wealth steadily increases with age across the entire range shown, with no exceptions.",
+    "C": "The chart suggests that wealth generally rises with age, but the exact differences between nearby ages are hard to judge from this view.",
+    "D": "Wealth is clearly lowest for individuals between ages 45 and 50 compared with all other ages."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 50 and 55 have the highest wealth. The small size of the chart may cause difficulty in accurately identifying the specific trends of wealth in certain age ranges."
+}

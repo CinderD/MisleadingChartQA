@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Monthly Website Traffic in City Z</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <h1>Monthly Website Traffic in City Z (2023)</h1>
+    <svg width="1000" height="750"></svg>
+
+    <script>
+        const margin = { top: 60, right: 60, bottom: 60, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Sample website traffic data (inverted for misleading effect)
+        const data = [
+            { month: 1, visitors: 25000 },
+            { month: 2, visitors: 24000 },
+            { month: 3, visitors: 20000 },
+            { month: 4, visitors: 14000 },
+            { month: 5, visitors: 8000 },
+            { month: 6, visitors: 3000 },
+            { month: 7, visitors: 2000 },
+            { month: 8, visitors: 4000 },
+            { month: 9, visitors: 8000 },
+            { month: 10, visitors: 12000 },
+            { month: 11, visitors: 18000 },
+            { month: 12, visitors: 22000 }
+        ];
+
+        const x = d3.scaleLinear()
+            .domain([1, 12])
+            .range([0, width]);
+
+        const y = d3.scaleLinear()
+            .domain([30000, 0])  // Inverted Y-axis for misleading effect
+            .range([height, 0]);
+
+        const line = d3.line()
+            .x(d => x(d.month))
+            .y(d => y(d.visitors));
+
+        svg.append("path")
+            .datum(data)
+            .attr("fill", "none")
+            .attr("stroke", "blue")
+            .attr("stroke-width", 3)
+            .attr("d", line);
+
+        svg.selectAll("dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("cx", d => x(d.month))
+            .attr("cy", d => y(d.visitors))
+            .attr("r", 5)
+            .attr("fill", "blue");
+
+        svg.append("g").attr("transform", `translate(0, ${height})`).call(d3.axisBottom(x).tickFormat(d => {
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            return months[d-1];
+        }));
+        svg.append("g").call(d3.axisLeft(y));
+
+        // Axis Labels
+        svg.append("text")
+            .attr("class", "axis-label")
+            .attr("x", width / 2)
+            .attr("y", height + 50)
+            .style("text-anchor", "middle")
+            .text("Month");
+
+        svg.append("text")
+            .attr("class", "axis-label")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -40)
+            .style("text-anchor", "middle")
+            .text("Number of Visitors");
+    </script>
+</body>
+
+</html>

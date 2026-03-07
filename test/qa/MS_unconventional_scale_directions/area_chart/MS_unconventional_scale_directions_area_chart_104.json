@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in daily package deliveries from January 8 to January 12 according to the data shown?",
+  "options": {
+    "A": "Increasing, then decreasing, and finally increasing",
+    "B": "Decreasing, then increasing, and finally decreasing",
+    "C": "Consistently increasing",
+    "D": "Consistently decreasing"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is inverted, reversing the time order and making the trend appear opposite to the actual chronological pattern."
+}

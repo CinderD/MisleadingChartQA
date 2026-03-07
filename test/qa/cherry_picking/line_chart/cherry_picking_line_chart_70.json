@@ -1,0 +1,17 @@
+{
+  "question": "What conclusion about the index over the broader 2000–2015 period is supported by this chart of values from 2005 to 2012?",
+  "options": {
+    "A": "The index shows a clear upward trend that likely continued across the full 2000–2015 period.",
+    "B": "The data shows a consistent decline over the entire 2000–2015 period.",
+    "C": "This 8-year slice from 2005 to 2012 cannot reliably represent the full 2000–2015 trend.",
+    "D": "The index remained roughly constant from 2000 to 2015 with no noticeable change."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays a cherry-picked rising segment; other subperiods may show flat or declining behavior."
+}

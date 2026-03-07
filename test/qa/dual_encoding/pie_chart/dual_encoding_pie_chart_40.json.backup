@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is reliable according to the chart data?",
+  "options": {
+    "A": "Brand A is larger than Brand D.",
+    "B": "Others and Brand A together equal Brand B.",
+    "C": "The combined share of Brand D + Others + Brand C exceeds Brand B.",
+    "D": "Brand B is larger than the combined share of Brand D + Others + Brand C."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Brand B: 40%; Brand D: 25%; Others: 15%; Brand C: 10%; Brand A: 10%."
+}

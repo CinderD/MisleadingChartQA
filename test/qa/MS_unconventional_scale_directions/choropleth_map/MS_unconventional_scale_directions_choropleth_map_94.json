@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher prevalence of species Z based on the chart, OK or NJ?",
+  "options": {
+    "A": "Both states have the same prevalence",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "NJ",
+    "D": "OK"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although OK appears darker, NJ has the higher assigned value when the inversion is considered."
+}

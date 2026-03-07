@@ -1,0 +1,17 @@
+{
+  "question": "Based on the temperature heatmap, which statement is most accurate about Houston and San Jose?",
+  "options": {
+    "A": "The temperature is impossible to determine from this visualization.",
+    "B": "Houston is higher than San Jose, and the color difference accurately represents this 0.7°C difference.",
+    "C": "The temperatures might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "D": "It can be infered that their temperatures are very similar."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Houston (36.8°C) and San Jose (37.5°C) have a 0.7°C difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of temperature relationships."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is supported by the chart?",
+  "options": {
+    "A": "The market share in 2023 is higher than in 2020.",
+    "B": "The trend cannot be determined from the chart alone.",
+    "C": "The trend suggests a sharp increase in the most recent period.",
+    "D": "The market share in 2021 is 18%."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "data_visual_disproportion",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The line is drawn using a different 'height' value for 2020 than the actual share, so the visual suggests a dramatic spike while the true share is 17%."
+}

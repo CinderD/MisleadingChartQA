@@ -1,0 +1,17 @@
+{
+  "question": "Analyzing the area chart of annual profit from 2018 to 2022, which of the following assertions appears accurate?",
+  "options": {
+    "A": "Profit was highest in 2018.",
+    "B": "Profit in both 2021 and 2022 is clearly identical.",
+    "C": "2018 had the lowest recorded profit among all the years shown.",
+    "D": "Profit decreased steadily over the entire period."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Bars for the highest years exceed the canvas and are clipped, making them look the same height; the true relationship cannot be inferred from the visual."
+}

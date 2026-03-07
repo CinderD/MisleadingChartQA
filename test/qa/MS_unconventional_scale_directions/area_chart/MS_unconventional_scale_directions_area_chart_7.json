@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of apples harvested depicted in the chart from January 10 to January 14?",
+  "options": {
+    "A": "Increasing, then decreasing, and finally increasing",
+    "B": "Decreasing, then increasing, and finally decreasing",
+    "C": "Constant",
+    "D": "Cannot be determined"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The x-axis and y-axis are inverted, which gives a misleading impression. The true trend is increasing then decreasing."
+}

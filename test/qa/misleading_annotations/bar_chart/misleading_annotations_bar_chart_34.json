@@ -1,0 +1,17 @@
+{
+  "question": "In City Y, what is the approximate average sales from April to June for Store B?",
+  "options": {
+    "A": "295",
+    "B": "300",
+    "C": "320",
+    "D": "345"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misleading_annotations",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows sales for April, May, June: April (293), May (320), June (345). The correct average is (293 + 320 + 345) / 3 = 319. However, the misleading annotation shows a dashed line labeled 'Average' at 293, which is incorrect and designed to mislead viewers into selecting 293 as the answer."
+}

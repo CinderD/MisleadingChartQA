@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart of rainfall (mm) over a recent two‑week period, which statement about rainfall at the beginning versus the end of the period is most accurate?",
+  "options": {
+    "A": "Rainfall was greater during the final days of the period than during the initial days.",
+    "B": "Rainfall was greater during the initial days of the period than during the final days.",
+    "C": "Rainfall was roughly the same at the beginning and at the end of the period.",
+    "D": "There was no rainfall on several days at both the beginning and the end of the period."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x‑axis order has been scrambled: the bars are not shown in true chronological sequence. If you reorder the days from Day 1 to Day 14 and sum the first and last 7 days, you see that the last segment actually has the greater total. Judging only from the apparent left‑to‑right pattern would give the wrong conclusion."
+}

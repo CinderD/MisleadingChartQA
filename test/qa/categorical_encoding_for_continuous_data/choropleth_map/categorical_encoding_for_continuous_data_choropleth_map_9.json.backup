@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US unemployment rate map, which statement below is the most accurate?",
+  "options": {
+    "A": "Florida and West Virginia have similar unemployment rates.",
+    "B": "The unemployment rate differences are impossible to determine from this visualization.",
+    "C": "All states have very diverse unemployment rate levels.",
+    "D": "The unemployment rate gap between Florida and West Virginia might exceeds that between Texas and Illinois."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Florida (11.2%) and West Virginia (14.3%) have a 3.1% unemployment rate difference, while Texas (6.5%) and Illinois (7.3%) have only a 0.8% difference. However, the categorical color encoding groups Florida and West Virginia into the same color bin (9%+ range), making their large difference appear similar, while Texas and Illinois appear more different due to different color bins."
+}

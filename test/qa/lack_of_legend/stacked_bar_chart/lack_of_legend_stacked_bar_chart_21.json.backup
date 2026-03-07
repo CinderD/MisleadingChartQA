@@ -1,0 +1,17 @@
+{
+  "question": "Which product category contributes the most to total in the last period?",
+  "options": {
+    "A": "The green segment (Clothing) shows the largest share.",
+    "B": "The red segment (Home goods) indicates the largest share.",
+    "C": "The purple segment (Other) shows the largest share.",
+    "D": "Cannot determine which product category contributes the most without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays different colored segments but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category has the largest share; options that assign a category to a color are guessing."
+}

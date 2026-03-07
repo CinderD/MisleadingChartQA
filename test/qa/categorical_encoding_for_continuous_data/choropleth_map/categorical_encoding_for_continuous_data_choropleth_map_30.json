@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the median income map, which statement below is the most accurate?",
+  "options": {
+    "A": "Ohio and Arizona have similar median incomes.",
+    "B": "The median income gap between Ohio and Arizona might exceed that between Wyoming and Iowa.",
+    "C": "The median income differences are impossible to determine from this visualization.",
+    "D": "All highlighted states have nearly identical median income levels."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Ohio (51.0$k) and Arizona (57.8$k) have a 6.8$k median income difference, while Wyoming (49.9$k) and Iowa (50.1$k) have only a 0.2$k difference. However, the categorical color encoding groups Ohio and Arizona into the same color bin (50-60$k range), making their large difference appear similar, while Wyoming and Iowa appear more different due to different color bins."
+}

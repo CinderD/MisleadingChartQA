@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Budget Allocation</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart { width: 1000px; height: 600px; margin: 60px auto; }
+        .axis path, .axis line { stroke: #000; }
+        .bar { fill: #d62728; opacity: 0.8; }
+        .bar:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+    <h1>Monthly Budget Allocation</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 40, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const data = [
+            {category: "Marketing", budget: 45000},
+            {category: "R&D", budget: 38000},
+            {category: "Operations", budget: 52000},
+            {category: "HR", budget: 28000},
+            {category: "IT", budget: 35000}
+        ];
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.category))
+            .range([0, width])
+            .padding(0.1);
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.budget)])
+            .range([height, 0]);
+
+        g.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x).tickFormat(d => d));
+
+        g.append("g")
+            .call(d3.axisLeft(y).tickFormat("").ticks(0));
+
+        g.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", d => x(d.category))
+            .attr("width", x.bandwidth())
+            .attr("y", d => y(d.budget))
+            .attr("height", d => height - y(d.budget));
+
+        g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 35)
+            .attr("text-anchor", "middle")
+            .text("Budget Category");
+
+        g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -40)
+            .attr("x", -height / 2)
+            .attr("text-anchor", "middle")
+            .text("Budget Amount ($)");
+    </script>
+</body>
+</html>

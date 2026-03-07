@@ -1,0 +1,17 @@
+{
+  "question": "Which statement best describes the site visits from 2018 to 2022 as shown in the bar chart?",
+  "options": {
+    "A": "We cannot tell if the last three years have the same or different visit counts because the bars are clipped.",
+    "B": "Site visits were highest in 2019 and then decreased.",
+    "C": "Site visits increased from 2018 to 2020 and then remained at the same level through 2022.",
+    "D": "Site visits in the last three years were exactly the same."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The visible y-range is set below the maximum value, so the top three bars are truncated and looks identical."
+}

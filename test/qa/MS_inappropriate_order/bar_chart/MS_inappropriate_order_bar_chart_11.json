@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is May 10, which statement about rainfall (mm) is true for the past 14 days?",
+  "options": {
+    "A": "The amount of rainfall peaked at the beginning of the past 14 days.",
+    "B": "There was more rainfall at the beginning than at the end of the past 14 days.",
+    "C": "None of the days had lower than 40mm of rainfall.",
+    "D": "The amount of rainfall peaked at the mid range of the past 14 days."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The days are reordered to show different peaks visually. Although it may seem rainfall peaked at the beginning, largest values happen around the middle, supporting option 'D'."
+}

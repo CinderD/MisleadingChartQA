@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows regional sales share. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "South has a larger market share than Central.",
+    "B": "Central has the largest market share among the regions.",
+    "C": "North has the smallest market share.",
+    "D": "Central has a higher market share than South."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, South has the highest share (39%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking Central is largest when relying on visual comparison."
+}

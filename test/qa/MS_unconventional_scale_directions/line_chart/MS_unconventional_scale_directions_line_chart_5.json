@@ -1,0 +1,17 @@
+{
+  "question": "What was the energy consumption trend throughout 2023?",
+  "options": {
+    "A": "Energy consumption increased gradually throughout the year.",
+    "B": "Energy consumption decreased gradually from January to December.",
+    "C": "Energy consumption was highest in January and lowest in December.",
+    "D": "Energy consumption remained constant throughout the year."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "True",
+  "explanation": "The inverted Y-axis creates the false impression that energy consumption is decreasing when it is actually increasing. Consumption rose from 800 kWh in January to 1250 kWh in December."
+}

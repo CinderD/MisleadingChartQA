@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows regional internet usage percentages. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "North America’s internet usage is approximately four times that of Africa.",
+    "B": "The difference between North America and Africa appears much larger than the actual 40% gap due to dual encoding.",
+    "C": "Europe and Asia Pacific have identical usage rates.",
+    "D": "Middle East has the lowest usage at 45%."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "North America has the highest usage at 85%. The dual encoding (height + width + color) makes the visual differences appear more dramatic than the actual percentage differences."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart of revenue analysis as presented, which statement is valid?",
+  "options": {
+    "A": "2021 and 2022 have the same revenue.",
+    "B": "2022 has lower revenue than 2021.",
+    "C": "It cannot be determined which is larger because the bars are probably clipped beyond the axis range.",
+    "D": "Both years are much lower than 2020."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Because the bar tops are clipped outside the visible plotting area and no actual values are shown, you cannot infer equality or ordering for the clipped bars."
+}

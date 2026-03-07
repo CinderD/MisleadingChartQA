@@ -1,0 +1,17 @@
+{
+  "question": "This line chart shows average test scores in an Advanced Mathematics course across the semester. Based on the data from January to August, which statement best describes the overall trend in student performance?",
+  "options": {
+    "A": "Average scores increase from January to a mid‑semester peak and then decline somewhat toward August.",
+    "B": "Average scores steadily decline from January to August with no periods of improvement.",
+    "C": "Average scores remain nearly the same throughout the semester, with only minor fluctuations.",
+    "D": "Average scores move up and down dramatically from month to month with no clear upward or downward tendency."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

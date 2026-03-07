@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot chart showcases the sales data across different years. Which of the following best describes the trend in sales from 1970 to 1990 as depicted in the chart?",
+  "options": {
+    "A": "The sales increased, peaking in 1990.",
+    "B": "The sales dropped between 1970 and 1980 and then increased until 1990.",
+    "C": "The sales decreased over the entire period.",
+    "D": "No correct answer."
+  },
+  "correctAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Identify Trends",
+  "explanation": "The sales data shows a drop from 1970 to 1980 and an increase again from 1980 to 1990. The small size may cause difficulty in accurately recognizing the specific trends in these years.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "A"
+}

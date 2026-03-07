@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Efficiency Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .line {
+            fill: none;
+            stroke: #f39c12;
+            stroke-width: 3;
+        }
+        .dot {
+            fill: #f39c12;
+            stroke: #fff;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Annual Production Efficiency Trends (as of October 10, 2024)</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 60, left: 80};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/inappropriate_aggregation/line_chart/inappropriate_aggregation_line_chart_5.csv").then(data => {
+            data.forEach(d => {
+                d.year = d.year;
+                d.efficiency = +d.efficiency;
+            });
+
+            const x = d3.scaleLinear()
+                .domain(d3.extent(data, d => +d.year))
+                .range([0, width]);
+
+            const y = d3.scaleLinear()
+                .domain([d3.min(data, d => d.efficiency) * 0.9, d3.max(data, d => d.efficiency) * 1.1])
+                .range([height, 0]);
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x).tickFormat(d3.format("d")).tickValues(data.map(d => +d.year)));
+
+            g.append("g")
+                .call(d3.axisLeft(y));
+
+            const line = d3.line()
+                .x(d => x(+d.year))
+                .y(d => y(d.efficiency));
+
+            g.append("path")
+                .datum(data)
+                .attr("class", "line")
+                .attr("d", line);
+
+            g.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(+d.year))
+                .attr("cy", d => y(d.efficiency))
+                .attr("r", 4);
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", -10)
+                .attr("text-anchor", "middle")
+                .attr("font-weight", "bold")
+                .text("Annual Production Efficiency Trends");
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 45)
+                .attr("text-anchor", "middle")
+                .text("Year");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -50)
+                .attr("x", -height / 2)
+                .attr("text-anchor", "middle")
+                .text("Efficiency Score (%)");
+        });
+    </script>
+</body>
+</html>

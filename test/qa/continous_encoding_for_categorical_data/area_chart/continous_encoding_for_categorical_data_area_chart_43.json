@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average test scores for different school subjects. Which statement is best supported by the chart?",
+  "options": {
+    "A": "English has the highest average score among the subjects shown.",
+    "B": "The chart demonstrates a smooth upward time trend in scores from History to English.",
+    "C": "The area shape shows that adjacent subjects are more strongly related than non‑adjacent subjects.",
+    "D": "History and English must be adjacent subjects in a natural learning progression."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for subject into a continuous filled region. However, the x‑axis categories (e.g., History, Geography, Math, Music, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

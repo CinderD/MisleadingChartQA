@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bar_chart Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .bar {
+            fill: steelblue;
+        }
+        .avg-line {
+            stroke: black;
+            stroke-dasharray: 4,4;
+            stroke-width: 2px;
+        }
+        .annotation {
+            font-size: 12px;
+            font-weight: bold;
+            fill: black;
+        }
+        .axis path, .axis line {
+            stroke: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number of Employees at Office D in City W</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Load data from CSV
+        d3.csv("../../../../data/misleading_annotations/bar_chart/misleading_annotations_bar_chart_4.csv").then(data => {
+            data.forEach(d => {
+                d.month = d.month;
+                d.employees = +d.employees;
+            });
+
+            const x = d3.scaleBand().domain(data.map(d => d.month)).range([0, width]).padding(0.3);
+            const y = d3.scaleLinear().domain([0, 350]).range([height, 0]);
+
+            // Axes
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+            g.append("g").call(d3.axisLeft(y));
+
+            // X-axis label
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 35)
+                .attr("text-anchor", "middle")
+                .text("Month");
+
+            // Y-axis label
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -45)
+                .attr("text-anchor", "middle")
+                .text("Number of Employees");
+
+            // Bars
+            g.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.month))
+                .attr("y", d => y(d.employees))
+                .attr("width", x.bandwidth())
+                .attr("height", d => height - y(d.employees));
+
+            // Misleading average line annotation (incorrect average)
+            g.append("line")
+                .attr("class", "avg-line")
+                .attr("x1", 0)
+                .attr("y1", y(150))  // Incorrect value
+                .attr("x2", width)
+                .attr("y2", y(150));
+
+            g.append("text")
+                .attr("class", "annotation")
+                .attr("x", width - 10)
+                .attr("y", y(150) - 10)
+                .attr("text-anchor", "end")
+                .text("Average");
+        });
+    </script>
+</body>
+</html>

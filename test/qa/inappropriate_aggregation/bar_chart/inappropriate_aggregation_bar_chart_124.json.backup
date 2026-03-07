@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is Thu of the current week, what is the approximate average visits for the entire week?",
+  "options": {
+    "A": "Unable to calculate / data for the full week is not available",
+    "B": "The average is exactly 30 visits because the bars look similar",
+    "C": "About 17 visits, computed from all seven bars",
+    "D": "About 29 visits, using only days with non-zero values"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart only shows measured values for the first part of the week; the remaining days are effectively missing, but are drawn as zero-height bars. Computing an average across all seven days (including those zeros) assumes the missing days truly had zero values, which is not supported by the data. Therefore the weekly average cannot be reliably calculated."
+}

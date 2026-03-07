@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choropleth Map - Prevalence of Predatory Species Z</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <style>
+        .state {
+            stroke: #fff;
+            stroke-width: 0.5px;
+        }
+        .legend {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prevalence of Predatory Species Z in Each State</h1>
+    <div id="map"></div>
+
+    <script>
+        const width = 1000, height = 750;
+
+        const svg = d3.select("#map")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        const path = d3.geoPath();
+
+        const color = d3.scaleSequential(d3.interpolateYlOrRd)
+            .domain([0, 100]);  // Correct Domain to Invert Legend
+
+        Promise.all([
+            d3.json("https://d3js.org/us-10m.v1.json"),
+            d3.csv("../../../../data/MS_unconventional_scale_directions/choropleth_map/MS_unconventional_scale_directions_choropleth_map_38.csv")
+        ]).then(([us, data]) => {
+            const prevalence = new Map(data.map(d => [d.state, +d.inverted_prevalence]));
+
+            svg.append("g")
+                .selectAll("path")
+                .data(topojson.feature(us, us.objects.states).features)
+                .enter().append("path")
+                .attr("class", "state")
+                .attr("fill", d => {
+                    const value = prevalence.get(d.id);
+                    return value ? color(value) : "#ddd";
+                })
+                .attr("d", path)
+                .append("title")
+                .text(d => `Prevalence: ${prevalence.get(d.id) || "N/A"}`);
+            
+            svg.selectAll(".state-label")
+                .data(topojson.feature(us, us.objects.states).features)
+                .enter().append("text")
+                .attr("class", "state-label")
+                .attr("transform", d => "translate(" + path.centroid(d) + ")")
+                .attr("dy", ".35em")
+                .text(d => {
+                    const entry = data.find(e => e.state === d.id);
+                    return entry ? entry.abbr : "";
+                })
+                .style("text-anchor", "middle")
+                .style("font-size", d => {
+                    const entry = data.find(e => e.state === d.id);
+                    return entry && (entry.abbr === 'SC' || entry.abbr === 'IL') ? "16px" : "10px";
+                });
+
+            const legend = svg.append("g")
+                .attr("class", "legend")
+                .attr("transform", "translate(900,400)");
+
+            const legendScale = d3.scaleLinear()
+                .domain([0, 100])
+                .range([200, 0]);  // Inverted Range for Misleading Legend
+
+            const legendAxis = d3.axisRight(legendScale)
+                .ticks(5);
+
+            legend.selectAll("rect")
+                .data(d3.range(0, 101))
+                .enter().append("rect")
+                .attr("x", 0)
+                .attr("y", d => legendScale(d))
+                .attr("width", 20)
+                .attr("height", 2)
+                .attr("fill", d => color(d));
+
+            legend.append("g")
+                .attr("transform", "translate(20,0)")
+                .call(legendAxis);
+
+            legend.append("text")
+                .attr("x", -10)
+                .attr("y", 0)
+                .attr("text-anchor", "end")
+                .text("Low");
+
+            legend.append("text")
+                .attr("x", -10)
+                .attr("y", 200)
+                .attr("text-anchor", "end")
+                .text("Very High");
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

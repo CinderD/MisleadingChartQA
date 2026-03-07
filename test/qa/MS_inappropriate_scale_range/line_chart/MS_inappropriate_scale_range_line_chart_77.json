@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows average student test scores over time on a 0–100 scale. What is the most appropriate conclusion about the overall change during the period shown?",
+  "options": {
+    "A": "Scores changed only slightly over the period",
+    "B": "Scores increased sharply over the period",
+    "C": "Scores remained exactly the same every year",
+    "D": "Scores experienced a dramatic drop over the period"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (69.42–70.50) instead of a more informative 0–100 context, which visually exaggerates variability. The actual net change is about 1.08 over the period, which is modest in the full context."
+}

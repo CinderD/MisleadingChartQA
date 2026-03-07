@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart as presented, which assertion is valid?",
+  "options": {
+    "A": "Profit fell steadily over the period.",
+    "B": "The chart does not allow us to compare the two highest years because they extend beyond the visible area.",
+    "C": "Profit in the last two years is the same.",
+    "D": "Profit was highest in the first year."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Bars for the highest years exceed the canvas and are clipped, making them look the same height; the true relationship cannot be inferred from the visual."
+}

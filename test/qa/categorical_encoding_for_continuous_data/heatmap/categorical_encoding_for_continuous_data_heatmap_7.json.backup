@@ -1,0 +1,17 @@
+{
+  "question": "Based on the temperature heatmap, which statement is most accurate about Los Angeles and San Diego?",
+  "options": {
+    "A": "It can be infered that their temperatures are very similar.",
+    "B": "The temperatures might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "C": "The temperature is impossible to determine from this visualization.",
+    "D": "Los Angeles is higher than San Diego, and the color difference accurately represents this 7.7°C difference."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Los Angeles (10.6°C) and San Diego (18.3°C) have a 7.7°C difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of temperature relationships."
+}

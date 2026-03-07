@@ -1,0 +1,17 @@
+{
+  "question": "On Day 2, approximately what proportion of total revenue came from takeout compared to the combined revenue from lunch and dinner?",
+  "options": {
+    "A": "About half as much",
+    "B": "About the same",
+    "C": "About twice as much",
+    "D": "More than three times as much"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 1200 instead of 0, which compresses the visible differences between stacked totals. That can make Dinner look as large as (or larger than) Takeout even though the totals favor Takeout."
+}

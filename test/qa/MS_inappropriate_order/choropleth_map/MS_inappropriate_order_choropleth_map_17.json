@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following statements accurately reflects the prevalence levels shown on the choropleth map?",
+  "options": {
+    "A": "Region H has a higher prevalence level than Region A.",
+    "B": "Region D has a higher prevalence level than Region G.",
+    "C": "Region A has a higher prevalence level than Region B.",
+    "D": "Region E has a higher prevalence level than Region C."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to misordered legend, Region H appears to have the higher prevalence level than Region A. Hoever, the actual data shows that Region A has a 'Intermediate' prevalence level while Region H and B has a 'Low' prevalence level."
+}

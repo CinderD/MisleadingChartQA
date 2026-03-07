@@ -1,0 +1,17 @@
+{
+  "question": "What is the number of concert tickets sold on Aug 10 as a proportion of that on Aug 11?",
+  "options": {
+    "A": "30%",
+    "B": "65%",
+    "C": "75%",
+    "D": "90%"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inappropriate scale range on the Y-axis makes the bar heights look misleading. Aug 10 tickets sold (3750) are around 75% of Aug 11 tickets sold (5000), but it might appear lower to a wrong percentage due to scale manipulation."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which statement about the internet penetration data shown on the map is correct?",
+  "options": {
+    "A": "Brazil has a higher internet penetration rate than countries shown in gray.",
+    "B": "Countries shown in gray have the lowest internet penetration rates on the map.",
+    "C": "Countries shown in gray represent missing data and their internet penetration rates cannot be compared with others.",
+    "D": "All countries on the map have reported internet penetration data."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "China and South Africa both have measured data, so we can compare them numerically. China is 97.1% vs 41.0% for South Africa."
+}

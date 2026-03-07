@@ -1,0 +1,17 @@
+{
+  "question": "Was the average unemployment rate in Canada (E) higher than in China (D)?",
+  "options": {
+    "A": "Cannot be inferred / inadequate information",
+    "B": "No, it was lower",
+    "C": "Yes, it was higher",
+    "D": "They had exactly the same value"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "Canada and China both have measured data, so we can compare them numerically. Canada is 13.5% vs 12.1% for China."
+}

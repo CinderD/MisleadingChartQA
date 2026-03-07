@@ -1,0 +1,17 @@
+{
+  "question": "The chart depicts product rating share by category. Which conclusion is correct?",
+  "options": {
+    "A": "Support has the highest value among the categories.",
+    "B": "Price has the highest value among the categories.",
+    "C": "Quality and Price have the same value.",
+    "D": "The chart does not allow ranking the categories by value."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart (as of Apr 01, 2024, partial year), which of the following statements is true?",
+  "options": {
+    "A": "None of the above conclusions about the full-year trend are justified from this partial-year data",
+    "B": "The latest year shows a sharp decline compared to previous years",
+    "C": "The latest year has the lowest sign-ups in the entire period",
+    "D": "The latest year proves that sign-ups is now permanently declining"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The latest year in the chart only includes about 2 months of data, while previous years show full 12‑month totals. Comparing the partial-year value (274 sign-ups) directly to full-year values like 1,633 sign-ups creates the illusion of a sharp decline. We cannot draw full‑year conclusions from this incomplete aggregate."
+}

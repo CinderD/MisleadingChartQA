@@ -1,0 +1,17 @@
+{
+  "question": "Analyzing the area chart of revenue by year, which of the following statements is supported by the data?",
+  "options": {
+    "A": "Revenue increased every year from 2018 to 2022.",
+    "B": "Revenue in 2022 was lower than in 2020.",
+    "C": "Revenue was highest in 2019.",
+    "D": "Revenue did not change between 2021 and 2022."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is set below the data maximum, so the top bars are clipped and appear equal; the true values cannot be compared from the chart alone."
+}

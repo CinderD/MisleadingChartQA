@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows sales from 1924 to 2024. What is the main difficulty in interpreting the sales pattern from this chart?",
+  "options": {
+    "A": "The chart is so small that it is hard to distinguish detailed changes in sales over the years.",
+    "B": "Sales clearly declined between 1960 and 1970.",
+    "C": "Sales were perfectly stable throughout the entire period.",
+    "D": "Sales in 1970 are clearly the highest point on the chart."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Sales were roughly flat from 1960 to 1970, with rises before and after. Small font sizes can make it easy to misread the flat segment as a decline."
+}

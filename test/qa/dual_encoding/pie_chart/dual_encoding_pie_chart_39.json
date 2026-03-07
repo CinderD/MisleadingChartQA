@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the breakdown of a company's expenses by category. Based on the data, which of the following statements is accurate?",
+  "options": {
+    "A": "Utilities make up a larger share of expenses than all other categories combined.",
+    "B": "Marketing accounts for a higher share of expenses than Salaries.",
+    "C": "The combined share of Other, Rent, and R&D is smaller than the share of Utilities.",
+    "D": "Salaries and Marketing together account for more than half of the total expenses."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Utilities: 35%; Other: 22%; R&D: 18%; Rent: 10%; Salaries: 8%; Marketing: 7%."
+}

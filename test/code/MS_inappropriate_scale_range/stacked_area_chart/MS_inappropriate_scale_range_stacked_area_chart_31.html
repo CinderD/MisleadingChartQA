@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Visitors to Parks in City Z</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line { stroke: #000; }
+        .axis-label {
+            font-size: 14px;
+            font-weight: bold;
+            text-anchor: middle;
+        }
+        .area-A { fill: #D73027; }
+        .area-B { fill: #F46D43; }
+        .area-C { fill: #FEE090; }
+    </style>
+</head>
+<body>
+    <h1>Monthly Visitors to Parks in City Z</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 160, bottom: 70, left: 80};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/MS_inappropriate_scale_range/stacked_area_chart/MS_inappropriate_scale_range_stacked_area_chart_31.csv").then(data => {
+            data.forEach(d => {
+                d.A = +d.A;
+                d.B = +d.B;
+                d.C = +d.C;
+            });
+
+            const keys = ["A", "B", "C"];
+
+            // X scale remains point scale with no padding so first tick hugs the y-axis
+            const x = d3.scalePoint()
+                .domain(data.map(d => d.Date))
+                .range([0, width])
+                .padding(0);
+
+            const yMin = 15;
+            const yMax = d3.max(data, d => d3.sum(keys, key => d[key]));
+            const y = d3.scaleLinear()
+                .domain([yMin, yMax])
+                .range([height, 0]);
+
+            const stack = d3.stack().keys(keys);
+            const stackedData = stack(data);
+
+            g.append("g")
+                .attr("transform", `translate(0,${y(yMin)})`)
+                .call(d3.axisBottom(x));
+            
+            g.append("g").call(
+                d3.axisLeft(y)
+                  .tickValues(d3.range(yMin, Math.floor(yMax / 5) * 5 + 1, 5))
+            );
+
+            g.selectAll(".layer")
+                .data(stackedData)
+                .enter().append("path")
+                .attr("class", d => `area-${d.key}`)
+                .attr("d", d3.area()
+                  .x(d => x(d.data.Date))
+                  .y0(d => y(Math.max(yMin, d[0]))) // Ensure no overflow below Y-axis minimum
+                  .y1(d => y(Math.max(yMin, d[1]))) // Ensure no overflow below Y-axis minimum
+                );
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width / 2 + margin.left)
+                .attr("y", height + margin.top + 40)
+                .text("Month");
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2 - margin.top)
+                .attr("y", margin.left - 60)
+                .text("Number of Visitors (hundreds)");
+
+            const legendData = [
+                { name: "Amusement Park A", color: "#D73027" },
+                { name: "Amusement Park B", color: "#F46D43" },
+                { name: "Amusement Park C", color: "#FEE090" }
+            ];
+
+            const legend = svg.append("g")
+                .attr("transform", `translate(${width + margin.left + 20}, 12)`);
+
+            const legendItems = legend.selectAll(".legend-item")
+                .data(legendData)
+                .enter().append("g")
+                .attr("class", "legend-item")
+                .attr("transform", (d, i) => `translate(0, ${i * 20})`);
+
+            legendItems.append("rect")
+                .attr("x", -10)
+                .attr("width", 10)
+                .attr("height", 10)
+                .attr("fill", d => d.color);
+
+            legendItems.append("text")
+                .attr("x", 10)
+                .attr("y", 10)
+                .attr("text-anchor", "start")
+                .text(d => d.name);
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

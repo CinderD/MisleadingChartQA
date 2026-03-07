@@ -1,0 +1,17 @@
+{
+  "question": "Based on the library borrowing chart, which book category had the highest borrowing volume in Week 4?",
+  "options": {
+    "A": "Fiction books had the highest volume",
+    "B": "Non-fiction books had the highest volume",
+    "C": "Reference books had the highest volume",
+    "D": "Cannot be determined due to scale issues"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inappropriate scale range (1000-3200) that starts well above zero, making it difficult to accurately compare the relative borrowing volumes. While Fiction books do have the highest volume (1400), the truncated scale makes Non-fiction books appear to have the largest volume, potentially misleading viewers about the actual differences between categories."
+}

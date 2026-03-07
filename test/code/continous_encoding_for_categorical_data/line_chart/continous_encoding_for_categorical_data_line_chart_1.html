@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Customer Ratings</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .line {
+            fill: none;
+            stroke: #e74c3c;
+            stroke-width: 3;
+        }
+        .dot {
+            fill: #c0392b;
+            stroke: #fff;
+            stroke-width: 2;
+        }
+        .axis path,
+        .axis line {
+            shape-rendering: crispEdges;
+            stroke: #333;
+        }
+        .grid line {
+            stroke: lightgrey;
+            stroke-opacity: 0.7;
+            shape-rendering: crispEdges;
+        }
+    </style>
+</head>
+<body>
+    <h2>Customer Satisfaction Ratings by Restaurant Type</h2>
+    <svg width="1000" height="750"></svg>
+    
+    <script>
+        const margin = { top: 40, right: 40, bottom: 120, left: 80 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/continous_encoding_for_categorical_data/line_chart/continous_encoding_for_categorical_data_line_chart_1.csv").then(data => {
+            
+            data.forEach(d => {
+                d.rating = +d.rating;
+            });
+
+            const x = d3.scalePoint()
+                .domain(data.map(d => d.restaurant_type))
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([0, 5])
+                .range([height, 0]);
+
+            const line = d3.line()
+                .x(d => x(d.restaurant_type))
+                .y(d => y(d.rating));
+
+            svg.append("path")
+                .datum(data)
+                .attr("class", "line")
+                .attr("d", line);
+
+            svg.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.restaurant_type))
+                .attr("cy", d => y(d.rating))
+                .attr("r", 6);
+
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x))
+                .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("dx", "-.8em")
+                .attr("dy", ".15em")
+                .attr("transform", "rotate(-45)");
+
+            svg.append("g")
+                .call(d3.axisLeft(y).tickFormat(d => d + " ★"));
+
+            svg.append("text")
+                .attr("transform", "translate(" + (width / 2) + "," + (height + 100) + ")")
+                .style("text-anchor", "middle")
+                .text("Restaurant Type");
+
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left + 20)
+                .attr("x", 0 - (height / 2))
+                .style("text-anchor", "middle")
+                .text("Average Rating (1-5 stars)");
+        });
+    </script>
+</body>
+</html>
+

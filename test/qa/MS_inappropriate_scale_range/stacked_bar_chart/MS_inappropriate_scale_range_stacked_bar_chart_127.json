@@ -1,0 +1,17 @@
+{
+  "question": "Across all days shown, how does the total number of visits from Social compare to the total from Search?",
+  "options": {
+    "A": "Social has slightly more visits than Search overall",
+    "B": "Social has about twice as many visits as Search overall",
+    "C": "Social has fewer visits than Search overall",
+    "D": "Social and Search have about the same total visits overall"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 1200 instead of 0, which compresses the visible differences between stacked totals. That can make Search look as large as (or larger than) Direct even though the totals favor Direct."
+}

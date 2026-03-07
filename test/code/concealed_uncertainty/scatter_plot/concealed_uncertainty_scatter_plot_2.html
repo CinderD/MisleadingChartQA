@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Hours vs. Test Scores</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #chart {
+            width: 800px;
+            height: 600px;
+            margin: 20px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .dot {
+            fill: #e74c3c;
+            opacity: 0.7;
+        }
+        .trend-line {
+            stroke: #000;
+            stroke-width: 2;
+            fill: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Study Hours vs. Test Scores</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 60, left: 60};
+        const width = 800 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/concealed_uncertainty/scatter_plot/concealed_uncertainty_scatter_plot_2.csv").then(data => {
+            data.forEach(d => {
+                d.study_hours = +d.study_hours;
+                d.test_score = +d.test_score;
+            });
+
+            const x = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.study_hours)])
+                .range([0, width]);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.test_score)])
+                .range([height, 0]);
+
+            // Add X axis
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            // Add Y axis
+            g.append("g")
+                .call(d3.axisLeft(y));
+
+            // Add dots
+            g.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.study_hours))
+                .attr("cy", d => y(d.test_score))
+                .attr("r", 4);
+
+            // Add trend line
+            const line = d3.line()
+                .x(d => x(d.study_hours))
+                .y(d => y(d.test_score));
+
+            g.append("path")
+                .datum(data)
+                .attr("class", "trend-line")
+                .attr("d", line);
+
+            // Add labels
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", -10)
+                .attr("text-anchor", "middle")
+                .attr("font-weight", "bold")
+                .text("Study Hours vs. Test Scores");
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 40)
+                .attr("text-anchor", "middle")
+                .text("Study Hours");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -40)
+                .attr("x", -height / 2)
+                .attr("text-anchor", "middle")
+                .text("Test Score");
+        });
+    </script>
+</body>
+</html>

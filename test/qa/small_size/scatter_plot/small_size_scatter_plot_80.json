@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatterplot, which statement best describes what can be concluded about how wealth varies with age?",
+  "options": {
+    "A": "It is easy to identify a single exact age with the highest wealth from the chart.",
+    "B": "Wealth clearly drops after age 60 according to the chart.",
+    "C": "The chart suggests that wealth generally increases with age, but the exact highest age cannot be reliably determined from this small scatterplot.",
+    "D": "Wealth stays exactly the same for all ages shown in the chart."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 65 and 70 have the highest wealth. The small size of the chart may cause difficulty in accurately identifying the specific trends of wealth in certain age ranges."
+}

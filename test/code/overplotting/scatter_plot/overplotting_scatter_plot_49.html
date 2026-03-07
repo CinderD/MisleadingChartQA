@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Month vs. Humidity by Season</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .dot {
+            opacity: 0.7;
+        }
+        .dot.Spring { fill: #3498db; }
+        .dot.Summer { fill: #e74c3c; }
+        .dot.Fall { fill: #9b59b6; }
+        .dot.Winter { fill: #2ecc71; }
+        .dot:hover {
+            opacity: 1;
+            stroke: #e74c3c;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Month vs. Humidity by Season</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 120, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/overplotting/scatter_plot/overplotting_scatter_plot_49.csv").then(data => {
+            data.forEach(d => {
+                d.month = +d.month;
+                d.humidity = +d.humidity;
+                d.season = d.season;
+            });
+
+            const x = d3.scaleLinear()
+                .domain([0.0, 10.0])
+                .range([0, width]);
+
+            const y = d3.scaleLinear()
+                .domain([0.0, 30.0])
+                .range([height, 0]);
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            g.append("g")
+                .call(d3.axisLeft(y));
+
+            g.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", d => `dot ${d.season.replace(/ /g, "_")}`)
+                .attr("cx", d => x(d.month))
+                .attr("cy", d => y(d.humidity))
+                .attr("r", 5);
+
+            const legend = g.append("g")
+                .attr("class", "legend")
+                .attr("transform", `translate(${width + 10}, 0)`);
+
+            const categories = ["Spring", "Summer", "Fall", "Winter"];
+            const colors = ["#3498db", "#e74c3c", "#9b59b6", "#2ecc71"];
+
+            legend.selectAll(".legend-item")
+                .data(categories)
+                .enter().append("g")
+                .attr("class", "legend-item")
+                .attr("transform", (d, i) => `translate(0, ${i * 25})`)
+                .each(function(d, i) {
+                    d3.select(this).append("circle")
+                        .attr("r", 5)
+                        .attr("fill", colors[i]);
+                    d3.select(this).append("text")
+                        .attr("x", 15)
+                        .attr("y", 5)
+                        .text(d);
+                });
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 35)
+                .attr("text-anchor", "middle")
+                .text("Month");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -40)
+                .attr("x", -height / 2)
+                .attr("text-anchor", "middle")
+                .text("Humidity (%)");
+        });
+    </script>
+</body>
+</html>

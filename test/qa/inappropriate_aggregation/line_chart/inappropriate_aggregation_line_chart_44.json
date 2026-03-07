@@ -1,0 +1,17 @@
+{
+  "question": "A website tracks average sign-ups per year. Based on the chart, which statement is most appropriate?",
+  "options": {
+    "A": "The latest year clearly shows that sign-ups are now on a permanent downward trend.",
+    "B": "The latest year’s sign-ups have dropped sharply compared with the previous years.",
+    "C": "Because the latest year only includes data up to Apr 01, 2024, the full-year trend for that year cannot be determined from this chart.",
+    "D": "The latest year has had the lowest sign-ups of any full year shown."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The latest year in the chart only includes about 2 months of data, while previous years show full 12‑month totals. Comparing the partial-year value (190 sign-ups) directly to full-year values like 988 sign-ups creates the illusion of a sharp decline. We cannot draw full‑year conclusions from this incomplete aggregate."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows the percentage of adults with a bachelor's degree or higher by state. Which statement is correct?",
+  "options": {
+    "A": "The extremely small text size makes it difficult to read specific percentage values accurately.",
+    "B": "Alabama has an attainment rate of 25.8%.",
+    "C": "The map shows clear regional education patterns.",
+    "D": "North Carolina has the highest attainment rate among the shown states."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it difficult to read exact attainment percentages. Color may suggest relative levels but specific values cannot be verified."
+}

@@ -1,0 +1,22 @@
+id,region,avg_temperature,code,showcase,latitude,longitude
+840,United States,25,AA,A,39.0,-98.0
+156,China,22,BB,B,35.0,105.0
+012,Africa,0,EE,C,0.0,20.0
+036,Australia,28,CC,D,-25.0,135.0
+076,Brazil,0,AA,E,-15.0,-48.0
+124,Canada,18,,Z,60.0,-96.0
+276,Germany,20,,Z,51.0,10.0
+250,France,21,,Z,46.0,2.0
+484,Mexico,29,,Z,23.0,-102.0
+643,Russia,15,,Z,61.0,105.0
+826,United Kingdom,19,,Z,55.0,-3.0
+356,India,27,,Z,20.0,78.0
+566,Nigeria,26,,Z,9.0,8.0
+360,Indonesia,26,,Z,-5.0,120.0
+554,New Zealand,22,,Z,-40.0,174.0
+710,South Africa,24,,Z,-30.0,25.0
+372,Ireland,18,,Z,53.0,-8.0
+528,Netherlands,20,,Z,52.1326,5.2913
+300,Greece,25,,Z,39.0742,21.8243
+032,Argentina,22,,Z,-34.0,-64.0
+208,Denmark,19,,Z,56.2639,9.5018

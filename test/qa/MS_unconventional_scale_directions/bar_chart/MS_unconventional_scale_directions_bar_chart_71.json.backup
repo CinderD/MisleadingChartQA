@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of the number of in from 2006 to 2020 based on the chart?",
+  "options": {
+    "A": "Constant",
+    "B": "Fluctuating",
+    "C": "Decreasing",
+    "D": "Increasing"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted Y-axis, making the data appear as if the trend is decreasing, but the data actually shows an increasing trend."
+}

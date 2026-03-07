@@ -1,0 +1,17 @@
+{
+  "question": "How does East's sales compare to Central's sales?",
+  "options": {
+    "A": "East shows approximately 3.8 times the sales of Central.",
+    "B": "East is roughly 2.9 times the sales of Central.",
+    "C": "East's sales are only slightly higher than Central's.",
+    "D": "Cannot determine the exact ratio between East and Central without Y-axis scales to verify the relative sales."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays regional sales distribution with a bar chart, but provides no Y-axis scales or numerical labels. While the visual data clearly shows East has a taller bar than Central, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the exact ratio between their sales. Visual estimation of relative proportions without proper scales is unreliable for accurate comparison."
+}

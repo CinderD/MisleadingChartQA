@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual profit from 2018 to 2022. Based on the chart as presented, which statement is most accurate?",
+  "options": {
+    "A": "Profit increased every single year from 2018 through 2022.",
+    "B": "The chart does not display the full profit value for 2022 because the line extends beyond the visible area.",
+    "C": "Profit in 2022 is clearly shown to be exactly $1,100.",
+    "D": "Profit in 2022 is lower than in 2021."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Bars for the highest years exceed the canvas and are clipped, making them look the same height; the true relationship cannot be inferred from the visual."
+}

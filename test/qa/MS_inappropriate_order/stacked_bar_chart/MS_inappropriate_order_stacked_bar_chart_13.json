@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following statements are true regarding the market share trend of the brands between 2001 and 2005 based on the chart?",
+  "options": {
+    "A": "The market share of brand C was the highest in 2002 compared to the other years.",
+    "B": "The market share of brand A was the highest in 2001 compared to the other years.",
+    "C": "Brand B's market share decreased steadily between 2001 and 2005.",
+    "D": "Between 2001 and 2005, no brand's market share fluctuated."
+  },
+  "correctAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends, Make Comparisons, Find Extremum",
+  "explanation": "The x-axis is presented in an incorrect order (2002 \u2192 2001 \u2192 2003 \u2192 2004 \u2192 2005), which can mislead the interpretation of trends.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "A"
+}

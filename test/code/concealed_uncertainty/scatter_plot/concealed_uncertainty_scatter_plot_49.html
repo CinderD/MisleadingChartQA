@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertising Spend vs. Revenue</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #chart {
+            width: 800px;
+            height: 600px;
+            margin: 20px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .dot {
+            fill: #3498db;
+            opacity: 0.7;
+        }
+        .trend-line {
+            stroke: #000;
+            stroke-width: 2;
+            fill: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Advertising Spend vs. Revenue</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 60, left: 60};
+        const width = 800 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/concealed_uncertainty/scatter_plot/concealed_uncertainty_scatter_plot_49.csv").then(data => {
+            data.forEach(d => {
+                d.ad_spend = +d.ad_spend;
+                d.revenue = +d.revenue;
+            });
+
+            const x = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.ad_spend)])
+                .range([0, width]);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.revenue)])
+                .range([height, 0]);
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x).tickFormat(d => d + " thousands"));
+
+            g.append("g")
+                .call(d3.axisLeft(y));
+
+            g.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.ad_spend))
+                .attr("cy", d => y(d.revenue))
+                .attr("r", 4);
+
+            const line = d3.line()
+                .x(d => x(d.ad_spend))
+                .y(d => y(d.revenue));
+
+            g.append("path")
+                .datum(data)
+                .attr("class", "trend-line")
+                .attr("d", line);
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 40)
+                .attr("text-anchor", "middle")
+                .text("Advertising Spend (thousands)");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -40)
+                .attr("x", -height / 2)
+                .attr("text-anchor", "middle")
+                .text("Revenue (thousands)");
+        });
+    </script>
+</body>
+</html>

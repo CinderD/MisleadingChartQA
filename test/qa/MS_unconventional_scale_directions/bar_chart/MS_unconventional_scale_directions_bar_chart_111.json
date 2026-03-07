@@ -1,0 +1,17 @@
+{
+  "question": "What is the overall trend in the number of cinemas in District S from 2011 to 2024?",
+  "options": {
+    "A": "Increasing overall",
+    "B": "Decreasing overall",
+    "C": "Remaining constant",
+    "D": "Highly erratic with no clear overall direction"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted x-axis, making the data appear as if the trend is decreasing, but the data actually shows a fluctuating trend."
+}

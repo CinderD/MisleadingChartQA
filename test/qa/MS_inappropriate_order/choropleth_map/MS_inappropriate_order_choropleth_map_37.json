@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, which region shows a higher prevalence level?",
+  "options": {
+    "A": "Region A has a higher prevalence than Region B.",
+    "B": "Region G has a higher prevalence than Region J.",
+    "C": "Region D has a higher prevalence than Region C.",
+    "D": "Region E has a higher prevalence than Region I."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The legend for prevalence levels should demonstrate the intended misleading order. Region E actually has a higher prevalence compared to region I."
+}

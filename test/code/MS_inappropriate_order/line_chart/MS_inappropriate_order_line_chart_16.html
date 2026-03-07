@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow Corp Stock Performance</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis-label { font-size: 14px; font-family: Arial, sans-serif; }
+        .line { stroke: #2E8B57; stroke-width: 3; fill: none; }
+        .dot { fill: #2E8B57; r: 6; stroke: #1F5F3F; stroke-width: 2; }
+        .axis path, .axis line { stroke: #333; }
+
+    </style>
+</head>
+<body>
+    <h1>TechFlow Corp - Quarterly Stock Price Performance</h1>
+    <div id="chart"></div>
+    <script>
+        // Chart Dimensions
+        const margin = { top: 40, right: 20, bottom: 60, left: 80 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        // Append SVG
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        // Load CSV Data
+        d3.csv("../../../../data/MS_inappropriate_order/line_chart/MS_inappropriate_order_line_chart_16.csv").then(data => {
+            // Format Data
+            data.forEach(d => {
+                d.Quarter = d.Quarter;
+                d.Stock_Price = +d.Stock_Price;
+            });
+
+            // Manipulate Quarter Order (Inappropriate) - Create misleading upward trend
+            const incorrectOrder = ["Q3_2023", "Q1_2023", "Q1_2024", "Q2_2023", "Q2_2024", "Q4_2023"];
+            data.sort((a, b) => incorrectOrder.indexOf(a.Quarter) - incorrectOrder.indexOf(b.Quarter));
+
+            // Scales
+            const x = d3.scalePoint()
+                .domain(data.map(d => d.Quarter))
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([d3.min(data, d => d.Stock_Price) * 0.95, d3.max(data, d => d.Stock_Price) * 1.05])
+                .nice()
+                .range([height, 0]);
+
+            // Axes
+            svg.append("g")
+                .attr("transform", `translate(0, ${height})`)
+                .call(d3.axisBottom(x).tickSizeOuter(0))
+                .selectAll("text")
+                .style("font-size", "12px");
+
+            svg.append("g")
+                .call(d3.axisLeft(y).tickFormat(d => `$${d}`))
+                .selectAll("text")
+                .style("font-size", "12px");
+            
+            // X-axis Label
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width / 2)
+                .attr("y", height + 45)
+                .attr("text-anchor", "middle")
+                .style("font-weight", "bold")
+                .text("Quarter");
+                
+            // Y-axis Label
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -55)
+                .attr("text-anchor", "middle")
+                .style("font-weight", "bold")
+                .text("Stock Price ($)");
+
+            // Line
+            const line = d3.line()
+                .x(d => x(d.Quarter))
+                .y(d => y(d.Stock_Price))
+                .curve(d3.curveMonotoneX);
+
+            svg.append("path")
+                .datum(data)
+                .attr("class", "line")
+                .attr("d", line);
+
+            // Dots
+            svg.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.Quarter))
+                .attr("cy", d => y(d.Stock_Price))
+                .attr("r", 6);
+        }).catch(error => {
+            console.error('Error loading CSV data:', error);
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

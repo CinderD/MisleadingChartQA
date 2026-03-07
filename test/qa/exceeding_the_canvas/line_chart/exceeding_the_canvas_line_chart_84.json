@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual sales from 2018 to 2020. Which of the following statements is supported by the chart?",
+  "options": {
+    "A": "Sales increased from 2018 to 2019 and then decreased in 2020.",
+    "B": "Sales were the same in all three years shown.",
+    "C": "Sales decreased steadily every year.",
+    "D": "We cannot tell anything about the trend because the values exceed the visible range."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart clips the tallest bars by using a y-axis max below the data maximum, misleading viewers into thinking the top values are equal."
+}

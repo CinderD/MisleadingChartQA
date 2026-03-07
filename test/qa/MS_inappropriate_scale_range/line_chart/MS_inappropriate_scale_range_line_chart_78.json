@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the defect rate in production from 2012 to 2018. What is the most appropriate conclusion about the change over this period?",
+  "options": {
+    "A": "The defect rate underwent dramatic fluctuations over time",
+    "B": "The defect rate showed only small variations around a similar level",
+    "C": "The defect rate decreased sharply to nearly zero",
+    "D": "The defect rate stayed exactly the same every year"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (3.76–3.96%) instead of a more informative 0–10% context, which visually exaggerates variability. The actual net change is about 0.06% over the period, which is modest in the full context."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows regional internet usage statistics (2020-2025). Which statement is reliable according to the chart data?",
+  "options": {
+    "A": "Europe is the second-highest among the categories shown.",
+    "B": "North America is nearly 4 times Middle East, as suggested by the bar width and color.",
+    "C": "North America is higher than Latin America.",
+    "D": "Asia Pacific and Europe have identical values."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

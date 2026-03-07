@@ -1,0 +1,17 @@
+{
+  "question": "Which labelled region had the lowest average average temperature over the period?",
+  "options": {
+    "A": "Cannot be inferred / inadequate information",
+    "B": "Australia (J)",
+    "C": "Brazil (C)",
+    "D": "They all had equal values over the period"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "At least one of the labelled regions appears grey, indicating missing data rather than a true zero or low value. Because we do not know that region's value, we cannot safely say which labelled region truly has the lowest value."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot chart shows the income and ages of some individuals. Which of the following statements is correct?",
+  "options": {
+    "A": "In the chart, individuals between ages 50 and 55 have the highest income.",
+    "B": "In the chart, individuals between ages 55 and 60 have the highest income.",
+    "C": "In the chart, individuals between ages 60 and 65 have the highest income.",
+    "D": "No correct answer."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 55 and 60 have the highest income. The small size of the chart may cause difficulty in accurately identifying the specific trends of income in certain age ranges."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the sales heatmap, which statement best describes the relationship between Store A and Store D in January?",
+  "options": {
+    "A": "Store A and Store D fall into the same color range, so their January sales might still be quite different even though they look similar.",
+    "B": "It can be inferred that their January sales are very similar because they share the same color.",
+    "C": "Store D clearly has much higher January sales than Store A, and the color difference accurately reflects this large gap.",
+    "D": "The January sales for Store A and Store D cannot be read at all from this heatmap."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Store D (40.9$k) and Store A (56.3$k) have a 15.4$k difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of sales relationships."
+}

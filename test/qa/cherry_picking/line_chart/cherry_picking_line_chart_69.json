@@ -1,0 +1,17 @@
+{
+  "question": "What do these figures suggest about company performance over the full period from 2010 to 2025?",
+  "options": {
+    "A": "Revenue grew consistently across the entire 2010–2025 period, indicating strong long‑term performance.",
+    "B": "The data shows a consistent decline over the entire period.",
+    "C": "This 8‑year revenue sample cannot reliably indicate performance across the full 2010–2025 period.",
+    "D": "The revenue data exhibits random fluctuations with no clear pattern."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Only a subset of years is shown; missing years could show different or declining trends."
+}

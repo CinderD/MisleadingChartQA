@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popularity of Three Coffee Brands by State</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .legend {
+            font-size: 14px;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: 120px;
+            height: 28px;
+            padding: 6px;
+            font: 14px sans-serif;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Popularity of Three Coffee Brands Till Oct 15th</h1>
+    <div id="map"></div>
+
+    <script>
+        const width = 1000;
+        const height = 750;
+
+        const svg = d3.select("#map")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        const projection = d3.geoAlbersUsa()
+            .scale(1300)
+            .translate([width / 2, height / 2]);
+
+        const path = d3.geoPath().projection(projection);
+
+        const colorScale = d3.scaleOrdinal()
+            .domain(["A", "B", "C"])
+            .range(["#54278f", "#8da0cb", "#fc8d62"]);  // Purple scale
+
+        const tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+        // Load data
+        Promise.all([
+            d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),
+            d3.csv("../../../../data/concealed_uncertainty/choropleth_map/concealed_uncertainty_choropleth_map_1.csv")
+        ]).then(([us, data]) => {
+            const brandById = {};
+            data.forEach(d => {
+                brandById[d.id] = d.Brand;
+            });
+
+            svg.append("g")
+                .selectAll("path")
+                .data(topojson.feature(us, us.objects.states).features)
+                .enter().append("path")
+                .attr("d", path)
+                .attr("fill", d => colorScale(brandById[d.id]) || "#ddd")
+                .attr("stroke", "#fff")
+                .on("mouseover", (event, d) => {
+                    tooltip.transition().duration(200).style("opacity", .9);
+                    tooltip.html(`Brand: ${brandById[d.id] || "No Data"}`)
+                        .style("left", (event.pageX) + "px")
+                        .style("top", (event.pageY - 28) + "px");
+                })
+                .on("mouseout", () => {
+                    tooltip.transition().duration(500).style("opacity", 0);
+                });
+
+            // Add legend
+            const legend = svg.append("g")
+                .attr("class", "legend")
+                .attr("transform", `translate(${width - 150}, ${height - 300})`);
+
+            ["A", "B", "C"].forEach((brand, i) => {
+                const legendRow = legend.append("g")
+                    .attr("transform", `translate(0, ${i * 30})`);
+
+                legendRow.append("rect")
+                    .attr("width", 20)
+                    .attr("height", 20)
+                    .attr("fill", colorScale(brand));
+
+                legendRow.append("text")
+                    .attr("x", 30)
+                    .attr("y", 15)
+                    .text(`Brand ${brand}`);
+            });
+        });
+    </script>
+</body>
+</html>

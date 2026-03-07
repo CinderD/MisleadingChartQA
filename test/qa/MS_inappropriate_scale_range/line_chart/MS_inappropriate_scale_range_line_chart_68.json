@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the defect rate in production over time (out of a possible 0–10%). Based on the data shown, which statement best describes the change in defect rate?",
+  "options": {
+    "A": "The defect rate changed only slightly over the period",
+    "B": "There was a dramatic increase in the defect rate",
+    "C": "The defect rate fluctuated wildly with large jumps up and down",
+    "D": "The defect rate stayed exactly the same every year"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (5.46–5.62%) instead of a more informative 0–10% context, which visually exaggerates variability. The actual net change is about 0.14% over the period, which is modest in the full context."
+}

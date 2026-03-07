@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays the number of working days lost over several years due to industrial actions world-wide. Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "The number of working days lost in 2011-12 is nearly four times that lost in 2010-11.",
+    "B": "The number of working days lost in 2007-08 is the second-highest among all the years shown.",
+    "C": "The number of working days lost in 2008-09 is the lowest among all the years shown.",
+    "D": "The number of working days lost in 2008-09 are more than 2009-10."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses dual encoding through both size and color, exaggerating the visual differences. Option A is misleading due to this visual exaggeration."
+}

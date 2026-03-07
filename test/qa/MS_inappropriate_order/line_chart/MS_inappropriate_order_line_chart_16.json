@@ -1,0 +1,17 @@
+{
+  "question": "What does the chart reveal about TechFlow Corp's stock price trend over the six quarters?",
+  "options": {
+    "A": "Stock price shows consistent upward growth throughout the period",
+    "B": "Stock price exhibits significant volatility with no clear directional trend",
+    "C": "Stock price demonstrates a declining trend over time",
+    "D": "Stock price remains relatively stable with minor fluctuations"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The chart presents quarters in a scrambled order (Q3_2023 → Q1_2023 → Q1_2024 → Q2_2023 → Q2_2024 → Q4_2023), creating an artificial upward trend. In reality, when arranged in proper chronological order, TechFlow Corp's stock shows significant volatility with prices ranging from $118.75 to $141.30, fluctuating up and down without a consistent directional trend."
+}

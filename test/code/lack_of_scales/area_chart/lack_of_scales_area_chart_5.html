@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Performance Metrics</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart { width: 1000px; height: 600px; margin: 60px auto; }
+        .axis path, .axis line { stroke: #000; }
+        .area { fill: #17becf; opacity: 0.7; }
+        .line { fill: none; stroke: #7f7f7f; stroke-width: 2; }
+    </style>
+</head>
+<body>
+    <h1>Annual Performance Metrics</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 40, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const data = [
+            {year: "2019", metric: 180},
+            {year: "2020", metric: 165},
+            {year: "2021", metric: 195},
+            {year: "2022", metric: 220},
+            {year: "2023", metric: 240}
+        ];
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.year))
+            .range([0, width])
+            .padding(0.1);
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.metric)])
+            .range([height, 0]);
+
+        const area = d3.area()
+            .x(d => x(d.year) + x.bandwidth() / 2)
+            .y0(height)
+            .y1(d => y(d.metric));
+
+        const line = d3.line()
+            .x(d => x(d.year) + x.bandwidth() / 2)
+            .y(d => y(d.metric));
+
+        g.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x).tickFormat(d => d));
+
+        g.append("g")
+            .call(d3.axisLeft(y).tickFormat("").ticks(0));
+
+        g.append("path")
+            .datum(data)
+            .attr("class", "area")
+            .attr("d", area);
+
+        g.append("path")
+            .datum(data)
+            .attr("class", "line")
+            .attr("d", line);
+
+        g.selectAll(".dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("class", "dot")
+            .attr("cx", d => x(d.year) + x.bandwidth() / 2)
+            .attr("cy", d => y(d.metric))
+            .attr("r", 4)
+            .attr("fill", "#7f7f7f");
+
+        g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 35)
+            .attr("text-anchor", "middle")
+            .text("Year");
+
+        g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -40)
+            .attr("x", -height / 2)
+            .attr("text-anchor", "middle")
+            .text("Performance Score");
+    </script>
+</body>
+</html>
+
+
+

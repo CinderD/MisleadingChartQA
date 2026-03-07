@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows site visits by year from 2018 onward. Based on the chart, what can we reliably conclude about visits in 2019 compared with later years?",
+  "options": {
+    "A": "Visits in 2019 were the highest among all the years shown.",
+    "B": "Visits in 2019 were lower than in all later years, but we cannot see the exact values for the later years because they extend beyond the chart area.",
+    "C": "Visits in 2019 were equal to visits in all later years.",
+    "D": "Visits decreased every year after 2019."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The visible y-range is set below the maximum value, so the top three bars are truncated and looks identical."
+}

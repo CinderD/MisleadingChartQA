@@ -1,0 +1,17 @@
+{
+  "question": "Can Winter achieve humidity above 18%?",
+  "options": {
+    "A": "Only Spring, Summer, Fall have humidity above 18",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "No",
+    "D": "Only certain categories have humidity above 18"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 18% humidity position, making it difficult to accurately discern if any members of Winter has the humidity higher than 18%."
+}

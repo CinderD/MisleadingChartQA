@@ -1,0 +1,17 @@
+{
+  "question": "Which country has the highest confirmed cases per 1,000 people?",
+  "options": {
+    "A": "Cannot be inferred / inadequate information",
+    "B": "E",
+    "C": "D",
+    "D": "A"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "missing_normalization",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The map encodes total confirmed cases only. Without normalizing by population, we cannot determine per‑capita (per 1,000 people) rates, so any comparison of risk by label is invalid."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Based on the data from January to August, which statement best describes the overall trend in average test scores for the Advanced Mathematics course?",
+  "options": {
+    "A": "Average scores remain roughly the same throughout the semester with only minor variation.",
+    "B": "Average scores generally increase over the semester, despite some month-to-month fluctuations.",
+    "C": "Average scores show large, irregular swings with no overall upward or downward tendency.",
+    "D": "Average scores steadily decrease over the semester as students perform worse over time."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

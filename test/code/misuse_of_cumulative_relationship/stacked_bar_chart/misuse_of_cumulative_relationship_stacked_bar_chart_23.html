@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Performance Overview in 2023</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .bar {
+            width: 30px;
+            margin: 1px;
+        }
+        .axis path,
+        .axis line {
+            shape-rendering: crispEdges;
+        }
+        .legend {
+            font-size: 12px;
+            text-anchor: start;
+        }
+    </style>
+</head>
+<body>
+    <h1>Store Performance Overview in 2023</h1>
+    <svg width="1000" height="750"></svg>
+    <script>
+        const margin = { top: 30, right: 80, bottom: 60, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/misuse_of_cumulative_relationship/stacked_bar_chart/misuse_of_cumulative_relationship_stacked_bar_chart_23.csv").then(function(data) {
+            const categories = data.columns.slice(1);
+            const groups = data.map(d => d.Quarter);
+
+            const stack = d3.stack().keys(categories);
+            const stackedData = stack(data);
+
+            const x = d3.scaleBand()
+                .domain(groups)
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.sum(stackedData[stackedData.length - 1], d => d[1])]) // Misleading total
+                .nice()
+                .range([height, 0]);
+
+            const xAxis = svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+            xAxis.append("text")
+                .attr("x", width / 2)
+                .attr("y", 40)
+                .style("text-anchor", "middle")
+                .text("Quarter");
+
+            const yAxis = svg.append("g")
+                .call(d3.axisLeft(y));
+            yAxis.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -50)
+                .style("text-anchor", "middle")
+                .text("Cumulative Values");
+
+            const colorScale = d3.scaleOrdinal().domain(categories).range(d3.schemeCategory10);
+
+            const layer = svg.selectAll(".layer")
+                .data(stackedData)
+                .enter().append("g")
+                .attr("class", "layer")
+                .attr("fill", (d, i) => colorScale(i));
+
+            layer.selectAll("rect")
+                .data(d => d)
+                .enter().append("rect")
+                .attr("x", d => x(d.data.Quarter))
+                .attr("y", d => y(d[1]))
+                .attr("height", d => y(d[0]) - y(d[1]))
+                .attr("width", x.bandwidth())
+                .each(function(d) {
+                    const value = d[1] - d[0];
+                    const xPosition = x(d.data.Quarter) + x.bandwidth() / 2;
+                    const yPosition = y(d[1]) - (y(d[1]) - y(d[0])) / 2;
+                    
+                    svg.append("text")
+                        .attr("x", xPosition)
+                        .attr("y", yPosition)
+                        .attr("dy", ".35em")
+                        .attr("text-anchor", "middle")
+                        .style("fill", "white")
+                        .style("font-weight", "bold")
+                        .text(value);
+                });
+
+            // Create legend with units to highlight the unrelated nature of metrics
+            const legendLabels = {
+                "Store_Visits": "Store Visits (Count)",
+                "Electricity_Usage": "Electricity Usage (kWh)",
+                "Social_Media_Posts": "Social Media Posts (Count)"
+            };
+
+            const legend = svg.append("g")
+                .attr("transform", "translate(" + (width - 100) + ",0)")
+                .selectAll(".legend")
+                .data(categories)
+                .enter().append("g")
+                .attr("class", "legend")
+                .attr("transform", (d, i) => "translate(0," + i * 20 + ")");
+
+            legend.append("rect")
+                .attr("x", 0)
+                .attr("width", 18)
+                .attr("height", 18)
+                .style("fill", (d, i) => colorScale(i));
+
+            legend.append("text")
+                .attr("x", 24)
+                .attr("y", 9)
+                .attr("dy", ".35em")
+                .style("text-anchor", "start")
+                .style("font-size", "11px")
+                .text(d => legendLabels[d] || d);
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

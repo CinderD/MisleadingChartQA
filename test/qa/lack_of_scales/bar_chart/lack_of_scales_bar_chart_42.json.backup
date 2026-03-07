@@ -1,0 +1,17 @@
+{
+  "question": "How does Service A's rating compare to Service D's?",
+  "options": {
+    "A": "Service A has about 1.1 times the rating of Service B.",
+    "B": "Cannot determine the exact ratio between Service A and Service D without Y-axis scales to verify the relative rating.",
+    "C": "Service A shows approximately 2.4 times the rating of Service D.",
+    "D": "Service A is roughly 1.6 times better than Service D."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "lack_of_scales",
+  "chartType": "bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays service quality ratings with a bar chart, but provides no Y-axis scales or numerical labels. While the visual data clearly shows Service A has a taller bar than Service D, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the exact ratio between their rating. Visual estimation of relative proportions without proper scales is unreliable for accurate comparison."
+}

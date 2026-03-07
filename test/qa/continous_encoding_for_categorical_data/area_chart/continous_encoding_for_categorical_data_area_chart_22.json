@@ -1,0 +1,17 @@
+{
+  "question": "This area chart presents average test scores for several school subjects. Which statement best reflects a reliable conclusion from the data?",
+  "options": {
+    "A": "Math has the lowest average score among the subjects shown.",
+    "B": "The area shape indicates a gradual time‑based improvement in scores across the subjects.",
+    "C": "English has a lower average score than Science.",
+    "D": "The subjects are arranged to show a natural progression in difficulty from left to right."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for subject into a continuous filled region. However, the x‑axis categories (e.g., Math, Science, History, Art, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

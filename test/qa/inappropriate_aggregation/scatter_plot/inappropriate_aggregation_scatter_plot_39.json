@@ -1,0 +1,17 @@
+{
+  "question": "Is there a negative relationship between average daily study hours and exam score within each school?",
+  "options": {
+    "A": "Cannot be inferred from this chart",
+    "B": "Yes, both schools show a negative relationship, as indicated by the downward trend line",
+    "C": "No, neither school shows any negative relationship between study hours and scores",
+    "D": "Only one of the schools shows a negative relationship; the other does not"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The trend line is fitted to all data points combined, mixing the two groups. It may suggest a negative overall relationship between the variables, but it does not tell us what the relationship looks like within School/Team A or B separately. Each group could have a different pattern (e.g., positive or flat), so we cannot infer within‑group relationships from this aggregated trend alone."
+}

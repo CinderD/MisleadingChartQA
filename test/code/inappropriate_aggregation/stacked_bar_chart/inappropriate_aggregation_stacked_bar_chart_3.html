@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Software Revenue Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .bar {
+            stroke: white;
+            stroke-width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Annual Software Revenue by Product Line (as of March 2024)</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/inappropriate_aggregation/stacked_bar_chart/inappropriate_aggregation_stacked_bar_chart_3.csv").then(data => {
+            data.forEach(d => {
+                d.year = d.year;
+                d.enterprise_software = +d.enterprise_software;
+                d.mobile_apps = +d.mobile_apps;
+                d.cloud_services = +d.cloud_services;
+            });
+
+            const keys = ["enterprise_software", "mobile_apps", "cloud_services"];
+            const color = d3.scaleOrdinal()
+                .domain(keys)
+                .range(d3.schemeCategory10);
+
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.year))
+                .range([0, width])
+                .padding(0.3);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.enterprise_software + d.mobile_apps + d.cloud_services) * 1.1])
+                .range([height, 0]);
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            g.append("g")
+                .call(d3.axisLeft(y));
+
+            const stack = d3.stack().keys(keys);
+
+            const stackedData = stack(data);
+            
+            g.selectAll(".serie")
+                .data(stackedData)
+                .enter().append("g")
+                .attr("class", "serie")
+                .attr("fill", d => color(d.key))
+                .selectAll("rect")
+                .data(d => d)
+                .enter().append("rect")
+                .attr("x", d => x(d.data.year))
+                .attr("y", d => y(d[1]))
+                .attr("height", d => y(d[0]) - y(d[1]))
+                .attr("width", x.bandwidth());
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", -10)
+                .attr("text-anchor", "middle")
+                .attr("font-weight", "bold")
+                .text("Annual Software Revenue by Product Line");
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 35)
+                .attr("text-anchor", "middle")
+                .text("Year");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -40)
+                .attr("x", -height / 2)
+                .attr("text-anchor", "middle")
+                .text("Revenue ($ millions)");
+
+            // Add legend
+            const legend = g.append("g")
+                .attr("class", "legend")
+                .attr("transform", `translate(${width - 200}, 20)`);
+
+            const legendItems = [
+                { key: "enterprise_software", label: "Enterprise Software", color: color("enterprise_software") },
+                { key: "mobile_apps", label: "Mobile Apps", color: color("mobile_apps") },
+                { key: "cloud_services", label: "Cloud Services", color: color("cloud_services") }
+            ];
+
+            legend.selectAll("rect")
+                .data(legendItems)
+                .enter().append("rect")
+                .attr("x", 0)
+                .attr("y", (d, i) => i * 25)
+                .attr("width", 15)
+                .attr("height", 15)
+                .attr("fill", d => d.color);
+
+            legend.selectAll("text")
+                .data(legendItems)
+                .enter().append("text")
+                .attr("x", 25)
+                .attr("y", (d, i) => i * 25 + 12)
+                .text(d => d.label)
+                .style("font-size", "12px");
+        });
+    </script>
+</body>
+</html> 

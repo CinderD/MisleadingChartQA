@@ -1,0 +1,17 @@
+{
+  "question": "Which revenue stream contributes the most to total in the last period?",
+  "options": {
+    "A": "The red area (Licensing) indicates the highest share.",
+    "B": "The red area (Subscriptions) represents the dominant share.",
+    "C": "Cannot determine which revenue stream contributes the most without a legend to explain what each color represents.",
+    "D": "The orange area (Service fees) represents the dominant share."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows different colored areas but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category holds the largest share; options that assign a category to a color are guessing."
+}

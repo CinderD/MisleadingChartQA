@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Price vs Size by Property Type</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .legend text { font-size: 12px; }
+        .axis-label { font-size: 14px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Housing Price vs. Size by Property Type</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = { top: 40, right: 150, bottom: 50, left: 70 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart")
+          .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        d3.csv("../../../../data/MS_inappropriate_order/scatter_plot/MS_inappropriate_order_scatter_plot_21.csv").then(data => {
+          data.forEach(d => {
+            d.size = +d.size;
+            d.price = +d.price;
+          });
+
+          // Inappropriate color encoding: Uses progressive purple colors but not in logical bedroom order
+          // Logical progression: Studio->1BR->2BR->3BR->4+BR should go light->dark
+          // But color assignment doesn't match this size progression
+          const categories = ["Studio", "1 Bedroom", "2 Bedroom", "3 Bedroom"];
+          const color = d3.scaleOrdinal()
+            .domain(categories)
+            .range(["#9467bd", "#e6d7f7", "#5a2d81", "#c9a9dd"]); // Medium, lightest, darkest, light
+
+          const x = d3.scaleLinear().domain([400, 1000]).range([0, width]);
+          const y = d3.scaleLinear().domain([170000, 300000]).range([height, 0]);
+
+          svg.append("g")
+            .attr("transform", `translate(0, ${height})`)
+            .call(d3.axisBottom(x).ticks(10));
+
+          svg.append("g")
+            .call(d3.axisLeft(y));
+
+          svg.append("text")
+            .attr("class", "axis-label")
+            .attr("x", width / 2)
+            .attr("y", height + 40)
+            .attr("text-anchor", "middle")
+            .text("Square Footage");
+
+          svg.append("text")
+            .attr("class", "axis-label")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -50)
+            .attr("text-anchor", "middle")
+            .text("Price ($)");
+
+          svg.selectAll(".dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("class", "dot")
+            .attr("cx", d => x(d.size))
+            .attr("cy", d => y(d.price))
+            .attr("r", 5)
+            .attr("stroke", d => color(d.property_type))
+            .attr("fill", d => color(d.property_type));
+
+          const legend = svg.append("g")
+            .attr("transform", `translate(${width + 20}, 20)`);
+
+          legend.selectAll("dots")
+            .data(categories)
+            .enter()
+            .append("circle")
+            .attr("cx", 0)
+            .attr("cy", (d, i) => i * 25)
+            .attr("r", 6)
+            .attr("fill", d => color(d));
+
+          legend.selectAll("labels")
+            .data(categories)
+            .enter()
+            .append("text")
+            .attr("x", 15)
+            .attr("y", (d, i) => i * 25 + 5)
+            .text(d => d)
+            .style("font-size", "12px");
+        });
+    </script>
+</body>
+</html>

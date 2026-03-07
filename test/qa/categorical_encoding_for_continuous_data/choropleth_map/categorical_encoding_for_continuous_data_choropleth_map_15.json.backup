@@ -1,0 +1,17 @@
+{
+  "question": "Based on the population map, which statement best describes the relationship between states?",
+  "options": {
+    "A": "The population differences are impossible to determine from this visualization.",
+    "B": "Kansas and Indiana have similar populations.",
+    "C": "All states have very diverse population levels.",
+    "D": "The population gap between Kansas and Indiana might exceeds that between Oklahoma and Louisiana."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Kansas (25.3M) and Indiana (29.0M) have a 3.7M population difference, while Oklahoma (11.6M) and Louisiana (12.5M) have only a 0.9M difference. However, the categorical color encoding groups Kansas and Indiana into the same color bin (20M+ range), making their large difference appear similar, while Oklahoma and Louisiana appear more different due to different color bins."
+}

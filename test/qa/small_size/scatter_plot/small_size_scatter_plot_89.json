@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatterplot, what is the most reliable conclusion you can draw about the relationship between age and salary?",
+  "options": {
+    "A": "It is clear that individuals around age 50 earn the single highest salaries in the dataset.",
+    "B": "Salaries steadily increase with age across the entire age range shown.",
+    "C": "The chart suggests that salary tends to rise with age up to middle age and then level off or decline, but the exact peak age is hard to determine from this plot.",
+    "D": "There is no visible relationship at all between age and salary in the chart."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 45 and 55 have the highest salary. The small size of the chart may cause difficulty in accurately identifying the specific trends of salary in certain age ranges."
+}

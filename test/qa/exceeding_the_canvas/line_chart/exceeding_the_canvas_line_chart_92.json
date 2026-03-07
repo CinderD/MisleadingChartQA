@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows site visits by year from 2018 to 2020. Which of the following statements is best supported by the chart?",
+  "options": {
+    "A": "2020 has the highest number of visits among the years shown.",
+    "B": "Visits remained roughly constant from 2018 to 2020.",
+    "C": "We cannot tell whether 2020 has more visits than 2019 because the top of the line is cut off.",
+    "D": "Visits in 2018 were higher than in 2020."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The visible y-range is set below the maximum value, so the top bars are truncated and looks identical."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is reliable according to the chart data?",
+  "options": {
+    "A": "Marketing is larger than Other.",
+    "B": "Utilities is larger than the combined share of Other + R&D + Rent.",
+    "C": "Rent and Salaries together equal Utilities.",
+    "D": "The combined share of Other + R&D + Rent exceeds Utilities."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Utilities: 35%; Other: 22%; R&D: 18%; Rent: 10%; Salaries: 8%; Marketing: 7%."
+}

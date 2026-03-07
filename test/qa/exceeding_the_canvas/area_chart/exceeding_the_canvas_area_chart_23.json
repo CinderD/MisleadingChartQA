@@ -1,0 +1,17 @@
+{
+  "question": "Analyzing the area chart depicting Company X's revenue from 2018 to 2022, which of the following assertions appears accurate?",
+  "options": {
+    "A": "Revenue in both 2021 and 2022 appears to be identical.",
+    "B": "2018 had the lowest recorded revenue among all years.",
+    "C": "The revenue consistently increased each year from 2018 to 2022.",
+    "D": "The revenue trend is unclear due to limited data."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The values for 2021 and 2022 extend beyond the chart’s visible area, making it seem like both years have similar revenues. However, revenues for 2021 are actually higher than 2022."
+}

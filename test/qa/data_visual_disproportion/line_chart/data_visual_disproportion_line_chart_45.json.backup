@@ -1,0 +1,17 @@
+{
+  "question": "What can we conclude about market share from this chart?",
+  "options": {
+    "A": "The market share growth from 2018 to 2023 is over 16 percentage points.",
+    "B": "The trend suggests a sharp increase in the most recent period.",
+    "C": "The trend cannot be determined from the chart alone.",
+    "D": "The market share in 2021 is 17%."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The line is drawn using a different 'height' value for 2021 than the actual share, so the visual suggests a dramatic spike while the true share is 17%."
+}

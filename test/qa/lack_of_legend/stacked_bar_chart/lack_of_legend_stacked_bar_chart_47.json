@@ -1,0 +1,17 @@
+{
+  "question": "Which product category appears to contribute the most to total revenue in the final quarter shown?",
+  "options": {
+    "A": "The red segment shows the largest share.",
+    "B": "The orange segment shows the largest share.",
+    "C": "The green segment shows the largest share.",
+    "D": "Cannot determine which product category contributes the most without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays different colored segments but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category has the largest share; options that assign a category to a color are guessing."
+}

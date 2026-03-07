@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows average student test scores (2010-2020) (on a 0–100 scale). Based on this context, what is the most accurate assessment?",
+  "options": {
+    "A": "The trend cannot be determined from this chart",
+    "B": "The rate stayed exactly the same",
+    "C": "Student performance remained essentially unchanged",
+    "D": "There was a sharp decline"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (71.55–73.18) instead of a more informative 0–100 context, which visually exaggerates variability. The actual net change is about 1.63 over the period, which is modest in the full context."
+}

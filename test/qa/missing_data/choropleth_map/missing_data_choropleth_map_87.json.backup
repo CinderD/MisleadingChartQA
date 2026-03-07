@@ -1,0 +1,17 @@
+{
+  "question": "Which statement about the grey (no data) regions is most accurate according to the chart?",
+  "options": {
+    "A": "Grey regions show where the metric increased the most over time.",
+    "B": "Grey regions show that those areas had virtually no value for this metric.",
+    "C": "Grey regions simply indicate smaller geographic size rather than missing data.",
+    "D": "Grey regions indicate that no data was reported, not that the value is zero."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "In the legend, grey is used as a 'No data' category. It does not correspond to a numeric bin in the color scale. Treating grey regions as very low values leads to incorrect comparisons and conclusions."
+}

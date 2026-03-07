@@ -1,0 +1,17 @@
+{
+  "question": "Which segment holds the largest share in the last year shown?",
+  "options": {
+    "A": "The orange area (Segment B) holds the largest share.",
+    "B": "Cannot determine which segment holds the largest share without a legend to explain the color coding.",
+    "C": "The red area (Segment A) holds the largest share.",
+    "D": "The red area (Segment D) holds the largest share."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows different colored areas but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category holds the largest share; options that assign a category to a color are guessing."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot illustrates annual earnings for individuals of different ages. Based on what can be reliably seen from the chart, which statement is most appropriate?",
+  "options": {
+    "A": "Individuals in their late 50s clearly earn more than all other age groups.",
+    "B": "It is difficult to determine which exact age group has the highest earnings from this scatterplot.",
+    "C": "Individuals in their early 30s clearly have the highest earnings.",
+    "D": "Individuals in their early 40s clearly have the lowest earnings."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 55 and 60 have the highest annual. The small size of the chart may cause difficulty in accurately identifying the specific trends of annual in certain age ranges."
+}

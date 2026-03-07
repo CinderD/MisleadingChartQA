@@ -1,0 +1,17 @@
+{
+  "question": "According to the percentage labels in the chart, which region has the largest sales share?",
+  "options": {
+    "A": "South has the largest sales share.",
+    "B": "Central has the largest sales share.",
+    "C": "East has the largest sales share.",
+    "D": "North has the largest sales share."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, North has the highest share (52%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking East is largest when relying on visual comparison."
+}

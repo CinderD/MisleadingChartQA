@@ -1,0 +1,17 @@
+{
+  "question": "Based on this visualization, which assertion holds?",
+  "options": {
+    "A": "Earnings were highest in 2018.",
+    "B": "It cannot be determined from the chart which of the top two years had higher earnings because the bars are clipped.",
+    "C": "Earnings fell each year after 2019.",
+    "D": "Earnings in the final year are the same."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The scale is set so that the highest bars exceed the visible area, leading to a misleading impression of equality."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "What trend does the chart suggest for the percentage growth from 1970 to 2020?",
+  "options": {
+    "A": "Strongly increasing",
+    "B": "Gradually increasing",
+    "C": "Erratic growth",
+    "D": "Almost constant "
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inappropriate Y-axis scale and exaggerated data values make it difficult to interpret the true trend. The actual growth is larger than it looks like."
+}

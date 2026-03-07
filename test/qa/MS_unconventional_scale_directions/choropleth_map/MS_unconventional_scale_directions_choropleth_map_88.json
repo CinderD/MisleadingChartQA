@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, which state has a higher incidence of Condition A, WI or IN?",
+  "options": {
+    "A": "Cannot be inferred / inadequate information",
+    "B": "Both states have the same incidence",
+    "C": "WI",
+    "D": "IN"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although WI appears darker, IN has the higher assigned value when the inversion is considered."
+}

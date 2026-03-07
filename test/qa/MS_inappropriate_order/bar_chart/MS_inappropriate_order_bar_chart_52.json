@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, which statement about visitor totals over the 14‑day period is most accurate?",
+  "options": {
+    "A": "The total number of visitors was higher in the second week than in the first week.",
+    "B": "The total number of visitors was higher in the first week than in the second week.",
+    "C": "The visitor totals were approximately the same in the first and second weeks.",
+    "D": "It is impossible to compare weekly totals from this chart."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x‑axis order has been scrambled: the bars are not shown in true chronological sequence. If you reorder the days from Day 1 to Day 14 and sum the first and last 7 days, you see that the last segment actually has the greater total. Judging only from the apparent left‑to‑right pattern would give the wrong conclusion."
+}

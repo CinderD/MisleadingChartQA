@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows daily screen time vs. sleep hours. Which statement best describes the relationship between screen time and sleep according to the chart data?",
+  "options": {
+    "A": "People who spend the most time on screens generally get the most sleep.",
+    "B": "Sleep hours tend to decrease as daily screen time increases.",
+    "C": "There is no clear relationship between screen time and sleep.",
+    "D": "Sleep hours remain roughly constant regardless of screen time."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

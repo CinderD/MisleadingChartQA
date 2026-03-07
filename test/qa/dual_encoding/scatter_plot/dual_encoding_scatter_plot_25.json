@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows marketing spend vs. revenue. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Revenue tends to be higher at lower levels of marketing spend and lower at higher levels of marketing spend.",
+    "B": "Revenue collapses much more dramatically with increased marketing spend than the positions of the points suggest, as implied by their size and color.",
+    "C": "There is no clear relationship between marketing spend and revenue.",
+    "D": "Revenue tends to increase as marketing spend increases."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the y-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

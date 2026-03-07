@@ -1,0 +1,17 @@
+{
+  "question": "What pattern does this premium customer data reveal about advertising spend effectiveness?",
+  "options": {
+    "A": "Premium customers show a U-shaped response to advertising spend, with high effectiveness at both low and high spending levels.",
+    "B": "The relationship between advertising spend and sales is weak across all spending levels.",
+    "C": "It is impossible that the data for all customers shows a linear relationship between advertising spend and sales.",
+    "D": "We need data from all customer segments to assess overall advertising effectiveness."
+  },
+  "correctAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Infer Trends",
+  "explanation": "The chart correctly shows a U-shaped relationship where premium customers respond well to both low ($20K) and high ($100K) advertising spend, but poorly to moderate spending ($40-80K). However, this creates a misleading impression that advertising is effective at both ends. The cherry-picking aspect is that this only shows premium customers, not the broader customer base that might show very different patterns. The trend is real for this segment, but not generalizable.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "C"
+}

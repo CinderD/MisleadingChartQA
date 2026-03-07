@@ -1,0 +1,17 @@
+{
+  "question": "This stacked bar chart shows the percentage market share of brands A, B, and C from 2016 to 2021. For brand A, in which year is its market share lowest?",
+  "options": {
+    "A": "2018",
+    "B": "2016",
+    "C": "2017",
+    "D": "2019"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Extremum",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The years along the x‑axis are presented in a scrambled order rather than true chronological order. If you reorder the columns by year and inspect only the segments for brand A, you will see that 2019 has the largest share. Simply picking the tallest segment based on the current left‑to‑right sequence can lead to choosing the wrong year."
+}

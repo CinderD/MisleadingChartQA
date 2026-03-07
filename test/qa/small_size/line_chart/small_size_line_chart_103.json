@@ -1,0 +1,17 @@
+{
+  "question": "What is the main difficulty in interpreting the sales trend from 1960 to 1970 in this chart?",
+  "options": {
+    "A": "The line segments in that period are so small that it is hard to judge whether sales rose, fell, or stayed flat.",
+    "B": "Sales clearly declined between 1960 and 1970.",
+    "C": "Sales were clearly flat between 1960 and 1970.",
+    "D": "Sales clearly increased sharply between 1960 and 1970."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Sales were roughly flat from 1960 to 1970, with rises before and after. Small font sizes can make it easy to misread the flat segment as a decline."
+}

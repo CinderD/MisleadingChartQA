@@ -1,0 +1,17 @@
+{
+  "question": "Based on the percentage labels shown on the chart, which statement is supported by the data?",
+  "options": {
+    "A": "The market share in 2023 is higher than in 2018.",
+    "B": "The market share in 2020 is more than double that in 2019.",
+    "C": "The market share in 2020 is the highest among all the years shown.",
+    "D": "The market share in 2021 is the lowest among all the years shown."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "data_visual_disproportion",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The line is drawn using a different 'height' value for 2020 than the actual share, so the visual suggests a dramatic spike while the true share is 14%."
+}

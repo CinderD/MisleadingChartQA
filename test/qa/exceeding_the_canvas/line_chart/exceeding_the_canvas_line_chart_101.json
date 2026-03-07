@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual costs from 2018 to 2022. Which of the following statements is accurate based on the chart as displayed?",
+  "options": {
+    "A": "The chart makes it appear that the cost in 2022 is only slightly higher than in 2021, but the true difference cannot be judged because the top of the 2022 line is cut off by the axis limit.",
+    "B": "The cost in 2022 is clearly only a little higher than in 2021.",
+    "C": "The cost stayed roughly constant from 2018 to 2022.",
+    "D": "The chart shows that 2021 had the highest cost."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis cap causes the top bar to be cut off, so they appear the same height although true values may differ."
+}

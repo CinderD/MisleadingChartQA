@@ -1,0 +1,17 @@
+{
+  "question": "Does the overall downward trend line prove a negative relationship between training hours and productivity within each team?",
+  "options": {
+    "A": "No, the relationship within each team cannot be determined from this overall trend line alone",
+    "B": "Yes, it shows a negative relationship within both teams",
+    "C": "It proves a positive relationship within both teams",
+    "D": "It proves a negative relationship within only one of the teams"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The trend line is fitted to all data points combined, mixing the two groups. It may suggest a negative overall relationship between the variables, but it does not tell us what the relationship looks like within School/Team A or B separately. Each group could have a different pattern (e.g., positive or flat), so we cannot infer within‑group relationships from this aggregated trend alone."
+}

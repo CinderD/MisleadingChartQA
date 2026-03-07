@@ -1,0 +1,17 @@
+{
+  "question": "For the quarterly data platform, which interpretation best reflects what can (and cannot) be inferred from the 100% stacked bar chart?",
+  "options": {
+    "A": "Q4 has the highest number of complaints received in absolute terms because it has the largest complaint share.",
+    "B": "Q3 has more online searches than complaints in that quarter.",
+    "C": "The combined height of the bars shows that total platform activity increases from Q1 to Q4.",
+    "D": "All three metrics have the same absolute total each quarter because every bar reaches 100%."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "100% stacking normalizes unrelated categories to 100% within each quarter. Valid inferences include within-quarter ranking (e.g., one metric > another in every quarter). Invalid inferences include cross-quarter total comparisons or combining unrelated categories."
+}

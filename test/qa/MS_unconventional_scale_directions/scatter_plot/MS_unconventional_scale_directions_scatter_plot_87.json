@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, how does the exam score appear to change as study time increases?",
+  "options": {
+    "A": "The exam score appears to increase.",
+    "B": "The exam score appears to decrease.",
+    "C": "The exam score appears to remain roughly constant.",
+    "D": "The relationship cannot be determined from the chart."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted x-axis, which can flip the apparent direction of the relationship. The correct option reflects the actual pattern in the data."
+}

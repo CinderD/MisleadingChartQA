@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, what is the trend of in from 2006 to 2020?",
+  "options": {
+    "A": "Decreasing",
+    "B": "Fluctuating",
+    "C": "Constant",
+    "D": "Increasing"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes it appear that the trend is decreasing, when in reality the data shows an increasing trend from 2006 to 2020."
+}

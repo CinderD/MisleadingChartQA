@@ -1,0 +1,17 @@
+{
+  "question": "The area chart shows the annual revenue trend for Company Y from 2018 to 2022. Which of the following statements is most accurate?",
+  "options": {
+    "A": "The revenues for 2021 and 2022 exceed the previous years significantly.",
+    "B": "Both 2021 and 2022 have lower revenues compared to 2020.",
+    "C": "The revenue for 2021 is slightly less than 2022.",
+    "D": "2021 and 2022 appear to have identical revenues."
+  },
+  "correctAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Identify Values",
+  "explanation": "The values for 2021 and 2022 are too large, causing them to exceed the chart\u2019s visible area. This results in both points being shown out of scope, which could mislead viewers into thinking that their revenues are identical.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "D"
+}

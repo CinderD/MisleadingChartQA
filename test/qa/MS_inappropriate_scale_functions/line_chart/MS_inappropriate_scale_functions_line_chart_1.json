@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, during which period did GDP increase by the larger amount?",
+  "options": {
+    "A": "2000-2003",
+    "B": "2005-2008",
+    "C": "Both periods have same amount of GDP growth",
+    "D": "The growth pattern is too irregular to determine"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear scale transformation that visually exaggerates the 2000-2003 period, making it appear to have more dramatic growth despite the actual data showing 2005-2008 had steeper growth."
+}

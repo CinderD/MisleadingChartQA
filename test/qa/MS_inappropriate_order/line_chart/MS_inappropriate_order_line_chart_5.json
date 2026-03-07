@@ -1,0 +1,17 @@
+{
+  "question": "The given chart displays the number of visitors at a tourist spot over various years. Which statement best describes the trend in visitor numbers from 2000 to 2005?",
+  "options": {
+    "A": "The number of visitors fluctuates without a clear trend.",
+    "B": "The number of visitors is consistently increasing.",
+    "C": "The number of visitors is consistently decreasing.",
+    "D": "The trend is downward, with one brief rebound in the early middle period before continuing to decline steadily."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is manipulated to display years in an incorrect order (2000 → 2002 → 2001 → 2003 → 2004 → 2005), leading to a perceived consistently decrease. Correctly ordering the data reveals a downward with one brief rebound in the early middle period."
+}

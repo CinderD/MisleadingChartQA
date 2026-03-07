@@ -1,0 +1,17 @@
+{
+  "question": "What is the approximate proportion of votes Candidate A has compared to Candidate B based on the chart?",
+  "options": {
+    "A": "25%",
+    "B": "50%",
+    "C": "75%",
+    "D": "200%"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a square root transformation, distorting the perceived difference between the bars. Although Candidate A's votes are 25% of Candidate B's, the scale makes A's votes appear closer to 50% of B's votes."
+}

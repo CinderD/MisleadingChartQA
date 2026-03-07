@@ -1,0 +1,17 @@
+{
+  "question": "Approximately, what is Product C's total revenue as a proportion of Product A's total revenue from Q1 2023 to Q2 2024?",
+  "options": {
+    "A": "16.7%",
+    "B": "50%",
+    "C": "200%",
+    "D": "600%"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_area_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The Y-axis scale starts at 10 instead of 0, which visually exaggerates the proportion of Product C relative to Product A. While Product C's actual revenue (2.5M) is about 16.7% of Product A's (15M), the truncated scale makes it appear closer to 50%."
+}

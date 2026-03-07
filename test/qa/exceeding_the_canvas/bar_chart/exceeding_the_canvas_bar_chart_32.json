@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows the annual revenue for a company from 2018 to 2022. Based on the chart, which of the following statements appears accurate?",
+  "options": {
+    "A": "Revenues for 2021 and 2022 are roughly equal.",
+    "B": "2022 shows a decrease in height compared to 2021, indicating lower revenue.",
+    "C": "Revenues for 2021 and 2020 are roughly equal.",
+    "D": "No correct answer."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The bars for 2020, 2021 and 2022 exceed the chart’s visible area, making them appear with the same height. This misleads viewers into thinking their revenues are identical."
+}

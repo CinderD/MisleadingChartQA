@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot chart shows age and earnings. Which statement is most appropriate based on the chart?",
+  "options": {
+    "A": "It is difficult to tell from the chart which age group has the highest earnings, because the points are small and close together.",
+    "B": "Individuals between ages 45 and 55 clearly have the highest earnings.",
+    "C": "Individuals between ages 35 and 40 clearly have the highest earnings.",
+    "D": "Individuals between ages 25 and 30 clearly have the highest earnings."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 40 and 50 have the highest earnings. The small size of the chart may cause difficulty in accurately identifying the specific trends of earnings in certain age ranges."
+}

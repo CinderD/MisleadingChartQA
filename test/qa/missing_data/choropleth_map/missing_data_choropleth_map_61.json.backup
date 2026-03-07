@@ -1,0 +1,17 @@
+{
+  "question": "Was the average unemployment rate in South Africa (B) higher than in China (C)?",
+  "options": {
+    "A": "They had exactly the same value",
+    "B": "Yes, it was higher",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "No, it was lower"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "South Africa and China both have measured data, so we can compare them numerically. South Africa is 12.9% vs 7.1% for China."
+}

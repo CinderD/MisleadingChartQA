@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Coffee Production Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 40px auto;
+        }
+        .text {
+            font-size: 24px;
+            font-weight: bold;
+            fill: black;
+        }
+        .label {
+            font-size: 18px;
+            fill: black;
+        }
+        .axis path, .axis line {
+            stroke: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Global Coffee Production by Country</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = { top: 20, right: 20, bottom: 40, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Load and process the data
+        d3.csv("../../../../data/data_visual_disproportion/bar_chart/data_visual_disproportion_bar_chart_6.csv").then(data => {
+            data.forEach(d => {
+                d.consumption_million_tons = +d.consumption_million_tons;
+                d.bar_height = +d.bar_height;
+            });
+
+            // Set x position for the different countries
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.coffee_country))
+                .range([0, width])
+                .padding(0.3);
+
+            // Set y position for consumption
+            const y = d3.scaleLinear()
+                .domain([0, 80])  // Scale for million tons
+                .range([height, 0]);
+
+            // Create X Axis
+            svg.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            // Create Y Axis
+            svg.append("g")
+                .call(d3.axisLeft(y));
+
+            // Display bars for each candidate's vote
+            svg.selectAll(".bar")
+                .data(data)
+                .enter()
+                .append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.coffee_country))
+                .attr("y", d => y(d.bar_height))
+                .attr("width", x.bandwidth())
+                .attr("height", d => height - y(d.bar_height))
+                .attr("fill", d => d.color);
+
+            // Label each bar with its vote percentage
+            svg.selectAll(".text")
+                .data(data)
+                .enter()
+                .append("text")
+                .attr("class", "text")
+                .attr("x", d => x(d.coffee_country) + x.bandwidth() / 2)
+                .attr("y", d => y(d.bar_height) - 10)
+                .attr("text-anchor", "middle")
+                .text(d => `${d.consumption_million_tons}M tons`);
+        }).catch(function(error) {
+            console.error('Error loading CSV data:', error);
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
+

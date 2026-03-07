@@ -1,0 +1,17 @@
+{
+  "question": "According to the underlying stock price data, during which period did the stock price decrease by the larger amount?",
+  "options": {
+    "A": "2010-2013",
+    "B": "2014-2016",
+    "C": "2016-2018",
+    "D": "Both periods have about the same decrease"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2010-2013: $220 → $202 (-$18); 2014-2018: $34 → $20 (-$14)."
+}

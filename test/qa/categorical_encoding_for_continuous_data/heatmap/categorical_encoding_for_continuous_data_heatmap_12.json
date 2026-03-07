@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the temperature heatmap, which statement best describes the relationship between Phoenix and San Jose in January?",
+  "options": {
+    "A": "Their January temperatures might differ noticeably, but the discrete color bins make them appear more similar than they actually are.",
+    "B": "It can be infered that their January temperatures are almost identical because they share the same color.",
+    "C": "Phoenix is clearly much warmer than San Jose in January, and the color difference accurately represents this large gap.",
+    "D": "The January temperatures for Phoenix and San Jose cannot be compared at all using this heatmap."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Phoenix (1.1°C) and San Jose (6.5°C) have a 5.4°C difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of temperature relationships."
+}

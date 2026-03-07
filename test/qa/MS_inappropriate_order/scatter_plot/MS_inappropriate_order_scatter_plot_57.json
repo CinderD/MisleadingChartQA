@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatter plot of employee salary vs. work experience, which statement is most accurate?",
+  "options": {
+    "A": "Mid Level employees always earn more than Entry Level employees at similar ranges of experience.",
+    "B": "Senior Level employees show perfectly consistent salary progression with experience, without any overlap.",
+    "C": "As work experience increases, salary increases at the same rate for all department levels.",
+    "D": "Executive-level employees do not always earn more than senior-level employees with comparable experience."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color scale uses darker and lighter blues in an order that does not match the true hierarchy of levels. This can trick viewers into assuming that darker colors always correspond to higher positions or salaries. However, the data show overlapping salary ranges between Entry and Mid levels, and between Senior and Executive levels, so you cannot rely on the misleading color order to claim that one level always earns more than another."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Was the average precipitation over 15 years in region D higher than in region E?",
+  "options": {
+    "A": "They had exactly the same average precipitation",
+    "B": "No, region D had lower average precipitation than region E",
+    "C": "Yes, region D had higher average precipitation than region E",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "China and Brazil both have measured data, so we can compare them numerically. China is 3,096 mm vs 801 mm for Brazil."
+}

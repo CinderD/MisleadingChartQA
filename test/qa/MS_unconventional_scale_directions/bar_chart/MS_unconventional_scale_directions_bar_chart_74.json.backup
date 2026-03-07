@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of the number of in from 2008 to 2021 based on the chart?",
+  "options": {
+    "A": "Increasing",
+    "B": "Fluctuating",
+    "C": "Decreasing",
+    "D": "Constant"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted Y-axis, making the data appear as if the trend is decreasing, but the data actually shows an increasing trend."
+}

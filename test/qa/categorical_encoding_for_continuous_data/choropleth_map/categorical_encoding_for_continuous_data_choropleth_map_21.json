@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the median income map, which statement below is the most accurate?",
+  "options": {
+    "A": "California and Delaware likely belong to very different income levels.",
+    "B": "California and Delaware have similar median incomes.",
+    "C": "The median income differences between the highlighted states are impossible to determine from this visualization.",
+    "D": "The median income gap between California and Delaware might exceeds that between Virginia and Utah."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "California (50.5$k) and Delaware (57.5$k) have a 7.0$k median income difference, while Virginia (39.6$k) and Utah (40.2$k) have only a 0.6$k difference. However, the categorical color encoding groups California and Delaware into the same color bin (50-60$k range), making their large difference appear similar, while Virginia and Utah appear more different due to different color bins."
+}

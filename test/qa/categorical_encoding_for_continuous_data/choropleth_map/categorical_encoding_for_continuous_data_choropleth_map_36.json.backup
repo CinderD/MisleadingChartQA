@@ -1,0 +1,17 @@
+{
+  "question": "Based on the population map, which statement best describes the relationship between states?",
+  "options": {
+    "A": "The population differences are impossible to determine from this visualization.",
+    "B": "The population gap between Tennessee and Wisconsin might exceeds that between Oregon and West Virginia.",
+    "C": "Tennessee and Wisconsin have similar populations.",
+    "D": "All states have very diverse population levels."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Tennessee (16.0M) and Wisconsin (20.8M) have a 4.8M population difference, while Oregon (24.9M) and West Virginia (27.3M) have only a 2.4M difference. However, the categorical color encoding groups Tennessee and Wisconsin into the same color bin (15-25M range), making their large difference appear similar, while Oregon and West Virginia appear more different due to different color bins."
+}

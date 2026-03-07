@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance vs Study Time by Grade Level</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .legend text { font-size: 12px; }
+        .axis-label { font-size: 14px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Student Test Scores vs. Study Hours by Grade Level</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = { top: 40, right: 150, bottom: 50, left: 70 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart")
+          .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        d3.csv("../../../../data/MS_inappropriate_order/scatter_plot/MS_inappropriate_order_scatter_plot_13.csv").then(data => {
+          data.forEach(d => {
+            d.study_hours = +d.study_hours;
+            d.test_score = +d.test_score;
+          });
+
+          // Inappropriate color encoding: Uses progressive green colors but not in logical grade order
+          // Logical progression: Freshman->Sophomore->Junior->Senior should go light->dark
+          // But color assignment doesn't match this academic progression
+          const categories = ["Freshman", "Sophomore", "Junior", "Senior"];
+          const color = d3.scaleOrdinal()
+            .domain(categories)
+            .range(["#0d5016", "#e8f5e8", "#2ca02c", "#90d690"]); // Dark, lightest, medium-dark, light
+
+          const x = d3.scaleLinear().domain([0, 15]).range([0, width]);
+          const y = d3.scaleLinear().domain([50, 100]).range([height, 0]);
+
+          svg.append("g")
+            .attr("transform", `translate(0, ${height})`)
+            .call(d3.axisBottom(x).ticks(10));
+
+          svg.append("g")
+            .call(d3.axisLeft(y));
+
+          svg.append("text")
+            .attr("class", "axis-label")
+            .attr("x", width / 2)
+            .attr("y", height + 40)
+            .attr("text-anchor", "middle")
+            .text("Study Hours per Week");
+
+          svg.append("text")
+            .attr("class", "axis-label")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -50)
+            .attr("text-anchor", "middle")
+            .text("Test Score (%)");
+
+          svg.selectAll(".dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("class", "dot")
+            .attr("cx", d => x(d.study_hours))
+            .attr("cy", d => y(d.test_score))
+            .attr("r", 5)
+            .attr("stroke", d => color(d.grade_level))
+            .attr("fill", d => color(d.grade_level))
+          
+          const legendOrder = ["Junior", "Freshman", "Senior", "Sophomore"]; // Misleading order
+          const legend = svg.append("g")
+            .attr("transform", `translate(${width + 20}, 20)`);
+
+          legend.selectAll("dots")
+            .data(legendOrder)
+            .enter()
+            .append("circle")
+            .attr("cx", 0)
+            .attr("cy", (d, i) => i * 25)
+            .attr("r", 6)
+            .attr("fill", d => color(d));
+
+          legend.selectAll("labels")
+            .data(legendOrder)
+            .enter()
+            .append("text")
+            .attr("x", 15)
+            .attr("y", (d, i) => i * 25 + 5)
+            .text(d => d)
+            .style("font-size", "12px");
+        });
+    </script>
+</body>
+</html>

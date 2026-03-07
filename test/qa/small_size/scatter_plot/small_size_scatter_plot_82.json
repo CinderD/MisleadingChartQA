@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot shows the relationship between age and wealth. Based on what can be clearly seen in the chart, which statement is most appropriate?",
+  "options": {
+    "A": "It is clearly visible that people in their late 60s are wealthier than any other age group.",
+    "B": "The chart makes it difficult to determine which specific age group has the highest wealth because the points and labels are too small.",
+    "C": "The chart shows that people in their late 20s are definitely the least wealthy group.",
+    "D": "The chart clearly ranks all age groups by wealth without any ambiguity."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 65 and 70 have the highest wealth. The small size of the chart may cause difficulty in accurately identifying the specific trends of wealth in certain age ranges."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows annual sales from 2018 to 2022. Which statement best describes the information in the chart?",
+  "options": {
+    "A": "Sales in 2021 and 2022 are identical.",
+    "B": "We cannot determine from the chart whether sales in 2021 and 2022 are equal or different because their bars extend beyond the visible range.",
+    "C": "Sales increased every year from 2018 through 2022.",
+    "D": "Sales in 2019 were lower than in 2018."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart clips the tallest bars by using a y-axis max below the data maximum, misleading viewers into thinking the top values are equal."
+}

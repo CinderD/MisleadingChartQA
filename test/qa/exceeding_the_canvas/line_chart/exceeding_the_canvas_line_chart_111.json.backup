@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is valid given the chart as shown?",
+  "options": {
+    "A": "Cost was lowest in the final year.",
+    "B": "Cost in the last two years is equal.",
+    "C": "The chart does not allow comparison of the two highest cost years because they exceed the visible range.",
+    "D": "Cost increased linearly every year."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis cap causes the top bars to be cut off, so they appear the same height although true values may differ."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is reliable according to the chart data?",
+  "options": {
+    "A": "Others and Healthcare together equal Education.",
+    "B": "Others is larger than Infrastructure.",
+    "C": "Education is the largest category by percentage.",
+    "D": "Education is larger than the combined share of Infrastructure + Healthcare + Others."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Education: 40%; Infrastructure: 30%; Healthcare: 20%; Others: 10%."
+}

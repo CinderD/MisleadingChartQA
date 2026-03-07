@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average test scores for different school subjects. Which statement best reflects what we can reliably conclude from the data?",
+  "options": {
+    "A": "The subjects form a continuous progression, so the scores represent a smooth trend across them.",
+    "B": "The smooth area shape means small differences between neighboring subjects are more meaningful than differences between non‑neighboring subjects.",
+    "C": "Math has the highest average score among the subjects shown.",
+    "D": "Science has the highest average score among the subjects shown."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for subject into a continuous filled region. However, the x‑axis categories (e.g., Science, Geography, PE, Art, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

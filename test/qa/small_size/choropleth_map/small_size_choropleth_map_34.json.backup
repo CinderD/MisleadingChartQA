@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows crime rates (per 100,000) for selected US states. Which statement is correct?",
+  "options": {
+    "A": "The extremely small text size makes it difficult to read specific crime rate values accurately.",
+    "B": "The map shows clear regional crime patterns.",
+    "C": "Maine has the lowest crime rate among the shown states.",
+    "D": "Nevada has a crime rate of 420 per 100,000."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific crime rate numbers accurately. Options that cite exact values or rankings cannot be verified."
+}

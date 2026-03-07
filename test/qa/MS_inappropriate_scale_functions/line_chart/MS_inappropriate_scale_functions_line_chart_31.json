@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart data values, between which two labeled years did GDP increase by the larger amount?",
+  "options": {
+    "A": "2001 to 2003",
+    "B": "2003 to 2006",
+    "C": "Both intervals have about the same GDP increase",
+    "D": "The GDP changes are too irregular to compare these intervals"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2001-2003: 80 → 247 (change 167); 2004-2007: 3677 → 3342 (change 335)."
+}

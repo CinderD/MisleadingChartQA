@@ -1,0 +1,17 @@
+{
+  "question": "Was the average internet penetration in China (B) higher than in South Africa (E)?",
+  "options": {
+    "A": "No, it was lower",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "Yes, it was higher",
+    "D": "They had exactly the same value"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "China and South Africa both have measured data, so we can compare them numerically. China is 97.1% vs 41.0% for South Africa."
+}

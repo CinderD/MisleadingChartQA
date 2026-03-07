@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the annual budget distribution of City A in various sectors. Based on this data, which of the following conclusions is accurate?",
+  "options": {
+    "A": "The combined share of Healthcare and Infrastructure equals the share of Others.",
+    "B": "Safety receives a smaller share than Education.",
+    "C": "Others receives the largest share of the budget.",
+    "D": "Education receives a larger share than Healthcare."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Others: 40%; Healthcare: 25%; Infrastructure: 15%; Education: 10%; Safety: 10%."
+}

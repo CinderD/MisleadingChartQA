@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following best describes the overall pattern in the number of public schools in Region X from 2005 to 2022?",
+  "options": {
+    "A": "Mostly increasing with some fluctuations",
+    "B": "Fluctuating without a consistent overall trend",
+    "C": "Remaining nearly constant over the period",
+    "D": "Mostly decreasing with some fluctuations"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted Y-axis, making the data appear as if the trend is decreasing, but the data actually shows an increasing trend."
+}

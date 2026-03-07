@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line Chart Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .lineC {
+            fill: none;
+            stroke: steelblue;
+            stroke-width: 3px;
+        }
+        .lineD {
+            fill: none;
+            stroke: gray;
+            stroke-dasharray: 5,5;
+            stroke-width: 3px;
+        }
+        .avg-line {
+            stroke: red;
+            stroke-dasharray: 4,4;
+            stroke-width: 2px;
+        }
+        .annotation {
+            font-size: 12px;
+            font-weight: bold;
+            fill: red;
+        }
+        .legend text {
+            font-size: 12px;
+        }
+        .axis path, .axis line {
+            stroke: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Decreasing Number of New Tourists in Town Z from 1880 to 1891</h1>
+    <div id="chart"></div>
+
+    <script>
+        const margin = { top: 40, right: 20, bottom: 40, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/misleading_annotations/line_chart/misleading_annotations_line_chart_1.csv").then(data => {
+            data.forEach(d => {
+                d.year = d.year;
+                d.tourists = +d.tourists;
+            });
+
+            const x = d3.scalePoint().domain(data.map(d => d.year)).range([0, width]);
+            const y = d3.scaleLinear().domain([0, 4000]).range([height, 0]);
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+            g.append("g").call(d3.axisLeft(y));
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 35)
+                .attr("text-anchor", "middle")
+                .text("Year");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -45)
+                .attr("text-anchor", "middle")
+                .text("Number of New Tourists");
+
+            const line = d3.line()
+                .x(d => x(d.year))
+                .y(d => y(d.tourists));
+
+            g.append("path")
+                .datum(data)
+                .attr("class", "lineC")
+                .attr("d", line);
+        });
+    </script>
+</body>
+</html> 

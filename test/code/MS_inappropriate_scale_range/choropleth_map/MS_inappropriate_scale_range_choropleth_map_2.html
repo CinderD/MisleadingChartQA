@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Variation Comparison</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            text-align: center;
+            font-size: 18px;
+        }
+        .legend {
+            font-size: 12px;
+        }
+        .map {
+            stroke: #fff;
+            stroke-width: 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Temperature Variation: Summer vs Winter</h1>
+    <div id="chart"></div>
+    <script>
+        const width = 1000;
+        const height = 750;
+
+        const mapWidth = width / 2; 
+        const mapHeight = height / 2; 
+
+        const colorScaleSummer = d3.scaleThreshold()
+            .domain([70, 80, 90])
+            .range(["#FEE0D2", "#FC9272", "#DE2D26"]);
+
+        const colorScaleWinter = d3.scaleThreshold()
+            .domain([20, 35, 50])
+            .range(["#FEE0D2", "#FC9272", "#DE2D26"]);
+
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        Promise.all([
+            d3.json("https://d3js.org/us-10m.v1.json"),
+            d3.csv("../../../../data/MS_inappropriate_scale_range/choropleth_map/MS_inappropriate_scale_range_choropleth_map_2.csv") 
+        ]).then(([us, data]) => {
+            const tempData = {};
+            data.forEach(d => {
+                tempData[d.id] = { summer_temp: +d.summer_temp, winter_temp: +d.winter_temp };
+            });
+
+            const states = topojson.feature(us, us.objects.states).features;
+
+            drawMap(states, "summer_temp", mapWidth / 2.5, 0, colorScaleSummer, "Summer Temperature (°F)");
+            drawMap(states, "winter_temp", mapWidth / 2.5, mapHeight, colorScaleWinter, "Winter Temperature (°F)");
+
+            function drawMap(states, type, xOffset, yOffset, colorScale, title) {
+                const mapGroup = svg.append("g")
+                    .attr("transform", `translate(${xOffset}, ${yOffset}) scale(${mapWidth / width}, ${mapHeight / height})`);
+
+                mapGroup.append("text")
+                    .attr("x", width / 2)
+                    .attr("y", 15)
+                    .attr("text-anchor", "middle")
+                    .style("font-size", "16px")
+                    .style("font-weight", "bold")
+                    .text(title);
+
+                mapGroup.selectAll(".state")
+                    .data(states)
+                    .enter().append("path")
+                    .attr("class", "map")
+                    .attr("d", d3.geoPath())
+                    .attr("fill", d => {
+                        const value = tempData[d.id]?.[type];
+                        return value ? colorScale(value) : "#ccc";
+                    });
+
+                const legend = mapGroup.append("g")
+                    .attr("transform", `translate(${mapWidth - 150}, ${height - 150})`);
+
+                const legendData = type === "summer_temp" ? [
+                    { color: "#DE2D26", label: "High (90+°F)" },
+                    { color: "#FC9272", label: "Medium (70-89°F)" },
+                    { color: "#FEE0D2", label: "Low (<70°F)" }
+                ] : [
+                    { color: "#DE2D26", label: "High (50+°F)" },
+                    { color: "#FC9272", label: "Medium (20-49°F)" },
+                    { color: "#FEE0D2", label: "Low (<20°F)" }
+                ];
+
+                legend.selectAll("rect")
+                    .data(legendData)
+                    .enter().append("rect")
+                    .attr("x", 0)
+                    .attr("y", (d, i) => i * 20)
+                    .attr("width", 18)
+                    .attr("height", 18)
+                    .style("fill", d => d.color);
+
+                legend.selectAll("text")
+                    .data(legendData)
+                    .enter().append("text")
+                    .attr("x", 24)
+                    .attr("y", (d, i) => i * 20 + 14)
+                    .text(d => d.label);
+            }
+        });
+    </script>
+</body>
+</html>

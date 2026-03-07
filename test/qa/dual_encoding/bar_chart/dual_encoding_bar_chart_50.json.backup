@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart data, which statement is correct?",
+  "options": {
+    "A": "North America has the lowest value among the categories shown.",
+    "B": "North America is higher than Africa.",
+    "C": "Europe is nearly 3 times Middle East, as suggested by the bar width and color.",
+    "D": "Middle East and North America have identical values."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

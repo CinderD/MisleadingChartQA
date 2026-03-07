@@ -1,0 +1,17 @@
+{
+  "question": "The election poll concludes in Sep 01, 2022. Which of the following is true?",
+  "options": {
+    "A": "Candidate D will be elected as the winner.",
+    "B": "Candidate A will be selected as the winner.",
+    "C": "Cannot be determined.",
+    "D": "The results are already final."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "concealed_uncertainty",
+  "chartType": "bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While Candidate D currently has the highest votes (59.4), the chart shows results as of Aug 15, 2022, but the election poll concludes in Sep 01, 2022. The remaining election period could dramatically change the outcome, making it premature to predict a winner. The concealed uncertainty lies in the incomplete election poll that is not reflected in the chart."
+}

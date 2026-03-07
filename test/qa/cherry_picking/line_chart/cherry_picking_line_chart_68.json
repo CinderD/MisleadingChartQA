@@ -1,0 +1,17 @@
+{
+  "question": "What do these commodity price movements suggest about broader economic conditions from 1960 to 1980?",
+  "options": {
+    "A": "The data shows steady economic growth with consistent price increases across the entire 1960–1980 period.",
+    "B": "The data shows a consistent price decline over the full 1960–1980 span.",
+    "C": "This 1968–1975 segment alone cannot reliably indicate conditions for the whole 1960–1980 period.",
+    "D": "The prices fluctuate randomly with no upward or downward tendency between 1968 and 1975."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The visible data from 1968-1975 shows an upward trend, but extrapolating this cherry-picked window to the broader 1960s and 1970s would be misleading."
+}

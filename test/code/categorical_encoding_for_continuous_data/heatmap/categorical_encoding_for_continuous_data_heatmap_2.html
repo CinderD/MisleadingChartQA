@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Performance Heatmap</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .cell {
+            stroke-width: 1;
+        }
+        .axis text {
+            font-size: 12px;
+        }
+        .label {
+            font-size: 12px;
+            text-anchor: middle;
+            fill: black;
+        }
+        .legend rect {
+            width: 20px;
+            height: 20px;
+            margin: 0 2px;
+        }
+        .legend-text {
+            font-size: 12px;
+            fill: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Product Performance Heatmap</h2>
+    <svg width="1000" height="750"></svg>
+
+    <script>
+        const margin = { top: 50, right: 100, bottom: 90, left: 80 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/categorical_encoding_for_continuous_data/heatmap/categorical_encoding_for_continuous_data_heatmap_2.csv").then(function(data) {
+            const products = data.map(d => d.Product);
+            const metrics = Object.keys(data[0]).filter(key => key !== "Product");
+  
+            // Define intervals and colors
+            const colorScale = d3.scaleThreshold()
+                .domain([60, 70, 80, 90])  // Define intervals for performance
+                .range(["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00"]);
+
+            // Define x and y scales
+            const x = d3.scaleBand()
+                .domain(metrics)
+                .range([0, width])
+                .padding(0.05);
+
+            const y = d3.scaleBand()
+                .domain(products)
+                .range([0, height])
+                .padding(0.05);
+
+            // Create the heatmap cells
+            svg.selectAll(".cell")
+                .data(data.flatMap(d => metrics.map(metric => ({
+                    product: d.Product,
+                    metric: metric,
+                    score: +d[metric]
+                }))))
+                .enter().append("rect")
+                .attr("class", "cell")
+                .attr("x", d => x(d.metric))
+                .attr("y", d => y(d.product))
+                .attr("width", x.bandwidth())
+                .attr("height", y.bandwidth())
+                .attr("fill", d => colorScale(d.score));
+
+            // Add x-axis (metrics)
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x))
+                .selectAll("text")
+                .style("transform", "rotate(45deg)")
+                .style("text-anchor", "start");
+
+            // Add y-axis (products)
+            svg.append("g")
+                .attr("class", "y axis")
+                .call(d3.axisLeft(y));
+
+  
+            // Define legend intervals and colors
+            const domain = [60, 70, 80, 90];  // Performance thresholds - should match colorScale domain
+            const range = ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00"];  // Colors for each range
+
+            const legendData = [];
+            // Bin 1: 0..60
+            legendData.push({
+                color: range[0],
+                min: 0,
+                max: domain[0]
+            });
+            // Bins 2..N-1
+            for (let i = 1; i < domain.length; i++) {
+                legendData.push({
+                    color: range[i],
+                    min: domain[i - 1],
+                    max: domain[i]
+                });
+            }
+            // Final bin: domain[last]..Infinity
+            legendData.push({
+                color: range[range.length - 1],
+                min: domain[domain.length - 1],
+                max: 100
+            });
+
+            // Add legend
+            const legend = svg.append("g")
+                .attr("class", "legend")
+                .attr("transform", "translate(" + (width + 20) + "," + margin.top + ")");
+
+            legend.selectAll("rect")
+                .data(legendData)
+                .enter()
+                .append("rect")
+                .attr("x", 0)
+                .attr("y", (_, i) => i * 25)
+                .attr("width", 20)
+                .attr("height", 20)
+                .attr("fill", d => d.color);
+
+            legend.selectAll("text")
+                .data(legendData)
+                .enter()
+                .append("text")
+                .attr("x", 30)
+                .attr("y", (_, i) => i * 25 + 14)
+                .text(d => {
+                    if (d.max === 100) {
+                        return `${d.min}+`;
+                    } else {
+                        return `${d.min} - ${d.max}`;
+                    }
+                })
+                .attr("class", "legend-text");
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html> 

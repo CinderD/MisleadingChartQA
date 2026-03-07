@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average test scores in different subjects. Which statement best describes the chart?",
+  "options": {
+    "A": "Math clearly has the lowest average score of all the subjects shown.",
+    "B": "The chart incorrectly uses a continuous filled area across separate subjects, giving a misleading sense of a smooth trend between them.",
+    "C": "The chart reveals a clear overall upward pattern across the subjects, indicating an underlying continuous progression from one subject to the next.",
+    "D": "Art clearly has the highest average score of all the subjects shown."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for subject into a continuous filled region. However, the x‑axis categories (e.g., Math, Science, English, PE, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

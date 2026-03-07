@@ -1,0 +1,17 @@
+{
+  "question": "The plot shows CO₂ emissions vs. temperature anomaly. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Temperature anomaly rises with CO₂ emissions up to a point, then declines slightly at the highest emission levels.",
+    "B": "There is no relationship at all between CO₂ emissions and temperature anomaly.",
+    "C": "The points form two completely separate groups with no overlap.",
+    "D": "Temperature anomaly steadily decreases as CO₂ emissions increase across the full range."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

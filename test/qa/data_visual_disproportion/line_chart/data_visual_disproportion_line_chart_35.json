@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows market share from 2018 to 2023. Based on the percentages indicated on the chart, which of the following statements is correct?",
+  "options": {
+    "A": "The market share in 2022 is much higher than in 2021.",
+    "B": "The market share growth from 2018 to 2023 is over 15 percentage points.",
+    "C": "The market share in 2018 is higher than in 2020.",
+    "D": "The market share in 2022 is 26%."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The line is drawn using a different 'height' value for 2022 than the actual share, so the visual suggests a dramatic spike while the true share is 26%."
+}

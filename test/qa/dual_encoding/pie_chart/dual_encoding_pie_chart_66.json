@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows a company's expense breakdown. Based on the actual percentage values, which of the following statements is correct?",
+  "options": {
+    "A": "Rent accounts for the largest share of expenses.",
+    "B": "Utilities account for the largest share of expenses.",
+    "C": "R&D accounts for the largest share of expenses.",
+    "D": "Other accounts for the largest share of expenses."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Rent: 34%; Utilities: 24%; Salaries: 18%; Other: 12%; R&D: 12%."
+}

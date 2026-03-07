@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows energy use by source. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Hydroelectric accounts for a larger share than Fossil Fuels.",
+    "B": "Nuclear accounts for more than one-fifth of total energy use.",
+    "C": "Other has the smallest share among all sources.",
+    "D": "Renewables account for less than one-quarter of total energy use."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Renewables: 34%; Hydroelectric: 24%; Fossil Fuels: 18%; Other: 12%; Nuclear: 12%."
+}

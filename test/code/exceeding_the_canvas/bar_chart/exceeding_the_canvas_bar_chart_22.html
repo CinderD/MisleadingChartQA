@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Adjusted Revenue (2018-2022)</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .bar {
+            fill: steelblue;
+        }
+        .axis path,
+        .axis line {
+            shape-rendering: crispEdges;
+        }
+        .grid line {
+            stroke: lightgrey;
+            stroke-opacity: 0.7;
+            shape-rendering: crispEdges;
+        }
+        .label {
+            font-size: 12px;
+            text-anchor: middle;
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Annual Adjusted Revenue Trend (2018-2022)</h2>
+    <svg width="1000" height="750"></svg>
+    
+    <script>
+        // Set up margin, width, and height
+        const margin = { top: 30, right: 40, bottom: 70, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        // Create the SVG element
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        // Load the CSV data
+        d3.csv("../../../../data/exceeding_the_canvas/bar_chart/exceeding_the_canvas_bar_chart_22.csv").then(function(data) {
+            // Parse the data
+            data.forEach(d => {
+                d.Adjusted_Revenue = +d.Adjusted_Revenue;
+            });
+
+            const maxRevenue = d3.max(data, d => d.Adjusted_Revenue);
+            const secondMaxRevenue = d3.max(data.filter(d => d.Adjusted_Revenue !== maxRevenue), d => d.Adjusted_Revenue);
+
+            // Set up the x-scale and y-scale
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.Year))
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([0, secondMaxRevenue * 0.6])  // Decreased buffer to create exceeding effect
+                .range([height, 0]);
+
+            // Create the bars
+            svg.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.Year))
+                .attr("y", d => y(d.Adjusted_Revenue))
+                .attr("width", x.bandwidth())
+                .attr("height", d => height - y(d.Adjusted_Revenue));
+
+            // Add the number labels below each bar
+            svg.selectAll(".label")
+                .data(data)
+                .enter().append("text")
+                .attr("class", "label")
+                .attr("x", d => x(d.Year) + x.bandwidth() / 2)
+                .attr("y", height - 30)  // Place the label just below each bar
+                .text(d => d.Adjusted_Revenue);
+
+            // Add X-axis
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+
+            // Add Y-axis
+            svg.append("g")
+                .call(d3.axisLeft(y));
+
+            // Add X-axis label
+            svg.append("text")
+                .attr("transform", "translate(" + (width / 2) + "," + (height + margin.bottom - 10) + ")")
+                .style("text-anchor", "middle")
+                .attr("class", "x-axis-label")
+                .text("Year");
+
+            // Add Y-axis label
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 0 - margin.left + 20)
+                .attr("x", 0 - (height / 2))
+                .style("text-anchor", "middle")
+                .attr("class", "y-axis-label")
+                .text("Adjusted Revenue");
+        });
+    </script>
+</body>
+</html>

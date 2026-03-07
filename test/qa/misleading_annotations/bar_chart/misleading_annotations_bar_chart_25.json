@@ -1,0 +1,17 @@
+{
+  "question": "In town X, what is the approximate average number of customers at Mall A from January to March?",
+  "options": {
+    "A": "290",
+    "B": "360",
+    "C": "420",
+    "D": "250"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misleading_annotations",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows customers for January, February, March: January (288), February (326), March (422). The correct average is (288 + 326 + 422) / 3 = 345. However, the misleading annotation shows a dashed line labeled 'Average' at 288, which is incorrect and designed to mislead viewers into selecting 288 as the answer."
+}

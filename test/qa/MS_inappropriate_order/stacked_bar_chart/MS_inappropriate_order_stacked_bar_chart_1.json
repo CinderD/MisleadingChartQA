@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, which year had the highest sales for brands B?",
+  "options": {
+    "A": "2000",
+    "B": "2002",
+    "C": "2001",
+    "D": "2003"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Extremum",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The order of the X-axis has been manipulated. The year 2001 actually has the highest sales when correctly interpreted."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows defect rate in production (2012-2022) (out of a possible 0–10%). Based on this context, what is the most accurate assessment?",
+  "options": {
+    "A": "There was a modest downward trend within a narrow band",
+    "B": "The rate stayed exactly the same",
+    "C": "The trend cannot be determined from this chart",
+    "D": "There was a sharp decline"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (3.99–4.22%) instead of a more informative 0–10% context, which visually exaggerates variability. The actual net change is about 0.23% over the period, which is modest in the full context."
+}

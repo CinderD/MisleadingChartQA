@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, are total sales in the first half of the year higher than in the second half?",
+  "options": {
+    "A": "No",
+    "B": "Yes",
+    "C": "Insufficient data to compare the two periods.",
+    "D": "Both periods show equal total sales."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "area_chart",
+  "task": "Calculate Differences",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is presented in an incorrect order, which might lead to an inaccurate judgment of the total sales."
+}

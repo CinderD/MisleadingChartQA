@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is correct about the market share by company?",
+  "options": {
+    "A": "Company B has the largest market share among all companies.",
+    "B": "Company B has about half of the total market share.",
+    "C": "Company C has the largest market share among all companies.",
+    "D": "Company D has the smallest market share."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "data_visual_disproportion",
+  "chartType": "pie_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Labels show Company B has the highest percentage. The pie uses visual_size for slice angles, so Company C's slice can appear larger, misleading viewers."
+}

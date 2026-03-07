@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the percentage share of product ratings by category. Based on the data labels, which statement is correct?",
+  "options": {
+    "A": "Quality has the highest rating share among the categories.",
+    "B": "Quality and Price have the same rating share.",
+    "C": "Price has the highest rating share among the categories.",
+    "D": "Support has the highest rating share among the categories."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

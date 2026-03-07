@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Bar 100 Chart for Quarterly Data</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .bar {
+            width: 30px;
+            margin: 1px;
+        }
+        .axis path,
+        .axis line {
+            shape-rendering: crispEdges;
+        }
+        .legend {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quarterly Data Stacked Bar Chart</h1>
+    <svg width="1000" height="750"></svg>
+    
+    <script>
+        const margin = { top: 30, right: 140, bottom: 60, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/misuse_of_cumulative_relationship/stacked_bar_100/misuse_of_cumulative_relationship_stacked_bar_100_10.csv").then(function(data) {
+            const categories = data.columns.slice(1);
+            const groups = data.map(d => d.Quarter);
+
+            data.forEach(d => {
+                const total = d3.sum(categories, category => +d[category]);
+                categories.forEach(category => {
+                    d[category] = +d[category] / total;
+                });
+            });
+
+            const stack = d3.stack().keys(categories);
+            const stackedData = stack(data);
+
+            const x = d3.scaleBand()
+                .domain(groups)
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([0, 1])
+                .nice()
+                .range([height, 0]);
+
+            const xAxis = svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+            xAxis.append("text")
+                .attr("x", width / 2)
+                .attr("y", 40)
+                .style("text-anchor", "middle")
+                .text("Quarter");
+
+            const yAxis = svg.append("g")
+                .call(d3.axisLeft(y).tickFormat(d3.format(".2%")));
+            svg.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -50)
+                .style("text-anchor", "middle")
+                .text("Percentage");
+
+            const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+            svg.selectAll(".layer")
+                .data(stackedData)
+                .enter().append("g")
+                .attr("class", "layer")
+                .style("fill", (d, i) => color(i))
+                .selectAll("rect")
+                .data(d => d)
+                .enter().append("rect")
+                .attr("x", d => x(d.data.Quarter))
+                .attr("y", d => y(d[1]))
+                .attr("height", d => y(d[0]) - y(d[1]))
+                .attr("width", x.bandwidth());
+
+            // Percentage labels inside segments
+            svg.selectAll(".layer")
+                .selectAll("text")
+                .data(d => d)
+                .enter().append("text")
+                .attr("x", d => x(d.data.Quarter) + x.bandwidth() / 2)
+                .attr("y", d => (y(d[0]) + y(d[1])) / 2)
+                .attr("text-anchor", "middle")
+                .style("font-size", "10px")
+                .style("fill", "white")
+                .text(d => d3.format(".1%")((d[1] - d[0])));
+
+            const legend = svg.append("g")
+                .attr("font-family", "sans-serif")
+                .attr("font-size", 12)
+                .attr("text-anchor", "end")
+                .selectAll("g")
+                .data(categories.slice().reverse())
+                .enter().append("g")
+                .attr("transform", (d, i) => "translate(0," + i * 20 + ")");
+
+            legend.append("rect")
+                .attr("x", width + 130)
+                .attr("width", 19)
+                .attr("height", 19)
+                .attr("fill", (d, i) => color(categories.length - 1 - i));
+
+            legend.append("text")
+                .attr("x", width + 120)
+                .attr("y", 9.5)
+                .attr("dy", "0.32em")
+                .text(d => d);
+        })
+        .catch(function(error) {
+            console.error('Error loading CSV data:', error);
+        });
+    </script>
+</body>
+</html>

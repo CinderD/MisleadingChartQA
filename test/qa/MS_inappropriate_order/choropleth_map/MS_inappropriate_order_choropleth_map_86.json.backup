@@ -1,0 +1,17 @@
+{
+  "question": "According to the prevalence categories shown on the map, which statement is most accurate?",
+  "options": {
+    "A": "Region J and Region H share exactly the same prevalence level.",
+    "B": "Region A appears to have a higher prevalence level than Region I if you rely only on the legend order.",
+    "C": "Region I has a higher prevalence level than Region A.",
+    "D": "All regions shown have distinct prevalence levels with no ties."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is ordered in a way that does not reflect the true ranking of prevalence levels, and the colors themselves are not in an intuitive Low→High sequence. From the underlying data, Region I is classified at a higher level than Region A, even though the legend ordering may make the opposite appear plausible at first glance."
+}

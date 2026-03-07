@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is Oct 15, and half of the votes from each state for a favorite coffee brand have been counted. The color of each state corresponds to the brand that has received the most votes in that state so far. The brand with the most number of colored states will be the most popular brand, and the results will be finalized on Oct 30. Which of the following is true?",
+  "options": {
+    "A": "A will be the most popular brand of coffee.",
+    "B": "B will be the least popular brand of coffee.",
+    "C": "C will be the most popular brand of coffee.",
+    "D": "Cannot be determined."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "concealed_uncertainty",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While Brand A currently dominates the map with the most colored states, the chart shows results as of Oct 15, but the voting ends on Oct 30. The remaining voting period could dramatically change the outcome, making it premature to predict which brand will be most popular. The concealed uncertainty lies in the incomplete voting process that is not reflected in the chart."
+}

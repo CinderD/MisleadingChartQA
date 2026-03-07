@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the line chart depicting the annual sales from 2018 to 2020, which statement appears correct?",
+  "options": {
+    "A": "Sales dramatically decreased from 2018 to 2019, then remained stable in 2020.",
+    "B": "Sales in 2020 were the highest among all the years.",
+    "C": "Sales for 2018 were the lowest among all the years.",
+    "D": "Sales increased every year from 2018 to 2020."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The sales values for 2019 and 2020 are cut off from the visible chart, leading to confusion about their magnitude."
+}

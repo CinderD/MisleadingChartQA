@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is reliable according to the chart data?",
+  "options": {
+    "A": "There is a generally positive relationship between the variables.",
+    "B": "There is a generally negative relationship between the variables.",
+    "C": "There is no clear relationship between the variables.",
+    "D": "There is a strong positive trend, as emphasized by the larger, darker points."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

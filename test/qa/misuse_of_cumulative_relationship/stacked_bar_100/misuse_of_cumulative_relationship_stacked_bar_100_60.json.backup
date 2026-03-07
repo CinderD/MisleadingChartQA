@@ -1,0 +1,17 @@
+{
+  "question": "For the quarterly platform engagement distribution, which interpretation best reflects what can (and cannot) be inferred from the 100% stacked bar chart?",
+  "options": {
+    "A": "The sum of all metrics indicates overall performance trends across the year.",
+    "B": "Valid inferences include within-quarter ranking comparisons. Invalid inferences include cross-quarter absolute quantity comparisons.",
+    "C": "Q1 has the highest number of support tickets compared to the other quarters.",
+    "D": "All metrics show identical trends because they are normalized to 100%."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "100% stacking normalizes unrelated categories to 100% within each quarter. Valid inferences include within-quarter ranking (e.g., one metric > another in every quarter). Invalid inferences include cross-quarter total comparisons or combining unrelated categories."
+}

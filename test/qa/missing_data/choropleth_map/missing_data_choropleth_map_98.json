@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following statements about the average temperature data shown on the map is most accurate?",
+  "options": {
+    "A": "Some regions shown on the map have no reported temperature data.",
+    "B": "Brazil clearly has the lowest average temperature on the map.",
+    "C": "All regions on the map have reported temperature data.",
+    "D": "Australia clearly has the lowest average temperature on the map."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "At least one of the labelled regions appears grey, indicating missing data rather than a true zero or low value. Because we do not know that region's value, we cannot safely say which labelled region truly has the lowest value."
+}

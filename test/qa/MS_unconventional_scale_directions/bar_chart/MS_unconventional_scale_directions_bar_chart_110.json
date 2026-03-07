@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, how did the number of libraries in County V change overall from 2008 to 2021?",
+  "options": {
+    "A": "It generally increased over the period.",
+    "B": "It generally decreased over the period.",
+    "C": "It remained roughly constant over the period.",
+    "D": "It fluctuated without any overall upward or downward change."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted Y-axis, making the data appear as if the trend is decreasing, but the data actually shows an increasing trend."
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choropleth_map Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .bar {
+            fill: steelblue;
+        }
+        .axis path, .axis line {
+            stroke: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Total CO2 Emissions by Country</h1>
+    <div id="chart"></div>
+    <script>
+        const width = 1000;
+        const height = 750;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        const projection = d3.geoMercator()
+            .scale(150)
+            .translate([width / 2.5, height / 2.5]);
+        const path = d3.geoPath().projection(projection);
+
+        const colorScale = d3.scaleSequential(d3.interpolateReds)
+            .domain([0, 1200]); // absolute emissions (Mt) – not normalized by population
+
+        Promise.all([
+            d3.json("https://d3js.org/world-110m.v1.json"),
+            d3.csv("../../../../data/missing_normalization/choropleth_map/missing_normalization_choropleth_map_3.csv")
+        ]).then(([world, data]) => {
+            const countries = topojson.feature(world, world.objects.countries).features;
+            const valueById = {};
+            data.forEach(d => valueById[d.id] = +d.emissions);
+
+            // Base layer: outlines for all countries (so no-data regions still visible)
+            svg.append("g").selectAll("path")
+                .data(countries)
+                .enter().append("path")
+                .attr("d", path)
+                .attr("fill", "#efefef")
+                .attr("stroke", "#666")
+                .attr("stroke-width", 0.8);
+
+            // Data layer: color only where data exists
+            svg.append("g").selectAll("path")
+                .data(countries)
+                .enter().append("path")
+                .attr("d", path)
+                .attr("fill", d => {
+                    const v = valueById[d.id] || 0;
+                    return v ? colorScale(v) : 'transparent';
+                })
+                .attr("stroke", d => (valueById[d.id] ? "#fff" : "none"))
+                .attr("stroke-width", d => (valueById[d.id] ? 0.8 : 0));
+
+            svg.selectAll(".country-label")
+                .data(data)
+                .enter().append("text")
+                .attr("class", "country-label")
+                .attr("x", d => {
+                    const c = countries.find(x => x.id == d.id);
+                    const centroid = c ? path.centroid(c) : [NaN, NaN];
+                    return (centroid[0] || 0);
+                })
+                .attr("y", d => {
+                    const c = countries.find(x => x.id == d.id);
+                    const centroid = c ? path.centroid(c) : [NaN, NaN];
+                    return (centroid[1] || 0);
+                })
+                .text(d => d.label)
+                .attr("font-size", 18)
+                .attr("font-weight", "bold");
+
+            // Legend
+            const legendHeight = 200;
+            const legendScale = d3.scaleLinear().domain([0, 1200]).range([legendHeight, 0]);
+            const legendAxis = d3.axisRight(legendScale).ticks(6).tickFormat(d3.format(",.0f"));
+            const legend = svg.append("g").attr("class", "legend").attr("transform", `translate(${width - 120}, 100)`);
+            legend.append("text").text("CO2 Emissions").attr("x", 0).attr("y", legendHeight + 40);
+            legend.selectAll("rect")
+                .data(d3.range(0, 1200, 120))
+                .enter().append("rect")
+                .attr("x", 0)
+                .attr("y", d => legendScale(d + 120))
+                .attr("width", 20)
+                .attr("height", 17)
+                .attr("fill", d => colorScale(d + 60));
+            legend.append("g").attr("transform", "translate(20, 0)").call(legendAxis);
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

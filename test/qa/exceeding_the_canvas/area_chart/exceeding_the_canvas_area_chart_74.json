@@ -1,0 +1,17 @@
+{
+  "question": "Based on the area chart of annual profit from 2018 to 2022, which statement is most supported by the data?",
+  "options": {
+    "A": "Profit in 2019 and 2021 appears to reach the same maximum level.",
+    "B": "Profit was lowest in 2019.",
+    "C": "Profit decreased continuously from 2018 to 2022.",
+    "D": "Profit in 2020 was higher than in 2019."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Bars for the highest years exceed the canvas and are clipped, making them look the same height; the true relationship cannot be inferred from the visual."
+}

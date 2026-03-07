@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher risk index based on the chart, UT or MO?",
+  "options": {
+    "A": "Cannot be inferred / inadequate information",
+    "B": "MO",
+    "C": "UT",
+    "D": "Both states have the same risk index"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although MO appears darker, UT has the higher assigned value when the inversion is considered."
+}

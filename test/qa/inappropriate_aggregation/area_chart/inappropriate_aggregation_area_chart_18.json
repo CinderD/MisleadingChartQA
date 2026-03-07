@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart of annual employee recruitment (as of May 01, 2024), which statement is most appropriate?",
+  "options": {
+    "A": "The latest year’s total hiring is about the same as the average of all previous full years.",
+    "B": "We cannot determine whether the latest year will end higher or lower than previous years based on the partial data.",
+    "C": "The latest year clearly shows a sharp drop in annual hiring compared to previous years.",
+    "D": "The latest year has already recorded more hires than any previous full year."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The area and line for the latest year include only about 2 months of data, while earlier years show totals for the full year. Visually, the latest year appears much lower, but this is purely because the period is shorter, not because the underlying performance has collapsed. Without the remaining months, we cannot judge the full-year outcome."
+}

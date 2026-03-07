@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, what is the approximate ratio between Apple's market share and Others' market share?",
+  "options": {
+    "A": "4.5:1",
+    "B": "3:1",
+    "C": "2:1",
+    "D": "1.5:1"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie chart uses adjusted scaling that significantly reduces the visual difference between Apple and Others, making the 4.5:1 ratio appear closer to 2:1, thus misleading viewers about the true market dominance."
+}

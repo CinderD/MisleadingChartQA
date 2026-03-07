@@ -1,0 +1,17 @@
+{
+  "question": "What is the approximate percentage of concert tickets sold on Aug 10 compared to that on Aug 11?",
+  "options": {
+    "A": "83%",
+    "B": "125%",
+    "C": "50%",
+    "D": "36%"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inappropriate Y-axis scale range causes Aug 10 (12,500) to appear as much less compared to Aug 11 (15,000) than it actually is, visually misrepresenting the differences."
+}

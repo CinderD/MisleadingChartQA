@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is reliable according to the chart data?",
+  "options": {
+    "A": "Leisure and Work together equal Commute.",
+    "B": "Commute is larger than the combined share of Chores + Sleep.",
+    "C": "Commute is the largest category by percentage.",
+    "D": "Leisure is larger than Chores."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Commute: 35%; Chores: 28%; Sleep: 22%; Work: 8%; Leisure: 7%."
+}

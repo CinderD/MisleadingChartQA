@@ -1,0 +1,17 @@
+{
+  "question": "How would you describe the student performance trend in the Advanced Mathematics course according to the chart?",
+  "options": {
+    "A": "Test scores show consistent improvement month over month",
+    "B": "Test scores demonstrate highly volatile performance with dramatic ups and downs",
+    "C": "Test scores remain relatively stable throughout the period",
+    "D": "Test scores show a declining pattern over the course period"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The chart displays months in a scrambled order (Mar → Jul → Jan → May → Aug → Feb → Jun → Apr), creating artificial volatility in what is actually a consistent upward trend. When arranged in proper chronological order from January to August, student test scores show steady improvement from 72 to 93 points, representing consistent month-over-month progress in the Advanced Mathematics course."
+}

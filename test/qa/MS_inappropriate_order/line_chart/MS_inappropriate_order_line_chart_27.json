@@ -1,0 +1,17 @@
+{
+  "question": "Based on the data shown for average test scores in the Advanced Mathematics course from January to August, which description best reflects the overall pattern in student performance?",
+  "options": {
+    "A": "Student performance generally improves over the semester, with higher scores toward the later months than in the earlier months.",
+    "B": "Student performance is almost unchanged, with scores staying at roughly the same level all semester.",
+    "C": "Student performance steadily worsens, with scores consistently declining from one month to the next.",
+    "D": "Student performance is highly erratic, with large and frequent reversals that show no overall direction."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

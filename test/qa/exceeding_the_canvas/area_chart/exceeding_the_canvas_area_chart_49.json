@@ -1,0 +1,17 @@
+{
+  "question": "Analyzing the area chart of earnings from 2018 to 2022, which statement is best supported by the visualization?",
+  "options": {
+    "A": "Earnings in 2021 and 2022 are the same.",
+    "B": "It is not possible to tell from the chart which year had the highest earnings among 2020–2022.",
+    "C": "Earnings fell each year after 2019.",
+    "D": "Earnings were highest in 2018."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The scale is set so that the highest bars exceed the visible area, leading to a misleading impression of equality."
+}

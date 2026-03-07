@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows adjusted revenue from 2018 to 2022. Based on how the chart is drawn, which statement is correct?",
+  "options": {
+    "A": "Adjusted revenue steadily increased from 2018 through 2022.",
+    "B": "Adjusted revenue was the same in 2018, 2019, and 2020.",
+    "C": "Adjusted revenue peaked in 2021.",
+    "D": "We cannot determine the adjusted revenue for 2021 and 2022 from this chart."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-scale is set so that the largest values are cut off, creating a misleading impression that the top two years are equal."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which region has a higher prevalence level according to the map?",
+  "options": {
+    "A": "Region F has a higher prevalence level than Region I.",
+    "B": "Region I has a higher prevalence level than Region F.",
+    "C": "Regions F and I have the same prevalence level.",
+    "D": "Neither Region F nor Region I is colored on the map."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is ordered in a way that does not reflect the true ranking of prevalence levels, and the colors themselves are not in an intuitive Low→High sequence. From the underlying data, Region I is classified at a higher level than Region F, even though the legend ordering may make the opposite appear plausible at first glance."
+}

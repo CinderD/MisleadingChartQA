@@ -1,0 +1,17 @@
+{
+  "question": "Based on the 100% stacked bar chart for the quarterly platform data, what can be concluded about the pattern of 'Advertisements Clicked' over the year?",
+  "options": {
+    "A": "The chart only shows the percentage share of 'Advertisements Clicked' each quarter, so it does not reveal whether the actual number of clicks is increasing or decreasing.",
+    "B": "The actual number of advertisements clicked increases each quarter because the percentage share is higher in later quarters.",
+    "C": "The actual number of advertisements clicked is the same in every quarter because each bar reaches 100%.",
+    "D": "The actual number of advertisements clicked decreases each quarter because the percentage share is lower in later quarters."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart normalizes unrelated categories to 100% within each quarter. It can suggest that the share of a metric is higher in later quarters, but it cannot establish an absolute increasing trend without the underlying totals. A higher percentage share does not necessarily mean a higher absolute quantity."
+}

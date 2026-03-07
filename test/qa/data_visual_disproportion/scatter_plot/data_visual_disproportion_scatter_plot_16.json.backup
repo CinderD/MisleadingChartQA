@@ -1,0 +1,17 @@
+{
+  "question": "What can we conclude from this chart about product rating share by category?",
+  "options": {
+    "A": "Other has the highest value among the categories.",
+    "B": "The categories have nearly identical values.",
+    "C": "Design has the highest value among the categories.",
+    "D": "Quality has the highest value among the categories."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

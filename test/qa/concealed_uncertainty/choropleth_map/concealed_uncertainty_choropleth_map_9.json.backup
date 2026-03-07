@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is Dec 5, and half of the votes from each state for a favorite product have been counted. The color of each state corresponds to the product that has received the most votes in that state so far. The product with the most number of colored states will be the most popular product, and the results will be finalized on Dec 20. Which of the following is true?",
+  "options": {
+    "A": "B will be the most popular product.",
+    "B": "C will be the least popular product.",
+    "C": "A will be the most popular product.",
+    "D": "Cannot be determined."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "concealed_uncertainty",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While Product B currently dominates the map with the most colored states, the chart shows results as of Dec 5, but the voting ends on Dec 20. The remaining voting period could dramatically change the outcome, making it premature to predict which product will be most popular. The concealed uncertainty lies in the incomplete voting process that is not reflected in the chart."
+}

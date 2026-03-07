@@ -1,0 +1,17 @@
+{
+  "question": "Based on the site visits area chart from 2018 to 2022, which statement is most accurate?",
+  "options": {
+    "A": "Visits in the final year were the same as in 2021.",
+    "B": "Visits declined from 2018 to 2022.",
+    "C": "Visits in 2019 were the highest among all years.",
+    "D": "It is unclear whether the final year has the same number of visits as the previous year because the top of the chart is clipped."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The visible y-range is set below the maximum value, so the top bar is truncated and looks identical."
+}

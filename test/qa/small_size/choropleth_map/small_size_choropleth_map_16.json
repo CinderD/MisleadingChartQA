@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows median household income for selected US states. Which statement is most appropriate based on this visualization?",
+  "options": {
+    "A": "Illinois has a median household income of exactly $71,000.",
+    "B": "The map clearly shows that one region of the country has much higher incomes than the others.",
+    "C": "Because the text and legend are so small, it is difficult to read exact income values for the states.",
+    "D": "Minnesota clearly has the highest median household income among the shown states."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific income values accurately. While the color coding may suggest relative income levels, the inability to read exact numbers prevents identification of the highest and lowest income states."
+}

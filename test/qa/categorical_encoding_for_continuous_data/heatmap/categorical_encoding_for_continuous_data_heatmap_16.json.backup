@@ -1,0 +1,17 @@
+{
+  "question": "Based on the performance heatmap, which statement is most accurate about Product C and Product A?",
+  "options": {
+    "A": "Product C is higher than Product A, and the color difference accurately represents this 0.7points difference.",
+    "B": "The performance is impossible to determine from this visualization.",
+    "C": "The performances might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "D": "It can be infered that their performances are very similar."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Product C (57.3points) and Product A (56.6points) have a 0.7points difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of performance relationships."
+}

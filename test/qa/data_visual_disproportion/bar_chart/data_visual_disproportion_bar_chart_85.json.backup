@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is correct about regional sales share?",
+  "options": {
+    "A": "South and South have about the same share.",
+    "B": "South has the largest market share among the categories shown.",
+    "C": "North and South have nearly identical market shares.",
+    "D": "West has the largest market share among the categories shown."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, South has the highest share (48%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking West is largest when relying on visual comparison."
+}

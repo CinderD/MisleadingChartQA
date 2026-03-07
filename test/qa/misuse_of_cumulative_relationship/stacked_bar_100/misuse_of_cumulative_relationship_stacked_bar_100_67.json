@@ -1,0 +1,17 @@
+{
+  "question": "For the quarterly platform engagement distribution, which interpretation best reflects what can (and cannot) be inferred from the 100% stacked bar chart?",
+  "options": {
+    "A": "The chart shows the proportion of each metric per quarter, but it does not allow us to judge overall platform performance across the year.",
+    "B": "Q4 clearly has the best overall platform performance because the combined height of all metrics appears most favorable.",
+    "C": "Q4 has the highest number of user registrations because its registrations segment occupies the largest share of the bar.",
+    "D": "All metrics must have identical absolute values each quarter since every bar reaches 100% in height."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "100% stacking normalizes unrelated categories to 100% within each quarter. Valid inferences include within-quarter ranking (e.g., one metric > another in every quarter). Invalid inferences include cross-quarter total comparisons or combining unrelated categories."
+}

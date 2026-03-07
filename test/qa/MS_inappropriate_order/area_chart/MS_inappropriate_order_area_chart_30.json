@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, did monthly product sales generally increase, decrease, or stay about the same over the year from January to December?",
+  "options": {
+    "A": "They generally increased over the year.",
+    "B": "They generally decreased over the year.",
+    "C": "They stayed approximately constant throughout the year.",
+    "D": "The trend over the year cannot be determined from the chart."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The months on the x‑axis are arranged in reverse (Dec back to Jan), so the filled area shape is misleading if read left‑to‑right. When you re‑order the months to the natural calendar sequence and sum Jan–Jun versus Jul–Dec, you find that the second half actually has higher total sales. The inappropriate month order can easily invert this interpretation."
+}

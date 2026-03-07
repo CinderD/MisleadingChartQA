@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, how does the number of parks in City U generally change from 2012 to 2023?",
+  "options": {
+    "A": "It generally increases over time.",
+    "B": "It generally decreases over time.",
+    "C": "It stays approximately constant.",
+    "D": "It shows no clear overall pattern."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes it appear that the trend is increasing, when in reality the data shows a decreasing trend from 2012 to 2023."
+}

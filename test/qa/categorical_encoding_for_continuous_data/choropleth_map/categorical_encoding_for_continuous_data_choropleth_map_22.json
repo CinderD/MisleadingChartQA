@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US population map, which statement below is the most accurate?",
+  "options": {
+    "A": "Iowa and Minnesota have similar populations.",
+    "B": "The population gap between Iowa and Minnesota might exceed that between Kansas and South Dakota.",
+    "C": "All highlighted states have nearly identical populations.",
+    "D": "The population differences between the highlighted states are impossible to judge from this map."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Iowa (20.8M) and Minnesota (29.2M) have a 8.4M population difference, while Kansas (29.5M) and South Dakota (30.4M) have only a 0.9M difference. However, the categorical color encoding groups Iowa and Minnesota into the same color bin (20-30M range), making their large difference appear similar, while Kansas and South Dakota appear more different due to different color bins."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart depicts the yearly revenue for Company X from 2018 to 2022. Which statement accurately reflects the revenue?",
+  "options": {
+    "A": "2021 had the highest revenue among all years.",
+    "B": "Revenues for 2021 and 2022 are equal.",
+    "C": "The revenue decreased consistently from 2019 onwards.",
+    "D": "Revenues for 2019 and 2020 are equal."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Both bars for 2019 and 2020 extend beyond the chart’s visible area, making them appear identical in height. This could mislead viewers into thinking their revenues are identical, although they are not necessarily the same."
+}

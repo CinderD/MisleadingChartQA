@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows population data for selected US states. Which statement is correct?",
+  "options": {
+    "A": "The extremely small text size makes it difficult to read specific population values accurately.",
+    "B": "It is easy to determine the exact population of each highlighted state from the map.",
+    "C": "The map clearly shows which single state has the highest population.",
+    "D": "The map clearly shows which single state has the lowest population."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific population values accurately. While the color coding may suggest population patterns, the inability to read exact numbers prevents meaningful comparisons between states."
+}

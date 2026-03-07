@@ -1,0 +1,17 @@
+{
+  "question": "For the online platform, which interpretation best reflects what can (and cannot) be inferred from the 100% stacked bar chart?",
+  "options": {
+    "A": "Q2 has the highest number of advertisements clicked compared to the other quarters.",
+    "B": "Because each bar totals 100%, the absolute number of online searches is the same in every quarter.",
+    "C": "The combined percentages of all three metrics indicate overall platform performance across the year.",
+    "D": "We can compare the proportions of metrics within a quarter, but we cannot determine how their absolute quantities change across quarters."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "100% stacking normalizes unrelated categories to 100% within each quarter. Valid inferences include within-quarter ranking (e.g., one metric > another in every quarter). Invalid inferences include cross-quarter total comparisons or combining unrelated categories."
+}

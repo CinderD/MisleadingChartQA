@@ -1,0 +1,17 @@
+{
+  "question": "Can we determine from the map whether the average unemployment rate in Mexico (B) was higher than in France (C) over 10 years?",
+  "options": {
+    "A": "Yes, Mexico (B) had a higher average unemployment rate",
+    "B": "Yes, France (C) had a higher average unemployment rate",
+    "C": "They had exactly the same average unemployment rate",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "Mexico and France both have measured data, so we can compare them numerically. Mexico is 12.8% vs 3.3% for France."
+}

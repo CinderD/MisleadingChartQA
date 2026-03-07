@@ -1,0 +1,17 @@
+{
+  "question": "This line chart shows average satisfaction score (1–10) across different department. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "The categories on the left are inherently more basic than those on the right.",
+    "B": "The chart shows a clear left‑to‑right trend in which the categories gradually improve or worsen.",
+    "C": "HR has the highest score of all categories.",
+    "D": "The chart inappropriately connects distinct categories with a continuous line, implying a smooth progression that does not exist between these categories."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart uses a continuous line over department that are purely categorical (e.g., Finance, Support, Engineering, ...). Connecting points suggests there is a meaningful smooth progression from left to right, which is conceptually incorrect — these categories have no inherent numeric order. The y‑axis values are on a 1 to 10 scale, but any comparison across categories should be made with a discrete chart such as a bar chart, not by reading trends from the connecting line."
+}

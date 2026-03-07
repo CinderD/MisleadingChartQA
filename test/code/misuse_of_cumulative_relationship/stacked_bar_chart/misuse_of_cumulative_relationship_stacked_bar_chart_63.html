@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quarterly Cumulative Statistics for Store X</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .bar {
+            width: 30px;
+            margin: 1px;
+        }
+        .axis path,
+        .axis line {
+            stroke: black;
+            shape-rendering: crispEdges;
+        }
+        .legend {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quarterly Cumulative Statistics for Store X</h1>
+    <svg width="1000" height="750"></svg>
+    
+    <script>
+        const margin = { top: 30, right: 80, bottom: 60, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/misuse_of_cumulative_relationship/stacked_bar_chart/misuse_of_cumulative_relationship_stacked_bar_chart_63.csv").then(function(data) {
+            const categories = data.columns.slice(1);
+            const groups = data.map(d => d.Quarter);
+
+            const stack = d3.stack().keys(categories);
+            const stackedData = stack(data);
+
+            const x = d3.scaleBand()
+                .domain(groups)
+                .range([0, width])
+                .padding(0.1);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(stackedData, d => d3.max(d, d => d[1]))])
+                .nice()
+                .range([height, 0]);
+
+            const xAxis = svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+            xAxis.append("text")
+                .attr("x", width / 2)
+                .attr("y", 50)
+                .style("text-anchor", "middle")
+                .style("font-weight", "bold")
+                .text("Quarter");
+
+            const yAxis = svg.append("g")
+                .call(d3.axisLeft(y).ticks(5));
+            yAxis.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -50)
+                .style("text-anchor", "middle")
+                .style("font-weight", "bold")
+                .text("Accumulated Value");
+
+            svg.selectAll(".layer")
+                .data(stackedData)
+                .enter().append("g")
+                .attr("class", "layer")
+                .attr("fill", (d, i) => d3.schemeCategory10[i])
+                .selectAll("rect")
+                .data(d => d)
+                .enter().append("rect")
+                .attr("x", d => x(d.data.Quarter))
+                .attr("y", d => y(d[1]))
+                .attr("height", d => y(d[0]) - y(d[1]))
+                .attr("width", x.bandwidth())
+                .each(function(d) {
+                    const value = d[1] - d[0];
+                    const xPosition = x(d.data.Quarter) + x.bandwidth() / 2;
+                    const yPosition = y(d[1]) - (y(d[1]) - y(d[0])) / 2;
+                    
+                    svg.append("text")
+                        .attr("x", xPosition)
+                        .attr("y", yPosition)
+                        .attr("dy", ".35em")
+                        .attr("text-anchor", "middle")
+                        .style("fill", "white")
+                        .style("font-weight", "bold")
+                        .text(value);
+                });
+
+            // Create legend with units to highlight the unrelated nature of metrics
+            const legendLabels = {
+                "Product_Sales": "Product Sales ($)",
+                "Office_Temperature": "Office Temperature (°C)",
+                "Employee_Satisfaction": "Employee Satisfaction (Score)"
+            };
+
+            const legend = svg.selectAll(".legend")
+                .data(categories.reverse())
+                .enter().append("g")
+                .attr("class", "legend")
+                .attr("transform", (d, i) => "translate(40," + i * 20 + ")");
+
+            legend.append("rect")
+                .attr("x", width - 18)
+                .attr("width", 18)
+                .attr("height", 18)
+                .attr("fill", (d, i) => d3.schemeCategory10[i]);
+
+            legend.append("text")
+                .attr("x", width - 24)
+                .attr("y", 9)
+                .attr("dy", ".35em")
+                .style("text-anchor", "end")
+                .style("font-size", "11px")
+                .text(d => legendLabels[d] || d);
+        });
+    </script>
+</body>
+</html>

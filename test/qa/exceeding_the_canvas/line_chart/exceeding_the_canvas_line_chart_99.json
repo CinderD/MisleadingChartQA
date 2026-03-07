@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows output by year. Which of the following statements is true based on the chart?",
+  "options": {
+    "A": "Output declined continuously over the years shown.",
+    "B": "The highest output value extends beyond the top of the chart, so its exact level cannot be read.",
+    "C": "Output in the first and last years shown is identical.",
+    "D": "Output remained roughly constant across all years."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Values exceeding the y-axis range are clipped, making the top bars look the same and misleading viewers."
+}

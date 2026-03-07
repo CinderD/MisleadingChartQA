@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revenue Growth Trends (Q1 2022 - Q2 2023)</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .line {
+            fill: none;
+            stroke: yellow;
+            stroke-width: 4;
+        }
+        .dot {
+            fill: red;
+            stroke: red;
+            stroke-width: 2;
+        }
+        .text-label {
+            font-size: 12px;
+            text-anchor: middle;
+        }
+    </style>
+</head>
+<body>
+    <h1>Revenue Growth Trends (Q1 2022 - Q2 2023)</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/data_visual_disproportion/line_chart/data_visual_disproportion_line_chart_2.csv").then(data => {
+            data.forEach(d => {
+                d.quarter = d.quarter;
+                d.revenue = +d.revenue;
+                d.height = +d.height;
+            });
+
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.quarter))
+                .range([0, width])
+                .padding(0.3);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.height)])
+                .range([height, 0]);
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            g.append("g")
+                .call(d3.axisLeft(y));
+
+            const line = d3.line()
+                .x(d => x(d.quarter) + x.bandwidth() / 2)
+                .y(d => y(d.height));
+
+            g.append("path")
+                .datum(data)
+                .attr("class", "line")
+                .attr("d", line);
+
+            // Dots
+            g.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.quarter) + x.bandwidth() / 2)
+                .attr("cy", d => y(d.height))
+                .attr("r", 6);
+
+            // Labels
+            g.selectAll(".text-label")
+                .data(data)
+                .enter().append("text")
+                .attr("class", "text-label")
+                .attr("x", d => x(d.quarter) + x.bandwidth() / 2)
+                .attr("y", d => y(d.height) - 10)
+                .text(d => d.revenue);
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 35)
+                .attr("text-anchor", "middle")
+                .text("Quarter");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -40)
+                .attr("x", -height / 2)
+                .attr("text-anchor", "middle")
+                .text("Revenue (Millions $)");
+        });
+    </script>
+</body>
+</html> 

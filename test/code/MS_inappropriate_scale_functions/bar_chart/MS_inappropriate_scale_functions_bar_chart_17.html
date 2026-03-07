@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votes for Candidates Chart</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .bar { fill: #b5a253; }
+        .axis-label { font-size: 14px; font-weight: bold; }
+        .title { font-size: 22px; font-weight: bold; text-anchor: middle; }
+    </style>
+</head>
+<body>
+    <h1>Votes for Three Candidates in an Election in Town Z</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = { top: 50, right: 30, bottom: 60, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/MS_inappropriate_scale_functions/bar_chart/MS_inappropriate_scale_functions_bar_chart_17.csv").then(data => {
+            data.forEach(d => d.vote_scale_transformed = +d.vote_scale_transformed);
+
+            const y = d3.scalePow()
+                .exponent(0.5)
+                .domain([0, d3.max(data, d => d.vote_scale_transformed)])
+                .range([height, 0]);
+
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.candidate))
+                .range([0, width])
+                .padding(0.4);
+
+            svg.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            svg.append("g")
+                .call(d3.axisLeft(y));
+
+            svg.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.candidate))
+                .attr("y", d => y(d.vote_scale_transformed))
+                .attr("height", d => height - y(d.vote_scale_transformed))
+                .attr("width", x.bandwidth());
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", -height / 2)
+                .attr("y", -40)
+                .attr("transform", "rotate(-90)")
+                .text("Votes (Transformed)");
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width / 2)
+                .attr("y", height + 50)
+                .text("Candidates");
+        })
+        .catch(function(error) {
+            console.error('Error loading CSV data:', error);
+        });
+    </script>
+</body>
+</html>
+
+
+In this revised HTML, I've ensured that:
+- The CSV file path is correctly linked.
+- The y-axis label now indicates that the votes are "Transformed" to accurately reflect the data's scale transformation without mentioning any misleading aspects in titles or labels. 
+- Other parts of the visualization code have been preserved as initially provided.

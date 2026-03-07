@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitors at Three Train Stations in City Z</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: black;
+        }
+        .label {
+            font-size: 12px;
+            font-weight: bold;
+            fill: white;
+            text-anchor: middle;
+        }
+        .legend text {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Visitors at Three Train Stations in City Z</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 100, bottom: 60, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const color = d3.scaleOrdinal()
+            .domain(["A", "B", "C"])
+            .range(["#1f77b4", "#2ca02c", "#ff7f0e"]); // Blue, Green, Orange
+
+        d3.csv("../../../../data/MS_inappropriate_scale_range/stacked_bar_chart/MS_inappropriate_scale_range_stacked_bar_chart_45.csv").then(data => {
+            data.forEach(d => {
+                d.A = +d.A;
+                d.B = +d.B;
+                d.C = +d.C;
+            });
+
+            const stackedData = d3.stack().keys(["A", "B", "C"])(data);
+
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.date))
+                .range([0, width])
+                .padding(0.3);
+
+            const y = d3.scaleLinear()
+                .domain([1000, d3.max(stackedData.flat(), d => d[1])]) // Intentional scaling distortion
+                .range([height, 0]);
+
+            g.selectAll(".layer")
+                .data(stackedData)
+                .enter().append("g")
+                .attr("fill", d => color(d.key))
+                .selectAll("rect")
+                .data(d => d)
+                .enter().append("rect")
+                .attr("x", d => x(d.data.date))
+                .attr("y", d => {
+                    return d[0] < 0 ? y(0) : y(d[1]);
+                })
+                .attr("height", d => {
+                    const start = Math.max(d[0], 1000);
+                    return y(start) - y(d[1]);
+                })
+                .attr("width", x.bandwidth());
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            g.append("g")
+                .call(d3.axisLeft(y).tickFormat(d => d >= 1000 ? d : ""));
+
+            g.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width / 2 + 10)
+                .attr("y", height + margin.top - 10)
+                .text("Date");
+
+            g.append("text")
+                .attr("class", "axis-label")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2 - 50)
+                .attr("y", margin.left - 110)
+                .text("Number of Visitors");
+
+            g.selectAll(".layer")
+                .data(stackedData)
+                .enter().append("g")
+                .selectAll(".label")
+                .data(d => d)
+                .enter().append("text")
+                .attr("x", d => x(d.data.date) + x.bandwidth() / 2)
+                .attr("y", d => (y(d[0]) + y(d[1])) / 2)
+                .attr("dy", "0.35em")
+                .attr("class", "label")
+                .text(d => d.data[d.key])
+                .style("font-size", "12px");
+
+            const legend = svg.append("g")
+                .attr("transform", `translate(${width + 20}, 20)`);
+
+            ["A", "B", "C"].forEach((name, i) => {
+                const legendRow = legend.append("g")
+                    .attr("transform", `translate(0, ${i * 20})`);
+
+                legendRow.append("rect")
+                    .attr("width", 10)
+                    .attr("height", 10)
+                    .attr("fill", color(name));
+
+                legendRow.append("text")
+                    .attr("x", 20)
+                    .attr("y", 10)
+                    .attr("text-anchor", "start")
+                    .style("text-transform", "capitalize")
+                    .text(name);
+            });
+        });
+    </script>
+</body>
+</html>

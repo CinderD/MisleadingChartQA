@@ -1,0 +1,17 @@
+{
+  "question": "Based on the GDP map, which statement best describes the relationship between states?",
+  "options": {
+    "A": "All states have very diverse GDP levels.",
+    "B": "The GDP gap between Maryland and Rhode Island might exceeds that between Colorado and California.",
+    "C": "Maryland and Rhode Island have similar GDPs.",
+    "D": "The GDP differences are impossible to determine from this visualization."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Maryland (434.0$B) and Rhode Island (556.0$B) have a 122.0$B GDP difference, while Colorado (89.6$B) and California (90.5$B) have only a 0.9$B difference. However, the categorical color encoding groups Maryland and Rhode Island into the same color bin (350$B+ range), making their large difference appear similar, while Colorado and California appear more different due to different color bins."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Can Summer reach humidity levels above 24%?",
+  "options": {
+    "A": "No",
+    "B": "Only Spring, Fall, and Winter reach humidity above 24%",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Yes"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 24% humidity position, making it difficult to accurately discern if any members of Summer has the humidity higher than 24%."
+}

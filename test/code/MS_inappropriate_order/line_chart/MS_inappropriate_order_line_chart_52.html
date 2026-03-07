@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Performance Trend</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    #chart {
+      width: 1000px;
+      height: 750px;
+      margin: 60px auto;
+    }
+    .line { stroke: steelblue; stroke-width: 2; fill: none; }
+    .dot { fill: steelblue; }
+    .axis path, .axis line { stroke: black; }
+  </style>
+</head>
+<body>
+  <h1>Student Test Scores Over the Semester</h1>
+  <div id="chart"></div>
+  <script>
+    const margin = { top: 40, right: 20, bottom: 60, left: 60 };
+    const width = 1000 - margin.left - margin.right;
+    const height = 750 - margin.top - margin.bottom;
+
+    const svg = d3.select("#chart").append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+    d3.csv("../../../../data/MS_inappropriate_order/line_chart/MS_inappropriate_order_line_chart_52.csv").then(data => {
+      data.forEach(d => {
+        d.Month = d.Month;
+        d.Score = +d.Score;
+      });
+
+      const scrambledOrder = data.map(d => d.Month);
+      const x = d3.scalePoint()
+        .domain(scrambledOrder)
+        .range([0, width]);
+
+      const y = d3.scaleLinear()
+        .domain([0, d3.max(data, d => d.Score)])
+        .nice()
+        .range([height, 0]);
+
+      svg.append("g")
+        .attr("transform", `translate(0, ${height})`)
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+        .attr("transform", "rotate(-45)")
+        .style("text-anchor", "end");
+
+      svg.append("g").call(d3.axisLeft(y));
+
+      const line = d3.line()
+        .x(d => x(d.Month))
+        .y(d => y(d.Score));
+
+      svg.append("path")
+        .datum(data)
+        .attr("class", "line")
+        .attr("d", line);
+
+      svg.selectAll(".dot")
+        .data(data)
+        .enter().append("circle")
+        .attr("class", "dot")
+        .attr("cx", d => x(d.Month))
+        .attr("cy", d => y(d.Score))
+        .attr("r", 5);
+
+      svg.append("text")
+        .attr("x", width / 2)
+        .attr("y", height + 45)
+        .attr("text-anchor", "middle")
+        .text("Month");
+
+      svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -height / 2)
+        .attr("y", -45)
+        .attr("text-anchor", "middle")
+        .text("Average Test Score");
+    });
+  </script>
+</body>
+</html>

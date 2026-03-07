@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following is true about the prevalence levels in the regions shown on the map?",
+  "options": {
+    "A": "Region C has a higher prevalence than Region H.",
+    "B": "Region A has a lower prevalence than Region B.",
+    "C": "Region J has higher prevalence than Region G.",
+    "D": "Region H has the same prevalence level as Region E."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The legend order misleads the actual comparison of prevalence levels between the regions."
+}

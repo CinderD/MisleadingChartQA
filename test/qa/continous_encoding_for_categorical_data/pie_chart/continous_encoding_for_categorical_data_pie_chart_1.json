@@ -1,0 +1,18 @@
+{
+  "question": "This pie chart shows quarterly sales distribution across different regions. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "The darker green regions indicate higher market maturity and better performance.",
+    "B": "North America accounts for the largest share of quarterly sales revenue.",
+    "C": "The color gradient suggests a geographical progression from developed to emerging markets.",
+    "D": "Europe and Asia Pacific combined represent exactly 60% of total sales."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "pie_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses continuous color encoding (green gradient) for categorical regional data. Geographic regions are distinct, independent categories with no inherent order or continuous relationship that would justify a color gradient. The continuous color scale misleadingly suggests that darker colors represent higher importance, maturity, or some progressive relationship between regions, when in reality the regions are simply different categorical divisions. Each region should use distinct, unordered colors to avoid implying false relationships between the categories."
+}
+

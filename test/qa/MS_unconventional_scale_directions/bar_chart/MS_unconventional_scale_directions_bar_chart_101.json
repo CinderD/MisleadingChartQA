@@ -1,0 +1,17 @@
+{
+  "question": "What is the overall trend in the number of restaurants reported in the chart from 2010 to 2023?",
+  "options": {
+    "A": "Increasing",
+    "B": "Decreasing",
+    "C": "Constant",
+    "D": "Fluctuating"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted x-axis, making the data appear as if the trend is decreasing, but the data actually shows a fluctuating trend."
+}

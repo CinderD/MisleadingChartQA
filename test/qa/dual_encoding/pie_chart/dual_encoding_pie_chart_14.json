@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows smartphone market share by brand. Which statement is correct according to the chart?",
+  "options": {
+    "A": "Brand A's share is larger than the combined share of Brand B, Brand C and Brand D.",
+    "B": "Brand B has the smallest share among all categories.",
+    "C": "Brand C, Brand D and 'Others' combined are equal to Brand A.",
+    "D": "No correct answer."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie chart dual-encodes segment size using angle and radius (inner+outer), exaggerating Brand A visually. According to the data, Brand C (15%) + Brand D (15%) + Others (10%) equals Brand A (40%)."
+}

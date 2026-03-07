@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the company expense breakdown. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "R&D accounts for the largest share of expenses.",
+    "B": "Rent accounts for the largest share of expenses.",
+    "C": "Salaries account for the largest share of expenses.",
+    "D": "Marketing accounts for the largest share of expenses."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. R&D: 30%; Utilities: 20%; Other: 18%; Salaries: 12%; Marketing: 10%; Rent: 10%."
+}

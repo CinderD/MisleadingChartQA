@@ -1,0 +1,17 @@
+{
+  "question": "Which quarter appears to have the best overall platform performance based on the stacked bar chart?",
+  "options": {
+    "A": "Q1 has the best overall performance.",
+    "B": "Q3 has the best overall performance.",
+    "C": "The chart cannot be used to determine overall performance because it stacks unrelated metrics with different units.",
+    "D": "Q4 has the best overall performance because it has the highest total stacked value."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart stacks unrelated metrics (Page Views, Server Uptime, etc.) into a single total. These metrics have different units and meanings (e.g., counts, temperatures, consumption), so adding them together creates a meaningless sum. The stacked height cannot be used to assess overall performance. Only individual metric comparisons are valid."
+}

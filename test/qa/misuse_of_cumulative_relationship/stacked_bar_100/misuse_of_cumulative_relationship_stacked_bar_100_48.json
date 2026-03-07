@@ -1,0 +1,17 @@
+{
+  "question": "Based on the quarterly platform engagement distribution chart, what can we say about the pattern of 'User Registrations' over the year?",
+  "options": {
+    "A": "The chart normalizes the categories to 100% per quarter, so it only shows the share of user registrations and does not allow us to determine an absolute increasing trend.",
+    "B": "The absolute number of user registrations increases each quarter because the share of registrations is larger in the later quarters.",
+    "C": "User registrations clearly decrease in absolute number from Q1 to Q4.",
+    "D": "The combined height of all colors in Q4 shows that total platform engagement, including registrations, is higher than in Q1."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart normalizes unrelated categories to 100% within each quarter. It can suggest that the share of a metric is higher in later quarters, but it cannot establish an absolute increasing trend without the underlying totals. A higher percentage share does not necessarily mean a higher absolute quantity."
+}

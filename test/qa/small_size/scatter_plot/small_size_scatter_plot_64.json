@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot chart visualizes sales data across several decades. Which of the following statements most accurately reflects the data trend?",
+  "options": {
+    "A": "The revenue of 2020 is betwen 70,000 and 80,000.",
+    "B": "The revenue of 2020 is betwen 80,000 and 90,000.",
+    "C": "The revenue of 2020 is betwen 90,000 and 100,000.",
+    "D": "No correct answer."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The revenue of 2020 is between 80,000 and 90,000. The small size of the chart may cause difficulty in accurately identifying the specific values."
+}

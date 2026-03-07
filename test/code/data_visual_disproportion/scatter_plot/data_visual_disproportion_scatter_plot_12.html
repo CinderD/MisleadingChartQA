@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Preferences Scatterplot</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis-label { font-size: 14px; font-weight: bold; }
+        .legend text { font-size: 12px; }
+        .dot {
+            fill: #96375E;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gift Preferences for Valentine's Day</h1>
+    <div id="chart"></div>
+    <script>
+        // Set dimensions
+        const margin = { top: 40, right: 150, bottom: 50, left: 70 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        // Append SVG
+        const svg = d3.select("#chart")
+          .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        // Load data
+        d3.csv("../../../../data/data_visual_disproportion/scatter_plot/data_visual_disproportion_scatter_plot_12.csv").then(data => {
+
+          data.forEach(d => {
+            d.actual_percentage = +d.actual_percentage;
+            d.visual_height = +d.visual_height;
+          });
+
+          // Scales
+          const x = d3.scaleBand().domain(data.map(d => d.category)).range([0, width]).padding(0.2);
+          const y = d3.scaleLinear().domain([0, 60]).range([height, 0]);
+
+          // Axes
+          svg.append("g")
+              .attr("transform", `translate(0, ${height})`)
+              .call(d3.axisBottom(x));
+
+          svg.append("g")
+              .call(d3.axisLeft(y));
+
+          // Axes Labels
+          svg.append("text")
+              .attr("class", "axis-label")
+              .attr("x", width / 2)
+              .attr("y", height + 40)
+              .attr("text-anchor", "middle")
+              .text("Categories");
+
+          svg.append("text")
+              .attr("class", "axis-label")
+              .attr("transform", "rotate(-90)")
+              .attr("x", -height / 2)
+              .attr("y", -50)
+              .attr("text-anchor", "middle")
+              .text("Adjusted Visual Metric");
+
+          // Scatter Points
+          svg.selectAll(".dot")
+              .data(data)
+              .enter()
+              .append("circle")
+              .attr("class", "dot")
+              .attr("cx", d => x(d.category) + x.bandwidth() / 2)
+              .attr("cy", d => y(d.visual_height))
+              .attr("r", 12)
+              .attr("stroke", "#96375E")
+              .attr("fill", "#96375E");
+
+          // Labels
+          svg.selectAll(".label")
+              .data(data)
+              .enter()
+              .append("text")
+              .attr("class", "label")
+              .attr("x", d => x(d.category) + x.bandwidth() / 2)
+              .attr("y", d => y(d.visual_height) - 15)
+              .attr("text-anchor", "middle")
+              .text(d => `${d.actual_percentage}%`)
+              .style("font-size", "12px");
+        });
+    </script>
+</body>
+</html>

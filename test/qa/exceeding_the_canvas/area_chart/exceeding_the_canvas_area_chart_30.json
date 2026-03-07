@@ -1,0 +1,17 @@
+{
+  "question": "The area chart shows the revenue for Company X from 2018 to 2022. Which of the following statements is true?",
+  "options": {
+    "A": "The revenue for 2021 is equal to 2022.",
+    "B": "The revenue for 2020 is higher than 2019.",
+    "C": "Revenues for 2021 is the highest.",
+    "D": "The revenues for 2021 and 2022 are both 10% more than 2020."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The values for 2021 and 2022 are too large, causing them to exceed the chart’s visible area. This results in both points being shown out of scope, which could mislead viewers into thinking that their revenues are identical."
+}

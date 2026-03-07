@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is Friday of the current week, what is the approximate average number of visits for the entire week (Monday to Sunday)?",
+  "options": {
+    "A": "about 30 visits per day, since the visible bars are mostly around that level",
+    "B": "about 23 visits per day, averaging all seven days including Saturday and Sunday as 0",
+    "C": "unable to determine a reliable weekly average because data for Saturday and Sunday are missing",
+    "D": "about 32 visits per day, averaging only the days with non-zero visits"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart only shows measured values for the first part of the week; the remaining days are effectively missing, but are drawn as zero-height bars. Computing an average across all seven days (including those zeros) assumes the missing days truly had zero values, which is not supported by the data. Therefore the weekly average cannot be reliably calculated."
+}

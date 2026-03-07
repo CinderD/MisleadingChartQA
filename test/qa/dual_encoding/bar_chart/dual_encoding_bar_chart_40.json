@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows annual cybersecurity incidents. Which statement is reliable according to the chart data?",
+  "options": {
+    "A": "2011-12 has slightly more incidents than 2010-11.",
+    "B": "2012-13 has the lowest number of incidents among all the years shown.",
+    "C": "2006-07 has the highest number of incidents among the years shown.",
+    "D": "2012-13 has more than twice as many incidents as 2011-12."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

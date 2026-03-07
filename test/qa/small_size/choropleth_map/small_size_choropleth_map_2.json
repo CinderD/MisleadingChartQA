@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map displays unemployment rates for selected US states. Which statement is correct?",
+  "options": {
+    "A": "The extremely small text size makes it difficult to read specific unemployment rates accurately.",
+    "B": "New Hampshire has the lowest unemployment rate among the shown states.",
+    "C": "Ohio has an unemployment rate of 4.1%.",
+    "D": "The map shows clear regional unemployment patterns."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific unemployment percentages accurately. While the color scheme may suggest relative differences, the inability to read exact values prevents precise comparison of unemployment rates between states. Options B and C seem reasonable but cannot be verified due to the poor text visibility."
+}

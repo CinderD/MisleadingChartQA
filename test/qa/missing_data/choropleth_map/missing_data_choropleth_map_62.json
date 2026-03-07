@@ -1,0 +1,17 @@
+{
+  "question": "Was the average precipitation over 15 years in Mexico (A) higher than in South Africa (C)?",
+  "options": {
+    "A": "Yes, Mexico (A) had higher precipitation",
+    "B": "No, South Africa (C) had higher precipitation",
+    "C": "They had equal precipitation",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "Mexico or South Africa appears grey on the map, which represents missing data, not a true value. Since one of the regions has no data, we cannot reliably compare their values, even though the color scale may tempt viewers to do so."
+}

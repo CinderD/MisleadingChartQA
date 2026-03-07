@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US population map, which statement below is the most accurate?",
+  "options": {
+    "A": "The population gap between California and Wyoming might exceed that between Virginia and Pennsylvania.",
+    "B": "The population differences are impossible to determine from this visualization.",
+    "C": "California and Wyoming have similar populations.",
+    "D": "Virginia and Pennsylvania have very different population levels."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Virginia (12.8M) and Illinois (19.3M) have a 6.5M population difference, while California (5.8M) and New York (6.5M) have only a 0.7M difference. However, the categorical color encoding groups Virginia and Illinois into the same color bin (12-20M range), making their large difference appear similar, while California and New York appear more different due to different color bins."
+}

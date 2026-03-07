@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, which category has the largest share?",
+  "options": {
+    "A": "Nuclear",
+    "B": "Fossil Fuels",
+    "C": "Hydroelectric",
+    "D": "Renewables"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie uses an adjusted scaling function for slice sizes, so the largest-looking wedge may not correspond to the largest true percentage. This can make Hydroelectric appear largest even though the data show Renewables is largest."
+}

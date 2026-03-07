@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows GDP (in billions) for selected US states. Which statement is correct?",
+  "options": {
+    "A": "California has the highest GDP among the shown states.",
+    "B": "The extremely small text size makes it difficult to read specific GDP values accurately.",
+    "C": "Texas has a GDP of approximately $1.8 trillion.",
+    "D": "The map shows clear regional economic patterns."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific GDP figures accurately. Rankings and exact values cannot be verified."
+}

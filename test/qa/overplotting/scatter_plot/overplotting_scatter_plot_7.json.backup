@@ -1,0 +1,17 @@
+{
+  "question": "Can Spring achieve humidity above 21%?",
+  "options": {
+    "A": "Cannot be inferred / inadequate information",
+    "B": "No",
+    "C": "Yes",
+    "D": "Only Summer, Fall, Winter have humidity above 21"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 21% humidity position, making it difficult to accurately discern if any members of Spring has the humidity higher than 21%."
+}

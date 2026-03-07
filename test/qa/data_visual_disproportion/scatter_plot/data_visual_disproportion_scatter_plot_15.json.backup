@@ -1,0 +1,17 @@
+{
+  "question": "The chart depicts preferences and values for valentine's gifts. Which conclusion is correct?",
+  "options": {
+    "A": "Candy has a considerably higher value than Candy.",
+    "B": "Cards and Candy have similar values.",
+    "C": "The categories have nearly identical values.",
+    "D": "Candy has the highest value among the categories."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

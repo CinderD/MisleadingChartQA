@@ -1,0 +1,17 @@
+{
+  "question": "Based on the unemployment rate map, which statement best describes the relationship between states?",
+  "options": {
+    "A": "Minnesota and Montana have similar unemployment rates.",
+    "B": "The unemployment rate gap between Minnesota and Montana might exceeds that between Iowa and Nebraska.",
+    "C": "All states have very diverse unemployment rate levels.",
+    "D": "The unemployment rate differences are impossible to determine from this visualization."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Minnesota (9.8%) and Montana (14.9%) have a 5.1% unemployment rate difference, while Iowa (2.7%) and Nebraska (3.3%) have only a 0.6% difference. However, the categorical color encoding groups Minnesota and Montana into the same color bin (9%+ range), making their large difference appear similar, while Iowa and Nebraska appear more different due to different color bins."
+}

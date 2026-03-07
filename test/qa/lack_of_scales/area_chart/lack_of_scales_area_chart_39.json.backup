@@ -1,0 +1,17 @@
+{
+  "question": "How does Week 4 output compare to Week 1 output?",
+  "options": {
+    "A": "Week 4 output is significantly lower than Week 1.",
+    "B": "Week 4 output appears to be about 0.7 times higher than Week 1.",
+    "C": "Week 4 output is about 0.5 times higher than Week 1.",
+    "D": "Cannot determine the exact relationship between Week 4 and Week 1."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "lack_of_scales",
+  "chartType": "area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart displays weekly production output with an area chart, but provides no Y-axis scales or numerical labels. While the visual data clearly shows Week 4 has higher output than Week 1, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or even reversed scale, it is impossible to determine the exact relationship between the two weeks. Visual estimation of relative proportions without proper scales is unreliable for accurate comparison."
+}

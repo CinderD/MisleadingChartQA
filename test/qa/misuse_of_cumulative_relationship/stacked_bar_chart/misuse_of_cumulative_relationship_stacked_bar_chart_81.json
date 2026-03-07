@@ -1,0 +1,17 @@
+{
+  "question": "Based on the stacked bar chart showing performance indicators, which quarter appears to have the best overall performance?",
+  "options": {
+    "A": "Q1 shows the best performance because it has the highest stacked total.",
+    "B": "Q2 shows the best performance because it has the highest stacked total.",
+    "C": "Q3 shows the best performance because it has balanced metrics across all categories.",
+    "D": "The chart cannot determine overall performance accurately because it combines unrelated metrics that cannot be meaningfully added together."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart stacks unrelated metrics (Store Visits, Electricity Consumption, etc.) into a single total. These metrics have different units and meanings (e.g., counts, temperatures, consumption), so adding them together creates a meaningless sum. The stacked height cannot be used to assess overall performance. Only individual metric comparisons are valid."
+}

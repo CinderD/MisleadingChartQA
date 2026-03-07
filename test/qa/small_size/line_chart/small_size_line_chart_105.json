@@ -1,0 +1,17 @@
+{
+  "question": "What is the main difficulty in drawing detailed conclusions from this line chart of sales from 1924 to 2024?",
+  "options": {
+    "A": "The chart is too small to clearly read the year labels and detect precise changes over time.",
+    "B": "Sales clearly decrease in the middle decades before rising again toward the end.",
+    "C": "The chart shows that sales remain constant throughout the entire period.",
+    "D": "The chart clearly identifies the exact year in which sales reached their maximum."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The data shows two declines: 1955-1965 and 1975-1985. Small text can make it difficult to see both dips."
+}

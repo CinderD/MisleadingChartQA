@@ -1,0 +1,17 @@
+{
+  "question": "In town X, what is the approximate average customers from January to March?",
+  "options": {
+    "A": "424",
+    "B": "377",
+    "C": "288",
+    "D": "303"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "misleading_annotations",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows customers for January, February, March: January (359), February (202), March (303). The correct average is (359 + 202 + 303) / 3 = 288. However, the misleading annotation shows a dashed line labeled 'Average' at 303, which is incorrect and designed to mislead viewers into selecting 303 as the answer."
+}

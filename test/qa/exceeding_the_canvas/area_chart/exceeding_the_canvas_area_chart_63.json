@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is best supported by the area chart of sales from 2018 to 2022?",
+  "options": {
+    "A": "Sales were flat in the middle years.",
+    "B": "Sales in 2021 and 2022 are identical.",
+    "C": "Sales increased overall from 2018 to 2022, but the exact values for the last two years are unclear from the chart.",
+    "D": "Sales decreased from 2018 to 2022."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart clips the tallest bars by using a y-axis max below the data maximum, misleading viewers into thinking the top values are equal."
+}

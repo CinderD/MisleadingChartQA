@@ -1,0 +1,17 @@
+{
+  "question": "What is the primary segment in the last period shown?",
+  "options": {
+    "A": "The orange segment (Low income) shows the largest share.",
+    "B": "Cannot determine the primary segment without a legend to explain what each color represents.",
+    "C": "The green segment (Upper-middle) indicates the largest share.",
+    "D": "The purple segment (High income) shows the largest share."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays different colored segments but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category has the largest share; options that assign a category to a color are guessing."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the percentage of people who prefer different Valentine’s gifts. Based on the percentage labels, which statement is supported by the data?",
+  "options": {
+    "A": "Flowers have the highest preference among all the categories.",
+    "B": "Jewelry has the highest preference among all the categories.",
+    "C": "Cards and Candy are preferred by the same percentage of people.",
+    "D": "The categories all have nearly identical preference percentages."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

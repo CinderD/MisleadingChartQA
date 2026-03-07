@@ -1,0 +1,17 @@
+{
+  "question": "Which statement best describes the site visits trend shown in the chart from 2018 to 2022?",
+  "options": {
+    "A": "Site visits peaked in 2020 and then declined afterward.",
+    "B": "We cannot determine whether 2021 or 2022 has more visits because their bars are clipped at the top.",
+    "C": "Site visits increased every year from 2018 through 2022.",
+    "D": "Site visits in 2021 and 2022 were exactly the same."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The visible y-range is set below the maximum value, so the top bars are truncated and looks identical."
+}

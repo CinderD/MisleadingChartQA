@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is May 01, 2024, which of the following statements about the latest year's recruitment is most appropriate based on the chart?",
+  "options": {
+    "A": "The company’s recruitment performance has been consistently declining every year since 2015, including the latest year.",
+    "B": "The latest year clearly shows a sharp drop in total new employees compared with all previous full years.",
+    "C": "The latest year has already recruited more new employees than any earlier year.",
+    "D": "The chart only shows recruitment up to May 01, 2024, so we cannot determine whether the latest year will end higher or lower than previous years."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The area and line for the latest year include only about 3 months of data, while earlier years show totals for the full year. Visually, the latest year appears much lower, but this is purely because the period is shorter, not because the underlying performance has collapsed. Without the remaining months, we cannot judge the full-year outcome."
+}

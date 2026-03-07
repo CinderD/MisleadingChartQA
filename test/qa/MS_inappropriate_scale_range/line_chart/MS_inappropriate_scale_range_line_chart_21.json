@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend for the percentage of bacteria Z from 1970 to 2020?",
+  "options": {
+    "A": "Generally increasing",
+    "B": "Generally decreasing",
+    "C": "Generally constant",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a full 0-100% scale while the actual data values range only from 0.1% to 0.45%, making the line appear almost flat and constant. The scale is inappropriate for the data range, making it impossible to accurately determine the trend from the visualization alone."
+}

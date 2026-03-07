@@ -1,0 +1,17 @@
+{
+  "question": "From these maps, what can be concluded about which crime type has higher rates overall across U.S. states?",
+  "options": {
+    "A": "Both crime types have similar overall levels across states",
+    "B": "It cannot be determined from these maps alone",
+    "C": "Property crimes tend to have higher rates overall across states",
+    "D": "Violent crimes tend to have higher rates overall across states"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Both maps reuse the same threshold scale, but their underlying distributions differ. This can make one map appear more intense simply because more states fall into the top bin. In the underlying data, Violent Crimes has the higher average value, so that is the only reliable conclusion."
+}

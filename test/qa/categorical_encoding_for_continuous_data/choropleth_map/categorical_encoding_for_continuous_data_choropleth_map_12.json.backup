@@ -1,0 +1,17 @@
+{
+  "question": "Based on the population map, which statement best describes the relationship between states?",
+  "options": {
+    "A": "The population differences are impossible to determine from this visualization.",
+    "B": "The population gap between Iowa and Massachusetts might exceeds that between North Dakota and Maryland.",
+    "C": "Iowa and Massachusetts have similar populations.",
+    "D": "All states have very diverse population levels."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Iowa (12.8M) and Massachusetts (19.2M) have a 6.4M population difference, while North Dakota (5.8M) and Maryland (6.3M) have only a 0.5M difference. However, the categorical color encoding groups Iowa and Massachusetts into the same color bin (12-20M range), making their large difference appear similar, while North Dakota and Maryland appear more different due to different color bins."
+}

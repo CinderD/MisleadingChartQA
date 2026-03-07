@@ -1,0 +1,17 @@
+{
+  "question": "What does the chart suggest about the approval rating from 2005 to 2020?",
+  "options": {
+    "A": "There was a modest upward trend within a narrow range",
+    "B": "There was a dramatic improvement over the period",
+    "C": "The approval rating remained almost unchanged with no clear trend",
+    "D": "The trend cannot be determined from this chart"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (59.24–61.30%) instead of a more informative 0–100% context, which visually exaggerates variability. The actual net change is about 2.06% over the period, which is modest in the full context."
+}

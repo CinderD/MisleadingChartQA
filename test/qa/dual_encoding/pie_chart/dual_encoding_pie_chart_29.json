@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, which activity accounts for the largest share of time in a typical day?",
+  "options": {
+    "A": "Leisure",
+    "B": "Work",
+    "C": "Sleep",
+    "D": "Commute"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Leisure: 45%; Sleep: 22%; Work: 18%; Commute: 15%."
+}

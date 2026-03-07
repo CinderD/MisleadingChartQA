@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows training hours vs. test score. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Students who train more hours tend to achieve higher test scores overall.",
+    "B": "The larger, darker points prove that only those specific students improved with more training.",
+    "C": "Students who train more hours tend to achieve lower test scores overall.",
+    "D": "There is no visible relationship between training hours and test scores."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the y-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

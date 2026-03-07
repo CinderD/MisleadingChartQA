@@ -1,0 +1,17 @@
+{
+  "question": "Based on the temperature heatmap, which statement is most accurate about the temperatures of Los Angeles and San Diego across the year?",
+  "options": {
+    "A": "It can be infered that their temperatures are very similar throughout the year because many months share the same color.",
+    "B": "The temperatures might be significantly different in some months, but the discrete color bins make them appear more similar than they actually are.",
+    "C": "The temperature patterns of these cities cannot be compared at all using this visualization.",
+    "D": "Los Angeles is consistently warmer than San Diego, and the color differences precisely represent the size of the temperature gaps."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Los Angeles (10.6°C) and San Diego (18.3°C) have a 7.7°C difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of temperature relationships."
+}

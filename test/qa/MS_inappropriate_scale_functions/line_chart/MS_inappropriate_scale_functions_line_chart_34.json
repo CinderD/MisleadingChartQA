@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart data, which period shows the larger net increase in value?",
+  "options": {
+    "A": "1992-1994",
+    "B": "It cannot be determined from the chart",
+    "C": "1997-1999",
+    "D": "Both periods show about the same increase"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 1992-1994: 1072 → 1728 (+656); 1997-1999: 2799 → 3525 (+726)."
+}

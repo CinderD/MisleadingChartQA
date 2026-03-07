@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatterplot of age and income, which statement can be reliably concluded?",
+  "options": {
+    "A": "Income clearly peaks only for individuals between ages 45 and 55.",
+    "B": "Income clearly peaks only for individuals between ages 55 and 60.",
+    "C": "The scatterplot does not allow a precise identification of a single age group with the highest income.",
+    "D": "Individuals younger than 35 clearly have the highest income in the chart."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 45 and 55 have the highest income. The small size of the chart may cause difficulty in accurately identifying the specific trends of income in certain age ranges."
+}

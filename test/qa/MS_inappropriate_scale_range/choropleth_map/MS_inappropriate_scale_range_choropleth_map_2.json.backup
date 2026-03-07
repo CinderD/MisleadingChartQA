@@ -1,0 +1,18 @@
+{
+  "question": "Which season shows more temperature variation across U.S. states according to these maps?",
+  "options": {
+    "A": "Summer shows more variation",
+    "B": "Winter shows more variation",
+    "C": "Both seasons show similar variation",
+    "D": "The maps cannot be compared due to different scales"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The maps use different temperature scales: summer (75-85°F+) vs winter (20-50°F+). Winter appears to show more color variation because the scale range is wider (30°F range vs 10°F range), but this is due to inappropriate scale ranges rather than actual temperature variation. The scales make direct comparison impossible."
+}
+

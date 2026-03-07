@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart data, which period shows the larger overall change in value (regardless of direction)?",
+  "options": {
+    "A": "2007-2009",
+    "B": "Both periods show about the same overall change",
+    "C": "2000-2002",
+    "D": "It cannot be determined from the chart"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2000-2002: 69 cm → 260 cm (change 191 cm); 2007-2009: 183 cm → 30 cm (change 153 cm)."
+}

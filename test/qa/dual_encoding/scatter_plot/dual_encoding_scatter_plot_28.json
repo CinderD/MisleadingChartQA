@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows marketing spend vs. revenue. Which statement best describes the relationship between the two variables?",
+  "options": {
+    "A": "Higher marketing spend is generally associated with lower revenue.",
+    "B": "There is no clear relationship between marketing spend and revenue.",
+    "C": "Revenue increases strongly as marketing spend increases.",
+    "D": "Revenue stays roughly constant as marketing spend increases."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

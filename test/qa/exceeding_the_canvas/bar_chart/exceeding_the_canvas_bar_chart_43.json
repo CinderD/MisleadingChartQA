@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart represents the revenue for a company from 2018 to 2022. Which statement best describes the chart's depiction of revenues?",
+  "options": {
+    "A": "The last three years have the same revenue.",
+    "B": "Revenue in the first year was the highest.",
+    "C": "It is not possible to tell from the chart which of the last three years has the highest revenue.",
+    "D": "Revenue declined every year."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is set below the data maximum, so the top three bars are clipped and appear equal; the true values cannot be compared from the chart alone."
+}

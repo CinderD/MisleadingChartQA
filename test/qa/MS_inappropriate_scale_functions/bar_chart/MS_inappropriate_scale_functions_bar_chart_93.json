@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, Campaign A received approximately what fraction of the donations that Campaign B received?",
+  "options": {
+    "A": "About one-fifth as many donations",
+    "B": "About two-thirds as many donations",
+    "C": "About the same number of donations",
+    "D": "About one-third as many donations"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a non-linear (inappropriate) scaling function, so differences in bar heights do not correspond linearly to differences in the underlying values. This can make the proportion between Campaign A and Campaign B look closer to 67% even though the data imply about 33%."
+}

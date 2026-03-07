@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows market share by company. Which statement is supported by the chart data?",
+  "options": {
+    "A": "Company E has the largest market share among all companies.",
+    "B": "Company B has the largest market share among all companies.",
+    "C": "Company A and Company C have nearly equal market shares.",
+    "D": "Company C has the smallest market share among all companies."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "pie_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Labels show Company B has the highest percentage. The pie uses visual_size for slice angles, so Company E's slice can appear larger, misleading viewers."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, approximately what percentage of global energy consumption comes from nuclear power?",
+  "options": {
+    "A": "About 25%",
+    "B": "About 30%",
+    "C": "About 45%",
+    "D": "About 50%"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie uses an adjusted scaling function for slice sizes, so the largest-looking wedge may not correspond to the largest true percentage. This can make Hydroelectric appear largest even though the data show Nuclear is largest."
+}

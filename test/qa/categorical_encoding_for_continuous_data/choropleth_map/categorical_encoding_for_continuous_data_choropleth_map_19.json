@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US population map, which statement below is the most accurate?",
+  "options": {
+    "A": "All states have very diverse population levels.",
+    "B": "The population gap between Tennessee and South Carolina might exceed that between West Virginia and Florida.",
+    "C": "The population differences are impossible to determine from this visualization.",
+    "D": "Tennessee and South Carolina have similar populations."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Tennessee (37.4M) and South Carolina (49.4M) have a 12.0M population difference, while West Virginia (29.8M) and Florida (30.8M) have only a 1.0M difference. However, the categorical color encoding groups Tennessee and South Carolina into the same color bin (30M+ range), making their large difference appear similar, while West Virginia and Florida appear more different due to different color bins."
+}

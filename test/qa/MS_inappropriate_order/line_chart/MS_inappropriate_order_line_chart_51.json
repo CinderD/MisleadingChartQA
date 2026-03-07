@@ -1,0 +1,17 @@
+{
+  "question": "This line chart shows average test scores in an Advanced Mathematics course across the semester. Based on the data shown, which statement best describes the pattern of scores over the months displayed on the x-axis?",
+  "options": {
+    "A": "Scores fluctuate noticeably from point to point, with no simple upward or downward trend across the months as arranged on the chart.",
+    "B": "Scores steadily increase from left to right, with each successive month higher than the last.",
+    "C": "Scores steadily decrease from left to right, with each successive month lower than the last.",
+    "D": "Scores remain almost perfectly constant from month to month, with virtually no variation."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual sales data from 1920 to 2024. What is the main difficulty in drawing precise conclusions from this chart?",
+  "options": {
+    "A": "The chart is so small that it is hard to see exact years and subtle changes in the sales trend.",
+    "B": "Sales clearly decreased between every pair of consecutive decades.",
+    "C": "Sales remained exactly constant over the entire period.",
+    "D": "Sales show a perfectly smooth exponential growth without any deviations."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The sales data indicates that sales rose from 1924 to 1970, fell from 1970 to 1980, and then began rising again from 1980 to 2024. However, the use of small text or data markers makes these trends hard to discern."
+}

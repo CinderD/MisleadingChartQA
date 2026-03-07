@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number of Bookstores in City Z Over the Years</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: black;
+        }
+        .bar {
+            fill: steelblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Number of Bookstores in City Z Over the Years</h1>
+    <div id="chart">
+        <svg width="1000" height="750"></svg>
+    </div>
+
+    <script>
+        const margin = { top: 60, right: 60, bottom: 60, left: 60 },
+              width = 1000 - margin.left - margin.right,
+              height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        d3.csv("../../../../data/MS_unconventional_scale_directions/bar_chart/MS_unconventional_scale_directions_bar_chart_68.csv")
+            .then(data => {
+                data.forEach(d => {
+                    d.year = +d.year;
+                    d.bookstores_inverted = +d.bookstores_inverted;
+                });
+
+                const x = d3.scaleBand()
+                    .domain(data.map(d => d.year))
+                    .range([0, width])
+                    .padding(0.1);
+
+                const y = d3.scaleLinear()
+                    .domain([d3.max(data, d => d.bookstores_inverted), 0]) // Inverted y-axis
+                    .nice()
+                    .range([0, height]);
+
+                svg.selectAll(".bar")
+                    .data(data)
+                    .enter().append("rect")
+                    .attr("class", "bar")
+                    .attr("x", d => x(d.year))
+                    .attr("y", d => y(d.bookstores_inverted))
+                    .attr("width", x.bandwidth())
+                    .attr("height", d => height - y(d.bookstores_inverted));
+
+                svg.append("g")
+                    .attr("transform", `translate(0, ${height})`)
+                    .call(d3.axisBottom(x).tickFormat(d3.format("d")))
+                    .selectAll("text")
+                    .style("text-anchor", "middle");
+
+                svg.append("g")
+                    .call(d3.axisLeft(y));
+
+                svg.append("text")
+                    .attr("class", "axis-label")
+                    .attr("x", width / 2)
+                    .attr("y", height + 50)
+                    .style("text-anchor", "middle")
+                    .text("Year");
+
+                svg.append("text")
+                    .attr("class", "axis-label")
+                    .attr("transform", "rotate(-90)")
+                    .attr("x", -height / 2)
+                    .attr("y", -50)
+                    .style("text-anchor", "middle")
+                    .text("Number of Bookstores");
+            });
+    </script>
+</body>
+</html>

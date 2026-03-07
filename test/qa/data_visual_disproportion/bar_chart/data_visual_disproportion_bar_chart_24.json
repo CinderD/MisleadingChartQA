@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the share of renewable energy production by source. Which statement follows from the chart data?",
+  "options": {
+    "A": "Hydroelectric exceeds Solar in share.",
+    "B": "Wind's share is about double Geothermal's.",
+    "C": "Biomass accounts for around of 20%.",
+    "D": "Geothermal contributes the smallest share among the five sources."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Labels show Geothermal has the smallest share (3.3%), so the correct answer is that Geothermal contributes the smallest share. The bars use heights unrelated to actual shares; Wind versus Geothermal may look like a 2× ratio and can mislead viewers into choosing the option about Wind's share being about double Geothermal's."
+}

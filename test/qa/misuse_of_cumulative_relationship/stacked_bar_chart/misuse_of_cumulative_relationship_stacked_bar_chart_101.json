@@ -1,0 +1,17 @@
+{
+  "question": "Based on the stacked bar chart showing quarterly restaurant performance indicators, which statement best reflects what can be concluded about overall performance across quarters?",
+  "options": {
+    "A": "The chart cannot determine overall performance accurately because it combines unrelated metrics that cannot be meaningfully added together.",
+    "B": "Q1 shows the best overall performance because it has the smallest combined height across all indicators.",
+    "C": "Q1 shows the best overall performance because its indicators remain relatively stable compared with other quarters.",
+    "D": "Q4 shows the best overall performance because it has the highest stacked total."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart stacks unrelated metrics (Sales, Kitchen Temperature, etc.) into a single total. These metrics have different units and meanings (e.g., counts, temperatures, consumption), so adding them together creates a meaningless sum. The stacked height cannot be used to assess overall performance. Only individual metric comparisons are valid."
+}

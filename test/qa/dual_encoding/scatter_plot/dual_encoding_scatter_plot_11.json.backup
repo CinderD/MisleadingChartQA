@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatter plot, which conclusion is most supported by the data?",
+  "options": {
+    "A": "There is a steady linear increase across the full x-range.",
+    "B": "The points form two completely separate groups with no overlap.",
+    "C": "There is no relationship at all.",
+    "D": "The relationship is non-linear: y changes in a curved pattern rather than steadily increasing or decreasing."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the y-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

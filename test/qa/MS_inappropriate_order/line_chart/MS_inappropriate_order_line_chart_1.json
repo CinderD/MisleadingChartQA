@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, how does the trend of visitors at Airport Y appear from 2000 to 2005?",
+  "options": {
+    "A": "Increasing consistently",
+    "B": "Decreasing consistently",
+    "C": "No consistent trend",
+    "D": "Fluctuating significantly"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is manipulated to display years in an incorrect order, such as showing 2003 before 2001 and 2004 before 2002, causing a misleading presentation of trends. Review the order carefully to discern real trends."
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Energy Consumption Trends</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <h1>Monthly Energy Consumption (kWh)</h1>
+    <svg width="1000" height="750"></svg>
+    <script>
+        const margin = { top: 60, right: 60, bottom: 60, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+        const svg = d3.select("svg").append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+        const data = [
+            { month: 1, consumption: 800 }, { month: 2, consumption: 750 }, { month: 3, consumption: 900 },
+            { month: 4, consumption: 850 }, { month: 5, consumption: 1000 }, { month: 6, consumption: 950 },
+            { month: 7, consumption: 1100 }, { month: 8, consumption: 1050 }, { month: 9, consumption: 1200 },
+            { month: 10, consumption: 1150 }, { month: 11, consumption: 1300 }, { month: 12, consumption: 1250 }
+        ];
+        const x = d3.scaleLinear().domain([1, 12]).range([0, width]);
+        const y = d3.scaleLinear().domain([1500, 500]).range([height, 0]);
+        const line = d3.line().x(d => x(d.month)).y(d => y(d.consumption));
+        svg.append("path").datum(data).attr("fill", "none").attr("stroke", "orange").attr("stroke-width", 3).attr("d", line);
+        svg.selectAll("dot").data(data).enter().append("circle").attr("cx", d => x(d.month)).attr("cy", d => y(d.consumption)).attr("r", 5).attr("fill", "orange");
+        svg.append("g").attr("transform", `translate(0, ${height})`).call(d3.axisBottom(x).tickFormat(d => {
+            const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+            return months[d-1];
+        }));
+        svg.append("g").call(d3.axisLeft(y));
+        svg.append("text").attr("class", "axis-label").attr("x", width / 2).attr("y", height + 50).style("text-anchor", "middle").text("Month");
+        svg.append("text").attr("class", "axis-label").attr("transform", "rotate(-90)").attr("x", -height / 2).attr("y", -40).style("text-anchor", "middle").text("Energy Consumption (kWh)");
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

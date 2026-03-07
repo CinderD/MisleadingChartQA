@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart of annual customer subscriptions (as of Mar 01, 2024), which statement is most appropriate?",
+  "options": {
+    "A": "The latest year clearly shows a sharp drop in subscriptions compared with earlier years.",
+    "B": "The latest year is on track to end with fewer subscriptions than any previous year.",
+    "C": "The latest year already matches the average annual subscriptions of the earlier years.",
+    "D": "Because the latest year only includes data up to March 1, we cannot determine whether it will finish higher or lower than previous years."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The area and line for the latest year include only about 3 months of data, while earlier years show totals for the full year. Visually, the latest year appears much lower, but this is purely because the period is shorter, not because the underlying performance has collapsed. Without the remaining months, we cannot judge the full-year outcome."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows population data for selected US states. Which statement is correct?",
+  "options": {
+    "A": "The extremely small text size makes it difficult to read specific population values accurately.",
+    "B": "Wyoming clearly has the smallest population among the highlighted states.",
+    "C": "Texas has approximately 29.0 million residents according to the exact value shown on the map.",
+    "D": "The map makes it easy to distinguish precise population differences between the highlighted states."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific population values accurately. While the color coding may suggest population patterns, the inability to read exact numbers prevents meaningful comparisons between states."
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Traffic Sources</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart { width: 1000px; height: 600px; margin: 60px auto; }
+        .axis path, .axis line { stroke: #000; }
+        .bar { fill: #9467bd; opacity: 0.8; }
+        .bar:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+    <h1>Website Traffic Sources</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 40, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        const data = [
+            {source: "Organic", traffic: 8500},
+            {source: "Direct", traffic: 6200},
+            {source: "Social", traffic: 4800},
+            {source: "Referral", traffic: 3200},
+            {source: "Email", traffic: 2100}
+        ];
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.source))
+            .range([0, width])
+            .padding(0.1);
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.traffic)])
+            .range([height, 0]);
+
+        g.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x).tickFormat(d => d));
+
+        g.append("g")
+            .call(d3.axisLeft(y).tickFormat("").ticks(0));
+
+        g.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", d => x(d.source))
+            .attr("width", x.bandwidth())
+            .attr("y", d => y(d.traffic))
+            .attr("height", d => height - y(d.traffic));
+
+        g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 35)
+            .attr("text-anchor", "middle")
+            .text("Traffic Source");
+
+        g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -40)
+            .attr("x", -height / 2)
+            .attr("text-anchor", "middle")
+            .text("Monthly Visitors");
+    </script>
+</body>
+</html>

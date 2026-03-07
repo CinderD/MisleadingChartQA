@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the temperature heatmap, which statement best describes the relationship between San Antonio's Nov temperature and Houston's Nov temperature?",
+  "options": {
+    "A": "San Antonio is higher than Houston, and the color difference accurately represents this 4.7°C difference.",
+    "B": "It can be infered that their temperatures are very similar.",
+    "C": "The temperature is impossible to determine from this visualization.",
+    "D": "The temperatures might be significantly different, but the discrete color bins make them appear more similar than they actually are."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "San Antonio (34.5°C) and Houston (39.2°C) have a 4.7°C difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of temperature relationships."
+}

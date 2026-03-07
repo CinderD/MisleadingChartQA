@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows monthly rainfall vs. crop yield. Which statement is best supported by the chart data?",
+  "options": {
+    "A": "Higher rainfall is generally associated with higher crop yields, though the relationship is not perfectly linear.",
+    "B": "The strongest relationship between rainfall and yield is indicated primarily by the darkest and largest points.",
+    "C": "Higher rainfall is generally associated with lower crop yields.",
+    "D": "There is no apparent relationship between rainfall and crop yield."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

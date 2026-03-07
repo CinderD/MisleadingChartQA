@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Revenue Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 600px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .area {
+            opacity: 0.8;
+        }
+        .area:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quarterly Revenue Sources</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 150, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Sample data for revenue sources
+        const data = [
+            {quarter: "Q1", source1: 1200000, source2: 800000, source3: 400000, source4: 200000},
+            {quarter: "Q2", source1: 1400000, source2: 900000, source3: 450000, source4: 250000},
+            {quarter: "Q3", source1: 1600000, source2: 1000000, source3: 500000, source4: 300000},
+            {quarter: "Q4", source1: 1800000, source2: 1100000, source3: 550000, source4: 350000}
+        ];
+
+        const keys = ["source1", "source2", "source3", "source4"];
+        const color = d3.scaleOrdinal()
+            .domain(keys)
+            .range(["#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]);
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.quarter))
+            .range([0, width])
+            .padding(0.3);
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.source1 + d.source2 + d.source3 + d.source4)])
+            .range([height, 0]);
+
+        const stack = d3.stack()
+            .keys(keys)
+            .order(d3.stackOrderNone)
+            .offset(d3.stackOffsetNone);
+
+        const series = stack(data);
+
+        g.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x).tickFormat(d => d));
+
+        g.append("g")
+            .call(d3.axisLeft(y).ticks(5).tickFormat(d => "$" + (d/1000000) + "M"));
+
+        const area = d3.area()
+            .x(d => x(d.data.quarter) + x.bandwidth() / 2)
+            .y0(d => y(d[0]))
+            .y1(d => y(d[1]));
+
+        g.selectAll(".area")
+            .data(series)
+            .enter().append("path")
+            .attr("class", "area")
+            .attr("fill", d => color(d.key))
+            .attr("d", area);
+
+        g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 35)
+            .attr("text-anchor", "middle")
+            .text("Quarter");
+
+        g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -40)
+            .attr("x", -height / 2)
+            .attr("text-anchor", "middle")
+            .text("Revenue ($)");
+
+        // Intentionally no legend to create the misleader
+    </script>
+</body>
+</html>

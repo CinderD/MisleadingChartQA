@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, what trend is observed in sales as advertising spend appears to increase?",
+  "options": {
+    "A": "Sales tend to decrease.",
+    "B": "Sales tend to increase.",
+    "C": "Sales remain roughly constant.",
+    "D": "The trend in sales cannot be determined from the chart."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted x-axis, which can flip the apparent direction of the relationship. The correct option reflects the actual pattern in the data."
+}

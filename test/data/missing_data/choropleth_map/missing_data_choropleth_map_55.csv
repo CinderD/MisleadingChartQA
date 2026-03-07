@@ -1,0 +1,10 @@
+id,region,unemployment_rate,code,representation,latitude,longitude
+484,Mexico,0.00,R-A,M,23.0,-102.0
+156,China,6.13,R-B,Z,35.0,105.0
+840,United States,8.74,R-C,Z,39.0,-98.0
+250,France,10.81,R-D,Z,46.0,2.0
+710,South Africa,4.64,R-E,Z,-30.0,25.0
+643,Russia,3.50,,Z,61.0,105.0
+124,Canada,0.00,,M,60.0,-96.0
+036,Australia,0.00,,M,-25.0,135.0
+076,Brazil,9.52,,Z,-10.0,-60.0

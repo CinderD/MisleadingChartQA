@@ -1,0 +1,17 @@
+{
+  "question": "Which income group appears to make up the largest share of customers in the most recent year shown?",
+  "options": {
+    "A": "The red segment (Low income) accounts for the largest share.",
+    "B": "The purple segment (High income) accounts for the largest share.",
+    "C": "The green segment (Middle income) accounts for the largest share.",
+    "D": "Cannot determine which income group has the largest share without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays different colored segments but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category has the largest share; options that assign a category to a color are guessing."
+}

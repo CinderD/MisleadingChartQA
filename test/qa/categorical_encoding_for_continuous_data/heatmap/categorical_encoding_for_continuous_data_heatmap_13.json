@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the revenue heatmap, which statement best describes the relationship between Company C and Company D in Q3?",
+  "options": {
+    "A": "Company C’s and Company D’s Q3 revenues might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "B": "It can be inferred that their Q3 revenues are very similar.",
+    "C": "Company C has higher Q3 revenue than Company D, and the color difference accurately represents this exact revenue gap.",
+    "D": "The Q3 revenues are impossible to determine or compare from this visualization."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Company C (6.1$M) and Company D (12.4$M) have a 6.3$M difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of revenue relationships."
+}

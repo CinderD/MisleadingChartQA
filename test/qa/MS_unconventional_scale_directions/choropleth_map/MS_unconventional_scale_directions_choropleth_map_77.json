@@ -1,0 +1,17 @@
+{
+  "question": "According to the data represented in the map, which state has a higher incidence, MT or CT?",
+  "options": {
+    "A": "CT",
+    "B": "Both states have the same incidence",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "MT"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although MT appears darker, CT has the higher assigned value when the inversion is considered."
+}

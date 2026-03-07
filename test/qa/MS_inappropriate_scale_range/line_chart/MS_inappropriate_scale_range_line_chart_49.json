@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows average student test scores from 1970 to 1979 (on a 0–100 scale). Based on this chart, what is the most accurate assessment of the change over time?",
+  "options": {
+    "A": "Student performance remained fairly stable, with only a small increase in scores",
+    "B": "There was a dramatic improvement in student performance",
+    "C": "The trend cannot be determined from this chart",
+    "D": "Student performance showed large year‑to‑year swings with no clear pattern"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (53.23–54.99) instead of a more informative 0–100 context, which visually exaggerates variability. The actual net change is about 1.64 over the period, which is modest in the full context."
+}

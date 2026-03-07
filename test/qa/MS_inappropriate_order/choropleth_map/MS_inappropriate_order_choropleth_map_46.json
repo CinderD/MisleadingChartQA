@@ -1,0 +1,17 @@
+{
+  "question": "Which region is more affected by the prevalence according to the misleading chart?",
+  "options": {
+    "A": "Region C is more affected than Region B.",
+    "B": "Region B is more affected than Region A.",
+    "C": "Region A is more affected than Region C.",
+    "D": "Region D is more affected than Region E."
+  },
+  "correctAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "explanation": "The legend for prevalence levels is ordered incorrectly, making it harder to interpret. Region A actually appears to have a higher prevalence than Region B due to this misordering.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "B"
+}

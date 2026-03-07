@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot chart portrays the income and ages of a group of people. Which statement accurately reflects the data?",
+  "options": {
+    "A": "In the chart, individuals between ages 58 and 63 have the highest annual.",
+    "B": "No correct answer.",
+    "C": "In the chart, individuals between ages 48 and 52 have the highest annual.",
+    "D": "In the chart, individuals between ages 52 and 58 have the highest annual."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 52 and 58 have the highest annual. The small size of the chart may cause difficulty in accurately identifying the specific trends of annual in certain age ranges."
+}

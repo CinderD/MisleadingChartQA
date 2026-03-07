@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows marketing spend vs. revenue, with larger, darker points highlighting some campaigns. Which statement best reflects the actual pattern in the data?",
+  "options": {
+    "A": "Revenue increases with marketing spend up to a point, then levels off or drops at the highest spend.",
+    "B": "Higher marketing spend always produces sharply higher revenue, as implied by the largest, darkest points.",
+    "C": "Revenue is roughly the same for all levels of marketing spend.",
+    "D": "Revenue consistently decreases as marketing spend increases."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

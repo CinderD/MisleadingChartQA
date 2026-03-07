@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows rainfall vs. crop yield. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Rainfall of around 140 mm is likely to result in roughly double the crop yield compared to rainfall of around 90 mm.",
+    "B": "There is a generally positive relationship between rainfall and yield.",
+    "C": "Yields decrease as rainfall increases.",
+    "D": "There is no relationship at all."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Dot position encodes yield, while size and color also encode yield, exaggerating visual differences. Despite the emphasis, the reliable takeaway is a generally positive relationship."
+}

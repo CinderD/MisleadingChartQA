@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows the cost from 2018 to 2022. Which statement is best supported by the chart?",
+  "options": {
+    "A": "The cost in 2022 was the highest among all the years shown.",
+    "B": "The cost in 2018 and 2021 was the same.",
+    "C": "The chart does not allow comparison of the highest cost years because they exceed the visible range.",
+    "D": "The cost decreased every year from 2018 to 2022."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis cap causes the top bar to be cut off, so they appear the same height although true values may differ."
+}

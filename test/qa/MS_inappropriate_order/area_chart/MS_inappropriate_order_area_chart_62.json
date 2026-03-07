@@ -1,0 +1,17 @@
+{
+  "question": "Comparing total sales in the first six calendar months (Jan–Jun) with the last six calendar months (Jul–Dec), which period has higher total sales?",
+  "options": {
+    "A": "Total sales are higher in the first six months (Jan–Jun).",
+    "B": "Total sales are higher in the last six months (Jul–Dec).",
+    "C": "Both six‑month periods have equal total sales.",
+    "D": "The chart does not provide enough information to compare the two periods."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The months on the x‑axis are arranged in reverse (Dec back to Jan), so the filled area shape is misleading if read left‑to‑right. When you re‑order the months to the natural calendar sequence and sum Jan–Jun versus Jul–Dec, you find that the second half actually has higher total sales. The inappropriate month order can easily invert this interpretation."
+}

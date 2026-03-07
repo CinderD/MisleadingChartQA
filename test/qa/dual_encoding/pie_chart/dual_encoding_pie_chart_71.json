@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the annual budget distribution of City A in various sectors. Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "The combined budget for Education and Safety is larger than the budget for Healthcare.",
+    "B": "Healthcare receives a larger share of the budget than Infrastructure.",
+    "C": "Healthcare receives more budget than all other sectors combined.",
+    "D": "Infrastructure receives the largest share of the budget among all sectors."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Healthcare: 55%; Education: 20%; Safety: 15%; Infrastructure: 10%."
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Chart of Apples Harvested Over Days</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .area {
+            fill: steelblue;
+        }
+        .axis-label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Total Number of Apples Harvested per Day in Farm Y</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = { top: 60, right: 60, bottom: 60, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        const x = d3.scaleTime().range([0, width]);
+        const y = d3.scaleLinear().range([height, 0]); // Unconventional scale (inverted)
+
+        d3.csv("../../../../data/MS_unconventional_scale_directions/area_chart/MS_unconventional_scale_directions_area_chart_59.csv").then(data => {
+            data.forEach(d => {
+                d.date = new Date(d.date);
+                d.inverted_apples = +d.inverted_apples;
+            });
+
+            x.domain(d3.extent(data, d => d.date));
+            y.domain([d3.max(data, d => d.inverted_apples), 0]); // Inverted Y-axis for misleading effect
+
+            const xAxis = d3.axisBottom(x)
+                .ticks(data.length)
+                .tickValues(data.map(d => d.date))
+                .tickFormat(d3.timeFormat("%b %d"));
+
+            const area = d3.area()
+                .x(d => x(d.date))
+                .y0(height)
+                .y1(d => y(d.inverted_apples));
+
+            svg.append("path")
+                .datum(data)
+                .attr("fill", "steelblue")
+                .attr("class", "area")
+                .attr("d", area);
+
+            svg.append("g")
+                .attr("transform", `translate(0, ${height})`)
+                .call(xAxis)
+                .selectAll("text")
+                .style("text-anchor", "middle")
+                .attr("dy", "1em");
+
+            svg.append("g")
+                .call(d3.axisLeft(y));
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -50)
+                .attr("dy", "1em")
+                .style("text-anchor", "middle")
+                .text("Number of Apples (Inverted)");
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width / 2)
+                .attr("y", height + 40)
+                .style("text-anchor", "middle")
+                .text("Date");
+        });
+    </script>
+</body>
+</html>

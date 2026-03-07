@@ -1,0 +1,17 @@
+{
+  "question": "Analyzing the area chart of revenue by year, which statement is best supported by the data shown?",
+  "options": {
+    "A": "The last three years all reached at least the upper limit of the chart’s revenue scale, so their exact values relative to one another cannot be determined from the figure alone.",
+    "B": "Revenue in the last three years was exactly the same.",
+    "C": "Revenue peaked in 2020 and then declined in 2021 and 2022.",
+    "D": "Revenue in 2019 was higher than in any later year."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is set below the data maximum, so the top bars are clipped and appear equal; the true values cannot be compared from the chart alone."
+}

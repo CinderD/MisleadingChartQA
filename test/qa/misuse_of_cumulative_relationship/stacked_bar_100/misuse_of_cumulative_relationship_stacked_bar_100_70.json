@@ -1,0 +1,17 @@
+{
+  "question": "For the quarterly data platform, which statement is a valid conclusion from the 100% stacked bar chart?",
+  "options": {
+    "A": "Q3 has the highest total number of platform interactions because its bar reaches the highest point on the chart.",
+    "B": "The chart allows us to determine the quarter with the highest absolute number of complaints received.",
+    "C": "Within each quarter, the percentage of complaints received can be compared to the percentages of searches and advertisement clicks.",
+    "D": "Because each bar reaches 100%, all three metrics must have the same absolute values in every quarter."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "100% stacking normalizes unrelated categories to 100% within each quarter. Valid inferences include within-quarter ranking (e.g., one metric > another in every quarter). Invalid inferences include cross-quarter total comparisons or combining unrelated categories."
+}

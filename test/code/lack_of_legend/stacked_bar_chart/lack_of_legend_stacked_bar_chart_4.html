@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Level Distribution Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 600px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .bar {
+            opacity: 0.8;
+        }
+        .bar:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Segmentation by Income Level</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 150, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Sample data for income levels
+        const data = [
+            {year: "2020", income1: 40, income2: 30, income3: 20, income4: 10},
+            {year: "2021", income1: 38, income2: 32, income3: 22, income4: 8},
+            {year: "2022", income1: 36, income2: 34, income3: 24, income4: 6},
+            {year: "2023", income1: 34, income2: 36, income3: 26, income4: 4}
+        ];
+
+        const keys = ["income1", "income2", "income3", "income4"];
+        const color = d3.scaleOrdinal()
+            .domain(keys)
+            .range(["#8c564b", "#e377c2", "#7f7f7f", "#bcbd22"]);
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.year))
+            .range([0, width])
+            .padding(0.3);
+
+        const y = d3.scaleLinear()
+            .domain([0, 100])
+            .range([height, 0]);
+
+        const stack = d3.stack()
+            .keys(keys)
+            .order(d3.stackOrderNone)
+            .offset(d3.stackOffsetNone);
+
+        const series = stack(data);
+
+        g.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x).tickFormat(d => d));
+
+        g.append("g")
+            .call(d3.axisLeft(y).ticks(5).tickFormat(d => d + "%"));
+
+        g.selectAll(".layer")
+            .data(series)
+            .enter().append("g")
+            .attr("class", "layer")
+            .attr("fill", d => color(d.key))
+            .selectAll("rect")
+            .data(d => d)
+            .enter().append("rect")
+            .attr("x", d => x(d.data.year))
+            .attr("y", d => y(d[1]))
+            .attr("height", d => y(d[0]) - y(d[1]))
+            .attr("width", x.bandwidth());
+
+        g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 35)
+            .attr("text-anchor", "middle")
+            .text("Year");
+
+        g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -40)
+            .attr("x", -height / 2)
+            .attr("text-anchor", "middle")
+            .text("Customer Percentage (%)");
+
+        // Intentionally no legend to create the misleader
+    </script>
+</body>
+</html>

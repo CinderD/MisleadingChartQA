@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows regional internet usage statistics. Which of the following statements is supported by the data?",
+  "options": {
+    "A": "North America has a higher internet usage percentage than Asia Pacific.",
+    "B": "Africa and the Middle East have the same internet usage percentage.",
+    "C": "Asia Pacific’s internet usage percentage is more than twice that of the Middle East.",
+    "D": "Africa has the lowest internet usage percentage among the regions shown."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

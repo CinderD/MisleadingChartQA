@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows earnings from 2018 to 2022. Which of the following statements is correct based on the chart?",
+  "options": {
+    "A": "Earnings were highest in 2020.",
+    "B": "Earnings in 2021 and 2022 are equal.",
+    "C": "Earnings increased every year from 2018 to 2022.",
+    "D": "It is not possible to determine from the chart which of the last two years had higher earnings because the top of the line is clipped."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The scale is set so that the highest bars exceed the visible area, leading to a misleading impression of equality."
+}

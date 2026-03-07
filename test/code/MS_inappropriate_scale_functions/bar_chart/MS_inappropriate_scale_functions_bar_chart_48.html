@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votes Distribution for Candidates in Town Z</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .bar { fill: #b5a253; }
+        .axis-label { font-size: 14px; font-weight: bold; }
+        .title { font-size: 22px; font-weight: bold; text-anchor: middle; }
+    </style>
+</head>
+<body>
+    <h1>Votes for Three Candidates in an Election in Town Z</h1>
+    <div id="chart"></div>
+    <script>
+        // Set dimensions and margins
+        const margin = { top: 50, right: 30, bottom: 60, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        // Append SVG
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Load data
+        d3.csv("../../../../data/MS_inappropriate_scale_functions/bar_chart/MS_inappropriate_scale_functions_bar_chart_48.csv").then(data => {
+            // Convert votes to numbers
+            data.forEach(d => d.transformed_votes = +d.transformed_votes);
+
+            // Non-linear scale manipulation (arbitrary)
+            const y = d3.scalePow()
+                .exponent(0.5) // Arbitrary square root scale
+                .domain([0, d3.max(data, d => d.transformed_votes)]) // Maximum value of the data
+                .range([height, 0]); // Pixel range
+
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.candidate))
+                .range([0, width])
+                .padding(0.4);
+
+            // Add axes
+            svg.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            svg.append("g")
+                .call(d3.axisLeft(y));
+
+            // Add bars
+            svg.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.candidate))
+                .attr("y", d => y(d.transformed_votes))
+                .attr("height", d => height - y(d.transformed_votes))
+                .attr("width", x.bandwidth());
+
+            // Add axis labels
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", -height / 2)
+                .attr("y", -40)
+                .attr("transform", "rotate(-90)")
+                .text("Transformed Votes");
+
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width / 2)
+                .attr("y", height + 50)
+                .text("Candidates");
+        });
+    </script>
+</body>
+</html>

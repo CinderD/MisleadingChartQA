@@ -1,0 +1,17 @@
+{
+  "question": "Assuming the chart shows all available measurements so far this week, what can we conclude about the average daily energy usage for the entire week?",
+  "options": {
+    "A": "It cannot be determined reliably because data for all seven days are not available.",
+    "B": "It is exactly 20 kWh per day for the week.",
+    "C": "It is about 14 kWh per day, based on the seven labeled days.",
+    "D": "It is about 20 kWh per day, using only the days with visible bars."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart only shows measured values for the first part of the week; the remaining days are effectively missing, but are drawn as zero-height bars. Computing an average across all seven days (including those zeros) assumes the missing days truly had zero values, which is not supported by the data. Therefore the weekly average cannot be reliably calculated."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual sales for Company Y from 2018 to 2022. Which of the following statements is true based on the chart?",
+  "options": {
+    "A": "Annual sales consistently increased each year.",
+    "B": "The sales in 2021 and 2022 is identical.",
+    "C": "2022 has the highest sales.",
+    "D": "No correct answer."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The sales values for 2021 and 2022 exceed the chart’s visible area. Despite actual differences in the real data, they appear the same on the chart, making it misleading."
+}

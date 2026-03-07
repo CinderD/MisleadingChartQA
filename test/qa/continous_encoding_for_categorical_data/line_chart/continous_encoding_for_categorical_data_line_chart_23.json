@@ -1,0 +1,17 @@
+{
+  "question": "This line chart displays average rating (1–5 stars) by restaurant type. Which of the following statements is most accurate?",
+  "options": {
+    "A": "The chart shows ratings that steadily increase from Thai to French and then steadily decrease toward Italian.",
+    "B": "Thai restaurants have the highest rating among all categories shown.",
+    "C": "The average rating appears almost identical for every restaurant type on the chart.",
+    "D": "French has the highest rating among all categories shown."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart uses a continuous line over restaurant type that are purely categorical (e.g., Thai, French, Chinese, ...). Connecting points suggests there is a meaningful smooth progression from left to right, which is conceptually incorrect — these categories have no inherent numeric order. The y‑axis values are on a 1 to 5 scale, but any comparison across categories should be made with a discrete chart such as a bar chart, not by reading trends from the connecting line."
+}

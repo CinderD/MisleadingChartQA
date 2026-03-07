@@ -1,0 +1,17 @@
+{
+  "question": "The plot shows rainfall vs. crop yield. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Points with the largest size and darkest color tend to have the highest crop yields.",
+    "B": "There is a generally negative relationship between rainfall and crop yield.",
+    "C": "There is no clear relationship between rainfall and crop yield.",
+    "D": "Crop yield stays roughly constant as rainfall increases."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

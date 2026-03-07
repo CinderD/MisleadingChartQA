@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average scores across different subjects. What is the most accurate statement according to the chart?",
+  "options": {
+    "A": "The chart incorrectly applies a continuous filled area over unrelated categories, creating a false impression of a smooth trend between them.",
+    "B": "The chart shows a generally increasing or decreasing pattern across the categories, indicating an underlying continuous progression.",
+    "C": "Science clearly has the lowest score among all categories.",
+    "D": "Music clearly has the highest score among all categories."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for subject into a continuous filled region. However, the x‑axis categories (e.g., Art, Science, Math, English, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

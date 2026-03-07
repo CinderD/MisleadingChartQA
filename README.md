@@ -2,26 +2,33 @@
 
 Dataset of chart-based QA pairs designed to probe model sensitivity to common misleading visualization practices (cherry-picking, inappropriate scales, missing data, dual encoding, etc.). Each case includes a chart figure, underlying data, and multiple-choice QA with a correct option and a "misleader" option that is plausible from the chart but wrong from the data.
 
-## Full train set (`train/`)
+## Train set (`train/`) and test set (`test/`)
 
-The **`train/`** folder is the complete training set used for model development and evaluation.
+Both **`train/`** and **`test/`** use the same directory layout: `code/`, `data/`, `figures/`, `qa/`. Paths follow `<misleader_type>/<plot_type>/<case_name>.<ext>`.
+
+### Train set (`train/`)
+
+Complete training set for model development and evaluation.
 
 - **Total cases:** 2,755  
-- **Total files:** ~11,027 (figures, code, QA, data per case)  
-- **Composition:** 393 manually-checked expansion cases + 2,362 LLM-reviewed expansion cases (same schema and quality flow).
+- **Total files:** ~11,027  
+- **Composition:** 393 manually-checked expansion cases + 2,362 LLM-reviewed expansion cases.
 
-### Directory structure
+### Test set (`test/`)
+
+Test set with the same schema; originally the root-level `code/`, `data/`, `figures/`, `qa/` folders merged under `test/` for release.
+
+- Same structure as `train/`: `code/`, `data/`, `figures/`, `qa/`.
+
+### Directory structure (train and test)
 
 ```
-train/
+train/   or   test/
 ├── code/           # HTML visualization code (one file per case)
 ├── data/           # CSV data files
 ├── figures/        # JPEG chart images
 └── qa/             # JSON question-answer files (question, options, correct, wrongDueToMisleader)
 ```
-
-Paths under `code/`, `data/`, `figures/`, and `qa/` follow the same hierarchy:  
-`<misleader_type>/<plot_type>/<case_name>.<ext>` (e.g. `MS_inappropriate_order/bar_chart/MS_inappropriate_order_bar_chart_4.json` in `qa/`).
 
 ### QA JSON schema (per case)
 
@@ -50,14 +57,15 @@ Plot types include bar_chart, line_chart, area_chart, scatter_plot, pie_chart, s
 
 ## Usage
 
-- **Training / evaluation:** Use `train/figures/` as images and `train/qa/` as labels; align by case name (filename without extension).  
-- **Reproducing charts:** Use `train/code/*.html` with `train/data/*.csv` (e.g. local HTTP server) to re-render the same charts.
+- **Training:** Use `train/figures/` as images and `train/qa/` as labels; align by case name (filename without extension).  
+- **Testing:** Use `test/figures/` and `test/qa/` the same way.  
+- **Reproducing charts:** Use `train/code/*.html` with `train/data/*.csv` (or `test/` equivalents) and a local HTTP server to re-render the same charts.
 
 ## Repository contents
 
-- **`train/`** — Full train set (2,755 cases) as above.  
-- **`README.md`** — This file.  
-- Root-level `code/`, `data/`, `figures/`, `qa/` — Full project sources; the `train/` set is a curated subset exported for training.
+- **`train/`** — Full train set (2,755 cases).  
+- **`test/`** — Test set (same schema and layout as `train/`).  
+- **`README.md`** — This file.
 
 ## Citation & license
 

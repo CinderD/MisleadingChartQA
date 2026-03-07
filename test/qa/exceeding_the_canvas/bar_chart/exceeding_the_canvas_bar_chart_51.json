@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows the cost from 2018 to 2022. Which statement best describes the trend in costs over these years?",
+  "options": {
+    "A": "Costs increased steadily every year from 2018 to 2022.",
+    "B": "Costs were highest in 2022 and lowest in 2018.",
+    "C": "Costs decreased every year from 2019 to 2021.",
+    "D": "Costs were the same in 2019 and 2021."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis cap causes the top bar to be cut off, so they appear the same height although true values may differ."
+}

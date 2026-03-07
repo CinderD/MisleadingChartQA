@@ -1,0 +1,17 @@
+{
+  "question": "Approximately, what is 'Neutral' satisfaction as a proportion of 'Very Satisfied' at January?",
+  "options": {
+    "A": "184%",
+    "B": "55%",
+    "C": "90%",
+    "D": "110%"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_area_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The Y-axis scale starts at 18 instead of 0, which visually exaggerates the proportion of Neutral satisfaction relative to Very Satisfied. While Neutral satisfaction is actually about 55% of Very Satisfied, the truncated scale makes it appear closer to 110%."
+}

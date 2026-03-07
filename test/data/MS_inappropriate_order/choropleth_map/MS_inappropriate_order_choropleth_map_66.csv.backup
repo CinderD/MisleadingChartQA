@@ -1,0 +1,11 @@
+code,region,level
+4,Region A,Low
+12,Region B,High
+24,Region C,Low
+36,Region D,High
+50,Region E,Intermediate
+40,Region F,Low
+20,Region G,Intermediate
+31,Region H,Low
+32,Region I,Low
+8,Region J,Intermediate

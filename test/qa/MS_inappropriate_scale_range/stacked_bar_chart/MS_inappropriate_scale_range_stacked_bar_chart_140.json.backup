@@ -1,0 +1,17 @@
+{
+  "question": "Which category has the largest total value across the periods shown?",
+  "options": {
+    "A": "Direct has the highest total",
+    "B": "Social has the highest total",
+    "C": "Search has the highest total",
+    "D": "Cannot be determined due to scale issues"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 1000 instead of 0, which compresses the visible differences between stacked totals. That can make Social look as large as (or larger than) Search even though the totals favor Search."
+}

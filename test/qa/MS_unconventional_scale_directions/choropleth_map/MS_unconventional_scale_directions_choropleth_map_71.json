@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher prevalence of hazard H based on the chart, RI or TX?",
+  "options": {
+    "A": "Both states have the same prevalence",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "RI",
+    "D": "TX"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although RI appears darker, TX has the higher assigned value when the inversion is considered."
+}

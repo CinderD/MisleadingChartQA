@@ -1,0 +1,17 @@
+{
+  "question": "Approximately what fraction of Product B's revenue is Product A's revenue according to the chart data?",
+  "options": {
+    "A": "67%",
+    "B": "125%",
+    "C": "25%",
+    "D": "33%"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a non-linear (inappropriate) scaling function, so differences in bar heights do not correspond linearly to differences in the underlying values. This can make the proportion between Product A and Product B look closer to 67% even though the data imply about 33%."
+}

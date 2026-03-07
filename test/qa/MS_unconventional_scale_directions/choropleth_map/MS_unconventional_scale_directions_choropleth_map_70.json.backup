@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher risk index based on the chart, MT or OR?",
+  "options": {
+    "A": "Both states have the same prevalence",
+    "B": "Cannot be inferred / inadequate information",
+    "C": "MT",
+    "D": "OR"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although OR appears darker, MT has the higher assigned value when the inversion is considered."
+}

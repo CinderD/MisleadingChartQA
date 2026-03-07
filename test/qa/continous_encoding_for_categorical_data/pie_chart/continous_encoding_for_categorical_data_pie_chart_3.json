@@ -1,0 +1,17 @@
+{
+  "question": "This pie chart shows market share distribution across different product categories. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "The purple gradient intensity represents the technological sophistication level from basic to advanced devices.",
+    "B": "Smartphones hold the largest market share among all product categories shown.",
+    "C": "The color progression indicates the chronological order of product introduction to the market.",
+    "D": "Gaming Consoles and Smart Home devices combined exceed Wearables' market share."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "pie_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses continuous color encoding (purple gradient) for categorical product data. Product categories like gaming consoles, smartphones, smart home devices, laptops, wearables, and tablets are distinct, independent categories with no inherent continuous relationship that would justify a color gradient. The continuous color scale misleadingly suggests that darker colors represent higher technological sophistication or chronological development order, when in reality these are simply different categorical divisions of the electronics market. Each product category should use distinct, unordered colors to avoid implying false relationships between the categories."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The plot shows study hours vs. exam score. Which conclusion is reliable (ignoring the size/color emphasis)?",
+  "options": {
+    "A": "Scores increase at a quadratic rate with study time, as suggested by the larger, darker points.",
+    "B": "There is a general upward trend as study hours increase.",
+    "C": "Scores decrease with more study hours.",
+    "D": "There is no pattern."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Both color and size encode score, exaggerating mid-to-high scores visually. The correct interpretation is a general positive trend."
+}

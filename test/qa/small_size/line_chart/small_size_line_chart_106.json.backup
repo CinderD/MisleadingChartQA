@@ -1,0 +1,17 @@
+{
+  "question": "What best describes the trend in this chart?",
+  "options": {
+    "A": "No correct answer.",
+    "B": "Values were flat from 1960 to 1980.",
+    "C": "Values decreased from 1970 to 1980.",
+    "D": "Values increased over the entire period from 1924 to 2024."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows a steady increase throughout. Small size can lead to misreading a segment as a decline."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual revenue from 1924 to 2024. What is the main limitation when trying to interpret this chart?",
+  "options": {
+    "A": "The chart is too small to clearly distinguish specific years and subtle changes in revenue.",
+    "B": "Revenue stayed exactly flat throughout the entire period.",
+    "C": "Revenue clearly decreased between 1970 and 1980.",
+    "D": "Revenue follows a perfectly smooth linear increase with no fluctuations."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows a steady increase throughout. Small size can lead to misreading a segment as a decline."
+}

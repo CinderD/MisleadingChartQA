@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows adult obesity rates for selected US states. Which statement is most appropriate based on this visualization?",
+  "options": {
+    "A": "Because the map is so small, it is hard to distinguish the exact obesity rates for each state.",
+    "B": "Colorado clearly has the lowest obesity rate among all the displayed states.",
+    "C": "West Virginia’s obesity rate is exactly 38%.",
+    "D": "The map clearly shows which single state has the highest obesity rate."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it difficult to read exact obesity percentages. Specific state values cannot be verified."
+}

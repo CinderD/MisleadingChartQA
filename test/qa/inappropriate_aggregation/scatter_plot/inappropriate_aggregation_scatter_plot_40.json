@@ -1,0 +1,17 @@
+{
+  "question": "Based on this chart, what can be concluded about the relationship between training hours per month and productivity index within each team?",
+  "options": {
+    "A": "Within each team, more training hours clearly lead to lower productivity",
+    "B": "Within each team, more training hours clearly lead to higher productivity",
+    "C": "The chart only shows an overall trend line, so the relationship within each team cannot be determined reliably",
+    "D": "The downward overall trend line proves that each team individually has a negative relationship between training hours and productivity"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The trend line is fitted to all data points combined, mixing the two groups. It may suggest a negative overall relationship between the variables, but it does not tell us what the relationship looks like within School/Team A or B separately. Each group could have a different pattern (e.g., positive or flat), so we cannot infer within‑group relationships from this aggregated trend alone."
+}

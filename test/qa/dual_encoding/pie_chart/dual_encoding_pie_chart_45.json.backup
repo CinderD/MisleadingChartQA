@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is reliable according to the chart data?",
+  "options": {
+    "A": "Nuclear and Fossil Fuels together equal Hydroelectric.",
+    "B": "Hydroelectric is larger than the combined share of Renewables + Other + Fossil Fuels.",
+    "C": "Nuclear is larger than Renewables.",
+    "D": "The combined share of Renewables + Other + Fossil Fuels exceeds Hydroelectric."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Hydroelectric: 34%; Renewables: 24%; Other: 18%; Fossil Fuels: 12%; Nuclear: 12%."
+}

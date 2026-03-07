@@ -1,0 +1,17 @@
+{
+  "question": "According to the market share percentages shown in the chart, which statement is correct?",
+  "options": {
+    "A": "Huawei has the largest market share among the categories shown.",
+    "B": "Xiaomi has the smallest market share.",
+    "C": "Apple has the largest market share among the categories shown.",
+    "D": "Samsung and Others have the same market share."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, Huawei has the highest share (33%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking Xiaomi is largest when relying on visual comparison."
+}

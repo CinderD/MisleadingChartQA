@@ -1,0 +1,17 @@
+{
+  "question": "This area chart presents average test scores for several school subjects. Which statement below best reflects what we can reliably conclude from the data shown?",
+  "options": {
+    "A": "Geography has the highest average score among all the subjects.",
+    "B": "Average scores steadily increase from Math through Geography, showing a smooth upward trend.",
+    "C": "Math and PE have identical average scores in this chart.",
+    "D": "History has a higher average score than Geography."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for subject into a continuous filled region. However, the x‑axis categories (e.g., Math, History, PE, Music, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renewable Energy Production Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 40px auto;
+        }
+        .text {
+            font-size: 24px;
+            font-weight: bold;
+            fill: black;
+        }
+        .label {
+            font-size: 18px;
+            fill: black;
+        }
+        .axis path, .axis line {
+            stroke: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Renewable Energy Production by Source</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = { top: 20, right: 20, bottom: 40, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Load data        
+        d3.csv("../../../../data/data_visual_disproportion/bar_chart/data_visual_disproportion_bar_chart_24.csv").then(data => {
+            data.forEach(d => {
+                d.production_percentage = +d.production_percentage;
+                d.bar_height = +d.bar_height;
+            });
+
+            // Set up scales    
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.energy_source))
+                .range([0, width])
+                .padding(0.3);
+
+            const y = d3.scaleLinear()
+                .domain([0, 70])
+                .range([height, 0]);
+
+            // Draw the axes
+            svg.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            svg.append("g")
+                .call(d3.axisLeft(y));
+
+            // Draw bars
+            svg.selectAll(".bar")
+                .data(data)
+                .enter()
+                .append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.energy_source))
+                .attr("y", d => y(d.bar_height))
+                .attr("width", x.bandwidth())
+                .attr("height", d => height - y(d.bar_height))
+                .attr("fill", d => d.color);
+
+            // Add the number labels 
+            svg.selectAll(".text")
+                .data(data)
+                .enter()
+                .append("text")
+                .attr("class", "text")
+                .attr("x", d => x(d.energy_source) + x.bandwidth() / 2)
+                .attr("y", d => y(d.bar_height) - 10)
+                .attr("text-anchor", "middle")
+                .text(d => `${d.production_percentage}%`);
+        });
+    </script>
+</body>
+</html>

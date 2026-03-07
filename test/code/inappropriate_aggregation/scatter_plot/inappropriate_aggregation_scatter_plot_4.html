@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income vs Housing Cost for Cities A and B</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .dot-A {
+            fill: #3498DB;
+            opacity: 0.7;
+        }
+        .dot-B {
+            fill: #E74C3C;
+            opacity: 0.7;
+        }
+        .trend-line {
+            stroke: #000;
+            stroke-width: 2;
+            fill: none;
+        }
+        .legend {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Income vs. Housing Cost for Cities A and B</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 60, right: 100, bottom: 80, left: 80};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/inappropriate_aggregation/scatter_plot/inappropriate_aggregation_scatter_plot_4.csv").then(data => {
+            data.forEach(d => {
+                d.income_k = +d.income_k;
+                d.housing_cost_k = +d.housing_cost_k;
+            });
+
+            const x = d3.scaleLinear()
+                .domain([25, d3.max(data, d => d.income_k) + 5])
+                .range([0, width]);
+
+            const y = d3.scaleLinear()
+                .domain([500, d3.max(data, d => d.housing_cost_k) + 100])
+                .range([height, 0]);
+
+            // Add axes
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            g.append("g")
+                .call(d3.axisLeft(y));
+
+            // Add dots for both cities
+            g.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", d => `dot-${d.city}`)
+                .attr("cx", d => x(d.income_k))
+                .attr("cy", d => y(d.housing_cost_k))
+                .attr("r", 4);
+
+            // Calculate overall trend line (misleading aggregation)
+            const xMean = d3.mean(data, d => d.income_k);
+            const yMean = d3.mean(data, d => d.housing_cost_k);
+            
+            const numerator = d3.sum(data, d => (d.income_k - xMean) * (d.housing_cost_k - yMean));
+            const denominator = d3.sum(data, d => (d.income_k - xMean) * (d.income_k - xMean));
+            const slope = numerator / denominator;
+            const intercept = yMean - slope * xMean;
+
+            const xExtent = d3.extent(data, d => d.income_k);
+            const lineData = [
+                [xExtent[0], slope * xExtent[0] + intercept],
+                [xExtent[1], slope * xExtent[1] + intercept]
+            ];
+
+            g.append("path")
+                .datum(lineData)
+                .attr("class", "trend-line")
+                .attr("d", d3.line()
+                    .x(d => x(d[0]))
+                    .y(d => y(d[1]))
+                );
+
+            // Axis labels
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 60)
+                .attr("text-anchor", "middle")
+                .text("Annual Income ($k)");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -50)
+                .attr("x", -height / 2)
+                .attr("text-anchor", "middle")
+                .text("Housing Cost ($k)");
+
+            // Legend
+            const legend = g.append("g")
+                .attr("class", "legend")
+                .attr("transform", `translate(${width + 20}, 50)`);
+
+            legend.append("text")
+                .attr("x", 0)
+                .attr("y", 0)
+                .text("Cities")
+                .style("font-weight", "bold");
+
+            legend.append("circle")
+                .attr("cx", 0)
+                .attr("cy", 20)
+                .attr("r", 4)
+                .attr("class", "dot-A");
+
+            legend.append("text")
+                .attr("x", 15)
+                .attr("y", 25)
+                .text("A");
+
+            legend.append("circle")
+                .attr("cx", 0)
+                .attr("cy", 40)
+                .attr("r", 4)
+                .attr("class", "dot-B");
+
+            legend.append("text")
+                .attr("x", 15)
+                .attr("y", 45)
+                .text("B");
+        });
+    </script>
+</body>
+</html>

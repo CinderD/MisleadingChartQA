@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the distribution of the city's budget across various sectors. Based on the chart, which conclusion seems most plausible?",
+  "options": {
+    "A": "The budget allocated to Education & Training is more than the combined budgets for Health Services and Infrastructure Development.",
+    "B": "The Health Services budget allocation is the clearly the lowest among all sectors.",
+    "C": "The Infrastructure Development budget is greater than the budget for Public Safety.",
+    "D": "The combined budgets for Health Services and Public Safety are more than the budget for Education & Training."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart shows that the combined budgets for Health Services (25%) and Public Safety (10%) are more than the budget for Education & Training (34%). The dual encoding in visuals can distort perceptions."
+}

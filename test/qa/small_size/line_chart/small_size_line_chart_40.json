@@ -1,0 +1,17 @@
+{
+  "question": "The line chart illustrates the sales trend from 1924 to 2024. Which statement best describes the trend between 1970 and 1980?",
+  "options": {
+    "A": "Sales dropped before slightly rising again.",
+    "B": "Sales dropped during this period.",
+    "C": "Sales increased during this period",
+    "D": "No corerect answer."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The data indicates a significant drop in sales from 1970 to 1980. However, due to small size elements in the chart, understanding this specific trend visually can be challenging."
+}

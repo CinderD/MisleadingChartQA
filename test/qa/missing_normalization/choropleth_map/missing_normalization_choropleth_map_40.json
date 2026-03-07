@@ -1,0 +1,17 @@
+{
+  "question": "Which labeled region has the highest number of outbreak cases per 1,000 people?",
+  "options": {
+    "A": "E",
+    "B": "C",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "A"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "missing_normalization",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The map encodes total outbreak cases only. Without normalizing by population, we cannot determine per‑capita (per 1,000 people) rates, so any comparison of risk by label is invalid."
+}

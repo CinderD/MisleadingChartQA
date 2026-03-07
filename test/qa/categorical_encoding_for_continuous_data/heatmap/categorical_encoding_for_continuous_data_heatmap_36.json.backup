@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the temperature heatmap, which statement best describes the relationship between New York's Nov temperature and San Jose's Nov temperature?",
+  "options": {
+    "A": "New York is higher than San Jose, and the color difference accurately represents this 2.1°C difference.",
+    "B": "The temperatures might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "C": "It can be infered that their temperatures are very similar.",
+    "D": "The temperature is impossible to determine from this visualization."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "New York (0.8°C) and San Jose (3.0°C) have a 2.1°C difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of temperature relationships."
+}

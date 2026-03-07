@@ -1,0 +1,17 @@
+{
+  "question": "Which segment does the largest colored area correspond to in the final year shown?",
+  "options": {
+    "A": "The purple area (Segment D) indicates the highest share in the final year.",
+    "B": "Cannot determine which segment the largest area represents without a legend to explain the color coding.",
+    "C": "The green area (Segment B) shows the largest share in the final year.",
+    "D": "The orange area (Segment C) represents the dominant share in the final year."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows different colored areas but provides no legend to identify which color corresponds to which category. Without a legend it is impossible to determine which specific category holds the largest share; options that assign a category to a color are guessing."
+}

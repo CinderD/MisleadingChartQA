@@ -1,0 +1,17 @@
+{
+  "question": "Which labelled region had the highest average average precipitation over the period?",
+  "options": {
+    "A": "Mexico (G)",
+    "B": "They all had equal values over the period",
+    "C": "Mexico (I)",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "At least one of the labelled regions appears grey, indicating missing data rather than a low value. Because we do not know that region's value, we cannot safely say which labelled region truly has the highest value."
+}

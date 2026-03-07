@@ -1,0 +1,17 @@
+{
+  "question": "What do these earnings suggest about the company’s profitability from 2005 to 2020?",
+  "options": {
+    "A": "Earnings increased steadily here, so the company was profitable throughout 2005–2020.",
+    "B": "The data indicates a consistent decline in profitability from 2005 to 2020.",
+    "C": "This 8-year segment from 2008 to 2015 cannot reliably indicate profitability over the entire 2005–2020 period.",
+    "D": "The company’s profitability was unchanged across the full 2005–2020 period."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The cherry-picked years show growth; omitted years could show declines or volatility."
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Channel Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 600px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .bar {
+            opacity: 0.8;
+        }
+        .bar:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Annual Revenue by Sales Channel</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 150, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Sample data for sales channels
+        const data = [
+            {year: "2019", channel1: 1500000, channel2: 1200000, channel3: 800000, channel4: 500000},
+            {year: "2020", channel1: 1800000, channel2: 1400000, channel3: 900000, channel4: 600000},
+            {year: "2021", channel1: 2100000, channel2: 1600000, channel3: 1000000, channel4: 700000},
+            {year: "2022", channel1: 2400000, channel2: 1800000, channel3: 1100000, channel4: 800000},
+            {year: "2023", channel1: 2700000, channel2: 2000000, channel3: 1200000, channel4: 900000}
+        ];
+
+        const keys = ["channel1", "channel2", "channel3", "channel4"];
+        const color = d3.scaleOrdinal()
+            .domain(keys)
+            .range(["#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]);
+
+        const x = d3.scaleBand()
+            .domain(data.map(d => d.year))
+            .range([0, width])
+            .padding(0.3);
+
+        const y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d.channel1 + d.channel2 + d.channel3 + d.channel4)])
+            .range([height, 0]);
+
+        const stack = d3.stack()
+            .keys(keys)
+            .order(d3.stackOrderNone)
+            .offset(d3.stackOffsetNone);
+
+        const series = stack(data);
+
+        g.append("g")
+            .attr("transform", `translate(0,${height})`)
+            .call(d3.axisBottom(x).tickFormat(d => d));
+
+        g.append("g")
+            .call(d3.axisLeft(y).ticks(5).tickFormat(d => "$" + (d/1000000) + "M"));
+
+        g.selectAll(".layer")
+            .data(series)
+            .enter().append("g")
+            .attr("class", "layer")
+            .attr("fill", d => color(d.key))
+            .selectAll("rect")
+            .data(d => d)
+            .enter().append("rect")
+            .attr("x", d => x(d.data.year))
+            .attr("y", d => y(d[1]))
+            .attr("height", d => y(d[0]) - y(d[1]))
+            .attr("width", x.bandwidth());
+
+        g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 35)
+            .attr("text-anchor", "middle")
+            .text("Year");
+
+        g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -40)
+            .attr("x", -height / 2)
+            .attr("text-anchor", "middle")
+            .text("Revenue ($)");
+
+        // Intentionally no legend to create the misleader
+    </script>
+</body>
+</html>

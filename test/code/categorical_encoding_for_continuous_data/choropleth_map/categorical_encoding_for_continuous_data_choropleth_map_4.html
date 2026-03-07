@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>US Choropleth with State Labels</title>
+    <!-- D3 v6 and TopoJSON v3 -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #map {
+            width: 1000px;
+            height: 700px;
+            position: relative;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: 120px;
+            padding: 6px;
+            font: 14px sans-serif;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            pointer-events: none;
+            opacity: 0;
+        }
+        .legend {
+            font-size: 14px;
+        }
+        .state-label {
+            font-size: 8px;
+            fill: #333;
+            text-anchor: middle;
+            pointer-events: none; /* let mouse events pass through label */
+        }
+    </style>
+</head>
+<body>
+    <h1>US Statistics by State</h1>
+    <div id="map"></div>
+
+    <script>
+        const width = 1000;
+        const height = 700;
+
+        // Append an SVG to #map
+        const svg = d3.select("#map")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        // GeoAlbersUsa projection
+        const projection = d3.geoAlbersUsa()
+            .scale(1300)
+            .translate([width / 2, height / 2]);
+
+        const path = d3.geoPath(projection);
+
+        // A categorical color scale for category values
+        const colorScale = d3.scaleThreshold()
+            .domain([20, 40, 60])
+            .range([
+                "#e41a1c",
+                "#377eb8",
+                "#4daf4a",
+                "#984ea3"
+            ]);
+
+        // Tooltip for hover info
+        const tooltip = d3.select("body")
+            .append("div")
+            .attr("class", "tooltip");
+
+        // Load the TopoJSON (us-atlas) & CSV in parallel
+        Promise.all([
+            d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json"),
+            d3.csv("../../../../data/categorical_encoding_for_continuous_data/choropleth_map/categorical_encoding_for_continuous_data_choropleth_map_4.csv")
+        ]).then(([us, data]) => {
+            // Build a dictionary: fips -> { name, value }
+            const valueById = {};
+            data.forEach(d => {
+                valueById[d.category] = {
+                    name: d.category,
+                    value: +d.value
+                };
+            });
+            console.log("valueById", valueById);
+
+            // Convert the states TopoJSON to GeoJSON
+            const states = topojson.feature(us, us.objects.states).features;
+
+            // Draw the states
+            svg.selectAll("path")
+                .data(states)
+                .enter()
+                .append("path")
+                .attr("d", path)
+                .attr("fill", d => {
+                    // Map states to categories
+                    const stateToCategory = {
+                        "13": "A", // Georgia
+                        "37": "B", // North Carolina
+                        "45": "C", // South Carolina
+                        "06": "D", // California
+                        "48": "E", // Texas
+                        "12": "F", // Florida
+                        "17": "G", // Illinois
+                        "36": "H", // New York
+                        "42": "I", // Pennsylvania
+                        "39": "J"  // Ohio
+                    };
+                    const fips = d.id.toString().padStart(2, "0");
+                    const category = stateToCategory[fips];
+                    const info = valueById[category];
+                    if (info) {
+                        return colorScale(info.value);
+                    } else {
+                        return "#ddd"; // no data
+                    }
+                })
+                .attr("stroke", "#fff")
+                .attr("stroke-width", 1)
+
+
+            // Add labels (use the same states array)
+            svg.selectAll(".state-label")
+                .data(states)
+                .enter()
+                .append("text")
+                .attr("class", "state-label")
+                .attr("transform", d => {
+                    const [x, y] = path.centroid(d);
+                    if (isNaN(x) || isNaN(y)) {
+                        return `translate(0, 0)`; // Fallback to default coordinates
+                    }
+                    return `translate(${x}, ${y})`;
+                })
+                .text(d => {
+                    // Map states to categories
+                    const stateToCategory = {
+                        "13": "A", // Georgia
+                        "37": "B", // North Carolina
+                        "45": "C", // South Carolina
+                        "06": "D", // California
+                        "48": "E", // Texas
+                        "12": "F", // Florida
+                        "17": "G", // Illinois
+                        "36": "H", // New York
+                        "42": "I", // Pennsylvania
+                        "39": "J"  // Ohio
+                    };
+                    const fips = d.id.toString().padStart(2, "0");
+                    const category = stateToCategory[fips];
+                    const info = valueById[category];
+                    return info ? category : "";
+                })
+                .style("font-size", "10px")
+                .style("font-weight", "bold");
+
+            // Build a legend
+            const domain = colorScale.domain(); // [20, 40, 60]
+            const range = colorScale.range();   // 4 colors
+
+            // We'll create an array describing each bin
+            const legendData = [];
+            // Bin 1: 0..5
+            legendData.push({
+                color: range[0],
+                min: 0,
+                max: domain[0]
+            });
+            // Bins 2..N-1
+            for (let i = 1; i < domain.length; i++) {
+                legendData.push({
+                    color: range[i],
+                    min: domain[i - 1],
+                    max: domain[i]
+                });
+            }
+            // Final bin: domain[last]..Infinity
+            legendData.push({
+                color: range[range.length - 1],
+                min: domain[domain.length - 1],
+                max: Infinity
+            });
+
+            const legend = svg.append("g")
+                .attr("class", "legend")
+                .attr("transform", `translate(900, 400)`);
+
+            legend.selectAll("rect")
+                .data(legendData)
+                .enter()
+                .append("rect")
+                .attr("x", 0)
+                .attr("y", (_, i) => i * 25)
+                .attr("width", 20)
+                .attr("height", 20)
+                .attr("fill", d => d.color);
+
+            legend.selectAll("text")
+                .data(legendData)
+                .enter()
+                .append("text")
+                .attr("x", 30)
+                .attr("y", (_, i) => i * 25 + 14)
+                .text(d => {
+                    if (d.max === Infinity) {
+                        return `${d.min}+ M`;
+                    } else {
+                        return `${d.min} - ${d.max} M`;
+                    }
+                });
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html> 

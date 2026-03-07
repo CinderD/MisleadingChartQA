@@ -1,0 +1,17 @@
+{
+  "question": "Which quarter shows the best overall restaurant performance based on the stacked bar chart?",
+  "options": {
+    "A": "Q3 shows the best performance because it has the highest combined bar height.",
+    "B": "Q1 shows the best performance because it has the lowest kitchen temperature and fewest customer complaints.",
+    "C": "The chart cannot determine overall performance accurately because it stacks different metrics that cannot be meaningfully added together.",
+    "D": "Q1 shows the best performance because all three indicators are at similar levels."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart stacks unrelated metrics (Sales, Kitchen Temperature, etc.) into a single total. These metrics have different units and meanings (e.g., counts, temperatures, consumption), so adding them together creates a meaningless sum. The stacked height cannot be used to assess overall performance. Only individual metric comparisons are valid."
+}

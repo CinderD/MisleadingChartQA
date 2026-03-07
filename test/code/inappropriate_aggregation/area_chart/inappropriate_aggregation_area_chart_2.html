@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Website Traffic Analysis</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .area {
+            fill: #16a085;
+            opacity: 0.6;
+        }
+        .line {
+            fill: none;
+            stroke: #138d75;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Annual Website Traffic Growth (as of March 15, 2023)</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/inappropriate_aggregation/area_chart/inappropriate_aggregation_area_chart_2.csv").then(data => {
+            data.forEach(d => {
+                d.year = d.year;
+                d.monthly_visitors = +d.monthly_visitors;
+            });
+
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.year))
+                .range([0, width])
+                .padding(0.3);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.monthly_visitors) * 1.1])
+                .range([height, 0]);
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            g.append("g")
+                .call(d3.axisLeft(y));
+
+            const area = d3.area()
+                .x(d => x(d.year) + x.bandwidth() / 2)
+                .y0(height)
+                .y1(d => y(d.monthly_visitors));
+
+            const line = d3.line()
+                .x(d => x(d.year) + x.bandwidth() / 2)
+                .y(d => y(d.monthly_visitors));
+
+            g.append("path")
+                .datum(data)
+                .attr("class", "area")
+                .attr("d", area);
+
+            g.append("path")
+                .datum(data)
+                .attr("class", "line")
+                .attr("d", line);
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", -10)
+                .attr("text-anchor", "middle")
+                .attr("font-weight", "bold")
+                .text("Annual Website Traffic Growth");
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 35)
+                .attr("text-anchor", "middle")
+                .text("Year");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -40)
+                .attr("x", -height / 2)
+                .attr("text-anchor", "middle")
+                .text("Monthly Visitors (Thousands)");
+        });
+    </script>
+</body>
+</html> 

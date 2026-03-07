@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following is true given how this chart is drawn?",
+  "options": {
+    "A": "Adjusted revenue peaked in 2018.",
+    "B": "The the top bar is clipped, so we cannot determine which year had higher adjusted revenue.",
+    "C": "There is a steady decline from 2019 onward.",
+    "D": "the final year has identical adjusted revenue."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-scale is set so that the largest values are cut off, creating a misleading impression that the top final year are equal."
+}

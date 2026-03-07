@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, what can we say about the average number of visits for the entire week?",
+  "options": {
+    "A": "The average is around 29 visits, considering only the days that show visits",
+    "B": "The average is around 27 visits because the bars are all between 25 and 31",
+    "C": "The average cannot be determined because we do not have visit data for the whole week",
+    "D": "The average is about 12 visits, calculated from all seven days including those with zero visits"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart only shows measured values for the first part of the week; the remaining days are effectively missing, but are drawn as zero-height bars. Computing an average across all seven days (including those zeros) assumes the missing days truly had zero values, which is not supported by the data. Therefore the weekly average cannot be reliably calculated."
+}

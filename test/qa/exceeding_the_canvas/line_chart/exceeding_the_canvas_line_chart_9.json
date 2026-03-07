@@ -1,0 +1,17 @@
+{
+  "question": "The line chart displays sales trends from 2018 to 2022. Based on the chart, which statement is valid?",
+  "options": {
+    "A": "Sales increased steadily from 2018 to 2020.",
+    "B": "Sales in 2021 and 2022 were the same.",
+    "C": "Sales peaked in 2022.",
+    "D": "Sales decreased every year from 2018 to 2022."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis scale is set to a maximum of 1500, causing the 2021 and 2022 data points (both 5000) to exceed the visible chart area. This makes it impossible to determine their actual values or compare them from the chart alone, tempting answer C, but the only valid conclusion from visible data is that sales increased steadily from 2018 to 2020."
+}

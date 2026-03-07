@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, which major has the highest actual enrollment share?",
+  "options": {
+    "A": "Business",
+    "B": "Engineering",
+    "C": "Computer Science",
+    "D": "Arts"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The pie chart uses an adjusted scaling function for slice sizes, which can shrink or inflate differences between categories. That makes the true ratio (1.2:1) look closer to 2:1 when judging by the wedge areas."
+}

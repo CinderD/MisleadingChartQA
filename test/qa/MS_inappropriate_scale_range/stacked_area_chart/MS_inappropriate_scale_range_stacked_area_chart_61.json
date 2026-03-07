@@ -1,0 +1,17 @@
+{
+  "question": "Approximately, what is C's revenue as a proportion of A's revenue in Q2 2024?",
+  "options": {
+    "A": "About 70%",
+    "B": "About 100%",
+    "C": "About 150%",
+    "D": "About 200%"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_area_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 10 instead of 0, which visually exaggerates smaller components in a stacked area chart. In Q2 2024, C is about 100% of A (data: 31.8 vs 24.7), but the truncated baseline can make it appear closer to 80%."
+}

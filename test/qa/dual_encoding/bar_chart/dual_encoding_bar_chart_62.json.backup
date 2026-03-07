@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows lost working days by year. Which statement is reliable according to the chart data?",
+  "options": {
+    "A": "2010-11 is lower than 2007-08.",
+    "B": "2012-13 has nearly 4 times as many lost days as 2007-08, as suggested by the bar size and color.",
+    "C": "2008-09 has the lowest value among the categories shown.",
+    "D": "2012-13 and 2013-14 have identical values."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

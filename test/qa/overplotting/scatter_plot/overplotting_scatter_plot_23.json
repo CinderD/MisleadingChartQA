@@ -1,0 +1,17 @@
+{
+  "question": "Do Manufacturing have income above 22 thousand?",
+  "options": {
+    "A": "Only certain categories have income above 22",
+    "B": "Yes",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "No"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 22 thousand income position, making it difficult to accurately discern if any members of Manufacturing has the income higher than 22 thousand."
+}

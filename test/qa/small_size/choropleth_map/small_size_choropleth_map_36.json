@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows GDP (in billions) for selected US states. Which statement is correct?",
+  "options": {
+    "A": "Because the states and legend are quite small, it is difficult to judge which highlighted state has the highest GDP.",
+    "B": "Virginia clearly has the highest GDP among the highlighted states.",
+    "C": "North Dakota clearly has the lowest GDP among the highlighted states.",
+    "D": "The map shows precise GDP figures that can be read easily for each state."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific GDP figures accurately. Rankings and exact values cannot be verified."
+}

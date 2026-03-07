@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map displays vaccination rates for selected US states. Which statement is correct?",
+  "options": {
+    "A": "The extremely small text size makes it difficult to read specific vaccination rates accurately.",
+    "B": "Ohio clearly has a higher vaccination rate than Indiana.",
+    "C": "Idaho clearly has a higher vaccination rate than Oregon.",
+    "D": "Texas clearly has the lowest vaccination rate among the shown states."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it difficult to read exact percentages. Specific state values or rankings cannot be reliably identified."
+}

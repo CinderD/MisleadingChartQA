@@ -1,0 +1,17 @@
+{
+  "question": "Approximately, what is Park C's total visitors as a proportion of Park A's total visitors in May?",
+  "options": {
+    "A": "25%",
+    "B": "50%",
+    "C": "80%",
+    "D": "200%"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_area_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The Y-axis scale starts at 15 instead of 0, which visually exaggerates Park C relative to Park A. Summing totals gives Park C (≈20) about 80% of Park A (≈25), but the truncated scale makes it appear closer to 50%."
+}

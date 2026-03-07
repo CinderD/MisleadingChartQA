@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart data, which period shows the larger net decrease in value?",
+  "options": {
+    "A": "Both periods show about the same decrease",
+    "B": "It cannot be determined from the chart",
+    "C": "2012-2015",
+    "D": "2007-2010"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a non-linear (inappropriate) y-axis scaling function, so equal vertical distances do not correspond to equal changes in the underlying values. That can make one period look like it changed more even when the data show otherwise. 2007-2010: 21.9°C → 16.3°C (-5.6°C); 2012-2015: 15.4°C → 10.0°C (-5.4°C)."
+}

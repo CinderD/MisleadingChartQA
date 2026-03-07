@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Major Enrollment Distribution - Visualization May Be Misleading</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .label {
+            font-size: 16px;
+            font-weight: bold;
+            text-anchor: middle;
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>University Major Enrollment Distribution</h1>
+    <div id="chart"></div>
+    <script>
+        const width = 1000;
+        const height = 750;
+        const radius = Math.min(width, height) / 2;
+
+        const color = d3.scaleOrdinal()
+            .domain(["Computer Science", "Business", "Engineering", "Arts"])
+            .range(["#D73027", "#F46D43", "#FDAE61", "#FEE08B"]);
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+        const pie = d3.pie().value(d => d.adjusted_scale);
+
+        const arc = d3.arc()
+            .innerRadius(0)
+            .outerRadius(radius);
+
+        d3.csv("../../../../data/MS_inappropriate_scale_functions/pie_chart/MS_inappropriate_scale_functions_pie_chart_6.csv").then(data => {
+            svg.selectAll("path")
+                .data(pie(data))
+                .enter().append("path")
+                .attr("d", arc)
+                .attr("fill", d => color(d.data.major))
+                .attr("stroke", "#fff")
+                .style("stroke-width", "1px");
+
+            svg.selectAll("text")
+                .data(pie(data))
+                .enter().append("text")
+                .attr("transform", d => `translate(${arc.centroid(d)})`)
+                .attr("class", "label")
+                .text(d => `${d.data.major} (${d.data.enrollment_percentage}%)`);
+        });
+    </script>
+</body>
+</html>

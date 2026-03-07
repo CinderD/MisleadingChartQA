@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Trends Over the Years</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis-label { font-size: 14px; font-family: Arial, sans-serif; }
+        .line { stroke: steelblue; stroke-width: 2; fill: none; }
+        .dot { fill: steelblue; r: 5; stroke: none; }
+        .axis path, .axis line { stroke: black; }
+    </style>
+</head>
+<body>
+    <h1>Visitor Trends Over the Years</h1>
+    <div id="chart"></div>
+    <script>
+        // Chart Dimensions
+        const margin = { top: 40, right: 20, bottom: 50, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        // Append SVG
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        // Load CSV Data
+        d3.csv("../../../../data/MS_inappropriate_order/line_chart/MS_inappropriate_order_line_chart_1.csv").then(data => {
+            // Format Data
+            data.forEach(d => {
+                d.Year = +d.Year;
+                d.Visitors = +d.Visitors;
+            });
+
+            // Scales
+            const x = d3.scalePoint()
+                .domain(data.map(d => d.Year))
+                .range([0, width]);
+
+            const y = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.Visitors)])
+                .nice()
+                .range([height, 0]);
+
+            // Axes
+            svg.append("g")
+                .attr("transform", `translate(0, ${height})`)
+                .call(d3.axisBottom(x).tickFormat(d3.format("d")).tickSizeOuter(0));
+
+            svg.append("g")
+                .call(d3.axisLeft(y));
+            
+            // X-axis Label
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("x", width / 2)
+                .attr("y", height + 40)
+                .text("Year");
+                
+            // Y-axis Label
+            svg.append("text")
+                .attr("class", "axis-label")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -50)
+                .text("Number of Visitors");
+
+            // Line
+            const line = d3.line()
+                .x(d => x(d.Year))
+                .y(d => y(d.Visitors));
+
+            svg.append("path")
+                .datum(data)
+                .attr("class", "line")
+                .attr("d", line);
+
+            // Dots
+            svg.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.Year))
+                .attr("cy", d => y(d.Visitors))
+                .attr("r", 5);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following best describes the change in CO2 emissions in Country N from 2012 to 2021?",
+  "options": {
+    "A": "They generally decreased, despite some year-to-year fluctuations.",
+    "B": "They generally increased, despite some year-to-year fluctuations.",
+    "C": "They remained constant over the period.",
+    "D": "They first decreased steadily and then remained constant."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes the series appear increasing when it is actually decreasing."
+}

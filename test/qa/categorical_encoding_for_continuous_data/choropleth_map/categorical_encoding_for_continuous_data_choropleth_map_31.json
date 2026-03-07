@@ -1,0 +1,17 @@
+{
+  "question": "Based on the unemployment rate map, which statement below is the most accurate?",
+  "options": {
+    "A": "Minnesota and Montana likely differ in unemployment rate by more than Iowa and Nebraska do, even though Minnesota and Montana share the same color.",
+    "B": "Minnesota and Montana have very similar unemployment rates because they are the same color.",
+    "C": "All four states (Minnesota, Montana, Iowa, Nebraska) clearly have identical unemployment rates.",
+    "D": "The unemployment rate differences between these states are impossible to compare from this map."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Minnesota (9.8%) and Montana (14.9%) have a 5.1% unemployment rate difference, while Iowa (2.7%) and Nebraska (3.3%) have only a 0.6% difference. However, the categorical color encoding groups Minnesota and Montana into the same color bin (9%+ range), making their large difference appear similar, while Iowa and Nebraska appear more different due to different color bins."
+}

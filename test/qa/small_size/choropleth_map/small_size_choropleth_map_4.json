@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map displays the percentage of adults with bachelor's degrees for selected US states. Which statement is correct?",
+  "options": {
+    "A": "The extremely small text size makes it impossible to compare the percentage.",
+    "B": "North Carolina has the highest percentage of bachelor's degree holders.",
+    "C": "Georgia has 30.2% of adults with bachelor's degrees.",
+    "D": "The map shows clear regional education patterns."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific percentage values accurately. While the color gradient can suggest relative educational attainment levels. Options C seem to provide concrete information but is wrong according to the data."
+}

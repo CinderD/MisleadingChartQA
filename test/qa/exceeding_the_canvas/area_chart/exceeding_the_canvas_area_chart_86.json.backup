@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart of revenue as presented, which statement is valid?",
+  "options": {
+    "A": "Revenue increased by the same amount each year.",
+    "B": "The last two years show the same revenue.",
+    "C": "We cannot reliably compare the highest bars because they extend above the visible axis.",
+    "D": "Revenue was lowest in the final year."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The bar tops are clipped outside the visible plotting area, so equality or ordering for the clipped bars cannot be inferred."
+}

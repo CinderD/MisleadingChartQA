@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatter plot, which statement accurately describes the correlation between activity level and anxiety?",
+  "options": {
+    "A": "Anxiety is lowest among 'Somewhat Active' individuals.",
+    "B": "As sleep time increases, anxiety decreases.",
+    "C": "'Active' individuals always have the higher anxiety levels than 'Somewhat Active' individuals.",
+    "D": "'Highly Active' individuals show the widest range of anxiety levels."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The legend for Activity Level is misleading due to its inappropriate order, making it appear that 'Somewhat Active' corresponds to higher active level than 'Active'. This misrepresentation can affect the interpretation of trends related to activity levels and anxiety."
+}

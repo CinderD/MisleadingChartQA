@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected High-Growth Quarters: Ad Spend vs Sales</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .dot { fill: steelblue; opacity: 0.8; }
+        .axis path, .axis line { stroke: #000; }
+        .month-label {
+            font-size: 10px;
+            fill: #333;
+            text-anchor: middle;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selected High-Growth Quarters: Ad Spend vs Sales</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 30, bottom: 50, left: 70};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/cherry_picking/scatter_plot/cherry_picking_scatter_plot_96.csv").then(data => {
+          data.forEach(d => {
+            d.Limited_AdSpend = +d.Limited_AdSpend;
+            d.Limited_Sales = +d.Limited_Sales;
+          });
+
+          const x = d3.scaleLinear()
+            .domain([d3.min(data, d => d.Limited_AdSpend) - 5, d3.max(data, d => d.Limited_AdSpend) + 5])
+            .range([0, width]);
+
+          const y = d3.scaleLinear()
+            .domain([d3.min(data, d => d.Limited_Sales) - 10, d3.max(data, d => d.Limited_Sales) + 10])
+            .range([height, 0]);
+
+          g.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x));
+          g.append("g").call(d3.axisLeft(y));
+
+          g.append("text")
+            .attr("x", width / 2)
+            .attr("y", height + 40)
+            .attr("text-anchor", "middle")
+            .style("font-size", "12px")
+            .text("Advertising Spend ($ thousands)");
+
+          g.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("x", -height / 2)
+            .attr("y", -50)
+            .attr("text-anchor", "middle")
+            .style("font-size", "12px")
+            .text("Sales ($ thousands)");
+
+          g.selectAll(".dot")
+            .data(data)
+            .enter().append("circle")
+            .attr("class", "dot")
+            .attr("cx", d => x(d.Limited_AdSpend))
+            .attr("cy", d => y(d.Limited_Sales))
+            .attr("r", 5);
+
+          g.selectAll(".month-label")
+            .data(data)
+            .enter().append("text")
+            .attr("class", "month-label")
+            .attr("x", d => x(d.Limited_AdSpend))
+            .attr("y", d => y(d.Limited_Sales) - 15)
+            .text(d => d.Month);
+        });
+    </script>
+</body>
+</html>

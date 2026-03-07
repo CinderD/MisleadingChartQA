@@ -1,0 +1,17 @@
+{
+  "question": "What can we infer about the index trend over the full 2000–2015 period based on this chart of index values from 2005 to 2012?",
+  "options": {
+    "A": "The index shows a clear upward trend that likely continued across the full 2000–2015 period.",
+    "B": "The data shows a consistent decline over the entire 2000–2015 period.",
+    "C": "This 8-year slice from 2005 to 2012 cannot reliably represent the full 2000–2015 trend.",
+    "D": "The data exhibits completely random fluctuations with no pattern during 2005–2012."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays a cherry-picked rising segment; other subperiods may show flat or declining behavior."
+}

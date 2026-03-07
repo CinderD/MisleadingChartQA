@@ -1,0 +1,17 @@
+{
+  "question": "Which state has a higher incidence of Condition A based on the data, AZ or SD?",
+  "options": {
+    "A": "SD",
+    "B": "Both states have the same incidence",
+    "C": "AZ",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although AZ appears darker, SD has the higher assigned value when the inversion is considered."
+}

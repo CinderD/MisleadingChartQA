@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows sales trends from 1924 to 2024. Which statement best describes the chart?",
+  "options": {
+    "A": "The extremely small text and thin lines make it difficult to determine specific trends and values accurately.",
+    "B": "Sales increased steadily from 1924 to 2024.",
+    "C": "Sales peaked in 1960 and then declined for several years.",
+    "D": "The chart shows clear seasonal patterns in sales."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses extremely small font sizes and very thin lines which make it nearly impossible to read specific values, identify trends, and verify conclusions. This poor visibility can lead to misinterpretation of data patterns, tempting answers like B or C, but the main issue is the inadequate visibility due to the extremely small text and line sizes."
+}

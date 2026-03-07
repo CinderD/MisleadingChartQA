@@ -1,0 +1,17 @@
+{
+  "question": "Which statement accurately describes what the chart shows?",
+  "options": {
+    "A": "Sales in 2021 and 2022 are identical.",
+    "B": "Sales were flat in the middle years.",
+    "C": "Sales decreased from 2018 to 2022.",
+    "D": "We cannot tell from the chart whether the last two years are equal or different because values exceed the visible range."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart clips the tallest bars by using a y-axis max below the data maximum, misleading viewers into thinking the top values are equal."
+}

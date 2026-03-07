@@ -1,0 +1,17 @@
+{
+  "question": "Based on the annual data (including the partial year), what can we conclude about the latest year?",
+  "options": {
+    "A": "The latest year has the lowest copies sold in the entire period",
+    "B": "The latest year shows a sharp decline compared to previous years",
+    "C": "None of the above conclusions about the full-year trend are justified from this partial-year data",
+    "D": "The latest year proves that copies sold is now permanently declining"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The latest year in the chart only includes about 2 months of data, while previous years show full 12‑month totals. Comparing the partial-year value (451 copies) directly to full-year values like 2,544 copies creates the illusion of a sharp decline. We cannot draw full‑year conclusions from this incomplete aggregate."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is correct about global smartphone market share 2024?",
+  "options": {
+    "A": "Apple and Samsung have nearly identical market shares.",
+    "B": "Huawei has the largest market share among the categories shown.",
+    "C": "Samsung has the largest market share among the categories shown.",
+    "D": "The chart does not support comparing shares across categories."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, Huawei has the highest share (38%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking Samsung is largest when relying on visual comparison."
+}

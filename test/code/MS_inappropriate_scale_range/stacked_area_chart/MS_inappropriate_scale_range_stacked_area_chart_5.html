@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Satisfaction Trends</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 600px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .area {
+            opacity: 0.8;
+        }
+        .area:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customer Satisfaction Trends</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 160, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 600 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/MS_inappropriate_scale_range/stacked_area_chart/MS_inappropriate_scale_range_stacked_area_chart_5.csv").then(data => {
+            const keys = data.columns.slice(1);
+            
+            data.forEach(d => {
+                d.month = d.month;
+                keys.forEach(key => {
+                    d[key] = +d[key];
+                });
+            });
+
+            const x = d3.scalePoint()
+                .domain(data.map(d => d.month))
+                .range([0, width]);
+
+            // Inappropriate scale range: Y-axis starts at 18 instead of 0
+            const y = d3.scaleLinear()
+                .domain([18, d3.max(data, d => d3.sum(keys, key => d[key]))])
+                .range([height, 0]);
+
+            const color = d3.scaleOrdinal()
+                .domain(keys)
+                .range(d3.schemeCategory10);
+
+            const stack = d3.stack().keys(keys);
+
+            const series = stack(data);
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            g.append("g")
+                .call(d3.axisLeft(y));
+
+            g.selectAll(".area")
+                .data(series)
+                .enter().append("path")
+                .attr("class", "area")
+                .attr("fill", d => color(d.key))
+                .attr("d", d3.area()
+                    .x(d => x(d.data.month))
+                    .y0(d => y(Math.max(18, d[0]))) // Ensure no overflow below Y-axis minimum
+                    .y1(d => y(Math.max(18, d[1]))) // Ensure no overflow below Y-axis minimum
+                );
+
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 35)
+                .attr("text-anchor", "middle")
+                .text("Month");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -40)
+                .attr("x", -height / 2)
+                .attr("text-anchor", "middle")
+                .text("Number of Customers");
+
+            // Add legend
+            const legend = svg.append("g")
+                .attr("transform", `translate(${width + margin.left + 20}, 12)`);
+
+            const legendData = [
+                { name: "Very Satisfied", color: d3.schemeCategory10[0] },
+                { name: "Satisfied", color: d3.schemeCategory10[1] },
+                { name: "Neutral", color: d3.schemeCategory10[2] }
+            ];
+
+            legend.selectAll(".legend-item")
+                .data(legendData)
+                .enter().append("g")
+                .attr("class", "legend-item")
+                .attr("transform", (d, i) => `translate(0, ${i * 20})`)
+                .call(g => g.append("rect")
+                    .attr("x", -10)
+                    .attr("width", 10)
+                    .attr("height", 10)
+                    .attr("fill", d => d.color))
+                .call(g => g.append("text")
+                    .attr("x", 10)
+                    .attr("y", 10)
+                    .text(d => d.name));
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html> 

@@ -1,0 +1,17 @@
+{
+  "question": "A company sells a board game. According to the chart, which of the following statements is true about the most recent year shown?",
+  "options": {
+    "A": "The chart only shows results up to part of the most recent year, so it does not tell us how that full year will compare with earlier years.",
+    "B": "The most recent year has clearly suffered a sharp drop in sales compared with all previous years.",
+    "C": "Sales have declined every single year since the first year shown.",
+    "D": "The most recent year must have the lowest annual sales in the entire period."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The latest year in the chart only includes about 5 months of data, while previous years show full 12‑month totals. Comparing the partial-year value (663 copies) directly to full-year values like 1,518 copies creates the illusion of a sharp decline. We cannot draw full‑year conclusions from this incomplete aggregate."
+}

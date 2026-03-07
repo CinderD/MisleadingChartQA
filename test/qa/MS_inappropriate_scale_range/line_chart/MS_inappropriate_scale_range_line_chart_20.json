@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the percentage of samples in which Bacteria Z was detected from 1970 to 2020 (out of a possible 0–100%). What is the most appropriate conclusion from the observed changes in value over the past 50 years?",
+  "options": {
+    "A": "There was a large surge in detection rates",
+    "B": "There was a modest upward trend within a narrow band",
+    "C": "The rate stayed exactly the same",
+    "D": "The trend cannot be inferred at all"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (≈15.0–16.4%) instead of a more informative 0–100% scale, visually exaggerating variability. The actual change is about 1.4 percentage points over decades, which is modest, not a large surge."
+}

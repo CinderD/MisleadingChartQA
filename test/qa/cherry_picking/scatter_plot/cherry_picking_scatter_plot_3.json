@@ -1,0 +1,17 @@
+{
+  "question": "What growth pattern does this high-performing regions data reveal about advertising scalability?",
+  "options": {
+    "A": "It is impossible that the data for all regions shows a linear relationship between advertising spend and sales.",
+    "B": "Advertising effectiveness is unpredictable and varies randomly.",
+    "C": "Advertising shows exponential returns in high-performing regions with accelerating growth.",
+    "D": "We need data from all regions to assess advertising scalability."
+  },
+  "correctAnswer": "C",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Infer Trends",
+  "explanation": "The chart correctly shows exponential growth where each $10K increase in advertising spend generates progressively larger sales increases ($20K, $35K, $55K, $80K). This indicates accelerating returns in high-performing regions. However, this creates a misleading impression that advertising scales exponentially. The cherry-picking aspect is that this only shows top-performing regions, hiding potentially different patterns in average or underperforming regions that might show diminishing returns, linear growth, or no growth at all. The trend is real for this segment, but not generalizable.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "A"
+}

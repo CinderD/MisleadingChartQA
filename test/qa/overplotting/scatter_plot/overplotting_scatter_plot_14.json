@@ -1,0 +1,17 @@
+{
+  "question": "Do Engineering employees have salaries above 18 thousand?",
+  "options": {
+    "A": "Yes",
+    "B": "No",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Only non-Engineering employees have salaries above 18 thousand"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 18 thousand salaries position, making it difficult to accurately discern if any members of Engineering has the salarie higher than 18 thousand."
+}

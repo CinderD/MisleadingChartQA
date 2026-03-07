@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows GDP (in billions) for selected US states. Which statement is correct?",
+  "options": {
+    "A": "Kentucky clearly has a much higher GDP than all the other highlighted states.",
+    "B": "The extremely small text size makes it difficult to read specific GDP values accurately.",
+    "C": "Nebraska’s GDP can be identified as exactly 3.2 on the map.",
+    "D": "The map makes it easy to compare precise GDP values between the highlighted states."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific GDP figures accurately. Rankings and exact values cannot be verified."
+}

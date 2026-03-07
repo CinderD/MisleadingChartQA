@@ -1,0 +1,17 @@
+{
+  "question": "What does the chart suggest about the defect rate in production over the period shown?",
+  "options": {
+    "A": "There was a sharp increase",
+    "B": "The trend cannot be determined from this chart",
+    "C": "The rate stayed exactly the same throughout",
+    "D": "There was a modest upward trend within a narrow range"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (6.44–6.74%) instead of a more informative 0–10% context, which visually exaggerates variability. The actual net change is about 0.30% over the period, which is modest in the full context."
+}

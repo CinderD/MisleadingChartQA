@@ -1,0 +1,17 @@
+{
+  "question": "How does Engineering's budget compare to Finance's?",
+  "options": {
+    "A": "Engineering shows approximately 2.0 times the budget of Finance.",
+    "B": "Cannot determine the exact ratio between Engineering and Finance without Y-axis scales to verify the relative budget.",
+    "C": "Engineering has about 1.2 times the budget of Marketing.",
+    "D": "Engineering shows approximately 2.2 times the budget of Finance."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays department budget allocation with a bar chart, but provides no Y-axis scales or numerical labels. While the visual data clearly shows Engineering has a taller bar than Finance, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the exact ratio between their budget. Visual estimation of relative proportions without proper scales is unreliable for accurate comparison."
+}

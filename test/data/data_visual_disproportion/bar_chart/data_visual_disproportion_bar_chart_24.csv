@@ -1,0 +1,6 @@
+energy_source,production_percentage,color,bar_height
+Solar,41.2,#FFD700,40
+Wind,29.8,#87CEEB,68
+Hydroelectric,18.5,#4169E1,52
+Biomass,7.2,#228B22,22
+Geothermal,3.3,#8B4513,35

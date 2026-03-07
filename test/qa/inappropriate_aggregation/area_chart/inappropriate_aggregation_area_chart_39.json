@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart of annual employee recruitment (as of May 01, 2024), which statement is most appropriate?",
+  "options": {
+    "A": "The latest year has already surpassed all previous years in total new employees.",
+    "B": "The latest year shows a clear and sustained collapse in recruitment compared with earlier years.",
+    "C": "Recruitment in the latest year is roughly in the middle of the range seen in previous full years.",
+    "D": "We cannot determine whether the latest year will end higher or lower than previous years because the data for it are only for part of the year."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The area and line for the latest year include only about 5 months of data, while earlier years show totals for the full year. Visually, the latest year appears much lower, but this is purely because the period is shorter, not because the underlying performance has collapsed. Without the remaining months, we cannot judge the full-year outcome."
+}

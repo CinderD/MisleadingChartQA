@@ -1,0 +1,17 @@
+{
+  "question": "Based on the stacked bar chart showing quarterly performance indicators for Store X, what can we conclude about which quarter has the best overall performance?",
+  "options": {
+    "A": "Q4 has the best overall performance because it has the highest combined bar height.",
+    "B": "Q2 has the best overall performance because it has the highest store visits.",
+    "C": "Q1 has the best overall performance because it has the lowest electricity consumption.",
+    "D": "We cannot determine the best overall performance from this chart because it stacks indicators with different units that cannot be meaningfully added."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart stacks unrelated metrics (Store Visits, Electricity Consumption, etc.) into a single total. These metrics have different units and meanings (e.g., counts, temperatures, consumption), so adding them together creates a meaningless sum. The stacked height cannot be used to assess overall performance. Only individual metric comparisons are valid."
+}

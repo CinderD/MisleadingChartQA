@@ -1,0 +1,17 @@
+{
+  "question": "Which half of the year has higher total sales: the first six months or the last six months?",
+  "options": {
+    "A": "First half of the year",
+    "B": "Cannot be determined from the chart.",
+    "C": "Second half of the year",
+    "D": "Both periods show equal total sales."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays months out of order, creating confusion. While visually it might seem sales decrease, summing the sales from July to December actually shows a higher total than from January to June."
+}

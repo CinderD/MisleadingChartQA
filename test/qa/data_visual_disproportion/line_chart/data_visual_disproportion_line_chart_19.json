@@ -1,0 +1,17 @@
+{
+  "question": "Based on the market share values shown in the chart, which of the following statements is correct?",
+  "options": {
+    "A": "The market share in 2019 is 13%.",
+    "B": "The market share growth from 2018 to 2023 is 17 percentage points.",
+    "C": "The market share growth from 2018 to 2023 is less than 12 percentage points.",
+    "D": "The market share in 2023 shows a dramatic increase compared to 2022."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The line is drawn using a different 'height' value for 2023 than the actual share, so the visual suggests a dramatic spike while the true share is 30%."
+}

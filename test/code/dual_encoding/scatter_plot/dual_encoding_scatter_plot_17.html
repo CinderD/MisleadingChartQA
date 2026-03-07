@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marketing Spend vs Revenue (Dual Encoded)</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    .axis-label { font-size: 16px; font-family: Arial, sans-serif; }
+  </style>
+</head>
+<body>
+  <h1>Marketing Spend vs Revenue</h1>
+  <svg width="1000" height="750"></svg>
+  <script>
+    const margin = { top: 60, right: 60, bottom: 60, left: 80 };
+    const width = 1000 - margin.left - margin.right;
+    const height = 750 - margin.top - margin.bottom;
+    const svg = d3.select("svg").append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    d3.csv("../../../../data/dual_encoding/scatter_plot/dual_encoding_scatter_plot_17.csv").then(data => {
+      data.forEach(d => { d.spend = +d.spend; d.revenue = +d.revenue; });
+      const x = d3.scaleLinear().domain([0, 200]).range([0, width]);
+      const y = d3.scaleLinear().domain([0, 2200]).range([height, 0]);
+
+      const color = d3.scaleSequential(d3.interpolateBuGn).domain(d3.extent(data, d => d.spend));
+      const radius = d3.scaleLinear().domain(d3.extent(data, d => d.spend)).range([6, 22]);
+
+      svg.selectAll("circle").data(data).enter().append("circle")
+        .attr("cx", d => x(d.spend))
+        .attr("cy", d => y(d.revenue))
+        .attr("r", d => radius(d.spend))
+        .attr("fill", d => color(d.spend))
+        .attr("opacity", 0.9);
+
+      const fmt = d3.format(",.0f");
+      svg.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x).ticks(6));
+      svg.append("g").call(d3.axisLeft(y).ticks(6));
+
+      svg.append("text").attr("class", "axis-label").attr("x", width/2).attr("y", height+45).style("text-anchor","middle").text("Marketing Spend (k$)");
+      svg.append("text").attr("class", "axis-label").attr("transform","rotate(-90)").attr("x", -height/2).attr("y", -50).style("text-anchor","middle").text("Revenue (k$)");
+    }).catch(err => console.error('Error loading CSV data:', err));
+  </script>
+</body>
+</html>

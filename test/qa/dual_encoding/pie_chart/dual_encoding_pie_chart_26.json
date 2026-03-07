@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the distribution of funds in various categories. Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "The Education budget is higher than the combined budgets for Healthcare and Infrastructure.",
+    "B": "The Healthcare category has the lowest budget allocation.",
+    "C": "The Infrastructure budget is larger than the Safety Funding budget.",
+    "D": "The allocation for Safety and Healthcare combined exceeds that for Education."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart displays an Education budget of 35%, which is less than the combined total for Healthcare (25%) and Infrastructure (20%), summing up to 45%. Option A could mislead due to the dual encoding technique, where the angle and area discrepancy makes Education appear larger relative to other categories."
+}

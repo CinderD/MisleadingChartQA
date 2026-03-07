@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows average student test scores from 2010 to 2020 (on a 0–100 scale). Based on this context, what is the most accurate assessment?",
+  "options": {
+    "A": "There was a dramatic improvement in student performance",
+    "B": "There was a steady but modest improvement over time",
+    "C": "Student performance remained essentially unchanged",
+    "D": "The trend cannot be determined from this chart"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very narrow range (78–82) instead of the full 0–100 scale, making the 3-point improvement appear much more dramatic than it actually is. A 1.75-point improvement on a 100-point scale represents only a modest 2% increase over 10 years."
+}

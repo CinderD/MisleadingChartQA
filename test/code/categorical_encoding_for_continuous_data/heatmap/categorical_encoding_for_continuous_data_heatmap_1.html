@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Temperature Heatmap</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .cell {
+            stroke-width: 1;
+        }
+        .axis text {
+            font-size: 12px;
+        }
+        .label {
+            font-size: 12px;
+            text-anchor: middle;
+            fill: black;
+        }
+        .legend rect {
+            width: 20px;
+            height: 20px;
+            margin: 0 2px;
+        }
+        .legend-text {
+            font-size: 12px;
+            fill: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Monthly Temperature Heatmap</h2>
+    <svg width="1000" height="750"></svg>
+
+    <script>
+        const margin = { top: 50, right: 100, bottom: 70, left: 80 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        d3.csv("../../../../data/categorical_encoding_for_continuous_data/heatmap/categorical_encoding_for_continuous_data_heatmap_1.csv").then(function(data) {
+            const cities = data.map(d => d.City);
+            const months = Object.keys(data[0]).filter(key => key !== "City");
+  
+            // Define intervals and colors
+            const colorScale = d3.scaleThreshold()
+                .domain([5, 10, 15, 20, 25])  // Define intervals for temperature
+                .range(["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00"]);
+
+            // Define x and y scales
+            const x = d3.scaleBand()
+                .domain(months)
+                .range([0, width])
+                .padding(0.05);
+
+            const y = d3.scaleBand()
+                .domain(cities)
+                .range([0, height])
+                .padding(0.05);
+
+            // Create the heatmap cells
+            svg.selectAll(".cell")
+                .data(data.flatMap(d => months.map(month => ({
+                    city: d.City,
+                    month: month,
+                    temp: +d[month]
+                }))))
+                .enter().append("rect")
+                .attr("class", "cell")
+                .attr("x", d => x(d.month))
+                .attr("y", d => y(d.city))
+                .attr("width", x.bandwidth())
+                .attr("height", y.bandwidth())
+                .attr("fill", d => colorScale(d.temp));
+
+            // Add x-axis (months)
+            svg.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x))
+                .selectAll("text")
+                .style("transform", "rotate(45deg)")
+                .style("text-anchor", "start");
+
+            // Add y-axis (cities)
+            svg.append("g")
+                .attr("class", "y axis")
+                .call(d3.axisLeft(y));
+
+  
+            // Define legend intervals and colors
+            const domain = [-5, 5, 15, 25, 35];  // Temperature thresholds
+            const range = ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00", "#ffff33"];  // Colors for each range
+
+            const legendData = [];
+            // Bin 1: 0..5
+            legendData.push({
+                color: range[0],
+                min: -1*Infinity,
+                max: domain[0]
+            });
+            // Bins 2..N-1
+            for (let i = 1; i < domain.length; i++) {
+                legendData.push({
+                    color: range[i],
+                    min: domain[i - 1],
+                    max: domain[i]
+                });
+            }
+            // Final bin: domain[last]..Infinity
+            legendData.push({
+                color: range[range.length - 1],
+                min: domain[domain.length - 1],
+                max: Infinity
+            });
+
+            // Add legend
+            const legend = svg.append("g")
+                .attr("class", "legend")
+                .attr("transform", "translate(" + (width + 20) + "," + margin.top + ")");
+
+            legend.selectAll("rect")
+                .data(legendData)
+                .enter()
+                .append("rect")
+                .attr("x", 0)
+                .attr("y", (_, i) => i * 25)
+                .attr("width", 20)
+                .attr("height", 20)
+                .attr("fill", d => d.color);
+
+            legend.selectAll("text")
+                .data(legendData)
+                .enter()
+                .append("text")
+                .attr("x", 30)
+                .attr("y", (_, i) => i * 25 + 14)
+                .text(d => {
+                    if (d.max === Infinity) {
+                        return `${d.min}+`;
+                    } else if (d.min === -1*Infinity) {
+                        return `<${d.max}`;
+                    } else {
+                        return `${d.min} - ${d.max}`;
+                    }
+                })
+                .attr("class", "legend-text");
+        });
+    </script>
+</body>
+</html> 

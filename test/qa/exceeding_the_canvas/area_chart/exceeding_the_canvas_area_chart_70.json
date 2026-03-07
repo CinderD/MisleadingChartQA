@@ -1,0 +1,17 @@
+{
+  "question": "Based on the area chart of costs from 2018 to 2022, which statement is most accurate?",
+  "options": {
+    "A": "The chart does not allow comparison of the highest cost years because they exceed the visible range.",
+    "B": "Costs increased by the same amount each year from 2018 to 2022.",
+    "C": "The costs in 2021 and 2022 are equal.",
+    "D": "The cost in 2018 was higher than in any other year."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis cap causes the top bar to be cut off, so they appear the same height although true values may differ."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Do Services have income above 22 thousand?",
+  "options": {
+    "A": "No",
+    "B": "Yes",
+    "C": "Only Agriculture, Manufacturing, Tech have income above 22",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 22 thousand income position, making it difficult to accurately discern if any members of Services has the income higher than 22 thousand."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "What best describes the change in the defect rate from 2012 to 2022?",
+  "options": {
+    "A": "There was a large surge in the defect rate",
+    "B": "The trend in the defect rate is unclear from this chart",
+    "C": "There was a modest upward trend within a narrow range",
+    "D": "The defect rate stayed exactly the same throughout"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (5.44–5.74%) instead of a more informative 0–10% context, which visually exaggerates variability. The actual net change is about 0.30% over the period, which is modest in the full context."
+}

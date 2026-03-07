@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of the number of in from 2005 to 2022 based on the chart?",
+  "options": {
+    "A": "Fluctuating",
+    "B": "Increasing",
+    "C": "Constant",
+    "D": "Decreasing"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted Y-axis, making the data appear as if the trend is decreasing, but the data actually shows an increasing trend."
+}

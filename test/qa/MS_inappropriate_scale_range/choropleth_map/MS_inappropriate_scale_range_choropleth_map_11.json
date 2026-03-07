@@ -1,0 +1,17 @@
+{
+  "question": "Based on these maps, what can you conclude about whether property crime rates are more unevenly distributed across states than violent crime rates?",
+  "options": {
+    "A": "Property crime rates are clearly more unevenly distributed across states than violent crime rates",
+    "B": "Violent crime rates are clearly more unevenly distributed across states than property crime rates",
+    "C": "Both types of crime show a similar level of unevenness across states",
+    "D": "The maps do not provide enough information to reliably compare how unevenly the two crime types are distributed across states"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The two maps use the SAME threshold scale even though their value distributions differ. That makes one map saturate in a single color while the other uses multiple colors, creating a misleading impression about which has more variation. The reliable conclusion is that variation cannot be judged from these maps alone."
+}

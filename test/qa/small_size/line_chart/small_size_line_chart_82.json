@@ -1,0 +1,17 @@
+{
+  "question": "The line chart depicts sales trends from 1924 to 2024. What does the sales trend show based on the chart?",
+  "options": {
+    "A": "A steady increase from 1924 to 2024",
+    "B": "A decline from 1970 to 1980 before rising again",
+    "C": "A decline from 1960 to 1970 before rising again",
+    "D": "No corerect answer."
+  },
+  "correctAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Identify trend",
+  "explanation": "The small text size and cramped data points can obscure the clear observation that sales declined from 1970 to 1980 before increasing again, as observed in the chart's data.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "C"
+}

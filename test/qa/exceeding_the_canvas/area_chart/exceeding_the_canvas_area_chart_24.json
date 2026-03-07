@@ -1,0 +1,17 @@
+{
+  "question": "The area chart displays the revenue figures for each year from 2018 to 2022. Which of the following statements is accurate?",
+  "options": {
+    "A": "The revenue for 2021 and 2022 are the same.",
+    "B": "The highest revenue is achieved in 2020.",
+    "C": "Revenue decreases consistently from 2020 to 2022.",
+    "D": "The revenue for 2018 is the lowest on the chart."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The values for 2021 and 2022 are too large, causing them to exceed the chart’s visible area. This results in both points being shown out of scope, which could mislead viewers into thinking that their revenues are identical."
+}

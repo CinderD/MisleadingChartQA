@@ -1,0 +1,17 @@
+{
+  "question": "Based on the cost trend chart, which statement is most accurate?",
+  "options": {
+    "A": "The cost increased by the same amount every year.",
+    "B": "The highest cost years cannot be fully compared because the area for the last year is clipped by the top of the chart.",
+    "C": "The cost in 2021 and 2022 is the same.",
+    "D": "The cost was lowest in 2021."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis cap causes the top bar to be cut off, so they appear the same height although true values may differ."
+}

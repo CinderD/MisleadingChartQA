@@ -1,0 +1,17 @@
+{
+  "question": "According to the data shown in the chart, which state has a higher incidence of Condition A, VA or TN?",
+  "options": {
+    "A": "TN",
+    "B": "VA",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Both states have the same incidence"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although TN appears darker, VA has the higher assigned value when the inversion is considered."
+}

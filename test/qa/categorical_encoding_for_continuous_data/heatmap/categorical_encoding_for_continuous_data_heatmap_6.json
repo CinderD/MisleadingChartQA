@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the temperature heatmap, which statement best describes the relationship between San Antonio and San Jose in May?",
+  "options": {
+    "A": "It can be infered that their May temperatures are very similar.",
+    "B": "Their May temperatures might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "C": "San Antonio is clearly much warmer than San Jose in May, and the color difference accurately represents this.",
+    "D": "The May temperatures for these two cities are impossible to determine from this visualization."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continuous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "San Antonio (-9.6°C) and San Jose (-8.6°C) have a 1.0°C difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of temperature relationships."
+}

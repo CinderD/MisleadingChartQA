@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows departmental energy consumption. Which of the following statements is supported by the data shown?",
+  "options": {
+    "A": "IT has higher energy consumption than Logistics.",
+    "B": "Manufacturing uses about twice as much energy as Offices.",
+    "C": "Packaging has the lowest energy consumption among the departments.",
+    "D": "Offices and Packaging use nearly the same amount of energy."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This bar chart uses dual encoding: the same value is shown with bar height, bar width, and color intensity. That combination exaggerates differences and can make moderate gaps look much larger. The reliable conclusion is the correct option based on the numeric labels/data."
+}

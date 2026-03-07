@@ -1,0 +1,17 @@
+{
+  "question": "What do these earnings suggest about the company’s profitability from 2008 to 2015?",
+  "options": {
+    "A": "Earnings grew consistently, so the company was profitable throughout the entire 2008–2015 period and beyond.",
+    "B": "The data shows a consistent decline in earnings over the entire 2008–2015 period.",
+    "C": "This 8-year window alone is not enough to judge the company’s overall long-term profitability.",
+    "D": "Earnings remained flat with no noticeable change during 2008–2015."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The cherry-picked years show growth; omitted years could show declines or volatility."
+}

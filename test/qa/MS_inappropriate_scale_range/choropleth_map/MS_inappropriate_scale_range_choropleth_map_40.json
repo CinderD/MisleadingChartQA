@@ -1,0 +1,17 @@
+{
+  "question": "From these maps, what can you conclude about which type of area has higher overall population density across states?",
+  "options": {
+    "A": "Both urban and rural areas clearly have similar overall density levels across states",
+    "B": "It cannot be determined from these maps alone which type has higher overall density",
+    "C": "Urban areas clearly have higher overall population density across states",
+    "D": "Rural areas clearly have higher overall population density across states"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Both maps reuse the same threshold scale, but their underlying distributions differ. This can make one map appear more intense simply because more states fall into the top bin. In the underlying data, Urban Population Density has the higher average value, so that is the only reliable conclusion."
+}

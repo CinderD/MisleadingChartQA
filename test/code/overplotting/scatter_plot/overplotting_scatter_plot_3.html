@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age vs. Income by Region</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .dot {
+            opacity: 0.7;
+        }
+        .dot.North { fill: #2ecc71; }
+        .dot.South { fill: #3498db; }
+        .dot.East { fill: #9b59b6; }
+        .dot.West { fill: #e74c3c; }
+        .dot:hover {
+            opacity: 1;
+            stroke: #e74c3c;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Age vs. Income by Region</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 120, bottom: 40, left: 60};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/overplotting/scatter_plot/overplotting_scatter_plot_3.csv").then(data => {
+            data.forEach(d => {
+                d.age = +d.age;
+                d.income = +d.income;
+                d.region = d.region;
+            });
+
+            const x = d3.scaleLinear()
+                .domain([0, 10])
+                .range([0, width]);
+
+            const y = d3.scaleLinear()
+                .domain([0, 30])
+                .range([height, 0]);
+
+            g.append("g")
+                .attr("transform", `translate(0,${height})`)
+                .call(d3.axisBottom(x));
+
+            g.append("g")
+                .call(d3.axisLeft(y));
+
+            // Add dots with overlapping
+            g.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", d => `dot ${d.region}`)
+                .attr("cx", d => x(d.age))
+                .attr("cy", d => y(d.income))
+                .attr("r", 5);
+
+            // Add legend
+            const legend = g.append("g")
+                .attr("class", "legend")
+                .attr("transform", `translate(${width + 10}, 0)`);
+
+            const regions = ["North", "South", "East", "West"];
+            const colors = ["#2ecc71", "#3498db", "#9b59b6", "#e74c3c"];
+
+            legend.selectAll(".legend-item")
+                .data(regions)
+                .enter().append("g")
+                .attr("class", "legend-item")
+                .attr("transform", (d, i) => `translate(0, ${i * 25})`)
+                .each(function(d, i) {
+                    d3.select(this).append("circle")
+                        .attr("r", 5)
+                        .attr("fill", colors[i]);
+                    d3.select(this).append("text")
+                        .attr("x", 15)
+                        .attr("y", 5)
+                        .text(d);
+                });
+
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 35)
+                .attr("text-anchor", "middle")
+                .text("Age (years)");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -40)
+                .attr("x", -height / 2)
+                .attr("text-anchor", "middle")
+                .text("Income (thousands)");
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html> 

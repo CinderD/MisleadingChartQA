@@ -1,0 +1,17 @@
+{
+  "question": "Which state has a higher incidence of Condition A based on the data, PA or NM?",
+  "options": {
+    "A": "NM",
+    "B": "PA",
+    "C": "Both states have the same incidence",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend is inverted, making lower values darker and higher values lighter. Although NM appears darker, PA has the higher assigned value when the inversion is considered."
+}

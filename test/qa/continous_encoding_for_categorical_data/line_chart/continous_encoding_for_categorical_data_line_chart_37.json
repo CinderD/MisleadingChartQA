@@ -1,0 +1,17 @@
+{
+  "question": "This line chart shows average viewer ratings (1–5 stars) for different genres. Which statement is most accurate based on the data?",
+  "options": {
+    "A": "Sci‑Fi has the highest average rating among all the listed genres.",
+    "B": "There is a clear left‑to‑right trend in which the genres steadily improve in rating.",
+    "C": "Comedy has the highest average rating among all the listed genres.",
+    "D": "All genres have approximately the same average rating with almost no differences."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart uses a continuous line over genre that are purely categorical (e.g., Sci‑Fi, Documentary, Action, ...). Connecting points suggests there is a meaningful smooth progression from left to right, which is conceptually incorrect — these categories have no inherent numeric order. The y‑axis values are on a 1 to 5 scale, but any comparison across categories should be made with a discrete chart such as a bar chart, not by reading trends from the connecting line."
+}

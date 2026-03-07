@@ -1,0 +1,17 @@
+{
+  "question": "What do these price movements from 2000-2005 suggest about long-term economic trends from 1995 to 2010?",
+  "options": {
+    "A": "The accelerating growth pattern indicates sustained economic expansion throughout the 15-year period.",
+    "B": "Economic conditions show persistent decline across the entire timeframe.",
+    "C": "The economy exhibits stagnant performance with no clear directional trend.",
+    "D": "This limited 6-year sample cannot reliably indicate 15-year economic trends."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "While the visible data shows an accelerating upward trend from 2000-2005, this cherry-picked 6-year window cannot reliably indicate economic behavior across the full 15-year period (1995-2010). Other periods within this timeframe could show significantly different patterns that would alter our understanding of long-term economic trends."
+}

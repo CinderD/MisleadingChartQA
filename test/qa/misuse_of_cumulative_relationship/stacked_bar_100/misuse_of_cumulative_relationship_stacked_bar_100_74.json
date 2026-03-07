@@ -1,0 +1,17 @@
+{
+  "question": "Based on the quarterly platform engagement distribution shown, what can we conclude about the trend in the absolute number of User Registrations over the year?",
+  "options": {
+    "A": "The chart normalizes unrelated categories to 100% per quarter, so it only shows the share of User Registrations and not whether their absolute number is increasing or decreasing.",
+    "B": "The absolute number of User Registrations increases each quarter because the green segment becomes largest in Q3.",
+    "C": "The absolute number of User Registrations decreases each quarter because their percentage share falls after Q3.",
+    "D": "The absolute number of User Registrations stays roughly constant across all quarters because the bar heights are equal."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart normalizes unrelated categories to 100% within each quarter. It can suggest that the share of a metric is higher in later quarters, but it cannot establish an absolute increasing trend without the underlying totals. A higher percentage share does not necessarily mean a higher absolute quantity."
+}

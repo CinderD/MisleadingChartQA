@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows output by year from 2018 to 2021. Which statement is best supported by the chart?",
+  "options": {
+    "A": "Output increased every year shown.",
+    "B": "The output value for 2021 is cut off by the axis range, so its exact level cannot be read from the chart.",
+    "C": "Output in 2020 and 2021 appears almost the same.",
+    "D": "Output decreased after 2019."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Values exceeding the y-axis range are clipped, making the top bars look the same and misleading viewers."
+}

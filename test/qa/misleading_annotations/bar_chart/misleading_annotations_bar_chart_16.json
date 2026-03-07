@@ -1,0 +1,17 @@
+{
+  "question": "In district D, what is the approximate average revenue from Week 1 to Week 4?",
+  "options": {
+    "A": "350",
+    "B": "450",
+    "C": "550",
+    "D": "650"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "misleading_annotations",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows revenue for Week 1, Week 2, Week 3, Week 4: Week 1 (467), Week 2 (547), Week 3 (448), Week 4 (350). The correct average is (467 + 547 + 448 + 350) / 4 = 453. However, the misleading annotation shows a dashed line labeled 'Average' at 547, which is incorrect and designed to mislead viewers into selecting 547 as the answer."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "For the quarterly platform data, which statement is a valid interpretation of the 100% stacked bar chart?",
+  "options": {
+    "A": "Q1 has the highest number of complaints received compared to the other quarters.",
+    "B": "The total height of each bar shows that overall platform activity increased each quarter.",
+    "C": "Within each quarter, the share of complaints received is greater than the share of advertisements clicked.",
+    "D": "Q3 has the highest number of online searches compared to the other quarters."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "100% stacking normalizes unrelated categories to 100% within each quarter. Valid inferences include within-quarter ranking (e.g., one metric > another in every quarter). Invalid inferences include cross-quarter total comparisons or combining unrelated categories."
+}

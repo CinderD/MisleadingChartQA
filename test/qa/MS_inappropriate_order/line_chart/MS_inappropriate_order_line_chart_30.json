@@ -1,0 +1,17 @@
+{
+  "question": "Based on the line chart, which statement best describes the pattern of average test scores over the displayed months?",
+  "options": {
+    "A": "Student performance fluctuates noticeably, with several rises and falls rather than a steady trend.",
+    "B": "Student performance improves steadily from the first month to the last without any setbacks.",
+    "C": "Student performance remains almost unchanged, staying at roughly the same level throughout.",
+    "D": "Student performance declines continuously from the first month to the last without any recovery."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The x‑axis labels are months but shown in a scrambled order, so the connected line path looks more erratic than the true pattern. If you reorder the months from January to August, the scores increase steadily from the starting value to the final month, indicating consistent improvement rather than volatility or decline."
+}

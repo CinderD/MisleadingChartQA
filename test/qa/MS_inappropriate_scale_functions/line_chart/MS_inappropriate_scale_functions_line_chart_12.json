@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart data, which period shows the larger temperature increase?",
+  "options": {
+    "A": "2000-2003",
+    "B": "2005-2008",
+    "C": "Both periods show equal increase",
+    "D": "The increase pattern is unclear"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "line_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses a scale that visually amplifies the 2005-2008 period, making it appear to have the larger increase despite the actual data showing 2005-2008 had a larger temperature increase (4.0°C vs 3.0°C)."
+}

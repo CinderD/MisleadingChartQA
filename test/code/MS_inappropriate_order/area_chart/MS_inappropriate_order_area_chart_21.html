@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Product Sales - TechCorp</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .area {
+            fill: #4CAF50;
+            opacity: 0.7;
+        }
+        .axis path, .axis line {
+            stroke: #333;
+            stroke-width: 1px;
+        }
+        .axis text {
+            font-size: 12px;
+            fill: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Monthly Product Sales - TechCorp (2023)</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = {top: 40, right: 20, bottom: 60, left: 80};
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g")
+            .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+        const y = d3.scaleLinear().range([height, 0]);
+
+        d3.csv("../../../../data/MS_inappropriate_order/area_chart/MS_inappropriate_order_area_chart_21.csv").then(data => {
+            data.forEach(d => {
+                d.month = d.month;
+                d.sales = +d.sales;
+            });
+
+            // Inappropriate order - scrambling the months to show declining trend instead of increasing
+            const incorrectOrder = ["Dec", "Nov", "Oct", "Sep", "Aug", "Jul", "Jun", "May", "Apr", "Mar", "Feb", "Jan"];
+            data.sort((a, b) => incorrectOrder.indexOf(a.month) - incorrectOrder.indexOf(b.month));
+
+            const x = d3.scalePoint()
+                .domain(data.map(d => d.month))
+                .range([0, width])
+                .padding(0.1);
+
+            y.domain([0, d3.max(data, d => d.sales) * 1.1]);
+
+            const area = d3.area()
+                .x(d => x(d.month))
+                .y0(height)
+                .y1(d => y(d.sales))
+                .curve(d3.curveMonotoneX);
+
+            g.append("path")
+                .datum(data)
+                .attr("class", "area")
+                .attr("d", area);
+
+            // Add line on top of area
+            const line = d3.line()
+                .x(d => x(d.month))
+                .y(d => y(d.sales))
+                .curve(d3.curveMonotoneX);
+
+            g.append("path")
+                .datum(data)
+                .attr("fill", "none")
+                .attr("stroke", "#2E7D32")
+                .attr("stroke-width", 2)
+                .attr("d", line);
+
+            // Add data points
+            g.selectAll(".dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("class", "dot")
+                .attr("cx", d => x(d.month))
+                .attr("cy", d => y(d.sales))
+                .attr("r", 4)
+                .attr("fill", "#1B5E20");
+
+            // Axes
+            g.append("g")
+                .attr("class", "axis")
+                .attr("transform", `translate(0, ${height})`)
+                .call(d3.axisBottom(x));
+
+            g.append("g")
+                .attr("class", "axis")
+                .call(d3.axisLeft(y).tickFormat(d => `${d/1000}K`));
+
+            // Labels
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 45)
+                .attr("text-anchor", "middle")
+                .style("font-size", "14px")
+                .style("font-weight", "bold")
+                .text("Month");
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", -55)
+                .attr("x", -height / 2)
+                .attr("text-anchor", "middle")
+                .style("font-size", "14px")
+                .style("font-weight", "bold")
+                .text("Sales (Units)");
+        });
+    </script>
+</body>
+</html>
+
+
+
+

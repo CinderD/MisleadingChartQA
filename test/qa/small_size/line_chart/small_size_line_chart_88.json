@@ -1,0 +1,17 @@
+{
+  "question": "Which statement best describes the difficulty in interpreting the revenue trend from 1990 to 2000 in this chart?",
+  "options": {
+    "A": "The chart is too small to clearly see how revenue changes between 1990 and 2000.",
+    "B": "Revenue clearly increased steadily every year from 1990 to 2000.",
+    "C": "Revenue clearly decreased every year from 1990 to 2000.",
+    "D": "Revenue clearly increased sharply from 1990 to 2000 and then fell back."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Revenue spiked between 1990 and 2000 then declined. Small chart elements can obscure the spike and subsequent fall."
+}

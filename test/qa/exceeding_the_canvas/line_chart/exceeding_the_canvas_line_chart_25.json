@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows the distribution of annual sales for Company X from 2018 to 2022. Which of the following statements is most accurate?",
+  "options": {
+    "A": "Sales increased steadily from 2018 to 2022.",
+    "B": "2021 and 2022 had similar sales performance.",
+    "C": "The chart cannot reliably show the relationship between 2021 and 2022 sales.",
+    "D": "Sales peaked in 2020 at 1200."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis scale is set too low (maximum 3000), causing both 2021 and 2022 data points (both 10,000) to exceed the visible chart area. This makes it impossible to determine their actual values or compare them from the chart alone, tempting answer B, but the correct conclusion is that the chart cannot reliably show the relationship between these two years."
+}

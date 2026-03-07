@@ -1,0 +1,17 @@
+{
+  "question": "Which statement best describes the pattern of CO2 emissions in Country N from 2000 to 2011?",
+  "options": {
+    "A": "Emissions steadily increased over the period.",
+    "B": "Emissions steadily decreased over the period.",
+    "C": "Emissions fluctuated without a consistent upward or downward trend.",
+    "D": "Emissions remained nearly constant each year."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes the series appear increasing when it is actually fluctuating."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Based on the maps, which type of crime shows more variation across U.S. states?",
+  "options": {
+    "A": "Violent crimes show more variation",
+    "B": "Property crimes show more variation",
+    "C": "Both types show similar variation",
+    "D": "Cannot be determined from these maps"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The maps use the same scale ranges for violent (400-800+) and property (400-800+) crimes, making direct comparison possible but misleading. Violent crimes appear more uniform because most fall into the 'High' category (800+), while property crimes show more color variation due to their lower actual values. However, this is due to inappropriate scale ranges rather than actual variation."
+}

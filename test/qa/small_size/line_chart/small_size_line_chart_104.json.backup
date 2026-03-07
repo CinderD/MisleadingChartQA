@@ -1,0 +1,17 @@
+{
+  "question": "What does the chart show about the period 1990 to 2000?",
+  "options": {
+    "A": "No correct answer.",
+    "B": "Revenue increased steadily throughout 1990 to 2000.",
+    "C": "Revenue decreased from 1990 to 2000.",
+    "D": "Revenue increased sharply from 1990 to 2000 and then fell back."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Revenue spiked between 1990 and 2000 then declined. Small chart elements can obscure the spike and subsequent fall."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend in the number of public schools in Region X from 2005 to 2022?",
+  "options": {
+    "A": "Increasing",
+    "B": "Constant",
+    "C": "Decreasing",
+    "D": "Fluctuating"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted x-axis and inverted Y-axis makes it appear that the trend is increasing, when in reality the data shows a decreasing trend from 2005 to 2022."
+}

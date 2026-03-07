@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of the total number of apples harvested in the farm from Jan 11 to Jan 14 based on the chart?",
+  "options": {
+    "A": "Increasing, then decreasing, and finally increasing",
+    "B": "Decreasing, then increasing, and finally decreasing",
+    "C": "Steady",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis is inverted, making the chart appear as though the number of apples initially increases and then decreases. In reality, the apples harvested decrease first and then increase, misleading the viewer."
+}

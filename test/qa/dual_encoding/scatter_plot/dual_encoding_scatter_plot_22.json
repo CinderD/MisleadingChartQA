@@ -1,0 +1,17 @@
+{
+  "question": "The scatter plot shows training hours vs. test score. Which statement is most accurate according to the chart data?",
+  "options": {
+    "A": "There is a generally positive relationship between training hours and test score.",
+    "B": "There is a generally negative relationship between training hours and test score.",
+    "C": "There is no clear relationship between training hours and test score.",
+    "D": "The relationship appears very strong, with test scores increasing almost perfectly with training hours."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

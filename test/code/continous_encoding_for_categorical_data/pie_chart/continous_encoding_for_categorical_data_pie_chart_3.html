@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Category Market Share</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .arc path {
+            stroke: #fff;
+            stroke-width: 2;
+        }
+
+        .legend {
+            font-size: 14px;
+        }
+
+        .legend rect {
+            stroke-width: 1;
+            stroke: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Market Share Distribution by Product Category</h1>
+    <div id="chart"></div>
+    <script>
+        const width = 1000,
+              height = 600,
+              margin = 20;
+
+        const svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+        const radius = Math.min(width, height) / 2 - margin;
+
+        d3.csv("../../../../data/continous_encoding_for_categorical_data/pie_chart/continous_encoding_for_categorical_data_pie_chart_3.csv").then(data => {
+            data.forEach(d => {
+                d.market_share = +d.market_share;
+            });
+
+            const pie = d3.pie()
+                .value(d => d.market_share)
+                .sort(null);
+
+            const arc = d3.arc()
+                .innerRadius(0)
+                .outerRadius(radius);
+
+            // Using continuous color encoding for categorical data (misleading)
+            const color = d3.scaleSequential()
+                .domain([0, data.length - 1])
+                .interpolator(t => d3.interpolatePurples(0.2 + t * 0.6));
+
+            const arcs = pie(data);
+
+            svg.selectAll(".arc")
+                .data(arcs)
+                .join("g")
+                .attr("class", "arc")
+                .append("path")
+                .attr("d", arc)
+                .attr("fill", (d, i) => color(i));
+
+            svg.selectAll(".arc-label")
+                .data(arcs)
+                .join("text")
+                .attr("class", "arc-label")
+                .attr("transform", d => `translate(${arc.centroid(d)})`)
+                .attr("text-anchor", "middle")
+                .attr("dy", "0.35em")
+                .style("fill", "#000")
+                .style("font-weight", "bold")
+                .style("font-size", "11px")
+                .text(d => d.data.product_category);
+
+            // Add legend
+            const legend = svg.append("g")
+                .attr("transform", `translate(${width / 2 - 200}, ${-height / 2 + 20})`);
+
+            legend.selectAll("rect")
+                .data(arcs)
+                .join("rect")
+                .attr("x", 0)
+                .attr("y", (d, i) => i * 25)
+                .attr("width", 20)
+                .attr("height", 20)
+                .attr("fill", (d, i) => color(i));
+
+            legend.selectAll("text")
+                .data(arcs)
+                .join("text")
+                .attr("x", 28)
+                .attr("y", (d, i) => i * 25 + 10)
+                .attr("dy", "0.35em")
+                .style("font-size", "14px")
+                .text(d => `${d.data.product_category}: ${d.data.market_share}%`);
+        });
+    </script>
+</body>
+</html>

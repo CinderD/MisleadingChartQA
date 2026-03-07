@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows percentage of bacteria z detected over time (out of a possible 0–100%). Based on this context, what is the most accurate assessment?",
+  "options": {
+    "A": "The trend cannot be determined from this chart",
+    "B": "There was a dramatic improvement",
+    "C": "The rate stayed exactly the same",
+    "D": "Changes were minimal overall"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis uses a very tight range (71.64–72.60%) instead of a more informative 0–100% context, which visually exaggerates variability. The actual net change is about 0.95% over the period, which is modest in the full context."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the distribution of energy use by source. Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "Fossil Fuels account for more energy use than all the other sources combined.",
+    "B": "Nuclear energy accounts for a larger share than Hydroelectric power.",
+    "C": "Hydroelectric power accounts for a larger share than the combined share of Nuclear and Other sources.",
+    "D": "Hydroelectric power has a larger share than Renewables."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This pie chart uses dual encoding: slice angle represents percentage, and the radius also varies with percentage, so slice area differences are exaggerated. That can make the largest category look overly dominant. Fossil Fuels: 35%; Hydroelectric: 25%; Nuclear: 20%; Other: 10%; Renewables: 10%."
+}

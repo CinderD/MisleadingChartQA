@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is supported by the chart?",
+  "options": {
+    "A": "Cards has a considerably higher value than Cards.",
+    "B": "Cards and Candy have similar values.",
+    "C": "The chart does not allow ranking the categories by value.",
+    "D": "Cards has the highest value among the categories."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

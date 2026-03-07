@@ -1,0 +1,22 @@
+id,region,population_density,code,representation,latitude,longitude
+840,United States,45,R-A,Z,39.0,-98.0
+156,Europe Asia,0,R-B,M,55.0,50.0
+012,Africa,85,R-C,Z,0.0,20.0
+036,Australia,3,R-D,Z,-25.0,135.0
+356,India,450,R-E,Z,20.0,78.0
+124,Canada,4,,Z,60.0,-96.0
+276,Germany,230,,Z,51.0,10.0
+250,France,120,,Z,46.0,2.0
+484,Mexico,65,,Z,23.0,-102.0
+643,Russia,9,,Z,61.0,105.0
+826,United Kingdom,270,,Z,55.0,-3.0
+086,China,150,,Z,35.0,105.0
+566,Nigeria,220,,Z,9.0,8.0
+360,Indonesia,140,,Z,-5.0,120.0
+554,New Zealand,18,,Z,-40.0,174.0
+710,South Africa,45,,Z,-30.0,25.0
+372,Ireland,70,,Z,53.0,-8.0
+528,Netherlands,410,,Z,52.1326,5.2913
+300,Greece,85,,Z,39.0742,21.8243
+032,Argentina,16,,Z,-34.0,-64.0
+208,Denmark,135,,Z,56.2639,9.5018

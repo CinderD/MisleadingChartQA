@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows annual counts of cybersecurity incidents. Which statement is reliable according to the chart data?",
+  "options": {
+    "A": "2011-12 has nearly four times as many incidents as 2010-11, as suggested by the bar size and color.",
+    "B": "2007-08 is the highest among all years shown.",
+    "C": "2006-07 has the fewest incidents among the years shown.",
+    "D": "2010-11 is lower than 2008-09."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "bar_chart",
+  "task": "Data Comparison",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Dual encoding (bar height + width/color) exaggerates differences. Despite the strong visual emphasis on later years, the reliable conclusion is that 2006-07 is the lowest."
+}

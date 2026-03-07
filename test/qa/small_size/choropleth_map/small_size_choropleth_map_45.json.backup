@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows adult obesity rates for selected US states. Which statement is correct?",
+  "options": {
+    "A": "West Virginia has an obesity rate of 38%.",
+    "B": "Colorado has the lowest obesity rate among the shown states.",
+    "C": "The map shows clear regional health patterns.",
+    "D": "The extremely small text size makes it difficult to read specific obesity rates accurately."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Identify Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it difficult to read exact obesity percentages. Specific state values cannot be verified."
+}

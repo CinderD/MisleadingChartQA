@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following statements correctly describes the prevalence levels?",
+  "options": {
+    "A": "Region C has higher prevalence than Region D.",
+    "B": "Region F has the same prevalence level as Region D.",
+    "C": "Region H and Region F have the same prevalence level.",
+    "D": "Region J has lower prevalence than Region I."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart manipulation suggests Region C has lower level than Region D/I, while it should be 'Intermediate' in the original context."
+}

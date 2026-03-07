@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the annual budget distribution of City A in various sectors. Based on this data, which of the following conclusions can be made?",
+  "options": {
+    "A": "The budget allocated to Education is significantly more than the combined budget for Healthcare and Safety.",
+    "B": "The budget allocation for Infrastructure is the lowest among all sectors.",
+    "C": "The budget for Infrastructure is more than the budget for 'Others'.",
+    "D": "The budget allocated to Education is less than the combined budget for Healthcare and Infrastructure."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "pie_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart shows that the budget for Education (35%) is equal to the combined budget for Healthcare (25%) and Safety (10%). The misleading impression due to dual encoding occurs because the visual representation exaggerates differences in angle and area, which can make some budgets seem more significant than they are. "
+}

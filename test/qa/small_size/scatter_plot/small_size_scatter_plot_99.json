@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot shows annual earnings for individuals of different ages. Based on this chart, which statement is most reasonable?",
+  "options": {
+    "A": "People in their mid-30s clearly earn more than all other age groups shown.",
+    "B": "It is difficult to compare earnings precisely between nearby age groups from this chart.",
+    "C": "People in their late 40s clearly earn the most among all ages shown.",
+    "D": "Earnings are exactly the same for every age in the chart."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 30 and 35 have the highest annual. The small size of the chart may cause difficulty in accurately identifying the specific trends of annual in certain age ranges."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which quarter had the highest product sales in 2023?",
+  "options": {
+    "A": "Q3",
+    "B": "Q1",
+    "C": "Q4",
+    "D": "Q2"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "True",
+  "explanation": "The inverted Y-axis makes Q2 appear to have the highest sales when Q3 actually had the highest sales (600 units). The visual representation is misleading due to the unconventional scale direction."
+}

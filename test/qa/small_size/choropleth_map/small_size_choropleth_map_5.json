@@ -1,0 +1,17 @@
+{
+  "question": "The choropleth map shows healthcare coverage percentages for selected US states. Which statement is correct?",
+  "options": {
+    "A": "The extremely small text size makes it impossible to compare coverage percentages.",
+    "B": "Oregon has the highest healthcare coverage rate among the shown states.",
+    "C": "Washington has 90.1% healthcare coverage.",
+    "D": "The map shows clear regional healthcare disparities."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "small_size",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The map uses extremely small font sizes which make it nearly impossible to read specific healthcare coverage percentages accurately. However, the color coding can still suggest relative coverage levels."
+}

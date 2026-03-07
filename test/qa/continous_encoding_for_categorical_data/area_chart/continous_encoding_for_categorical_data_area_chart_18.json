@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average housing prices (in $1000s) across different cities. Which statement best describes what can be concluded from the data shown?",
+  "options": {
+    "A": "Denver clearly has the lowest average housing price among all the cities.",
+    "B": "Boston clearly has the highest average housing price among all the cities.",
+    "C": "The chart reveals a smooth increasing or decreasing trend across the cities, suggesting an underlying continuous progression.",
+    "D": "The continuous filled area suggests a trend between cities that are actually separate categories without a natural order."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart joins category values for city into a continuous filled region. However, the x‑axis categories (e.g., Denver, Atlanta, San Francisco, New York, ...) have no inherent numeric or spatial continuity, so the apparent smooth trend is an artifact of the chart type rather than a meaningful pattern. A bar chart would allow readers to compare each category independently without implying a continuous progression."
+}

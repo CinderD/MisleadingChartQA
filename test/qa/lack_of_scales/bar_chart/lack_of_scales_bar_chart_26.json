@@ -1,0 +1,17 @@
+{
+  "question": "What is the relative performance between Product A and Product E?",
+  "options": {
+    "A": "Cannot determine the exact ratio between Product A and Product E without Y-axis scales to verify the relative performance.",
+    "B": "Product A shows approximately 3.0 times the performance of Product E.",
+    "C": "Product A has about 2.3 times the performance of Product E.",
+    "D": "Product A has roughly 1.5 times the performance of Product E."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "lack_of_scales",
+  "chartType": "bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays product performance comparison with a bar chart, but provides no Y-axis scales or numerical labels. While the visual data clearly shows A has a taller bar than E, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the exact ratio between their performance. Visual estimation of relative proportions without proper scales is unreliable for accurate comparison."
+}

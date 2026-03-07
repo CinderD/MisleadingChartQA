@@ -1,0 +1,17 @@
+{
+  "question": "The scatterplot shows the relationship between years of experience and sales. Based on the chart, which conclusion is most reliable?",
+  "options": {
+    "A": "Sales clearly peak for employees with exactly 10 years of experience.",
+    "B": "Employees with more years of experience tend to have higher sales overall.",
+    "C": "Employees with fewer than 5 years of experience have the highest sales.",
+    "D": "There is no visible relationship between years of experience and sales."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 40 and 50 have the highest sales. The small size of the chart may cause difficulty in accurately identifying the specific trends of sales in certain age ranges."
+}

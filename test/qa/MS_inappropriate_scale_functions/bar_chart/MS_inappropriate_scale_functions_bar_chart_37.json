@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, what is the approximate proportion of votes Candidate A has compared to Candidate B?",
+  "options": {
+    "A": "12.5%",
+    "B": "33%",
+    "C": "50%",
+    "D": "300%"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_scale_functions",
+  "chartType": "bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The scale function applied to the y-axis uses an arbitrary transformation, distorting the perceived proportional difference between the bar heights. Although Candidate A's votes are 12.5% of Candidate B's votes, the non-linear scale makes the bar for Candidate A appear much bigger, leading to the incorrect interpretation that A's votes are closer to 33% of B's votes."
+}

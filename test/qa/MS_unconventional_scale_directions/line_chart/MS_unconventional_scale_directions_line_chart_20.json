@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following best describes the pattern of electricity demand in Region R during 2023?",
+  "options": {
+    "A": "Demand was generally higher in the first half of the year than in the second half.",
+    "B": "Demand was generally lower in the first half of the year than in the second half.",
+    "C": "Demand increased steadily from January to December.",
+    "D": "Demand remained roughly constant throughout the year."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis makes it appear that the series is flipped vertically, which can swap the perceived highs and lows. The correct option matches the actual data values."
+}

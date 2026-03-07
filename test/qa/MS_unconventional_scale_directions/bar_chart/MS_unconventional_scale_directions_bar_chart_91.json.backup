@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of the number of in from 2010 to 2023 based on the chart?",
+  "options": {
+    "A": "Constant",
+    "B": "Fluctuating",
+    "C": "Increasing",
+    "D": "Decreasing"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted x-axis and inverted Y-axis, making the data appear as if the trend is decreasing, but the data actually shows a fluctuating trend."
+}

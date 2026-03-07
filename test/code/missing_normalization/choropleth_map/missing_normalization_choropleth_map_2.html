@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>choropleth_map Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+
+        .legend text {
+            font-size: 12px;
+        }
+
+        .country-label {
+            font-size: 18px;
+            font-weight: bold;
+            fill: black;
+            stroke: white;
+            stroke-width: 3px;
+            paint-order: stroke fill;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Total GDP by Country (2023)</h1>
+    <div id="chart"></div>
+    <script>
+        const width = 1000;
+        const height = 750;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        const projection = d3.geoMercator()
+            .scale(150)
+            .translate([width / 2.5, height / 2.5]);
+
+        const path = d3.geoPath().projection(projection);
+
+        // Increase separation by using quantized steps
+        const colorScale = d3.scaleQuantize()
+            .domain([0, 25000])
+            .range(["#deebf7", "#9ecae1", "#4292c6", "#08519c"]);
+
+        // Load data
+        Promise.all([
+            d3.json("https://d3js.org/world-110m.v1.json"),
+            d3.csv("../../../../data/missing_normalization/choropleth_map/missing_normalization_choropleth_map_2.csv")
+        ]).then(([world, data]) => {
+            const countries = topojson.feature(world, world.objects.countries).features;
+
+            const gdpById = {};
+            data.forEach(d => gdpById[d.id] = +d.gdp);
+
+            // Base outlines for all countries
+            svg.append("g").selectAll("path")
+                .data(countries)
+                .enter().append("path")
+                .attr("d", path)
+                .attr("fill", "#efefef")
+                .attr("stroke", "#666")
+                .attr("stroke-width", 0.8);
+
+            // Data layer fills where present
+            svg.append("g").selectAll("path")
+                .data(countries)
+                .enter().append("path")
+                .attr("d", path)
+                .attr("fill", d => {
+                    const gdp = gdpById[d.id] || 0;
+                    return gdp ? colorScale(gdp) : 'transparent';
+                })
+                .attr("stroke", d => (gdpById[d.id] ? "#fff" : "none"))
+                .attr("stroke-width", d => (gdpById[d.id] ? 0.8 : 0));
+
+            // Add country labels with custom offsets
+            svg.selectAll(".country-label")
+                .data(data)
+                .enter().append("text")
+                .attr("class", "country-label")
+                .attr("x", d => {
+                    const country = countries.find(c => c.id == d.id);
+                    const centroid = country ? path.centroid(country) : [NaN, NaN];
+                    const offsetX = {
+                        "A": 30,
+                        "B": 0,
+                        "C": -20,
+                        "D": 0,
+                        "E": 0
+                    };
+                    return (centroid[0] || 0) + (offsetX[d.label] || 0);
+                })
+                .attr("y", d => {
+                    const country = countries.find(c => c.id == d.id);
+                    const centroid = country ? path.centroid(country) : [NaN, NaN];
+                    const offsetY = {
+                        "A": 30,
+                        "B": 0,
+                        "C": 40,
+                        "D": 15,
+                        "E": 0
+                    };
+                    return (centroid[1] || 0) + (offsetY[d.label] || 0);
+                })
+                .text(d => d.label);
+
+            // Add Legend
+            const legendHeight = 200;
+            const legendScale = d3.scaleLinear()
+                .domain([0, 25000])
+                .range([legendHeight, 0]);
+
+            const legendAxis = d3.axisRight(legendScale)
+                .ticks(6)
+                .tickFormat(d3.format(",.0f"));
+
+            const legend = svg.append("g")
+                .attr("class", "legend")
+                .attr("transform", `translate(${width - 80}, 100)`);
+
+            legend.append("text")
+                .text("GDP ($B)")
+                .attr("x", 0)
+                .attr("y", legendHeight + 40);
+
+            legend.selectAll("rect")
+                .data(d3.range(0, 25000, 2500))
+                .enter().append("rect")
+                .attr("x", 0)
+                .attr("y", d => legendScale(d + 2500))
+                .attr("width", 20)
+                .attr("height", 17)
+                .attr("fill", d => colorScale(d + 1250));
+
+            legend.append("g")
+                .attr("transform", "translate(20, 0)")
+                .call(legendAxis);
+        });
+    </script>
+</body>
+
+</html> 

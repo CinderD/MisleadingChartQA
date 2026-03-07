@@ -1,0 +1,17 @@
+{
+  "question": "In the scatter plot of Marketing Spend vs. Revenue, which marketing spend level actually corresponds to the highest revenue?",
+  "options": {
+    "A": "Around $20k in marketing spend",
+    "B": "Around $80k in marketing spend",
+    "C": "Around $170k in marketing spend",
+    "D": "Around $200k in marketing spend"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the y-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

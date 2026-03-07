@@ -1,0 +1,17 @@
+{
+  "question": "Based on this chart, what can be concluded about the revenues in 2021 and 2022?",
+  "options": {
+    "A": "It is not possible to tell whether 2021 or 2022 has higher revenue because their bars extend beyond the shown axis range.",
+    "B": "2021 and 2022 have exactly the same revenue.",
+    "C": "Revenue in 2021 is clearly higher than in 2022.",
+    "D": "Revenue in 2022 is clearly higher than in 2021."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is set below the data maximum, so the top bars are clipped and appear equal; the true values cannot be compared from the chart alone."
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Usage Visualization</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+        #chart {
+            width: 1000px;
+            height: 750px;
+            margin: 60px auto;
+        }
+        .bar {
+            fill: steelblue;
+        }
+        .avg-line {
+            stroke: black;
+            stroke-dasharray: 4, 4;
+            stroke-width: 2;
+        }
+        .axis path, .axis line {
+            stroke: #000;
+        }
+        .annotation {
+            font-size: 12px;
+            font-weight: bold;
+            fill: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Energy Usage for Partial Weekdays (Mon-Thu)</h1>
+    <div id="chart"></div>
+    <script>
+        const margin = { top: 40, right: 20, bottom: 50, left: 60 };
+        const width = 1000 - margin.left - margin.right;
+        const height = 750 - margin.top - margin.bottom;
+
+        const svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+        d3.csv("../../../../data/inappropriate_aggregation/bar_chart/inappropriate_aggregation_bar_chart_8.csv").then(data => {
+            data.forEach(d => d.ReportedEnergyUsage = +d.ReportedEnergyUsage);
+
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.Day))
+                .range([0, width])
+                .padding(0.3);
+
+            const y = d3.scaleLinear()
+                .domain([0, 150])
+                .range([height, 0]);
+
+            g.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.Day))
+                .attr("y", d => y(d.ReportedEnergyUsage))
+                .attr("width", x.bandwidth())
+                .attr("height", d => height - y(d.ReportedEnergyUsage));
+
+            g.append("line")
+                .attr("class", "avg-line")
+                .attr("x1", 0)
+                .attr("y1", y(20))
+                .attr("x2", width)
+                .attr("y2", y(20));
+
+            g.append("g").attr("transform", `translate(0,${height})`).call(d3.axisBottom(x));
+            g.append("g").call(d3.axisLeft(y));
+
+            g.append("text")
+                .attr("x", width / 2)
+                .attr("y", height + 40)
+                .attr("text-anchor", "middle")
+                .text('Days');
+
+            g.append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("x", -height / 2)
+                .attr("y", -40)
+                .attr("text-anchor", "middle")
+                .text('Reported Energy Usage (kWh)');
+        }).catch(function(error) {
+            console.error('Error loading CSV data:', error);
+        });
+    </script>
+</body>
+</html>

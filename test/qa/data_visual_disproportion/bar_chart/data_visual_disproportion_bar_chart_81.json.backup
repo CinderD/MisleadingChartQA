@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, which category has the largest share?",
+  "options": {
+    "A": "Others accounts for more than 15% of the market.",
+    "B": "The chart does not support comparing shares across categories.",
+    "C": "Xiaomi has the smallest market share among the categories shown.",
+    "D": "Apple has the largest market share among the categories shown."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, Apple has the highest share (81%). The bars' heights are not proportional to the percentages (they use a separate 'height' value), which can mislead viewers into thinking Apple is largest when relying on visual comparison."
+}

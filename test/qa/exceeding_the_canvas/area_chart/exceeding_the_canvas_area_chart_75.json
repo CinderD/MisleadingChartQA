@@ -1,0 +1,17 @@
+{
+  "question": "Considering the area chart of adjusted revenue from 2018 to 2022, which statement is most accurate?",
+  "options": {
+    "A": "2021 and 2022 have identical adjusted revenue.",
+    "B": "Adjusted revenue peaked in 2018.",
+    "C": "There is a steady decline in adjusted revenue from 2019 onward.",
+    "D": "The top of the chart clips the highest values, so we cannot determine whether 2021 or 2022 had higher adjusted revenue."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-scale is set so that the largest values are cut off, creating a misleading impression that the top two years are equal."
+}

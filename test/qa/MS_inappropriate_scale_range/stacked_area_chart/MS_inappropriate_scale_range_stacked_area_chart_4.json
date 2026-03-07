@@ -1,0 +1,17 @@
+{
+  "question": "Approximately, what is Company C's total market share as a proportion of Company A's total market share at 2020?",
+  "options": {
+    "A": "25%",
+    "B": "50%",
+    "C": "85%",
+    "D": "200%"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_area_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The Y-axis scale starts at 15 instead of 0, which visually exaggerates the proportion of Company C relative to Company A. While Company C's actual market share (~12.5%) is about 50% of Company A's (~25%), the truncated scale makes it appear closer to 85%."
+}

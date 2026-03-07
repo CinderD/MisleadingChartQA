@@ -1,0 +1,17 @@
+{
+  "question": "Which labeled region has the highest energy consumption per capita?",
+  "options": {
+    "A": "B",
+    "B": "D",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "A"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "missing_normalization",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Only total energy consumption are encoded. Per‑person energy consumption require dividing by population, which is not shown."
+}

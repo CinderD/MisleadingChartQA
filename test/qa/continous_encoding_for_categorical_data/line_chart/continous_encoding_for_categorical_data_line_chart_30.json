@@ -1,0 +1,17 @@
+{
+  "question": "This line chart shows average rating (1–5 stars) across different restaurant types. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "The chart shows a clear left‑to‑right trend suggesting that some cuisines are consistently improving or worsening in quality across the sequence.",
+    "B": "The chart inappropriately connects distinct restaurant types with a continuous line, implying a smooth progression that does not actually exist between these categories.",
+    "C": "Mexican restaurants clearly have the highest average rating of all the cuisines shown.",
+    "D": "The cuisines on the left side of the chart are fundamentally less sophisticated than those on the right."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart uses a continuous line over restaurant type that are purely categorical (e.g., French, Indian, Thai, ...). Connecting points suggests there is a meaningful smooth progression from left to right, which is conceptually incorrect — these categories have no inherent numeric order. The y‑axis values are on a 1 to 5 scale, but any comparison across categories should be made with a discrete chart such as a bar chart, not by reading trends from the connecting line."
+}

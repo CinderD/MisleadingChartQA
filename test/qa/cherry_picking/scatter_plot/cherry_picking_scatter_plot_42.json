@@ -1,0 +1,17 @@
+{
+  "question": "Can we generalize this holiday season performance to predict year-round advertising effectiveness?",
+  "options": {
+    "A": "Yes, the strong growth pattern indicates year-round effectiveness.",
+    "B": "No, the holiday season data here is not sorted in chronological (month) order.",
+    "C": "Yes, the consistent upward trend suggests universal success.",
+    "D": "No, we need non-holiday season data for accurate year-round assessment."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Identify Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart only shows data for five months during the holiday season (October to February), representing a selective subset of the complete dataset. While the visible data points suggest strong growth during this peak period, this cherry-picked sample cannot reliably indicate year-round advertising effectiveness. The missing data from non-holiday months could reveal very different performance patterns, as holiday seasons typically show inflated sales that are not representative of regular business periods."
+}

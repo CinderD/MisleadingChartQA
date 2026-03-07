@@ -1,0 +1,17 @@
+{
+  "question": "Approximately, what is Site C's total visits as a proportion of Site A's total visits in May?",
+  "options": {
+    "A": "200%",
+    "B": "50%",
+    "C": "80%",
+    "D": "125%"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_area_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The Y-axis scale starts at 15 instead of 0, which visually exaggerates the proportion of Site C relative to Site A. Summing totals gives Site C (12.5) about 50% of Site A (25), but the truncated scale makes it appear closer to 125%."
+}

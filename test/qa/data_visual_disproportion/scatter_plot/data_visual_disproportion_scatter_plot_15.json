@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows the labeled percentages for different Valentine’s gift categories. Which statement is supported by these labeled values?",
+  "options": {
+    "A": "Jewelry has the highest labeled percentage among all the categories.",
+    "B": "Candy has the highest labeled percentage among all the categories.",
+    "C": "Cards and Clothing have the same labeled percentage.",
+    "D": "Dining Out has a higher labeled percentage than Candy."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The labels show the actual values; dot positions are based on a different 'visual_height' scale, so the visual can suggest a different ranking than the data."
+}

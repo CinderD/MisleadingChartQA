@@ -1,0 +1,17 @@
+{
+  "question": "The bar chart shows the annual revenues for Company Y from 2018 to 2022. Which of the following statements is true?",
+  "options": {
+    "A": "The annual revenue for 2021 and 2022 appear to be the same.",
+    "B": "The annual revenue increased every year.",
+    "C": "2018 had a higher revenue than 2020.",
+    "D": "The revenue peaked in 2021."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The y-axis maximum is set below the true top values, so the tallest bars are truncated. This clipping can make 2021 and 2022 look similar, tempting answer A, but the correct conclusion is that revenue peaks in 2021."
+}

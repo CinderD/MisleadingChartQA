@@ -1,0 +1,17 @@
+{
+  "question": "Across all dates shown, approximately what proportion of total revenue comes from Lunch services?",
+  "options": {
+    "A": "About one quarter of the total revenue",
+    "B": "About half of the total revenue",
+    "C": "About three quarters of the total revenue",
+    "D": "Lunch contributes only a very small share of the total revenue"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "MS_inappropriate_scale_range",
+  "chartType": "stacked_bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The y-axis starts at 1200 instead of 0, which compresses the visible differences between stacked totals. That can make Lunch look as large as (or larger than) Dinner even though the totals favor Dinner."
+}

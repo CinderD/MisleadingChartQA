@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatter plot of daily screen time vs. sleep, which conclusion is most supported by the data?",
+  "options": {
+    "A": "There is a generally negative relationship between screen time and sleep.",
+    "B": "As daily screen time increases, reported sleep tends to increase overall.",
+    "C": "People with the largest and darkest points get much more sleep than others, indicating a dramatically stronger effect.",
+    "D": "There is no relationship at all between screen time and sleep."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This scatter plot uses dual encoding: point position shows the relationship, but point size and color also encode the x-variable, making high values overly salient. That can tempt viewers to overstate the strength or form of the relationship."
+}

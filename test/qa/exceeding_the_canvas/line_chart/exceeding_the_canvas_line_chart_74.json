@@ -1,0 +1,17 @@
+{
+  "question": "Based on the visible portion of the chart, which statement is best supported by the data shown?",
+  "options": {
+    "A": "Sales increased each year from 2018 to 2020 in the visible data.",
+    "B": "Sales in 2018 and 2020 are identical in the visible data.",
+    "C": "Sales decreased between 2018 and 2019 in the visible data.",
+    "D": "Sales were flat from 2018 through 2020 in the visible data."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart clips the tallest bars by using a y-axis max below the data maximum, misleading viewers into thinking the top values are equal."
+}

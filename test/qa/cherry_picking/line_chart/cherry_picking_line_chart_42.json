@@ -1,0 +1,17 @@
+{
+  "question": "What do these price movements suggest about long-term market trends from 1960 to 2000?",
+  "options": {
+    "A": "The data reveals a clear cyclical pattern: growth followed by decline, indicating predictable market cycles.",
+    "B": "Market performance shows consistent decline throughout the four-decade period.",
+    "C": "The market exhibits random behavior with no discernible long-term pattern.",
+    "D": "These isolated data points spanning only 12 years cannot reliably indicate 40-year market trends."
+  },
+  "correctAnswer": "D",
+  "misleader": "cherry_picking",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "explanation": "While the visible data shows a pattern of rising prices (1964-1971) followed by declining prices (1980-1983), this cherry-picked sample covers only 12 years out of a 40-year period. The majority of years (1972-1979, 1984-2000) are omitted, making it unreliable for understanding long-term market trends.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "A"
+}

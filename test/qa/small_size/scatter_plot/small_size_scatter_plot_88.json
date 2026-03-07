@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatterplot, what can be reliably concluded about the relationship between age and wealth?",
+  "options": {
+    "A": "Individuals in their late 30s clearly have the highest wealth among all ages shown.",
+    "B": "Wealth consistently decreases as age increases across the entire age range.",
+    "C": "The chart is too small and the points too close together to determine precisely which age group has the highest wealth.",
+    "D": "Younger individuals (under 30) definitely have lower wealth than all older individuals."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "small_size",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The individuals in the chart between the ages of 30 and 35 have the highest wealth. The small size of the chart may cause difficulty in accurately identifying the specific trends of wealth in certain age ranges."
+}

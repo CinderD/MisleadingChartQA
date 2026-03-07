@@ -1,0 +1,17 @@
+{
+  "question": "The line chart shows annual profit from 2018 to 2021. Which of the following statements is true based on the chart?",
+  "options": {
+    "A": "Profit was highest in 2021.",
+    "B": "Profit was highest in 2020.",
+    "C": "Profit in 2020 and 2021 appears the same on the chart.",
+    "D": "Profit decreased from 2019 to 2020."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "exceeding_the_canvas",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Bars for the highest years exceed the canvas and are clipped, making them look the same height; the true relationship cannot be inferred from the visual."
+}

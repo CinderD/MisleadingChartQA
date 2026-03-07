@@ -1,0 +1,17 @@
+{
+  "question": "What does this early-year marketing data reveal about advertising spend optimization?",
+  "options": {
+    "A": "Early-year shows an optimal spending range around $60K that maximizes sales performance.",
+    "B": "Marketing spend has no relationship with sales performance in early-year periods.",
+    "C": "Higher marketing spend always leads to higher sales in early-year periods.",
+    "D": "We need data from all seasons to determine if this pattern holds year-round."
+  },
+  "correctAnswer": "D",
+  "misleader": "cherry_picking",
+  "chartType": "scatter_plot",
+  "task": "Infer Trends",
+  "explanation": "The chart shows an inverted U-shape where sales peak at around $60K spend ($120K sales) and decline with both lower and higher spending. This suggests an optimal spending range for early-year periods. However, this cherry-picked data only shows January-May, hiding potentially different patterns in summer, fall, or winter that might show different optimal spending levels or no optimal point at all.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "A"
+}

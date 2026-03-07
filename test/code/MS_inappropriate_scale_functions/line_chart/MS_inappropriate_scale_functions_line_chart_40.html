@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>River Water Level Over Time</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    #chart {
+      width: 1000px;
+      height: 750px;
+      margin: 60px auto;
+    }
+    .line { stroke: steelblue; stroke-width: 2; fill: none; }
+    .dot { fill: black; }
+    .axis-label { font-size: 14px; font-weight: bold; }
+    .title { font-size: 22px; font-weight: bold; text-anchor: middle; }
+  </style>
+</head>
+<body>
+  <h1>River Water Level Over Time</h1>
+  <div id="chart"></div>
+  <script>
+    const margin = { top: 50, right: 30, bottom: 60, left: 60 };
+    const width = 1000 - margin.left - margin.right;
+    const height = 750 - margin.top - margin.bottom;
+
+    const svg = d3.select("#chart")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    d3.csv("../../../../data/MS_inappropriate_scale_functions/line_chart/MS_inappropriate_scale_functions_line_chart_40.csv").then(data => {
+      data.forEach(d => {
+        d.year = +d.year;
+        d.value = +d.value;
+      });
+
+      const x = d3.scaleLinear()
+        .domain(d3.extent(data, d => d.year))
+        .range([0, width]);
+
+      const y = d3.scalePow().exponent(0.25).domain([0, 253.0]).range([height, 0]);
+
+      const fmt0 = d3.format(",.0f");
+      const fmt1 = d3.format(",.1f");
+      const yTick = (d) => (Math.abs(d - Math.round(d)) < 1e-6 ? fmt0(d) : fmt1(d));
+
+      svg.append("g")
+        .attr("transform", `translate(0,${height})`)
+        .call(d3.axisBottom(x).tickFormat(d3.format("d")));
+
+      svg.append("g")
+        .call(d3.axisLeft(y).ticks(6).tickFormat(yTick));
+
+      const line = d3.line()
+        .x(d => x(d.year))
+        .y(d => y(d.value));
+
+      svg.append("path")
+        .datum(data)
+        .attr("class", "line")
+        .attr("d", line);
+
+      const points = svg.selectAll(".dot")
+        .data(data)
+        .enter().append("g")
+        .attr("class", "dot")
+        .attr("transform", d => `translate(${x(d.year)},${y(d.value)})`);
+
+      points.append("circle").attr("r", 4).attr("fill", "black");
+
+      points.append("text")
+        .attr("dy", -8)
+        .attr("text-anchor", "middle")
+        .style("font-size", "12px")
+        .text(d => `$${d3.format(",.0f")(d.value)} cm`);
+
+      svg.append("text")
+        .attr("class", "axis-label")
+        .attr("x", -height / 2)
+        .attr("y", -40)
+        .attr("transform", "rotate(-90)")
+        .text("Water Level (cm)");
+
+      svg.append("text")
+        .attr("class", "axis-label")
+        .attr("x", width / 2)
+        .attr("y", height + 50)
+        .text("Year");
+    }).catch(function(error) {
+      console.error('Error loading CSV data:', error);
+    });
+  </script>
+</body>
+</html>

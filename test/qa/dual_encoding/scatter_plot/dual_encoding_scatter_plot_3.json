@@ -1,0 +1,17 @@
+{
+  "question": "The plot shows daily screen time vs sleep hours. Which statement is reliable according to the chart data?",
+  "options": {
+    "A": "More screen time is associated with fewer sleep hours.",
+    "B": "There is a strong positive association.",
+    "C": "There is no relationship between Sleep hours and Daily Screen Time.",
+    "D": "Sleep declines proportionally to the square of daily screen time, as indicated by the larger, darker points."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Both point size and color also encode screen time, making high-screen-time points more visually salient. The reliable trend is negative."
+}

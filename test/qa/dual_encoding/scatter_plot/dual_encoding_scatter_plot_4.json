@@ -1,0 +1,17 @@
+{
+  "question": "The plot shows temperature vs. ice cream sales. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Sales decline as temperature rises.",
+    "B": "There is a generally positive relationship between temperature and sales.",
+    "C": "There is no clear pattern.",
+    "D": "Sales increase exponentially with temperature, as suggested by the larger, darker points."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "dual_encoding",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Both point size and color encode sales, exaggerating high-sales points visually. The reliable pattern is a generally positive relationship."
+}

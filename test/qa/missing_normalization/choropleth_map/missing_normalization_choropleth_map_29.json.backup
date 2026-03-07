@@ -1,0 +1,17 @@
+{
+  "question": "Which country has the highest energy consumption per capita?",
+  "options": {
+    "A": "Cannot be inferred / inadequate information",
+    "B": "D",
+    "C": "C",
+    "D": "A"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "missing_normalization",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Only total energy consumption are encoded. Per‑person energy consumption require dividing by population, which is not shown."
+}
