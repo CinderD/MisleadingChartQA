@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following statements about Company ABC stock performance is correct?",
+  "options": {
+    "A": "The stock price showed a consistent upward trend throughout 2023.",
+    "B": "The stock price showed a consistent downward trend throughout 2023.",
+    "C": "The stock price fluctuated but ended the highest.",
+    "D": "The stock price remained stable throughout the year."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "cherry_picking",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "True",
+  "explanation": "The inverted Y-axis creates the illusion that stock prices are decreasing when they are actually increasing. The stock price rose from $100 in January to $145 in December, showing a clear upward trend."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which label shows the highest outbreak risk per 1,000 people?",
+  "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "missing_normalization",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Totals are mapped without accounting for population. Risk per 1,000 people requires normalization that is missing."
+}

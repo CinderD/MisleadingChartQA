@@ -1,0 +1,17 @@
+{
+  "question": "What is the relative sales pattern across regions?",
+  "options": {
+    "A": "Sales show a clear hierarchy with East leading, followed by West, North, South, and Central.",
+    "B": "The pattern is relatively uniform with most regions performing similarly except for Central.",
+    "C": "Sales display a bimodal distribution with high performers (East, West) and low performers (South, Central).",
+    "D": "Cannot determine the exact relative sales pattern without Y-axis scales to verify the magnitude differences."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays regional sales distribution with a bar chart, but provides no Y-axis scales or numerical labels. While the visual data shows varying bar heights across regions, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the true relative sales pattern and magnitude differences. Visual estimation of relative patterns without proper scales is unreliable for accurate sales analysis."
+}

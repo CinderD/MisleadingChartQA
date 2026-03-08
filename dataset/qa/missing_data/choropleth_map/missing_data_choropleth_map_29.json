@@ -1,0 +1,17 @@
+{
+  "question": "Which region had the lowest average temperature over 15 years according to the chart?",
+  "options": {
+    "A": "Africa (C)",
+    "B": "Brazil (E)",
+    "C": "China (B)",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "Both Africa (C) and Brazil (E) appear grey on the map, which represents missing temperature data rather than zero temperature. Since their temperature data is missing, we cannot determine which region had the lowest temperature from the chart alone. Users might incorrectly assume the grey regions have the lowest temperature."
+}

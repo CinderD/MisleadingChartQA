@@ -1,0 +1,17 @@
+{
+  "question": "Is there a positive relationship between patient age and recovery time within each hospital?",
+  "options": {
+    "A": "True",
+    "B": "False",
+    "C": "Only for Hospital A",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The chart shows an overall positive trend when combining data from both hospitals, suggesting that older patients recover slower. However, this aggregated view masks the individual hospital patterns. Each hospital may have different treatment protocols, patient populations, or care quality that affects the age-recovery relationship differently. The overall trend line inappropriately combines distinct groups and cannot tell us about the within-hospital relationships."
+}

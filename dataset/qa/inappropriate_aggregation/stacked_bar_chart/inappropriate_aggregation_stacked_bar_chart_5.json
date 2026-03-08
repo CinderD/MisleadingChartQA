@@ -1,0 +1,17 @@
+{
+  "question": "Based on this annual R&D investment chart (as of May 2024), which division appears to be receiving reduced investment priority?",
+  "options": {
+    "A": "AI Innovation shows the most significant reduction with only $38.1M invested in 2024.",
+    "B": "All divisions have the large absolute decrease in investment for 2024.",
+    "C": "Software Development shows inconsistent investment patterns across all years.",
+    "D": "Cannot determine investment priorities from this incomplete 2024 data."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "stacked_bar_chart",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "This chart presents annual R&D investment data with 2024 showing only partial-year results (as of May 2024, representing approximately 5 months or 42% of the year). The inappropriate aggregation misleadingly compares incomplete 2024 data with complete annual data from previous years. While all divisions appear to show reduced investment in 2024, this is simply because only the first five months are included. R&D investments are often allocated and spent unevenly throughout the year, with major project funding decisions frequently made later in the fiscal year."
+}

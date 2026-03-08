@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is Thursday, what is the average energy usage for the week based on the chart?",
+  "options": {
+    "A": "20 kWh",
+    "B": "34 kWh",
+    "C": "45 kWh",
+    "D": "Cannot be accurately calculated due to incomplete data"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart attempts to suggest a weekly average based on not only Monday through Thursday's data, but also other days (set them 0), thus making it calculate a wrong 20. The 20 is misleading."
+}

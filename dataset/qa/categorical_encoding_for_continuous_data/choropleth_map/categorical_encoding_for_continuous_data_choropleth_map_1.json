@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the US population map, which statement below is the most accurate?",
+  "options": {
+    "A": "The population between Texas and California are similar.",
+    "B": "The population gap between California and Texas might exceeds that between Texas and Florida.",
+    "C": "The three states (Texas, California, Florida) have very diverse population levels.",
+    "D": "The population differences are impossible to determine from this visualization."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "California (39.5M) and Texas (30.1M) have a 9.4M population difference, while Texas (30.1M) and Florida (27.5M) have only a 2.6M difference. However, the categorical color encoding groups California and Texas into the same color bin (30M+ range), making their large difference appear similar, while Texas and Florida appear more different due to different color bins."
+}

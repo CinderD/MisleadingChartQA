@@ -1,0 +1,17 @@
+{
+  "question": "What is the energy consumption trend pattern from January to August?",
+  "options": {
+    "A": "Energy consumption shows a clear seasonal pattern with peak usage in summer months.",
+    "B": "The trend is relatively stable with only minor fluctuations throughout the period.",
+    "C": "Consumption displays a declining pattern with consistent reduction over time.",
+    "D": "Cannot determine the exact consumption trend pattern without Y-axis scales to verify the magnitude of changes."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "line_chart",
+  "task": "Data Interpretation",
+      "explanation": "The chart displays energy consumption trend with a line chart, but provides no Y-axis scales or numerical labels. While the visual data shows varying line heights across months, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the true pattern and magnitude of consumption changes. Visual estimation of trend patterns without proper scales is unreliable for accurate energy analysis.",
+  "difficulty": "Medium",
+  "ifLabelled": "False"
+}

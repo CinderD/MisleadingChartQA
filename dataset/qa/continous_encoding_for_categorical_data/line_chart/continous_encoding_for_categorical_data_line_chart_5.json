@@ -1,0 +1,17 @@
+{
+  "question": "This line chart shows average annual salaries across different professional fields. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "The chart demonstrates a clear career advancement pathway from teacher to doctor.",
+    "B": "Programmer and lawyer salaries combined exceed doctor salary by approximately $35,000.",
+    "C": "Artist receives the lowest average annual salary among all professions shown.",
+    "D": "Teacher and Engineer salaries show the smallest difference compared to other profession pairs."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart incorrectly uses continuous encoding for categorical profession data. Different professions like teacher, nurse, engineer, doctor, and lawyer are distinct, independent career fields with no inherent sequential order or continuous relationship. The connecting line creates a misleading impression of a career progression pathway or evolutionary relationship between professions, suggesting that salaries change smoothly from one profession to another in sequence, which is conceptually incorrect. Each profession should be treated as a separate category, making a bar chart more appropriate for comparing salaries across different career fields."
+}

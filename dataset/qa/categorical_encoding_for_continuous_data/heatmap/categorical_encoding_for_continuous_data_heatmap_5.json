@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the website traffic heatmap, which statement best describes the relationship between Home page's 6PM traffic and Blog page's 6PM traffic?",
+  "options": {
+    "A": "It can be inferred that their traffic levels are very similar.",
+    "B": "Home performs clearly worse than Blog, as indicated by other timestamps.",
+    "C": "The traffic levels might be significantly different.",
+    "D": "The traffic level difference is impossible to determine from this visualization."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continous_data",
+  "chartType": "heatmap",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Home (325.8) and Blog (456.5) have a 130.7-visitor difference in 6PM traffic, but the categorical color encoding groups them into the same color bin (300+ range), masking their actual difference."
+}

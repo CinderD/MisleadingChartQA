@@ -1,0 +1,17 @@
+{
+  "question": "Does brand C manufacture fireworks that can last longer than 15 seconds?",
+  "options": {
+    "A": "Yes, brand C has fireworks that last longer than 15 seconds",
+    "B": "No, brand C does not have fireworks that last longer than 15 seconds",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "All brands have fireworks that last longer than 15 seconds"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "cherry_picking",
+  "chartType": "scatterplot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 15 seconds duration position, making it difficult to accurately discern if any members of brand C has the duration longer than 15 seconds."
+}

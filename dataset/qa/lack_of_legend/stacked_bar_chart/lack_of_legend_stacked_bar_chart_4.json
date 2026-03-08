@@ -1,0 +1,17 @@
+{
+  "question": "What is the primary customer segment based on income level in 2023?",
+  "options": {
+    "A": "The brown segment (middle-income earners) represents the primary customer base.",
+    "B": "The pink segment (high-income customers) shows the most valuable segment.",
+    "C": "The gray segment (low-income consumers) indicates the largest market share.",
+    "D": "Cannot determine the primary customer segment without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays customer segmentation by income level with different colored segments, but provides no legend to identify what each color represents in terms of income categories. While the visual data clearly shows which colored segment is largest in 2023, without knowing which income level each color corresponds to, it is impossible to determine which specific income category represents the primary customer segment. Income level color assignments without proper labeling are unreliable for customer segmentation analysis."
+}

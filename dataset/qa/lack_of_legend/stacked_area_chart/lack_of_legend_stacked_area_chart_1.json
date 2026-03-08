@@ -1,0 +1,17 @@
+{
+  "question": "Based on this population distribution chart, what does the blue area represent?",
+  "options": {
+    "A": "The blue area represents the largest demographic group, likely the working-age population.",
+    "B": "The blue area shows the highest income bracket in the population.",
+    "C": "The blue area indicates the most educated segment of the population.",
+    "D": "Cannot determine what the blue area represents without a legend to explain the color coding."
+  },
+  "correctAnswer": "D",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_area_chart",
+  "task": "Data Interpretation",
+  "explanation": "The chart shows a stacked area chart with different colored areas representing population segments, but there is no legend to explain what each color represents. While the blue area appears to be the largest segment, without a legend, it is impossible to determine what demographic or characteristic this color actually represents. Users might assume it represents common categories like age groups or income levels, but this would be speculation without proper labeling.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "A"
+}

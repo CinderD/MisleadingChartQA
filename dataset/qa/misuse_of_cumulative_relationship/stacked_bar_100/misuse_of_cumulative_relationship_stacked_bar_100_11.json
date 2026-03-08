@@ -1,0 +1,17 @@
+{
+  "question": "Does 'Unrelated Product Purchases' show an increasing trend over the year according to the chart?",
+  "options": {
+    "A": "Yes, the absolute number of purchases increases quarter by quarter.",
+    "B": "No, the share increases in later quarters, but absolute totals cannot be concluded from a 100% stacked chart.",
+    "C": "Yes, because the combined height of all colors adds up to more in Q4 than Q1.",
+    "D": "No, the share decreases steadily across the year."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart normalizes unrelated categories to 100% per quarter. It can suggest that the share of 'Unrelated Product Purchases' is higher in later quarters, but it cannot establish an absolute increasing trend without the underlying totals."
+}

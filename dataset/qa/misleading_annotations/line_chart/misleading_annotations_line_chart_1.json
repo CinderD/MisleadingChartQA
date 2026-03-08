@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of the number of new tourists in town Z from 1880 to 1891?",
+  "options": {
+    "A": "Generally increasing",
+    "B": "Generally decreasing",
+    "C": "Generally constant",
+    "D": "Cannot be inferred / Inadequate Information"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misleading_annotations",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "The chart shows a clear upward trend in tourist numbers from 1100 in 1880 to 3000 in 1891. However, the misleading title 'Decreasing Number of New Tourists' contradicts the visual data and is designed to mislead viewers into thinking the trend is decreasing."
+}

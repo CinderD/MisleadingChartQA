@@ -1,0 +1,17 @@
+{
+  "question": "The chart depicts the percentage of people who prefer different gifts for Valentine's Day. Based on this data, which of the following conclusions is incorrect?",
+  "options": {
+    "A": "The preference for Clothing is slightly less than Jewelry.",
+    "B": "Candy has a considerably higher preference than Dining Out.",
+    "C": "Dining Out and Clothing have similar popularity levels.",
+    "D": "Cards have the highest preference among all gifts."
+  },
+  "correctAnswer": "C",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Data Interpretation",
+  "explanation": "Despite the graphical representation, the difference in preference between Dining Out (34.6%) and Flowers (34.3%) is only 0.3%, but Clothing is actually (14.4%), which is not represented correctly by the visual distance on the chart.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "A"
+}

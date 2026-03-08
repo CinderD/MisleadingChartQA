@@ -1,0 +1,17 @@
+{
+  "question": "Based the chart, is the total number of shirts sold by the company in the second half of 2021 higher than in the first half?",
+  "options": {
+    "A": "Yes",
+    "B": "No",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Total sales are the same in both halves of the year."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "area_chart",
+  "task": "Calculate Differences",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is presented in an incorrect order, which might lead to an inaccurate judgment of the total sales."
+}

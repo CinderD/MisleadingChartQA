@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is Jan 10, and half of the votes from each state for a favorite fast food brand have been counted. The color of each state corresponds to the brand that has received the most votes in that state so far. The brand with the most number of colored states will be the most popular brand, and the results will be finalized on Jan 25. Which of the following is true?",
+  "options": {
+    "A": "A will be the most popular brand of fast food.",
+    "B": "B will be the least popular brand of fast food.",
+    "C": "C will be the most popular brand of fast food.",
+    "D": "Cannot be determined."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "concealed_uncertainty",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "While Brand C currently dominates the map with the most colored states, the chart shows results as of Jan 10, but the voting ends on Jan 25. The remaining voting period could dramatically change the outcome, making it premature to predict which brand will be most popular. The concealed uncertainty lies in the incomplete voting process that is not reflected in the chart."
+}

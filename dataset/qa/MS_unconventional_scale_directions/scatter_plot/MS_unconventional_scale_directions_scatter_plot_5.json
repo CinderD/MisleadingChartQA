@@ -1,0 +1,17 @@
+{
+  "question": "Given the chart, what is the perceived trend in plant growth as the amount of sunlight appears to increase?",
+  "options": {
+    "A": "The growth seems to decrease.",
+    "B": "The growth seems to increase.",
+    "C": "The growth seems constant.",
+    "D": "Cannot be determined."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses an inverted x-axis, creating the illusion that sunlight increases, suggesting growth increases, when it actually decreases."
+}

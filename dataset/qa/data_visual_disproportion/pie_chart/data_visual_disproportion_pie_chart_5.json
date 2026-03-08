@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows employee distribution by department. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Sales has the largest workforce among all categories.",
+    "B": "Engineering has the largest workforce at 35.2%.",
+    "C": "Sales and Marketing combined employ more than 60% of the workforce.",
+    "D": "Operations employs about half of Marketing' workforce."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "pie_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Labels show Engineering at 35.2% (largest), so B is correct. The pie slices use visual sizes that don't match the percentages—Sales' slice appears largest but its actual share is only 28.7%, making A a tempting but misleading choice. "
+}

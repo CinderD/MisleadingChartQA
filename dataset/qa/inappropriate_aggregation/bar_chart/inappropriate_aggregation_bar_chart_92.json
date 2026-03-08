@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is Thursday, what is the approximate average energy usage for the week?",
+  "options": {
+    "A": "20 kWh",
+    "B": "26 kWh",
+    "C": "35 kWh",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart displays energy usage for Monday through Thursday only. Without data for Friday, Saturday, and Sunday, it is impossible to calculate the weekly average energy usage. The dotted line suggesting 20 kWh is misleading since it lacks complete data."
+}

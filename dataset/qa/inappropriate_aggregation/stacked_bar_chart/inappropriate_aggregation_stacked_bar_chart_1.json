@@ -1,0 +1,17 @@
+{
+  "question": "Based on this annual marketing campaign performance chart (as of February 2024), what can we conclude about marketing effectiveness in 2024?",
+  "options": {
+    "A": "All marketing channels show significant decline in ROI performance for 2024.",
+    "B": "Digital ads maintain the highest ROI performance across all years including 2024.",
+    "C": "Traditional media shows the most consistent performance decline over the years.",
+    "D": "Cannot make valid conclusions about 2024 annual performance from this incomplete data."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "This chart displays annual marketing ROI data with 2024 showing only partial-year results (as of February 2024, representing approximately 2 months or 17% of the year). The inappropriate aggregation compares incomplete 2024 data with complete annual data from previous years. While 2024 appears to show dramatically lower ROI across all channels, this is misleading because only the first two months are included. Marketing campaigns often have seasonal variations, and early-year performance may not be representative of full-year results."
+}

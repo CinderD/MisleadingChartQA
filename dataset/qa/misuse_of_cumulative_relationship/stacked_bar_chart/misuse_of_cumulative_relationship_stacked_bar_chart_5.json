@@ -1,0 +1,17 @@
+{
+  "question": "Which quarter shows the best overall store performance based on the stacked bar chart?",
+  "options": {
+    "A": "Q3 shows the best performance with the highest total value.",
+    "B": "Q2 shows the best performance with balanced metrics.",
+    "C": "The chart cannot determine overall performance precisely because it combines unrelated business metrics.",
+    "D": "Q1 shows the best performance with the lowest electricity consumption."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart stacks unrelated business metrics (store visits, electricity consumption, customer comments) into a single total. These metrics cannot be meaningfully combined to assess overall performance. Only individual metric analysis is valid."
+}

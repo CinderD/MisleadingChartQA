@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following statements is most accurate about Store B based on the chart?",
+  "options": {
+    "A": "Its monthly sales are increasing from Jan to Dec.",
+    "B": "Its monthly sales are decreasing from Jan to Dec.",
+    "C": "Its monthly sales show similar performance to Store A throughout the year.",
+    "D": "Store B consistently outperforms Store A in sales."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misleading_annotations",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "The chart shows that Store B's sales are decreasing from 3000 in January to 1050 in December, which is a clear downward trend. Therefore, Store B's sales are decreasing, not increasing. The misleading aspect is that the question focuses on Store B when viewers might be confused by the visual prominence of the lines or the title."
+}

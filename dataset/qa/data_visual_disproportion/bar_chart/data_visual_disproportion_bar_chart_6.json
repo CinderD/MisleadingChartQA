@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows coffee production by country (million tons). Which statement is supported by the chart data?",
+  "options": {
+    "A": "Vietnam produces more than double of Colombia's output.",
+    "B": "Indonesia produces more than Colombia.",
+    "C": "Ethiopia has the smallest production among the listed countries.",
+    "D": "Brazil and Vietnam produce about the same amount."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "According to labels: Ethiopia 0.6M (smallest) so C is correct. Visual bar heights are intentionally non-proportional; Vietnam (2.1M) looks far taller than Colombia (1.2M) and might be perceived as double (A), but the ratio is ~1.75×. Colombia (1.2M) actually exceeds Indonesia (0.9M), so B is false. Brazil (3.8M) is much larger than Vietnam (2.1M), so D is false."
+}

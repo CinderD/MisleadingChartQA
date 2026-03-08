@@ -1,0 +1,17 @@
+{
+  "question": "The market research project concludes in Phase 3. Which of the following is true?",
+  "options": {
+    "A": "New York will be selected as the store location.",
+    "B": "Los Angeles will be selected as the store location.",
+    "C": "Chicago will be selected as the store location.",
+    "D": "Cannot be determined."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "concealed_uncertainty",
+  "chartType": "bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While New York currently has the highest preference score (42.5%), the chart shows results as of Phase 1, but the research project concludes in Phase 3. The remaining research phases could significantly change the results, making it premature to choose a store location. The concealed uncertainty lies in the incomplete research process that is not reflected in the chart."
+}

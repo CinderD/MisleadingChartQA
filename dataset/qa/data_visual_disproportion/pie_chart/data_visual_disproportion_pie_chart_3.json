@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows customer satisfaction levels. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Very Satisfied has the highest satisfaction level among all categories.",
+    "B": "Neutral customers represent about half of Satisfied customers. ",
+    "C": "Neutral and Dissatisfied combined represent over 25% of customers.",
+    "D": "Satisfied has the highest percentage at 42.3%."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "pie_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "Labels show Satisfied at 42.3% (highest), so D is correct. The pie slices use visual sizes that don't match the percentages—Neutral's slice appears large but its actual percentage is only 12.8%, making B a tempting but misleading choice."
+}

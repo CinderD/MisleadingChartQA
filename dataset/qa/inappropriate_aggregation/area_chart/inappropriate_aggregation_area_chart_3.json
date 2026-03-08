@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, what trend can be observed in the company's energy consumption?",
+  "options": {
+    "A": "Energy consumption has dramatically decreased in 2024, indicating successful efficiency improvements.",
+    "B": "The company shows consistent energy growth during recent years.",
+    "C": "Energy usage patterns suggest the company is implementing sustainable practices in 2025.",
+    "D": "Cannot determine 2024 annual energy trends from this incomplete data."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart displays annual energy consumption data with 2024 showing only partial-year results (as of June 30, 2024, representing exactly 6 months or 50% of the year). The inappropriate aggregation misleadingly compares incomplete 2024 data (1,820 MWh for 6 months) with complete annual data from previous years. While 2024 appears to show a significant decrease in energy consumption, this is simply because only half the year is included. Energy consumption often varies seasonally, and mid-year performance cannot indicate annual efficiency improvements."
+}

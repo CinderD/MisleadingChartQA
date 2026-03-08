@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following statements is most accurate about Product B based on the chart?",
+  "options": {
+    "A": "Its monthly performance is improving from Jan to Dec.",
+    "B": "Its monthly performance is declining from Jan to Dec.",
+    "C": "Its monthly performance shows similar trends to Product A throughout the year.",
+    "D": "Product B consistently outperforms Product A in performance."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misleading_annotations",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "The chart shows that Product B's performance is declining from 2800 in January to 1000 in December, which is a clear downward trend. Therefore, Product B's performance is declining, not improving. The misleading aspect is that the question focuses on Product B when viewers might be confused by the visual prominence of the lines or the title."
+}

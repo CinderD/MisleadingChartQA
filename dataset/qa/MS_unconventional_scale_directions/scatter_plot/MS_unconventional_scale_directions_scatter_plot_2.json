@@ -1,0 +1,17 @@
+{
+  "question": "What is the actual trend in the harvested apples as the amount of sunlight increases, according to the CSV data?",
+  "options": {
+    "A": "The number of apples harvested generally decreases.",
+    "B": "The number of apples harvested generally increases.",
+    "C": "The number of apples harvested remains constant.",
+    "D": "The trend cannot be determined from the chart."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The inverted Y-axis misleads viewers by reversing the scale, making it falsely appear that the number of harvested apples decreases with increased sunlight, when it actually increases."
+}

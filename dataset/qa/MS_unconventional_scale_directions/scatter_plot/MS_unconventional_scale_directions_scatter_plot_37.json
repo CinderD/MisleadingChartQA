@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of the growth for plant species as the number of hours of sunlight exposure per month increases, based on the chart provided?",
+  "options": {
+    "A": "Generally increases",
+    "B": "Generally decreases",
+    "C": "Generally constant",
+    "D": "Cannot be inferred / Inadequate Information"
+  },
+  "correctAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "explanation": "The chart uses an inverted Y-axis, misrepresenting the data trend. The axis inversion makes lower growth values appear higher, misleading the viewer to believe the growth decreases with more sunlight, while it actually increases.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "B"
+}

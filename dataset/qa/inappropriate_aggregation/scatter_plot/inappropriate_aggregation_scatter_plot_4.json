@@ -1,0 +1,17 @@
+{
+  "question": "Is there a positive relationship between income and housing cost within each city?",
+  "options": {
+    "A": "Yes",
+    "B": "No",
+    "C": "Only for City B",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The overall trend line shows a positive relationship across both cities combined, but this aggregated view cannot determine the relationship within each individual city. City A and City B may have different housing markets, cost of living, or economic structures that create different income-housing cost relationships within each city. The combined trend line inappropriately aggregates data from distinct urban markets and may not represent the true within-city relationships."
+}

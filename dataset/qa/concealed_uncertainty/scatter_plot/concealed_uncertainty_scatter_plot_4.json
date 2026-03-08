@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart shown, what can be concluded about sales when the advertising budget is $50,000?",
+  "options": {
+    "A": "Sales will definitely be above $200,000",
+    "B": "Sales will definitely be below $180,000",
+    "C": "The trend line suggests sales will be $190,000",
+    "D": "Cannot be determined due to data variability"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "concealed_uncertainty",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While the trend line shows a positive correlation between advertising budget and sales, the data only goes up to $25,000. Extrapolating to $50,000 involves significant uncertainty given the fact that $50,000 is way beyond the observed range."
+}

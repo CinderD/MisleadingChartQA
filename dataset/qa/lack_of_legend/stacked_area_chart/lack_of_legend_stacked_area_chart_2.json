@@ -1,0 +1,17 @@
+{
+  "question": "Which revenue stream contributes the most to total quarterly revenue?",
+  "options": {
+    "A": "The orange area (product sales) represents the highest revenue contribution.",
+    "B": "The green area (service fees) shows the largest revenue stream.",
+    "C": "The purple area (licensing) indicates the dominant revenue source.",
+    "D": "Cannot determine which revenue stream contributes the most without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_area_chart",
+  "task": "Data Interpretation",
+  "explanation": "The chart displays quarterly revenue data with different colored areas, but provides no legend to identify what each color represents in terms of revenue streams. While the visual data clearly shows which colored area contributes the most, without knowing which revenue source each color corresponds to, it is impossible to determine which specific revenue stream is the highest contributor. Color assumptions based on business conventions are unreliable without proper labeling.",
+  "difficulty": "Medium",
+  "ifLabelled": "False"
+}

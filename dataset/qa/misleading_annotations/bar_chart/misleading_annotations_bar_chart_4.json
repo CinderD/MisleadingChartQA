@@ -1,0 +1,17 @@
+{
+  "question": "In city W, what is the approximate average number of employees at office D from Jan to Mar?",
+  "options": {
+    "A": "150",
+    "B": "200",
+    "C": "233",
+    "D": "300"
+  },
+  "correctAnswer": "C",
+  "misleader": "misleading_annotations",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "explanation": "The chart shows employees for January (150), February (300), and March (250). The correct average is (150 + 300 + 250) / 3 = 233. However, the misleading annotation shows a dashed line labeled 'Average' at 150, which is incorrect and designed to mislead viewers into selecting 150 as the answer.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "A"
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart shown, what can be concluded about test scores when a student studies for 60 hours?",
+  "options": {
+    "A": "The test score will definitely be above 95",
+    "B": "The test score will definitely be below 90",
+    "C": "The trend line suggests the score will be 92",
+    "D": "Cannot be determined due to data variability"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "concealed_uncertainty",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While the trend line shows a positive correlation, the data plateaus around 38 hours and shows some decline after that. Extrapolating to 60 hours involves uncertainty, and the word 'definitely' in option A and B implies certainty that cannot be guaranteed given the variability in the data and the plateau effect shown."
+}

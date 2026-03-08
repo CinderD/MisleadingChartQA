@@ -1,0 +1,17 @@
+{
+  "question": "Considering the chart data reordered correctly, which of the following statements correctly reflects the trends of the brands from 2000 to 2005?",
+  "options": {
+    "A": "Brand A consistently decreased in market share from 2000 to 2003.",
+    "B": "Brand C shows a dip in market share between 2001 and 2002.",
+    "C": "Brand B's highest market share was observed in 2003 after reordering.",
+    "D": "Brands B and C traded market leading positions from 2000 to 2005."
+  },
+  "correctAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends, Make Comparisons, Find Extremum",
+  "explanation": "If ordered correctly, Brand C increased in market share from 2001 to 2002.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "B"
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is February 8, 2024, what is the most accurate assessment of the monthly order trends?",
+  "options": {
+    "A": "February 2024 shows a significant decline in customer demand compared to previous months.",
+    "B": "The business is experiencing consistent monthly growth throughout 2022 to early 2024.",
+    "C": "Orders typically peak in December and drop significantly in the following February.",
+    "D": "Insufficient to determine February 2024 performance relative to seasonal patterns."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart displays monthly product orders with February 2024 showing only partial-month results (as of February 8, 2024, potentially incomplete data collection). The inappropriate aggregation misleadingly compares February 2024 data (4,800 orders) with complete monthly data from previous periods. While February 2024 appears to show a dramatic decline, this could be due to incomplete data reporting, different counting methodologies, or genuine seasonal variations that require complete monthly data to assess properly."
+}

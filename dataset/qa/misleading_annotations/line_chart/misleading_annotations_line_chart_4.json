@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of population in city A from 2010 to 2015?",
+  "options": {
+    "A": "Generally increasing",
+    "B": "Generally decreasing",
+    "C": "Generally constant",
+    "D": "Cannot be inferred / Inadequate Information"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misleading_annotations",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "The chart shows a clear upward trend in population from 2000 in 2010 to 3000 in 2015. However, the misleading title 'Shrinking Population' contradicts the visual data and is designed to mislead viewers into thinking the trend is decreasing."
+}

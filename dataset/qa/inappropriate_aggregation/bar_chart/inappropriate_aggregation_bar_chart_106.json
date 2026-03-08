@@ -1,0 +1,17 @@
+{
+  "question": "Based on the weekly energy usage trend analysis shown in the chart, what is the expected weekly average energy consumption for the complete week?",
+  "options": {
+    "A": "44.0 kWh (as shown by the weekly average line)",
+    "B": "The weekly average will be higher than 44.0 kWh",
+    "C": "The weekly average will be lower than 44.0 kWh",
+    "D": "Cannot be determined from the available data"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The chart shows data only through Thursday (4 out of 7 days) and labels the average of these 4 days as 'Weekly Average', which is misleading. Since weekend data is still being collected, we cannot determine the true weekly average. The displayed 44.0 kWh represents only the Monday-Thursday average, not a complete weekly average. Weekend energy usage patterns might be significantly different from weekday patterns."
+}

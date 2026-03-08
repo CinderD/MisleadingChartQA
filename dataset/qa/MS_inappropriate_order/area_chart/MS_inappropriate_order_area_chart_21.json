@@ -1,0 +1,17 @@
+{
+  "question": "What is the overall trend of TechCorp's monthly product sales throughout 2023?",
+  "options": {
+    "A": "Sales show consistent growth from January to December",
+    "B": "Sales exhibit significant volatility with no clear pattern",
+    "C": "Sales demonstrate a declining trend throughout the year",
+    "D": "Sales remain relatively stable with minor fluctuations"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "True",
+  "explanation": "The chart displays months in reverse chronological order (Dec to Jan), making the naturally increasing sales trend appear as a decreasing trend. In reality, when arranged in proper chronological order, TechCorp's sales show consistent growth from 2,100 units in January to 4,200 units in December, representing a 100% increase over the year."
+}

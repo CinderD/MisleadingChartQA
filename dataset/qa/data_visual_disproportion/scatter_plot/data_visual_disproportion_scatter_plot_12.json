@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows preferences for Valentine's gifts. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Clothing's preference is roughly two times Cards.",
+    "B": "Dining Out and Flowers differ by less than 1%.",
+    "C": "Cards is less popular than Jewelry.",
+    "D": "Gift Card is higher than Clothing."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Labels show Dining Out 34.6% vs Flowers 34.3% (difference 0.3%), so B is correct. The dots' vertical positions are intentionally disproportionate—e.g., Cards is drawn very low while Candy is drawn high—so A or C may look plausible. Gift Card (12.6%) is below Clothing (14.4%), so D is false."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Based on this annual software revenue chart (as of March 2024), what can we conclude about the expected full-year performance for 2024?",
+  "options": {
+    "A": "2024 will show the similar revenue performance in recent years across all product lines.",
+    "B": "Enterprise Software will continue its growth trend and likely exceed 2023 performance by year-end.",
+    "C": "All product lines show declining performance in 2024 compared to previous years.",
+    "D": "Cannot be determined from the incomplete 2024 data shown."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "This chart shows annual revenue data with 2024 displaying only partial-year data (as of March 2024, representing approximately 3 months or 25% of the year). The misleading aggregation inappropriately compares incomplete 2024 data with full-year data from previous years. While 2024 appears to show dramatically lower performance, this is simply because only the first quarter is included. Making predictions about full-year 2024 performance based on this incomplete aggregated data is inappropriate and misleading."
+}

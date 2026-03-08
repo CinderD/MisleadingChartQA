@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of the number of bookstores in city Z from 2000 to 2020 based on the chart?",
+  "options": {
+    "A": "Decreasing",
+    "B": "Increasing",
+    "C": "Fluctuating",
+    "D": "Constant"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart uses inverted x-axis and y-axis, the data actually shows a decreasing trend."
+}

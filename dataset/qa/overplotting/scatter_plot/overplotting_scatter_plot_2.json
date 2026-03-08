@@ -1,0 +1,17 @@
+{
+  "question": "Can eleventh grade students achieve test scores above 20 points?",
+  "options": {
+    "A": "Yes",
+    "B": "No",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Only ten and twelfth grade students can achieve scores above 20 points"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "overplotting",
+  "chartType": "scatterplot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 20 points test score position, making it difficult to accurately discern if any members of tenth grade has the test score higher than 20 points."
+}

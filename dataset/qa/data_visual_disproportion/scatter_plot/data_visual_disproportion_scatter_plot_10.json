@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows vote percentages per candidate. Which statement matches the chart data correctly?",
+  "options": {
+    "A": "Candidate 2 has about double Candidate 5's votes.",
+    "B": "Candidate 4 leads the group.",
+    "C": "Candidate 3 has a higher vote share than Candidate 4.",
+    "D": "Candidate 1 and Candidate 3 have nearly equal vote shares."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Labels show Candidate 3 = 25% vs Candidate 4 = 22.7.4%, so C is correct. The dot heights are intentionally disproportionate (e.g., Candidate 2's dot is drawn much higher than real), which can make A, B, or D look plausible."
+}

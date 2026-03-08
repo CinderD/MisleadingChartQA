@@ -1,0 +1,17 @@
+{
+  "question": "How does Quality rating compare to Delivery rating?",
+  "options": {
+    "A": "Quality is about 1.2 times higher than Delivery.",
+    "B": "Quality shows approximately 1.3 times the rating of Delivery.",
+    "C": "Quality is roughly 1.1 times better than Delivery.",
+    "D": "Cannot determine the exact ratio between Quality and Delivery ratings without Y-axis scales to verify the relative scores."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "bar_chart",
+  "task": "Data Interpretation",
+      "explanation": "The chart displays customer satisfaction ratings with a bar chart, but provides no Y-axis scales or numerical labels. While the visual data clearly shows Quality has a taller bar than Delivery, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the exact ratio between their satisfaction ratings. Visual estimation of relative proportions without proper scales is unreliable for accurate rating comparison.",
+  "difficulty": "Medium",
+  "ifLabelled": "False"
+}

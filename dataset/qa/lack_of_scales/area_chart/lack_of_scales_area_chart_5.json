@@ -1,0 +1,17 @@
+{
+  "question": "What is the relative performance trend from 2019 to 2023?",
+  "options": {
+    "A": "Performance has generally increased year over year, showing a steady upward trend.",
+    "B": "The trend is volatile with a significant dip in 2020 followed by strong recovery.",
+    "C": "Performance displays a gradual decline from 2019 to 2021, then stabilizes.",
+    "D": "Cannot determine the exact trend pattern without Y-axis scales to verify the magnitude and direction of changes."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays annual performance data with an area chart, but provides no Y-axis scales or numerical labels. While the visual data shows varying area heights across years, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or even reversed scale, it is impossible to determine the true pattern and magnitude of the performance trend. Visual estimation of trend patterns without proper scales is unreliable for accurate performance analysis."
+}

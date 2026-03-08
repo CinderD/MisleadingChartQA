@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the bar chart, which statement best describes the pattern of rainfall over the past 14 days?",
+  "options": {
+    "A": "Rainfall reached its highest values in the middle of the period.",
+    "B": "Rainfall remained mostly low (below ~45 mm) throughout the period.",
+    "C": "Rainfall was generally higher during the first few recorded dates than in the middle periods.",
+    "D": "Rainfall stayed roughly the same with little fluctuation across all dates."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis order has been manipulated to make it appear that the highest rainfall occurred from the start, when it actually peaked at the middle."
+}

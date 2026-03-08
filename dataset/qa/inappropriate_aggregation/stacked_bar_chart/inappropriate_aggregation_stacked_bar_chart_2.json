@@ -1,0 +1,17 @@
+{
+  "question": "Based on this annual e-commerce sales chart (as of January 2024), which product category shows the most concerning performance trend?",
+  "options": {
+    "A": "Electronics shows the steepest decline with only $8.2M in sales for 2024.",
+    "B": "Home Goods shows the worst performance with the lowest absolute sales numbers.",
+    "C": "All categories show declining trends, but Clothing has the most dramatic drop.",
+    "D": "Cannot determine performance trends from this incomplete 2024 data."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "This chart presents annual e-commerce sales data with 2024 showing only partial-year results (as of January 2024, representing approximately 1 month or 8% of the year). The inappropriate aggregation misleadingly compares incomplete 2024 data with complete annual data from previous years. While all categories appear to show dramatic declines in 2024, this is simply because only January sales are included. E-commerce sales often have seasonal patterns, and January performance alone cannot indicate annual trends or concerning declines."
+}

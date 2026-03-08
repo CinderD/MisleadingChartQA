@@ -1,0 +1,17 @@
+{
+  "question": "How does the number of bookstores appear to change from 2000 to 2020 according to the chart?",
+  "options": {
+    "A": "Increasing",
+    "B": "Decreasing",
+    "C": "Constant",
+    "D": "Fluctuating"
+  },
+  "correctAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "explanation": "The chart uses an inverted x-axis, making the data appear as if the trend is increasing, but the data actually shows a decreasing trend.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "A"
+}

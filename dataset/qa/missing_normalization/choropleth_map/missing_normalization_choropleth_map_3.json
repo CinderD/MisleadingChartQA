@@ -1,0 +1,17 @@
+{
+  "question": "Which label represents the highest CO2 emissions per person?",
+  "options": {
+    "A": "A",
+    "B": "B",
+    "C": "E",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_normalization",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Only total emissions are encoded. Per‑person emissions require dividing by population, which is not shown."
+}

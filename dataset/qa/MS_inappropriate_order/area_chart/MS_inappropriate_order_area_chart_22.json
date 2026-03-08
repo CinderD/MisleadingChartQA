@@ -1,0 +1,17 @@
+{
+  "question": "How would you describe the revenue pattern of DataFlow Systems throughout 2023?",
+  "options": {
+    "A": "Revenue demonstrates a clear upward growth trend",
+    "B": "Revenue shows volatile fluctuations with peaks and valleys",
+    "C": "Revenue remains relatively stable with minimal variation",
+    "D": "Revenue follows a declining pattern throughout the year"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The chart presents months in a scrambled order (Nov, Feb, May, Jan, Jul, Mar, Sep, Jun, Apr, Aug, Oct, Dec), creating artificial upward trend in what is actually a volatile pattern. "
+}

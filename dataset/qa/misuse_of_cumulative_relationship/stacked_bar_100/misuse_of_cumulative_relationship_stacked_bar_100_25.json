@@ -1,0 +1,17 @@
+{
+  "question": "What is the safest interpretation of the chart about Grains Consumption, Pet Adoption, and Social Media?",
+  "options": {
+    "A": "Q4 has higher social media shares than Q3 in absolute numbers.",
+    "B": "Q3 might have a higher Pet Adoption amount than Q4 this year.",
+    "C": "Q1 has the highest grains consumption in absolute amount this year.",
+    "D": "Combining pet adoptions and shares yields a sensible overall index."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "A 100% stacked chart normalizes unrelated categories to 100% within each quarter. Thus, it allows comparison of composition shares but not absolute quantities, nor can categories be aggregated across groups to form a composite index."
+}

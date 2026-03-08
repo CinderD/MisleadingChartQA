@@ -1,0 +1,17 @@
+{
+  "question": "Which geographic region has the largest customer base in 2023?",
+  "options": {
+    "A": "The red segment (North America) represents the largest customer base.",
+    "B": "The blue segment (Europe) shows the dominant regional market.",
+    "C": "The yellow segment (Asia) indicates the highest customer concentration.",
+    "D": "Cannot determine which geographic region has the largest customer base without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays annual customer distribution data with different colored segments, but provides no legend to identify which geographic region each color represents. While the visual data clearly shows which colored segment has the largest customer base in 2023, without knowing which region each color corresponds to, it is impossible to determine which specific geographic region has the largest customer base. Regional color assignments without proper labeling are unreliable for market analysis."
+}

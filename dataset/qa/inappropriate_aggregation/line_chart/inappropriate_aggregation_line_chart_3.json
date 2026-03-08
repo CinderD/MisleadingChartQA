@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, which statement best describes the company's competitive position?",
+  "options": {
+    "A": "Market share has been consistently growing from 2020 through 2023.",
+    "B": "The company lost significant market share in Q1 2024 compared to Q4 2023, potential indicating competitive challenges.",
+    "C": "Market share growth has accelerated in recent quarters through early 2024.",
+    "D": "Q4 2023 appears to represent the peak market share within the 2023–2025 period."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart displays quarterly market share data with Q1 2024 showing only partial-quarter results (as of Feb 15, 2024, representing about 1.5 months of the 3-month quarter). The inappropriate aggregation misleadingly compares incomplete Q1 2024 data (15.2% market share for 1.5 months) with complete quarterly data from previous periods. While Q1 2024 appears to show a dramatic decline, this is simply because only half the quarter is included. The correct answer focuses on the clear trend visible in complete data (2020-2023), avoiding the misleading incomplete 2024 data."
+}

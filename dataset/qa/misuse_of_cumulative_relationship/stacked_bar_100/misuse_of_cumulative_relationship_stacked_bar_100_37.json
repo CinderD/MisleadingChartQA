@@ -1,0 +1,17 @@
+{
+  "question": "Do customer complaints show an increasing trend over the year according to the chart?",
+  "options": {
+    "A": "Yes, the absolute number of complaints increases quarter by quarter.",
+    "B": "No, the complaint share declines in the second half of the year.",
+    "C": "The share of complaints increases each quarter, but absolute levels cannot be inferred from a 100% stacked chart.",
+    "D": "Complaints remain constant across all quarters."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "In a 100% stacked chart, unrelated indicators are normalized within each quarter. The share of complaints increases from Q1 to Q4, indicating a rising proportion; however, since the chart does not provide absolute quantities, one cannot conclude that the number of complaints increased each quarter, nor can total amounts be compared across quarters."
+}

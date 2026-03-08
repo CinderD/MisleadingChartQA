@@ -1,0 +1,17 @@
+{
+  "question": "True or False: The color shading on the map indicates that species Z is less prevalent in NC compared to SC.",
+  "options": {
+    "A": "True",
+    "B": "False",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Both states have the same prevalence"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend for the prevalence scale is inverted, making lower values darker and higher values lighter. Although NC appears lighter, SC actually has a higher prevalence of species Z."
+}

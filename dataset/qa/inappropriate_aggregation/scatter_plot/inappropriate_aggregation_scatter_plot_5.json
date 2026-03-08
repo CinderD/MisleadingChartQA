@@ -1,0 +1,17 @@
+{
+  "question": "Is there a negative relationship between training hours and productivity score within each department?",
+  "options": {
+    "A": "Yes",
+    "B": "No",
+    "C": "Only for Department A",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The overall trend line shows a negative relationship across both departments combined, suggesting more training leads to lower productivity. However, this aggregated view cannot determine the relationship within each individual department. Department A and Department B may have different work processes, skill requirements, or productivity measurement methods that create different training-productivity relationships within each department. The combined trend line inappropriately aggregates data from distinct organizational units."
+}

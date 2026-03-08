@@ -1,0 +1,17 @@
+{
+  "question": "Do Sales employees have salaries above 20 thousand?",
+  "options": {
+    "A": "Yes",
+    "B": "No",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Only Engineering and HR employees have salaries above 20 thousand"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 20 thousand salary position, making it difficult to accurately discern if any members of Sales has the salary higher than 20 thousand."
+}

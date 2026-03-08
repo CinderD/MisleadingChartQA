@@ -1,0 +1,17 @@
+{
+  "question": "In town Z, what is the approximate average number of visitors at museum C from Jul to Sep?",
+  "options": {
+    "A": "150",
+    "B": "200",
+    "C": "300",
+    "D": "400"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misleading_annotations",
+  "chartType": "bar_chart",
+  "task": "Aggregate Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows visitors for July (200), August (400), and September (300). The correct average is (200 + 400 + 300) / 3 = 300. However, the misleading annotation shows a dashed line labeled 'Average' at 200, which is incorrect and designed to mislead viewers into selecting 200 as the answer."
+}

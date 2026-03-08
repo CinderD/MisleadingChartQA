@@ -1,0 +1,17 @@
+{
+  "question": "Which country has the highest tourist arrivals per resident?",
+  "options": {
+    "A": "B",
+    "B": "D",
+    "C": "E",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_normalization",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The choropleth encodes total visitors only. To compare tourism intensity per resident, we would need each country's population, which is not provided."
+}

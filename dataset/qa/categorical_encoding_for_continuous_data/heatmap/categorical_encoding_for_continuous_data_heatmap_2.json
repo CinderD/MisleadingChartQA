@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the product performance heatmap, which statement below is the most accurate?",
+  "options": {
+    "A": "The speed difference between Product A and B exceeds that between Product B and C.",
+    "B": "Product B and C may differ greatly in speed, but discrete color bins mask the difference.",
+    "C": "Product A is clearly faster than Product B, and the color difference accurately represents this performance gap.",
+    "D": "The speed performance difference is impossible to determine from this visualization."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continous_data",
+  "chartType": "area_chart",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Product A Speed (78.5) and Product B Speed (80.1) have a 1.6-point difference, while Product B and Product C Speed (88.2) have a 8.1-point difference. However, the categorical color encoding groups B and C into the same color bin (80-90), masking their actual difference, while A and B appear more different due to different color bins."
+}

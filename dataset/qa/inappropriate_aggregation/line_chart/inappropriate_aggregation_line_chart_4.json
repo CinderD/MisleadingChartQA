@@ -1,0 +1,17 @@
+{
+  "question": "From the data shown in the chart, what is the most accurate statement about user engagement trends?",
+  "options": {
+    "A": "Daily active users increased consistently from June through mid-July 2024.",
+    "B": "User engagement dropped significantly in the third week of July 2024.",
+    "C": "The platform shows steady user growth with minor weekly fluctuations.",
+    "D": "Week 3 July data appears incomplete and may not reflect actual user engagement."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart displays weekly daily active users with Week 3 July showing only partial-week results (as of July 16, 2024, representing approximately 2 days of the 7-day week). The inappropriate aggregation misleadingly compares incomplete Week 3 July data (125K daily users for 2 days) with complete weekly data from previous periods. While Week 3 July appears to show a dramatic decline in user engagement, this is likely because the week is not yet complete. Weekly user metrics should only be compared when full 7-day periods are available."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays the percentage of votes received by five candidates in a local election. Based on this data, which of the following statements is misleading due to the chart's visual presentation?",
+  "options": {
+    "A": "Candidate 1 received exactly 40% of the total votes.",
+    "B": "Candidate 2 is the forth second place.",
+    "C": "Candidate 5 received the least votes.",
+    "D": "Candidate 3 received more than double the percentage of votes compared to Candidate 4."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The bar chart clearly shows that Candidate 5 received the smallest percentage of votes (2.9%), indicating option C as correct. The visual disproportion of bars suggests otherwise. Option B appears plausible due to the misleading lengths of the bars though it is incorrect, as Candidate 2 only has 9.4% of the votes."
+}

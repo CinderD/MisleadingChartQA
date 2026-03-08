@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the temperature heatmap, which statement best describes the relationship between New York's January temperature and Chicago's January temperature?",
+  "options": {
+    "A": "It can be infered that their temperatures are very similar.",
+    "B": "The temperatures might be significantly different, but the discrete color bins make them appear more similar than they actually are.",
+    "C": "New York is warmer than Chicago, and the color difference accurately represents this 5°C difference.",
+    "D": "The temperature is impossible to determine from this visualization."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continous_data",
+  "chartType": "heatmap",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "New York (2.5°C) and Chicago (-2.5°C) have a 5°C difference in the data, but the categorical color encoding groups them into discrete bins that don't reflect this continuous difference. The artificial boundaries created by the color bins distort the perception of temperature relationships."
+}

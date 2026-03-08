@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, are total sales in the first half of the year higher than in the second half?",
+  "options": {
+    "A": "Yes",
+    "B": "No",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Total sales are the same in both halves of the year."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays months out of order, creating confusion. While visually it might seem sales decrease, summing the sales from July to December actually shows a higher total than from January to June."
+}

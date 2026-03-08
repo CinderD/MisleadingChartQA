@@ -1,0 +1,17 @@
+{
+  "question": "How does Product D's performance compare to Product A's?",
+  "options": {
+    "A": "Product D has about 1.8 times the performance of Product A.",
+    "B": "Product D shows approximately 2.2 times the performance of Product A.",
+    "C": "Product D is roughly 1.5 times better than Product A.",
+    "D": "Cannot determine the exact ratio between Product D and Product A without Y-axis scales to verify the relative performance."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays product performance comparison with a bar chart, but provides no Y-axis scales or numerical labels. While the visual data clearly shows Product D has a taller bar than Product A, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the exact ratio between their performance scores. Visual estimation of relative proportions without proper scales is unreliable for accurate comparison."
+}

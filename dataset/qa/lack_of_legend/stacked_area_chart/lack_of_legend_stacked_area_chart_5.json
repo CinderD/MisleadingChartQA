@@ -1,0 +1,17 @@
+{
+  "question": "What percentage of the population has completed college education?",
+  "options": {
+    "A": "The brown area (college graduates) represents about 35% of the population.",
+    "B": "The pink area (high school graduates) shows approximately 40% of people.",
+    "C": "The gray area (postgraduate degree holders) indicates roughly 15% of the population.",
+    "D": "Cannot determine the percentage of people with college education without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays population education level distribution with different colored areas, but provides no legend to identify what each color represents in terms of education categories. While the visual data shows the relative sizes of different colored areas, without knowing which education level each color corresponds to, it is impossible to determine the specific percentage of people with college education. Color interpretations without proper labeling are speculative and unreliable for demographic analysis."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which labeled region has the highest GDP per person?",
+  "options": {
+    "A": "A",
+    "B": "B",
+    "C": "D",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_normalization",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The map encodes total GDP only. Without dividing by population, we cannot tell which label has the highest GDP per person."
+}

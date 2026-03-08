@@ -1,0 +1,17 @@
+{
+  "question": "Which statement about night reading preference is most accurate?",
+  "options": {
+    "A": "More than half of people in county Z prefer reading at night.",
+    "B": "Fewer than half of people in county Z prefer reading at night.",
+    "C": "Night and morning preferences are about the same.",
+    "D": "Around one‑third of people in county Z prefer reading at night."
+  },
+  "correctAnswer": "B",
+  "misleader": "misleading_annotations",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "explanation": "The grey slice (Night) is 45%, which is less than half. The misleading angle encourages choosing that more than half prefer night, but the majority is actually the red Morning slice (55%).",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "A"
+} 

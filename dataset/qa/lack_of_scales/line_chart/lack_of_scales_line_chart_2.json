@@ -1,0 +1,17 @@
+{
+  "question": "What is the temperature variation pattern throughout the day?",
+  "options": {
+    "A": "Temperature remains relatively stable with only minor variations throughout the day. ",
+    "B": "The pattern is irregular with multiple temperature spikes and unpredictable fluctuations.",
+    "C": "Temperature shows a clear daily cycle with a peak in the afternoon and gradual cooling in the evening.",
+    "D": "Cannot determine the exact temperature variation pattern without Y-axis scales to verify the magnitude of changes."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "lack_of_scales",
+  "chartType": "line_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays temperature variation with a line chart, but provides no Y-axis scales or numerical labels. While the visual data shows a curve pattern throughout the day, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the true magnitude and pattern of temperature changes. Visual estimation of temperature variation patterns without proper scales is unreliable for accurate weather analysis."
+}

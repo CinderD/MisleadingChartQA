@@ -1,0 +1,17 @@
+{
+  "question": "Which age group represents the largest segment in the target market?",
+  "options": {
+    "A": "The green segment (25-34 year olds) represents the largest demographic group.",
+    "B": "The purple segment (35-44 year olds) shows the dominant age range.",
+    "C": "The red segment (18-24 year olds) indicates the highest market share.",
+    "D": "Cannot determine which age group represents the largest segment without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays demographic data with different colored segments, but provides no legend to identify what each color represents in terms of age groups. While the visual data clearly shows which colored segment is largest, without knowing which age range each color corresponds to, it is impossible to determine which specific age group represents the largest segment in the target market. Age group color assignments without proper labeling are unreliable for demographic analysis."
+}

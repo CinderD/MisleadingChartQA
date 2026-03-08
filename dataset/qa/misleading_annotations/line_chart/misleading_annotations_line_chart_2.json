@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of student enrollment at university Y from 2015 to 2022?",
+  "options": {
+    "A": "Generally increasing",
+    "B": "Generally decreasing",
+    "C": "Generally constant",
+    "D": "Cannot be inferred / Inadequate Information"
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misleading_annotations",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "The chart shows a clear upward trend in student enrollment from 800 in 2015 to 1850 in 2022. However, the misleading title 'Declining Student Enrollment' contradicts the visual data and is designed to mislead viewers into thinking the trend is decreasing."
+}

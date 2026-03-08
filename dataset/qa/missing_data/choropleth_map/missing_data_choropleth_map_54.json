@@ -1,0 +1,17 @@
+{
+  "question": "Was the average precipitation in Australia (D) higher than in Canada (C)?",
+  "options": {
+    "A": "Yes, Australia (D) had higher precipitation",
+    "B": "No, Canada (C) had higher precipitation",
+    "C": "They had equal precipitation",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "Canada (C) appears grey on the map, which represents missing precipitation data rather than zero precipitation. Since Canada's precipitation data is missing, we cannot make any comparison between Australia (D) and Canada (C). The misleading aspect is that users might interpret the grey color as low precipitation and conclude that Australia (D) had higher precipitation."
+}

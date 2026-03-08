@@ -2,30 +2,17 @@
 
 Dataset of chartQA (EMNLP 2025 Oral), designed to probe model sensitivity to common misleading visualization practices (cherry-picking, inappropriate scales, missing data, dual encoding, etc.). Each case includes a chart figure, underlying data, and multiple-choice QA with a correct option and a "misleader" option with explanation.
 
-## Train set (`train/`) and test set (`test/`)
+## Dataset (`dataset/`)
 
-Both **`train/`** and **`test/`** use the same directory layout: `code/`, `data/`, `figures/`, `qa/`. Paths follow `<misleader_type>/<plot_type>/<case_name>.<ext>`.
+Single release containing all cases. Directory layout: `code/`, `data/`, `figures/`, `qa/`. Paths follow `<misleader_type>/<plot_type>/<case_name>.<ext>`.
 
-### Train set (`train/`)
+- **Total cases:** ~3,060  
+- **Total files:** ~12,240  
 
-Complete training set for model development and evaluation.
-
-- **Total cases:** ~2,755  
-- **Total files:** ~11,027  
-
-
-### Test set (`test/`)
-
-- **Total cases:** ~305  
-
-Test set with the same schema; originally the root-level `code/`, `data/`, `figures/`, `qa/` folders merged under `test/` for release.
-
-- Same structure as `train/`: `code/`, `data/`, `figures/`, `qa/`.
-
-### Directory structure (train and test)
+### Directory structure
 
 ```
-train/   or   test/
+dataset/
 ├── code/           # HTML visualization code (one file per case)
 ├── data/           # CSV data files
 ├── figures/        # JPEG chart images
@@ -59,10 +46,8 @@ Plot types include bar_chart, line_chart, area_chart, scatter_plot, pie_chart, s
 
 ## Usage
 
-- **Training:** Use `train/figures/` as images and `train/qa/` as labels; align by case name (filename without extension).  
-- **Testing:** Use `test/figures/` and `test/qa/` the same way.  
-- **Reproducing charts:** Use `train/code/*.html` with `train/data/*.csv` (or `test/` equivalents) and a local HTTP server to re-render the same charts.
-
+- **Training / evaluation:** Use `dataset/figures/` as images and `dataset/qa/` as labels; align by case name (filename without extension).  
+- **Reproducing charts:** Use `dataset/code/*.html` with `dataset/data/*.csv` and a local HTTP server to re-render the same charts.
 
 ## Citation & license
 

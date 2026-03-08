@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart below for employees in a company, which of the following statements is true?",
+  "options": {
+    "A": "Mid Level employees always earn more than Entry Level employees at similar experience ranges.",
+    "B": "As work experience increases, salary increases consistently for all department levels.",
+    "C": "Executive-level employees do not always earn more than senior-level employees with comparable experience.",
+    "D": "Senior Level employees have the most consistent salary progression with experience."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses inappropriate color encoding where Entry Level (darkest blue #003f8c) appears to represent the highest hierarchy, while Mid Level (lightest blue #d3e5ff) appears to be the top tier. This misleading color scheme leads viewers to assume Entry Level employees (darkest blue dots) should always earn less than Mid Level employees (lightest blue dots) at similar experience ranges. However, the data shows significant overlap where Entry Level employees with 6-10 years experience can earn $47K-$58K, overlapping with Mid Level employees at 2-8 years experience earning $50K-$61K. The color encoding creates a false visual hierarchy that doesn't match the actual salary distribution patterns."
+}

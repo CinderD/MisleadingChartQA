@@ -1,0 +1,17 @@
+{
+  "question": "Which statement about in‑store shopping preference is most accurate?",
+  "options": {
+    "A": "Most residents prefer shopping in‑store.",
+    "B": "Fewer than half of residents prefer shopping in‑store.",
+    "C": "Roughly two‑fifths of residents prefer shopping in‑store.",
+    "D": "In‑store and online preferences are roughly equal."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misleading_annotations",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The grey slice (In-store) is 40%, which is less than half. The misleading angle pushes the idea that in-store is the majority, but the orange Online slice (60%) is actually larger."
+}

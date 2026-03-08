@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows revenue sources. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Product Sales has the largest revenue share at 52.8%.",
+    "B": "Licensing has the largest revenue share among all categories.",
+    "C": "Services and Product Sales combined account for nearly 50% of revenue.",
+    "D": "Consulting represents about double of Licensing's revenue."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "data_visual_disproportion",
+  "chartType": "pie_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Labels show Product Sales at 52.8% (largest), so A is correct. The pie slices use visual sizes that don't match the percentages—Licensing's slice appears largest but its actual share is only 12.3%, making B a tempting but misleading choice. "
+}

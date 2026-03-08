@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is May 01, 2022, which of the following statements is true?",
+  "options": {
+    "A": "Company Z had more new employees in 2018 than in 2020.",
+    "B": "The number of new employees per year fell sharply in 2022.",
+    "C": "The total number of employees in company Z keep the same with previous in 2022.",
+    "D": "None of the above."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart shows annual employee recruitment data with 2022 displaying only partial-year results (as of May 01, 2022, representing approximately 4 months or 33% of the year). The inappropriate aggregation misleadingly compares incomplete 2022 data (420 new employees in 4 months) with complete annual data from previous years. While 2022 appears to show a sharp decline in recruitment, this is simply because only the first four months are included. We cannot determine if there was actually a decline without the complete year's data."
+}

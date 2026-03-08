@@ -1,0 +1,17 @@
+{
+  "question": "What is the trend of the growth for plant species P as the number of hours of sunlight exposure per month increases?",
+  "options": {
+    "A": "Generally increases",
+    "B": "Generally decreases",
+    "C": "Generally constant",
+    "D": "Cannot be inferred / Inadequate Information"
+  },
+  "correctAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "explanation": "The inverted Y-axis misleads viewers by reversing the scale, making lower growth values appear higher.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "B"
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The election poll closes on Sep 01, 2022. Which of the following is true?",
+  "options": {
+    "A": "Candidate A will be elected as the winner.",
+    "B": "Candidate B will be elected as the winner.",
+    "C": "Candidate C will be elected as the winner.",
+    "D": "Cannot be determined."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "concealed_uncertainty",
+  "chartType": "bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While Candidate A currently leads with 2200 votes, the chart shows results as of Aug 15, 2022, but the election closes on Sep 01, 2022. The remaining voting period could dramatically change the outcome, making it premature to predict a winner. The concealed uncertainty lies in the incomplete voting process that is not reflected in the chart."
+}

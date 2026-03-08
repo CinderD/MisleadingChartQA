@@ -1,0 +1,17 @@
+{
+  "question": "This line chart displays customer satisfaction ratings for different restaurant types. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "The chart shows a generally a decline–increase–decline trend in customer satisfaction from Italian to Thai restaurants.",
+    "B": "Italian restaurants receive the highest customer rating among all cuisine types.",
+    "C": "Japanese restaurants have a higher rating than Indian restaurants but lower than French restaurants.",
+    "D": "None of the above."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart inappropriately uses continuous encoding for categorical data (restaurant types). Different cuisine types like Italian, Chinese, Mexican, and French are distinct, unrelated categories with no inherent order or continuous relationship. The connecting line falsely suggests a progression or trend between restaurant types, implying that ratings change smoothly from one cuisine to another in sequence, which is conceptually incorrect. Each restaurant type should be treated as a separate category, making a bar chart more appropriate for comparing discrete categories."
+}

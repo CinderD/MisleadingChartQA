@@ -1,0 +1,17 @@
+{
+  "question": "This area chart displays average customer ratings for different product categories. What is the the most accurate statement based on this chart?",
+  "options": {
+    "A": "Laptops receive the highest customer ratings among all products.",
+    "B": "The ratings show a pattern of initial increase, followed by a decline, and then a subsequent rise across product categories.",
+    "C": "Smart-watches show the lowest rating compared to other electronic products.",
+    "D": "None of the above."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart incorrectly uses continuous encoding for categorical product data. Product categories like smartphones, laptops, and headphones are distinct, unrelated categories with no inherent sequential order or continuous relationship. The area chart creates a misleading impression of a smooth trend or progression between products, suggesting that ratings change gradually from one product category to the next, which is conceptually incorrect. Each product category should be treated independently, making a bar chart more suitable for comparing discrete categories."
+}

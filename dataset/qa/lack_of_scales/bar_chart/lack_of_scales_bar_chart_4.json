@@ -1,0 +1,17 @@
+{
+  "question": "What is the budget distribution pattern across categories?",
+  "options": {
+    "A": "Budget shows a clear hierarchy with Operations receiving the most, followed by Marketing, R&D, IT, and HR.",
+    "B": "The distribution is relatively balanced with most categories receiving similar allocations except HR.",
+    "C": "Budget displays a bimodal pattern with high-budget categories (Operations, Marketing) and low-budget categories (HR, IT).",
+    "D": "Cannot determine the exact budget distribution pattern without Y-axis scales to verify the relative allocations."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "bar_chart",
+  "task": "Data Interpretation",
+      "explanation": "The chart displays monthly budget allocation with a bar chart, but provides no Y-axis scales or numerical labels. While the visual data shows varying bar heights across categories, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the true budget distribution pattern and relative allocations. Visual estimation of distribution patterns without proper scales is unreliable for accurate budget analysis.",
+  "difficulty": "Medium",
+  "ifLabelled": "False"
+}

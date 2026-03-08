@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, are total sales in the first half of the year higher than in the second half?",
+  "options": {
+    "A": "Yes",
+    "B": "No",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Both halves of the year show equal total sales."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The x-axis is presented in an incorrect order (months are jumbled). While visually it appears January to June is higher, if ordered correctly, the data shows that the total sales from January to June are lower than from July to December."
+}

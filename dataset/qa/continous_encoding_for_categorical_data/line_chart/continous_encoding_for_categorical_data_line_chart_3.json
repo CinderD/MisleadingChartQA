@@ -1,0 +1,17 @@
+{
+  "question": "This line chart displays carbon emissions by different transportation methods. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "The chart shows a smooth and predictable progression in emissions as transportation methods.",
+    "B": "Airplane travel produces the highest carbon emissions among all transportation methods.",
+    "C": "Train and motorcycle emissions combined exceed car emissions by more than 50%.",
+    "D": "Electric bus emissions are exactly three times higher than motorcycle emissions."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart inappropriately uses continuous encoding for categorical transportation data. Transportation methods like walking, bicycle, car, train, and airplane are distinct, independent categories with no inherent sequential order or continuous relationship. The connecting line falsely implies a smooth progression or evolutionary relationship between transportation methods, suggesting that emissions change gradually from one method to another in sequence, which is conceptually incorrect. Each transportation method should be treated as a separate category, making a bar chart more appropriate for comparing emissions across different modes of transport."
+}

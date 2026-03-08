@@ -1,0 +1,17 @@
+{
+  "question": "What is the conversion rate improvement pattern over the 8-week period?",
+  "options": {
+    "A": "The rate shows a plateau pattern with rapid early gains followed by stabilization. ",
+    "B": "The improvement pattern is exponential with accelerating growth in later weeks.",
+    "C": "The conversion rate shows a steady linear improvement with consistent weekly gains.",
+    "D": "Cannot determine the exact improvement pattern without Y-axis scales to verify the magnitude of changes."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "lack_of_scales",
+  "chartType": "line_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays website conversion rate with a line chart, but provides no Y-axis scales or numerical labels. While the visual data shows an upward trend in the line, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the true pattern and magnitude of conversion rate improvements. Visual estimation of improvement patterns without proper scales is unreliable for accurate performance analysis."
+}

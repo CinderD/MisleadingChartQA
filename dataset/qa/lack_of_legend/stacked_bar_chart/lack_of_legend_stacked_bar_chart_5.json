@@ -1,0 +1,17 @@
+{
+  "question": "Which sales channel generates the highest annual revenue?",
+  "options": {
+    "A": "The orange segment (online sales) represents the highest revenue generator.",
+    "B": "The purple segment (retail stores) shows the dominant sales channel.",
+    "C": "The yellow segment (wholesale) indicates the highest revenue contribution.",
+    "D": "Cannot determine which sales channel generates the highest revenue without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays annual revenue data with different colored segments representing sales channels, but provides no legend to identify which channel each color represents. While the visual data clearly shows which colored segment generates the highest annual revenue, without knowing which sales channel each color corresponds to, it is impossible to determine which specific channel is the highest revenue generator. Sales channel color assignments without proper labeling are unreliable for business analysis."
+}

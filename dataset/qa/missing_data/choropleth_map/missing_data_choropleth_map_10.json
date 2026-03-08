@@ -1,0 +1,17 @@
+{
+  "question": "Was the average precipitation over 15 years in Australia (D) higher than in South America (C)?",
+  "options": {
+    "A": "Yes, Australia (D) had higher precipitation",
+    "B": "No, South America (C) had higher precipitation",
+    "C": "They had equal precipitation",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "South America (C) appears grey on the map, which represents missing data rather than zero precipitation. Since South America's precipitation data is missing, we cannot make any comparison between Australia (D) and South America (C). The misleading aspect is that users might interpret the grey color as low precipitation and conclude that Australia (D) had higher precipitation."
+}

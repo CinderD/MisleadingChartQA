@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the unemployment rate map, which statement below is the most accurate?",
+  "options": {
+    "A": "Illinois and Michigan have similar unemployment rates.",
+    "B": "The unemployment gap between Illinois and Michigan might exceed that between Georgia and North Carolina.",
+    "C": "All four states (Michigan, Illinois, Georgia and North Carolina) have very diverse unemployment levels.",
+    "D": "The unemployment differences are impossible to determine from this visualization."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continous_data",
+  "chartType": "choropleth_map",
+  "task": "Compare Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Illinois (9.2%) and Michigan (12.8%) have a 3.6 percentage point difference, while Georgia (3.9%) and North Carolina (2.7%) have only a 1.2 percentage point difference. However, the categorical color encoding groups Illinois and Michigan into the same color bin (9%+ range), making their large difference appear similar, while Georgia and North Carolina appear more different due to different color bins."
+}

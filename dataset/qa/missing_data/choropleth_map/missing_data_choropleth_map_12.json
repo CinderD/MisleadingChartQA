@@ -1,0 +1,17 @@
+{
+  "question": "Which region has the highest population density according to the chart?",
+  "options": {
+    "A": "India (E)",
+    "B": "Europe Asia (B)",
+    "C": "Africa (C)",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "While India (E) appears to have the darkest color among the labeled regions, there are grey areas on the map that represent missing data rather than zero density. These grey regions (such as parts of Africa) might actually have higher population density than India, but we cannot determine this from the chart since their data is missing. The misleading aspect is that users might conclude India has the highest density based only on the visible colored regions."
+}

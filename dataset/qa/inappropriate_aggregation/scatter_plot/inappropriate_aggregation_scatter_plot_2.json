@@ -1,0 +1,17 @@
+{
+  "question": "Is there a negative relationship between work experience and job satisfaction within each company?",
+  "options": {
+    "A": "True",
+    "B": "False",
+    "C": "Only for Company A",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The overall trend line shows a negative relationship across both companies combined, but this aggregated view cannot tell us about the relationship within each individual company. Company A employees might have different satisfaction patterns than Company B employees due to different corporate cultures, career paths, or compensation structures. The combined trend line inappropriately aggregates data from distinct groups and may not represent the true within-company relationships."
+}

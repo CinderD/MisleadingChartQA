@@ -1,0 +1,17 @@
+{
+  "question": "Which labeled region has the highest number of confirmed cases per 1,000 people?",
+  "options": {
+    "A": "A",
+    "B": "B",
+    "C": "C",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "missing_normalization",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The map encodes total confirmed cases only. Without normalizing by population, we cannot determine per‑capita (per 1,000 people) rates, so any comparison of risk by label is invalid."
+}

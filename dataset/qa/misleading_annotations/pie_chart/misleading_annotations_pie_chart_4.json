@@ -1,0 +1,17 @@
+{
+  "question": "Which statement about rural residents is most accurate?",
+  "options": {
+    "A": "Most residents in region W live in rural areas.",
+    "B": "Fewer than one-third of residents in region W live in rural areas.",
+    "C": "About one‑third of residents live in rural areas.",
+    "D": "Urban and rural populations are about equal."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misleading_annotations",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The grey slice (Rural) is 35%, which is about one-third. The misleading angle is to assume rural is the majority, but the purple Urban slice (65%) is actually larger."
+}

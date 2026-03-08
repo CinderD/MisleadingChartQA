@@ -1,0 +1,17 @@
+{
+  "question": "Which region had the highest average temperature over 15 years according to the chart?",
+  "options": {
+    "A": "Australia (D)",
+    "B": "India (E)",
+    "C": "Africa (C)",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "missing_data",
+  "chartType": "choropleth_map",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "Africa (C) appears grey on the map, which represents missing temperature data rather than zero temperature. Since Africa's temperature data is missing, we cannot determine which region had the highest temperature from the chart alone. Users might incorrectly assume Australia (D) has the highest temperature among the visible colored regions, but the actual highest might be in Africa (C) where data is missing."
+}

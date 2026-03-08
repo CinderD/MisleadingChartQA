@@ -1,0 +1,17 @@
+{
+  "question": "Company A sells a board game. According to the chart, which of the following statements is true?",
+  "options": {
+    "A": "2004 has more copies sold than 2003.",
+    "B": "Copies sold per year fell sharply in 2022.",
+    "C": "Copies sold per year has been strictly increasing since 2003.",
+    "D": "None of the above."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart displays annual board game sales data with 2022 showing only partial-year results (as of Jun 01, 2022, representing approximately 5 months or 42% of the year). The inappropriate aggregation misleadingly compares incomplete 2022 data (1,000 copies sold in 5 months) with complete annual data from previous years. While 2022 appears to show a sharp decline in sales, this is simply because only about five months are included. Board game sales often have seasonal patterns, and mid-year performance cannot indicate annual sales trends."
+}

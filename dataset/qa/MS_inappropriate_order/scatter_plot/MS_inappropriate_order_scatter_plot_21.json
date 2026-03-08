@@ -1,0 +1,17 @@
+{
+  "question": "Based on the scatter plot, how can we accurately interpret the trend in property types in relation to size and price?",
+  "options": {
+    "A": "1 Bedroom properties always have higher prices than Studio apartments at similar size ranges.",
+    "B": "2 Bedroom properties show the widest range of price levels across different sizes.",
+    "C": "3 Bedroom properties have the most consistent price progression with size.",
+    "D": "None of the above."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses inappropriate color encoding where 2 Bedroom units (darkest purple #5a2d81) appear to represent the largest property type, while 1 Bedroom units (lightest purple #e6d7f7) appear smallest. This misleading color scheme leads viewers to assume 1 Bedroom properties (lightest purple dots) should always have higher prices than Studio apartments (medium purple dots) at similar size ranges. However, the data shows significant overlap where both property types have overlapping price ranges. Additionally, Studio apartments actually show the widest price range ($180K-$235K), not 2 Bedroom properties ($190K-$210K), and 3 Bedroom properties show significant price variation ($240K-$295K), not consistency. The color encoding creates a false visual hierarchy that doesn't match the actual pricing distribution patterns."
+}

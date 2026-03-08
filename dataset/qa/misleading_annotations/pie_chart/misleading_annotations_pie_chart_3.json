@@ -1,0 +1,17 @@
+{
+  "question": "Which statement about private transportation use is most accurate?",
+  "options": {
+    "A": "More than half of students use private transportation.",
+    "B": "More than one-third of students use private transportation.",
+    "C": "About 30% of students use private transportation.",
+    "D": "Use of public and private transportation is about the same."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "misleading_annotations",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The grey slice (Private) is 30%, which is less than one-third. The misleading angle suggests private is the majority, but the green Public slice (70%) is actually the majority."
+}

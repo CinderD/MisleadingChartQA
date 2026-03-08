@@ -1,0 +1,17 @@
+{
+  "question": "How does Q4 sales compare to Q1 sales?",
+  "options": {
+    "A": "Q4 sales appears to be about 2.5 times higher than Q1.",
+    "B": "Q4 shows approximately 3 times the sales volume of Q1.",
+    "C": "Q4 sales is higher than Q1.",
+    "D": "Cannot determine the exact relationship between Q4 and Q1 sales."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart displays quarterly sales performance with an area chart, but provides no Y-axis scales or numerical labels. While the visual data clearly shows Q4 has higher sales than Q1, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or even reversed scale, it is impossible to determine the exact relationship between the two quarters. Visual estimation of relative proportions without proper scales is unreliable for accurate comparison."
+}

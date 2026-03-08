@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart shown, what can be concluded about salary when someone has 35 years of work experience?",
+  "options": {
+    "A": "Salary will definitely be above $150,000",
+    "B": "Salary will definitely be below $140,000",
+    "C": "The trend line suggests salary will be $145,000",
+    "D": "Cannot be determined due to data variability"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "concealed_uncertainty",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While the trend line shows a positive correlation between work experience and salary, the data only goes up to 25 years. Extrapolating to 35 years involves significant uncertainty given the fact that 35 years is way beyond the observed range."
+}

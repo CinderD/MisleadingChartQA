@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows daily social media usage time by platform (hours). Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Instagram users spend more than 3 hours per day on average.",
+    "B": "TikTok is used slightly longer than YouTube.",
+    "C": "Twitter is the second-most used platform.",
+    "D": "Facebook usage equals YouTube usage."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "Labels show TikTok at 1.9h and YouTube at 1.5h, so TikTok is slightly higher (B). The bars use heights not proportional to hours, which may make A seem plausible even though Instagram is 2.8h (<3h)."
+}

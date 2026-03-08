@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, which statement about rainfall (mm) over the past 14 days is accurate?",
+  "options": {
+    "A": "The rainfall amount was highest at the end of the period.",
+    "B": "Rainfall was greater at the beginning than at the end of the period.",
+    "C": "Each day's rainfall was consistently below 50mm.",
+    "D": "It rained more than 80mm on only one of these days."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis has been manipulated to reorder the days. Initially, it seems the rainfall peaked at the end, but it was actually higher at the start."
+}

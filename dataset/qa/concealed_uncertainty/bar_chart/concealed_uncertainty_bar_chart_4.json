@@ -1,0 +1,17 @@
+{
+  "question": "The investment analysis period ends in Q4. Which of the following is true?",
+  "options": {
+    "A": "TechCorp will be recommended for investment.",
+    "B": "FinanceInc will be recommended for investment.",
+    "C": "HealthCare will be recommended for investment.",
+    "D": "Cannot be determined."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "concealed_uncertainty",
+  "chartType": "bar_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While TechCorp currently has the highest return (12.5%), the chart shows results as of Q2, but the analysis period ends in Q4. The remaining quarters could significantly change the results, making it premature to recommend any stock for investment. The concealed uncertainty lies in the incomplete analysis period that is not reflected in the chart."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which competitor holds the largest market share in Q4?",
+  "options": {
+    "A": "The green area (Company A) represents the market leader with the largest share.",
+    "B": "The red area (Company B) shows the dominant competitor position.",
+    "C": "The purple area (Company C) indicates the highest market share.",
+    "D": "Cannot determine which competitor holds the largest market share without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows quarterly market share distribution with different colored areas, but provides no legend to identify which competitor each color represents. While the visual data clearly shows which colored area is largest in Q4, without knowing which company corresponds to which color, it is impossible to determine which specific competitor holds the largest market share. Color assignments without proper labeling are unreliable for accurate market analysis."
+}

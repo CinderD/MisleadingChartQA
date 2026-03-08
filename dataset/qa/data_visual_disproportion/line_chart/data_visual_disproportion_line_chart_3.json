@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays employee productivity from January to June. Based on this data, which of the following conclusions is correct?",
+  "options": {
+    "A": "The productivity in June shows exceptional improvement compared to May.",
+    "B": "The productivity in June is higher than in March.",
+    "C": "The productivity in May is 71.2%.",
+    "D": "The productivity growth from January to June is over 5 percentage points."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "line_chart",
+  "task": "Data Comparison",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The data shows June productivity (71.2%) is higher than March (67.8%), so B is correct. The visual representation shows a dramatic spike in June due to the height value being 85.0 instead of 71.2, making A a tempting but misleading choice. C is false (71.2% > 69.5%). D is false (growth is only 2.7 percentage points, not over 5)."
+}

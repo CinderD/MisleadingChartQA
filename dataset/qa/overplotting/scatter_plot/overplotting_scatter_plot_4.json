@@ -1,0 +1,17 @@
+{
+  "question": "Does Fall have days with humidity above 27%?",
+  "options": {
+    "A": "Yes",
+    "B": "No",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Only Spring and Summer have days with humidity above 30%"
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "overplotting",
+  "chartType": "scatter_plot",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Due to overplotting, the data points overlap heavily around 27% humidity position, making it difficult to accurately discern if any members of Fall has the humidity higher than 27%."
+}

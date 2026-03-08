@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays product quality scores from January to June. Based on this data, which of the following conclusions is correct?",
+  "options": {
+    "A": "The quality in June shows improvement compared to May.",
+    "B": "The quality in June is 93.0%.",
+    "C": "The quality in June is higher than in March.",
+    "D": "The quality growth from January to June is over 1 percentage point."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "line_chart",
+  "task": "Data Comparison",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The data shows June quality is 93.0%, so B is correct. The visual representation shows a dramatic spike in June due to the height value being 98.0 instead of 93.0, making A a tempting but misleading choice. C is false (93.0% < 93.1%). D is false (growth is only 0.5 percentage points, not over 1)."
+}

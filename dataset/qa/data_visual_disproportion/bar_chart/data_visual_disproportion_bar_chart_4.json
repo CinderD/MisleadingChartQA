@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows global smartphone market share by brand. Which statement is supported by the chart data?",
+  "options": {
+    "A": "Apple and Samsung have nearly identical market shares.",
+    "B": "Xiaomi has a larger share than Samsung.",
+    "C": "Huawei has the smallest market share among the five brands.",
+    "D": "Others accounts for more than 15% of the market."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "data_visual_disproportion",
+  "chartType": "bar_chart",
+  "task": "Identify Values",
+  "difficulty": "Easy",
+  "ifLabelled": "False",
+  "explanation": "From the labels, Huawei has 6.8% while Others is 7.0%, making Huawei the smallest. The bars' heights are not proportional to the percentages, which can mislead viewers into thinking brands like Apple and Samsung are much closer (A) or that Others exceeds 15% (D)."
+}

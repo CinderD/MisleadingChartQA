@@ -1,0 +1,17 @@
+{
+  "question": "Based on this annual employee training hours chart (as of April 2024), what trend can we observe in the company's training investment?",
+  "options": {
+    "A": "Training investment has significantly decreased across all categories in 2024.",
+    "B": "Technical training shows the most consistent growth pattern over the years.",
+    "C": "Leadership training maintains steady investment levels throughout all years.",
+    "D": "Cannot assess 2024 training investment trends from this incomplete annual data."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "This chart displays annual employee training hours with 2024 showing only partial-year data (as of April 2024, representing approximately 4 months or 33% of the year). The inappropriate aggregation compares incomplete 2024 data with complete annual data from previous years. While 2024 appears to show significantly reduced training investment across all categories, this is misleading because only the first four months are included. Training programs often have seasonal patterns, with many organizations scheduling intensive training later in the year."
+}

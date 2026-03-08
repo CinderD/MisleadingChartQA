@@ -1,0 +1,17 @@
+{
+  "question": "Which quarter demonstrates the strongest store performance based on the stacked bar chart?",
+  "options": {
+    "A": "Q3 shows the strongest performance with the highest total value.",
+    "B": "Q2 shows the strongest performance with balanced metrics across all categories.",
+    "C": "Q4’s Feedback/Energy segment is largest within its bar (a within-quarter composition statement).",
+    "D": "No overall performance ranking can be made from this chart precisely."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Unrelated categories are stacked into a single  bar, so the largest total does not mean ‘best performance’. Only within-bar composition statements are defensible; overall rankings from the stack are misleading."
+}

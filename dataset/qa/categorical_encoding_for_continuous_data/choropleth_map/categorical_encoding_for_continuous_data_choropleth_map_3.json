@@ -1,0 +1,17 @@
+{
+  "question": "Looking at this choropleth map, which statement below is the most accurate?",
+  "options": {
+    "A": "State A and State B have very similar values.",
+    "B": "The value gap between State A and State B might exceed that between State J and State B.",
+    "C": "All three States (A,B,J) have very diverse values.",
+    "D": "The value differences are impossible to determine from this visualization."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continous_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "State A (30) and State B (45) have a 15-point difference, while State B (45) and State J (55) have a 10-point difference. However, the categorical color encoding groups A and B into the same color bin (25-50 range), making their difference appear similar, while B and J appear more different due to different color bins."
+}

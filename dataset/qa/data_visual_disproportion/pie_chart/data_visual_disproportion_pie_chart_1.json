@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows market share by company. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "Company B has the largest market share among all companies.",
+    "B": "Company A has the largest market share exceed 40%.",
+    "C": "Company C and Company D have nearly equal market shares.",
+    "D": "Company E has about half of Company D's market share."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "pie_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Labels show Company A at 45.2% (largest), so B is correct. The pie slices use visual sizes that don't match the percentages—Company B's slice appears largest but its actual share is only 28.7%, making A a tempting but misleading choice. Company C (15.3%) vs D (8.1%) are not equal, so C is false. Company E (2.7%) is about 1/3 of D (8.1%), not half, so D is false."
+}

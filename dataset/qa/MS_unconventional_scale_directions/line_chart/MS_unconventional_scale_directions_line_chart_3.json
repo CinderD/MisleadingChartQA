@@ -1,0 +1,17 @@
+{
+  "question": "Which of the following is true about the website traffic trends in City Z during 2023?",
+  "options": {
+    "A": "The website traffic was highest in January and lowest in July.",
+    "B": "The website traffic steadily increased over the first half of the year.",
+    "C": "The website traffic was highest in July and lowest in December.",
+    "D": "The website traffic remained constant throughout the year."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "cherry_picking",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "True",
+  "explanation": "The inverted Y-axis makes it appear that website traffic is increasing when it is actually decreasing. January has the highest traffic (25,000 visitors) and July has the lowest (2,000 visitors), but the inverted scale makes this relationship misleading."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which quarter demonstrates the strongest student performance based on the stacked area chart?",
+  "options": {
+    "A": "Q4 shows the strongest performance with the highest total area.",
+    "B": "Q1 shows the strongest performance with balanced metrics.",
+    "C": "The chart cannot determine overall performance because it combines unrelated student metrics.",
+    "D": "Q3 shows the strongest performance with the highest library book count."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart stacks unrelated student metrics (test score, absence days, library books) into a cumulative area. These metrics cannot be meaningfully combined to assess overall performance. Only individual metric analysis is valid."
+}

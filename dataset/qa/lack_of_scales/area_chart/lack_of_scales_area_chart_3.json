@@ -1,0 +1,17 @@
+{
+  "question": "How does Company B's market share compare to Company A's?",
+  "options": {
+    "A": "Company B appears to have about 1.4 times the market share of Company A based on the visual height.",
+    "B": "Company B shows approximately 1.2 times the market share of Company A from the chart area.",
+    "C": "Company B looks roughly 1.6 times larger than Company A judging from the visual proportion.",
+    "D": "Cannot determine the exact ratio between Company B and Company A without Y-axis scales to verify the relative proportions."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "area_chart",
+  "task": "Data Interpretation",
+      "explanation": "The chart displays market share distribution with an area chart, but provides no Y-axis scales or numerical labels. While the visual data clearly shows Company B has a larger area than Company A, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the exact ratio between their market shares. Visual estimation of relative proportions without proper scales is unreliable for accurate market analysis.",
+  "difficulty": "Medium",
+  "ifLabelled": "False"
+}

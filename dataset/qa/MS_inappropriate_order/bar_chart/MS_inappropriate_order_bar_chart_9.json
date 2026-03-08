@@ -1,0 +1,17 @@
+{
+  "question": "Which statement accurately describes the trend in rainfall over the past 14 days, based on the chart?",
+  "options": {
+    "A": "The rainfall was highest at the beginning and decreased towards the end.",
+    "B": "Rainfall was highest in the middle of the 14 days.",
+    "C": "Rainfall was highest at the start and decreased towards the end of the 14 days. ",
+    "D": "Rainfall peaked at the end of the 14 days."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "bar_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis has been manipulated to show a consistent decline due to the incorrect time sequence, but rainfall was actually highest at the middle."
+}

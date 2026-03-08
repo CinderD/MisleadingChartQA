@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays revenue growth from Q1 2022 to Q2 2023. Based on this data, which of the following conclusions is correct?",
+  "options": {
+    "A": "The revenue in Q2 2023 shows dramatic growth compared to Q1 2023.",
+    "B": "The revenue in Q2 2023 is higher than in Q3 2022.",
+    "C": "The revenue in Q1 2022 is 13.2 million dollars.",
+    "D": "The revenue growth from Q1 2022 to Q2 2023 is over 4 million dollars."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "line_chart",
+  "task": "Data Comparison",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The data shows Q2 2023 revenue (15.8M) is higher than Q3 2022 (13.8M), so B is correct. The visual representation shows a dramatic spike in Q2 2023 due to the height value being 25.0 instead of 15.8, making A a tempting but misleading choice. C is false (12.5M). D is false (growth is only 3.3M, not over 4M)."
+}

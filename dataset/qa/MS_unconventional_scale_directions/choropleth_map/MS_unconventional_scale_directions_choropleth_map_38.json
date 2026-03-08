@@ -1,0 +1,17 @@
+{
+  "question": "Based on the choropleth map, which state appears to have a higher prevaleSCe of species Z, SC or IL?",
+  "options": {
+    "A": "SC",
+    "B": "IL",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Both appear the same"
+  },
+  "correctAnswer": "B",
+  "misleader": "MS_uSConventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "explanation": "The color legend for the prevaleSCe scale is inverted, making lower values darker and higher values lighter. Although SC appears lighter, IL actually has a higher prevaleSCe of species Z.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "A"
+}

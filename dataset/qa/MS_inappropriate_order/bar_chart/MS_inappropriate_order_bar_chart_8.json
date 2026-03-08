@@ -1,0 +1,17 @@
+{
+  "question": "Looking at the chart, which statement accurately describes the rainfall trend over the 14-day period?",
+  "options": {
+    "A": "Rainfall was higher towards the end of the period.",
+    "B": "Rainfall progressively decreased over the period.",
+    "C": "The highest rainfall occurred in the middle range of the period.",
+    "D": "Rainfall showed a consistent increase throughout."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "bar_chart",
+  "task": "Identify Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The x-axis elements are in a misleading random order, and the data incorrectly suggests the highest values were in the mid-range due to this order."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Is there a negative relationship between average daily study hours and exam score within each school?",
+  "options": {
+    "A": "True",
+    "B": "False",
+    "C": "Only for School A",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "True",
+  "explanation": "The chart shows aggregated data from both schools with an overall negative trend line, which might mislead viewers to think this relationship exists within each school. However, the individual school-level relationships cannot be determined from this aggregated visualization. School A might have a negative correlation, School B might have a positive correlation, or both might have different patterns than the overall trend suggests. This is a classic example of inappropriate aggregation where the combined trend masks the individual group patterns."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "The chart shows budget allocation by department. Which statement is correct according to the chart data?",
+  "options": {
+    "A": "R&D has the largest budget among all departments.",
+    "B": "Marketing has the largest budget at 32.5%.",
+    "C": "Sales and Marketing combined receive less than 50% of the budget.",
+    "D": "Operations receives about one-third of Sales' budget."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "pie_chart",
+  "task": "Identify Values",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "Labels show Marketing at 32.5% (largest), so B is correct. The pie slices use visual sizes that don't match the percentages—R&D's slice appears largest but its actual allocation is only 22.1%, making A a tempting but misleading choice."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "Which quarter demonstrates the strongest website performance based on the stacked area chart?",
+  "options": {
+    "A": "Q4 shows the strongest performance with the highest total area.",
+    "B": "Q2 shows the strongest performance with balanced metrics.",
+    "C": "The chart cannot determine overall performance because it combines unrelated business metrics.",
+    "D": "Q4 shows the strongest performance with the highest email subscriptions."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart stacks unrelated business metrics (website traffic, server load, email subscriptions) into a cumulative area. These metrics cannot be meaningfully combined to assess overall performance. Only individual metric analysis is valid."
+}

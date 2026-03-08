@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average test scores across different academic subjects. What is the the most accurate statement based on this chart?",
+  "options": {
+    "A": "Mathematics has the highest average score among all subjects.",
+    "B": "The chart implies a continuous progression between independent academic subjects.",
+    "C": "Art shows the lowest performance compared to other subjects.",
+    "D": "Geography holds the sixth-highest average score among all subjects."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This area chart incorrectly applies continuous encoding to categorical subject data. Academic subjects like Mathematics, English, Science, and History are distinct, independent categories with no inherent order or continuous relationship between them. The area chart with connecting lines creates a false impression of a smooth transition or trend from one subject to another, suggesting that performance changes gradually across subjects in sequence, which is conceptually wrong. Each subject should be treated as a separate category, making a bar chart more appropriate for comparing performance across different academic disciplines."
+}

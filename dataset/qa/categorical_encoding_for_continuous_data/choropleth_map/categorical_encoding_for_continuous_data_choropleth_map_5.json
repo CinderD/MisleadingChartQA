@@ -1,0 +1,17 @@
+{
+  "question": "Looking at this choropleth map, which statement below is the most accurate?",
+  "options": {
+    "A": "States F and G have quite different values.",
+    "B": "The value difference between State A and State D is large.",
+    "C": "The value gap between State H and State I might exceed that between State F and State G.",
+    "D": "The value differences are impossible to determine from this visualization."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "categorical_encoding_for_continous_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "States F(40) and G(45) have a 5-point difference, while States H(55) and I(65) have a 10-point difference. However, the categorical color encoding groups F and G into different color bins (F in 30-45, G in 45+), making their small difference appear large, while H and I appear similar due to being in the same color bin (45+)."
+}

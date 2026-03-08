@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows average housing prices across different cities. What is the most accurate statement according to the chart?",
+  "options": {
+    "A": "New Yokr shows the highest housing prices among all cities.",
+    "B": "The chart suggests a continuous relationship between unrelated city categories due to an inappropriate chart type.",
+    "C": "The data accurately represents geographic price variations.",
+    "D": "The average housing prices show a generally decreasing pattern among these cities."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart inappropriately uses continuous encoding (connected area) for categorical data (different cities). Cities are distinct, unrelated categories with no inherent order or continuous relationship. The area chart creates a false impression of a smooth trend or transition between cities, suggesting that housing prices change gradually as you move from one city to another, which is misleading. A bar chart would be more appropriate for comparing discrete city categories."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "What is the price movement pattern throughout the trading day?",
+  "options": {
+    "A": "The pattern is volatile with significant price fluctuations and multiple peaks and valleys.",
+    "B": "The stock shows a steady upward trend with consistent price increases throughout the day.",
+    "C": "The price movement is relatively flat with minimal changes except for a late-day surge.",
+    "D": "Cannot determine the exact price movement pattern without Y-axis scales to verify the magnitude of changes."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "lack_of_scales",
+  "chartType": "line_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays stock price movement with a line chart, but provides no Y-axis scales or numerical labels. While the visual data shows an upward trend in the line, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the true magnitude and pattern of price changes. Visual estimation of price movement patterns without proper scales is unreliable for accurate trading analysis."
+}

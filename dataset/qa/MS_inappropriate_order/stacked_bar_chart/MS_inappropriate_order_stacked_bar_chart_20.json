@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, what is the approximate sales for Brand A in 2023?",
+  "options": {
+    "A": "20%",
+    "B": "30%",
+    "C": "40%",
+    "D": "50%"
+  },
+  "correctAnswer": "B",
+  "misleader": "misleader",
+  "chartType": "chart_type",
+  "task": "Aggregate Values",
+  "explanation": "According to the visualization, we can get the correct share.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "C"
+}

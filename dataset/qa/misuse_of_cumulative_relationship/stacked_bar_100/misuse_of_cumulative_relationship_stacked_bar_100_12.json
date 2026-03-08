@@ -1,0 +1,17 @@
+{
+  "question": "Which statement is best supported by the 100% stacked chart about statistics across quarters?",
+  "options": {
+    "A": "The absolute amount of Music Downloads increases from Q1 to Q3 and then decreases in Q4.",
+    "B": "Music Downloads increase steadily in absolute terms across all quarters.",
+    "C": "In Q2, Water Usage is more than twice the value of Product Reviews in absolute terms.",
+    "D": "Adding Music Downloads and Product Reviews yields a reliable engagement index across quarters."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart shows share proportions: Music Downloads’ share rises from Q1 to Q3, then declines in Q4. Since a 100% stacked chart does not provide absolute totals, changes in share cannot be interpreted as increases or decreases in the actual number of downloads, nor can unrelated categories be added together."
+}

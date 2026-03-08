@@ -1,0 +1,17 @@
+{
+  "question": "This line chart shows weekly participation hours for different sports activities. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "Swimming receives the highest weekly participation hours among all sports activities.",
+    "B": "The chart demonstrates a clear downward trend in participation from soccer to tennis.",
+    "C": "Tennis and running combined have fewer participation hours than swimming alone.",
+    "D": "Basketball shows higher participation than cycling but lower than soccer."
+  },
+  "correctAnswer": "A",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart incorrectly applies continuous encoding to categorical sport data. Sports like soccer, basketball, tennis, and swimming are distinct, independent activities with no inherent order or continuous relationship between them. The connecting line creates a misleading impression of a smooth progression or trend from one sport to another, suggesting that participation hours change gradually across sports in sequence, which is conceptually wrong. Each sport should be treated as a separate category, making a bar chart more appropriate for comparing participation levels across different activities."
+}

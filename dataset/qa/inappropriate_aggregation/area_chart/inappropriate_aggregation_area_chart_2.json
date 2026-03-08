@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is March 15, 2023, what can we conclude about website traffic trends?",
+  "options": {
+    "A": "Website traffic growth has significantly slowed down in 2023 compared to previous years.",
+    "B": "The website experienced a major increase in visitor engagement during 2023.",
+    "C": "Traffic patterns show consistent growth year by year.",
+    "D": "Cannot determine 2023 annual trends from this incomplete data."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart displays annual website traffic data with 2023 showing only partial-year results (as of March 15, 2023, representing approximately 2.5 months or 21% of the year). The inappropriate aggregation misleadingly compares incomplete 2023 data (720K monthly visitors for 2.5 months) with complete annual data from previous years. While 2023 appears to show a dramatic decline in traffic, this is simply because only the first quarter is included. Website traffic often has seasonal variations, and early-year performance may not be representative of full-year trends."
+}

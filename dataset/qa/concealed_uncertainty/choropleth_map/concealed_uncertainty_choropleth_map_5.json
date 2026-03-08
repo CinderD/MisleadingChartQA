@@ -1,0 +1,17 @@
+{
+  "question": "Assuming today is Feb 15, and half of the votes from each state for a favorite beverage brand have been counted. The color of each state corresponds to the brand that has received the most votes in that state so far. The brand with the most number of colored states will be the most popular brand, and the results will be finalized on Mar 1. Which of the following is true?",
+  "options": {
+    "A": "A will be the most popular brand of beverage.",
+    "B": "B will be the least popular brand of beverage.",
+    "C": "C will be the most popular brand of beverage.",
+    "D": "Cannot be determined."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "concealed_uncertainty",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While Brand B currently dominates the map with the most colored states, the chart shows results as of Feb 15, but the voting ends on Mar 1. The remaining voting period could dramatically change the outcome, making it premature to predict which brand will be most popular. The concealed uncertainty lies in the incomplete voting process that is not reflected in the chart."
+}

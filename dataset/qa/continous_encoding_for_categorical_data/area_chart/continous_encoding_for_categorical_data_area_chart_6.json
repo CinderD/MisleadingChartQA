@@ -1,0 +1,17 @@
+{
+  "question": "This area chart displays market share percentages for different technology brands. What makes this visualization misleading?",
+  "options": {
+    "A": "Apple has the largest market share among all brands shown.",
+    "B": "The chart suggests a continuous progression between unrelated brand categories.",
+    "C": "Netflix shows the lowest market share in the technology sector.",
+    "D": "The data fails to accurately represent changes in trends across different brands."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "D",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This area chart inappropriately connects discrete brand categories with continuous area encoding. Brands are independent, unrelated entities with no inherent sequential order or continuous relationship. The area visualization falsely implies a smooth transition or trend between brands, suggesting that market share changes gradually from one brand to the next, which is conceptually incorrect. Each brand should be treated as a separate category, making a bar chart more appropriate for this comparison."
+}

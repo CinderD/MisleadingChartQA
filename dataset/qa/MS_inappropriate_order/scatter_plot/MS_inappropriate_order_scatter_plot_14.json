@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart below for fitness enthusiasts, which of the following statements is true?",
+  "options": {
+    "A": "Intermediate level show higher fitness progress than Advanced participants under some workout frequencies.",
+    "B": "Experience level has no impact on fitness progress regardless of workout frequency.",
+    "C": "Advanced participants always achieve better progress than all other experience levels.",
+    "D": "Some Beginners achieve higher fitness progress than Advanced participants despite having less experience."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses inappropriate color encoding where Beginners and Intermediates appear to represent a higher skill level than Advanced. This misleading color scheme leads viewers to assume Beginners (dark red dots) should consistently show lower progress than Advanced participants (lighter red dots). "
+}

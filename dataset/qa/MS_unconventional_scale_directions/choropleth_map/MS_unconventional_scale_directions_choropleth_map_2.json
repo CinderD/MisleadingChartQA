@@ -1,0 +1,17 @@
+{
+  "question": "Which state is shown to have a higher prevalence of species Z based on the chart, NC or IL?",
+  "options": {
+    "A": "NC",
+    "B": "IL",
+    "C": "Both states have the same prevalence",
+    "D": "Cannot be inferred / inadequate information"
+  },
+  "correctAnswer": "A",
+  "misleader": "MS_unconventional_scale_directions",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "explanation": "The color legend for the prevalence scale is inverted, making lower values darker and higher values lighter. Although IL appears darker, NC has a lower assigned value indicating a higher prevalence of species Z when the scale inversion is consILered.",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "wrongDueToMisleaderAnswer": "B"
+}

@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, what can we conclude about customer satisfaction trends?",
+  "options": {
+    "A": "Customer satisfaction has significantly declined in 2024, indicating potential service quality issues.",
+    "B": "The satisfaction score shows consistent improvement during recent years.",
+    "C": "Customer feedback suggests the company needs immediate service improvements in 2023.",
+    "D": "Cannot determine 2024 annual satisfaction trends from this chart data."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart displays annual customer satisfaction data with 2024 showing only partial-year results (as of August 15, 2024, representing approximately 7.5 months or 63% of the year). The inappropriate aggregation misleadingly compares incomplete 2024 data (5.4 satisfaction score for 7.5 months) with complete annual data from previous years. While 2024 appears to show a significant decline in customer satisfaction, this is simply because only about two-thirds of the year is included. Customer satisfaction can vary throughout the year due to seasonal factors, product launches, or service changes."
+}

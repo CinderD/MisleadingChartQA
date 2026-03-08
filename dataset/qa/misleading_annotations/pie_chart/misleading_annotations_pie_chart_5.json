@@ -1,0 +1,17 @@
+{
+  "question": "Which statement about the share of female employees is most accurate?",
+  "options": {
+    "A": "More than half of employees are female.",
+    "B": "Fewer than half of employees are female.",
+    "C": "About 55% of employees are female.",
+    "D": "Male and female shares are roughly equal."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misleading_annotations",
+  "chartType": "pie_chart",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The grey slice (Female) is 45%, which is less than half. The misleading angle suggests females are the majority, but the blue Male slice (55%) is actually larger."
+}

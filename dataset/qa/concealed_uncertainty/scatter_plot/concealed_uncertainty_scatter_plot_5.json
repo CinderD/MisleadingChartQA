@@ -1,0 +1,17 @@
+{
+  "question": "Based on the chart, what can be concluded about weight loss when someone exercises for 40 hours per week?",
+  "options": {
+    "A": "Weight loss will definitely be more than 8 kg",
+    "B": "Weight loss will definitely not be around 7 kg",
+    "C": "The trend line indicate weight loss will be 7.5 kg",
+    "D": "Cannot be determined due to data variability"
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "C",
+  "misleader": "concealed_uncertainty",
+  "chartType": "scatter_plot",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "While the trend line shows a positive correlation between exercise hours and weight loss, the data only goes up to 25 hours. Extrapolating to 40 hours involves significant uncertainty as the fact that 40 hours is beyond the observed range."
+}

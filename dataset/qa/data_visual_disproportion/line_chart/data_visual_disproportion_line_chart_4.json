@@ -1,0 +1,17 @@
+{
+  "question": "The chart displays website traffic from Week 1 to Week 6. Based on this data, which of the following conclusions is correct?",
+  "options": {
+    "A": "The traffic in Week 6 shows dramatic recovery compared to Week 5.",
+    "B": "The traffic in Week 6 is the lowest among all weeks.",
+    "C": "The traffic in Week 4 is higher than in Week 3.",
+    "D": "The traffic decline from Week 1 to Week 6 is less than 5 thousand visitors."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "data_visual_disproportion",
+  "chartType": "line_chart",
+  "task": "Data Comparison",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The data shows Week 6 traffic is 78.2K, so B is correct. The visual representation shows a dramatic spike in Week 6 due to the height value being 95.0 instead of 78.2, making A a tempting but misleading choice. C is false (80.8K < 82.1K). D is false (decline is 7K, not less than 5K)."
+}

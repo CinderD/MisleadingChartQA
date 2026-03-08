@@ -1,0 +1,17 @@
+{
+  "question": "Looking at this choropleth map, which statement below is the most accurate?",
+  "options": {
+    "A": "States B, H, D have similar values. ",
+    "B": "The value difference between State B and State C is large.",
+    "C": "The value gap between State B and State J might less that between State B and State E. ",
+    "D": "The value differences are impossible to determine from this visualization."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "categorical_encoding_for_continous_data",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "Category E (45) and Category B (55) have a 10-point difference, while Category B (55) and Category J (60) have a 5-point difference. However, the categorical color encoding groups B and E into the same color bin (40+ range), making their difference appear similar, while J and B appear more different due to different color bins."
+}

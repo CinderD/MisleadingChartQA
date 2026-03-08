@@ -1,0 +1,17 @@
+{
+  "question": "For the online platform, which interpretation best reflects what can (and cannot) be inferred from the 100% stacked bar chart?",
+  "options": {
+    "A": "Q1 has the highest number of online searches compared to the other quarters.",
+    "B": "The sum of clicks and searches indicates user satisfaction trends across the year.",
+    "C": "Complaints received are greater than online searches for every quarter.",
+    "D": "Q4 has the highest number of advertisements clicked compared to the other quarters."
+  },
+  "correctAnswer": "C",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "misuse_of_cumulative_relationship",
+  "chartType": "stacked_bar_100",
+  "task": "Make Comparisons",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "100% stacking normalizes unrelated categories (clicks, complaints, searches) to 100% within each quarter. Valid inferences include within-quarter ranking (e.g., complaints > searches in every quarter). Invalid inferences include cross-quarter total comparisons or combining unrelated categories."
+}

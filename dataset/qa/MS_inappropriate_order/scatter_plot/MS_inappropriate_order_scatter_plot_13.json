@@ -1,0 +1,17 @@
+{
+  "question": "In the scatter plot depicting the relationship between study hours, test scores, and grade levels, which conclusion is most accurate?",
+  "options": {
+    "A": "Sophomores perform better than Freshmen at all similar study hours.",
+    "B": "Freshmen students show the widest range of test scores across different study hours.",
+    "C": "Senior students have the most consistent score improvement with increased study time.",
+    "D": "None of the above."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "MS_inappropriate_order",
+  "chartType": "scatter_plot",
+  "task": "Interpret Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "The chart uses inappropriate color encoding where Freshmen (darkest green #0d5016) appear to represent the highest academic level compared to Sophomores (lightest green #e8f5e8). This misleading color scheme leads viewers to assume Sophomores (lightest green dots) should always perform better than Freshmen (darkest green dots) at similar study hour ranges. However, the data shows significant overlap where Freshmen studying 8-12 hours can score 69-76%, overlapping with Sophomores studying 4-10 hours scoring 71-79%. The color encoding creates a false visual hierarchy that doesn't match the actual academic performance distribution patterns."
+}

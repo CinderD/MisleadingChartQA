@@ -1,0 +1,17 @@
+{
+  "question": "Which energy source has the highest consumption in the most recent period?",
+  "options": {
+    "A": "The red area (fossil fuels) shows the highest consumption.",
+    "B": "The blue area (renewable energy) indicates the highest usage.",
+    "C": "The yellow area (nuclear energy) represents the dominant consumption.",
+    "D": "Cannot determine which energy source has the highest consumption without a legend."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart shows energy consumption over time with different colored areas, but provides no legend to explain what each color represents. While the visual pattern shows which colored area is largest in the most recent period, without knowing what energy source each color corresponds to, it is impossible to identify the specific energy source with the highest consumption. Color assumptions based on common conventions are not reliable without proper labeling."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "This area chart shows employee satisfaction scores across different company departments. What is the the most accurate statement based on this chart?",
+  "options": {
+    "A": "Sales department has the highest satisfaction score among all departments.",
+    "B": "The satisfaction scores display a fluctuating trend across different departments.",
+    "C": "HR department shows the lowest satisfaction score in the company.",
+    "D": "None of the above."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "This area chart incorrectly applies continuous encoding to categorical data (departments). Company departments are distinct organizational units with no inherent order or continuous relationship between them. The area chart with connecting lines suggests a smooth progression or trend from one department to another, implying that satisfaction scores change across departments in sequence, which is conceptually wrong. Departments should be treated as independent categories, making a bar chart more appropriate for comparing their satisfaction scores."
+}

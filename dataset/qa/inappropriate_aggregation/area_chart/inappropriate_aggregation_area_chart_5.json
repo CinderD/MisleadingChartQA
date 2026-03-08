@@ -1,0 +1,17 @@
+{
+  "question": "According to the chart, what trend can be observed in the company's R&D investment strategy?",
+  "options": {
+    "A": "R&D investment has plateaued in 2024, suggesting a shift in company priorities.",
+    "B": "From 2019 to 2023, the company’s annual R&D investment generally increased, peaking in 2023, before experiencing a decline in 2024.",
+    "C": "Investment patterns indicate the company is increasing its focus on innovation in 2024.",
+    "D": "Cannot determine 2024 annual R&D investment trends from this chart data."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "B",
+  "misleader": "inappropriate_aggregation",
+  "chartType": "area_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This area chart displays annual R&D investment data with 2024 showing only partial-year results (as of September 10, 2024, representing approximately 8.5 months or 71% of the year). The inappropriate aggregation misleadingly compares incomplete 2024 data ($255M for 8.5 months) with complete annual data from previous years. While 2024 appears to show reduced investment compared to 2023, this is simply because only about three-quarters of the year is included. R&D investments are often allocated unevenly throughout the year, with major funding decisions and project approvals frequently occurring in the final quarter."
+}

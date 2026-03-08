@@ -1,0 +1,17 @@
+{
+  "question": "This line chart displays color popularity scores in fashion design survey. What is the most accurate statement based on this chart?",
+  "options": {
+    "A": "The chart reveals a natural color spectrum progression from warm to cool tones.",
+    "B": "Black achieves the highest popularity score among all colors in the fashion survey.",
+    "C": "Purple and orange popularity scores differ by exactly 13 percentage points.",
+    "D": "The popularity trend shows consistent growth across the color sequence."
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "continous_encoding_for_categorical_data",
+  "chartType": "line_chart",
+  "task": "Find Correlations/Trends",
+  "difficulty": "Hard",
+  "ifLabelled": "False",
+  "explanation": "This line chart inappropriately applies continuous encoding to categorical color data. Colors like red, blue, green, yellow, and purple are distinct, independent categories with no inherent order or continuous relationship between them. The connecting line creates a false impression of a smooth progression or spectrum relationship between colors, suggesting that popularity changes gradually from one color to another in sequence, which is conceptually incorrect. While colors do have natural spectrum relationships, the arbitrary ordering in this chart (not following the actual color spectrum) makes the connections meaningless. Each color should be treated as a separate category, making a bar chart more appropriate for comparing popularity across different colors."
+}

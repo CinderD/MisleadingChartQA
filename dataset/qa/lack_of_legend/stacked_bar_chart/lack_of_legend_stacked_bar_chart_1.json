@@ -1,0 +1,17 @@
+{
+  "question": "Which product category contributes the most to Q4 revenue?",
+  "options": {
+    "A": "The blue segment (electronics) represents the highest revenue contribution.",
+    "B": "The orange segment (clothing) shows the largest revenue stream.",
+    "C": "The green segment (home goods) indicates the dominant revenue category.",
+    "D": "Cannot determine which product category contributes the most without a legend to explain what each color represents."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_legend",
+  "chartType": "stacked_bar_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The chart displays quarterly revenue data with different colored segments, but provides no legend to identify what each color represents in terms of product categories. While the visual data clearly shows which colored segment contributes the most to Q4 revenue, without knowing which product category each color corresponds to, it is impossible to determine which specific category is the highest contributor. Color assumptions based on product conventions are unreliable without proper labeling."
+}

@@ -1,0 +1,17 @@
+{
+  "question": "True or False: The prevalence of species Z is higher in WA than in OR based on the chart.",
+  "options": {
+    "A": "True",
+    "B": "False",
+    "C": "Cannot be inferred / inadequate information",
+    "D": "Both states have the same prevalence"
+  },
+  "correctAnswer": "B",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "cherry_picking",
+  "chartType": "choropleth_map",
+  "task": "Make Comparisons",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+  "explanation": "The color legend for the prevaleWAe scale is inverted, making lower values darker and higher values lighter. Although WA appears lighter, the inversion makes direct visual comparison misleading."
+}

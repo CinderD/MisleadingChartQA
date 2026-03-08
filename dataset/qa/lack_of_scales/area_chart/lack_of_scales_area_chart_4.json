@@ -1,0 +1,17 @@
+{
+  "question": "What is the pattern of growth acceleration across quarters?",
+  "options": {
+    "A": "Growth accelerates at a consistent rate, with each quarter showing incremental increases.",
+    "B": "Growth accelerates rapidly in Q3 and Q4, indicating exponential growth pattern.",
+    "C": "Growth shows a linear pattern with steady, uniform increases across all quarters.",
+    "D": "Cannot determine the exact acceleration pattern without Y-axis scales to verify the magnitude of changes."
+  },
+  "correctAnswer": "D",
+  "wrongDueToMisleaderAnswer": "A",
+  "misleader": "lack_of_scales",
+  "chartType": "area_chart",
+  "task": "Data Interpretation",
+  "difficulty": "Medium",
+  "ifLabelled": "False",
+      "explanation": "The chart displays quarterly growth data with an area chart, but provides no Y-axis scales or numerical labels. While the visual data shows increasing area heights from Q1 to Q4, without knowing the actual scale values or whether the Y-axis uses a linear, logarithmic, or reversed scale, it is impossible to determine the true pattern of growth acceleration. Visual estimation of acceleration patterns without proper scales is unreliable for accurate growth analysis."
+}
